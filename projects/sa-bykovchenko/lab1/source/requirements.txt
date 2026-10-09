@@ -1,0 +1,14 @@
+# Основной эксперимент и анализ используют только стандартную библиотеку Python 3.11+.
+#
+#   source/run_experiment.py        — сбор данных (stdlib: urllib, json, csv)
+#   source/analyze_experiment.py    — воспроизводимый анализ 108 запросов (stdlib)
+#   source/analyze_tokenization.py  — сводные таблицы токенизации (stdlib)
+#   source/scoring.py               — оценка P2/P3 (stdlib)
+#
+# Поэтому для чтения отчёта и повторного анализа устанавливать ничего не нужно.
+#
+# Необязательный изолированный benchmark токенизации
+# (source/benchmark_tokenization.py, запускается в отдельном окружении Python 3.11):
+#   python -m pip install --only-binary=:all: "llama-cpp-python==0.3.36" ^
+#       --extra-index-url https://abetlen.github.io/llama-cpp-python/whl/cpu
+llama-cpp-python==0.3.36

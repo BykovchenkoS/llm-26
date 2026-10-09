@@ -1,0 +1,10 @@
+{
+  "requests": 108,
+  "p3_raw_valid": 27,
+  "p3_recovered": 36,
+  "total_latency_minutes": 37.13909318333333,
+  "length_counts": {
+    "B_tuned": 12,
+    "C_bounded": 7
+  }
+}

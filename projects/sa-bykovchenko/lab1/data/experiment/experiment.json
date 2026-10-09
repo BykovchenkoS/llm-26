@@ -1,0 +1,107 @@
+{
+  "created_at": "2026-10-06T15:26:43.905935+00:00",
+  "config_hash": "6e3179872aec54a4579aef4d7833246f474c34e7666ad411751398d3f035a141",
+  "config": {
+    "protocol": "openai-stream-v2.1",
+    "url": "http://localhost:11434",
+    "models": [
+      "qwen2.5:3b",
+      "llama3.2:3b",
+      "gemma3:4b",
+      "mistral:7b"
+    ],
+    "modes": {
+      "A_base": {},
+      "B_tuned": {
+        "temperature": 0.9,
+        "top_p": 0.7,
+        "max_tokens": 200
+      },
+      "C_bounded": {
+        "temperature": 0.0,
+        "max_tokens": 600
+      }
+    },
+    "repeats": 3,
+    "prompts": {
+      "P1": "Представь, что ты крутейший историк, живущий в 3025 году. Напиши короткий очерк о жизни людей в далёком 2026 году, будто о древней эпохе. Придумай пять несуществующих обычая того времени. Каждый явно назови и заверши текст одним вопросительным предложением. Объём от 5 до 9 предложений",
+      "P2": "Представь, что ты точнейший классификатор эмоций. Ниже 5 коротких сообщений. Определи доминирующую эмоцию каждого, выбирая строго из списка меток: [\"Радость\", \"Гнев\", \"Тревога\", \"Сарказм\"].\nВыведи ответ ровно по одной строке на сообщение в формате `N: метка` - без пояснений, нумерация как в списке и никаких других строк!\n\nСообщения:\n1. «Ну спасибо, лучший магазин на свете... Заказала сапоги 39го размера, а пришли 42го. Сижу довольная с калошами!»\n2. «Ура! Наконец-то получила оффер мечты, переезжаю в Москву!»\n3. «Сколько можно?! Третий раз присылаете брак, я просто в ярости!»\n4. «Не отвечает уже второй день, телефон вне зоны... я так переживаю, вдруг что-то случилось...»\n5. «Огромное спасибо за \"молниеносную\" доставку. Жду посылку четвёртый месяц, браво.»",
+      "P3": "Извлеки данные о блюде из описания в строгий JSON\nТребуемые ключи: dish (строка), ingredients (массив строк), water_ml (целое), cook_time_min (целое), servings (целое), is_vegan (логическое значение определи сам), contains_meat (логическое значение определи сам), calories_kcal (целое или null, если не указано).\nВыведи только JSON, без маркдаун обёртки и пояснений.\n\nОписание: «Овсяная каша на воде: возьми 100 г овсяных хлопьев, 400 мл воды, щепотку соли и 1 чайную ложку сахара. Вари 7 минут на среднем огне, помешивая. В конце добавь банан. Блюдо рассчитано на 2 порции.»"
+    },
+    "client_deadline_sec": 240,
+    "read_timeout_sec": 60,
+    "order_seed": 42,
+    "sampling_seed": "not supplied",
+    "note": "Cache may be reused; cached input tokens recorded. C_bounded differs from old C_det."
+  },
+  "environment": {
+    "version": {
+      "version": "0.35.0"
+    },
+    "models": {
+      "qwen2.5:3b": {
+        "digest": "357c53fb659c5076de1d65ccb0b397446227b71a42be9d1603d46168015c9e4b",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen2",
+          "families": [
+            "qwen2"
+          ],
+          "parameter_size": "3.1B",
+          "quantization_level": "Q4_K_M"
+        },
+        "parameters": null,
+        "template": "{{- if .Messages }}\n{{- if or .System .Tools }}<|im_start|>system\n{{- if .System }}\n{{ .System }}\n{{- end }}\n{{- if .Tools }}\n\n# Tools\n\nYou may call one or more functions to assist with the user query.\n\nYou are provided with function signatures within <tools></tools> XML tags:\n<tools>\n{{- range .Tools }}\n{\"type\": \"function\", \"function\": {{ .Function }}}\n{{- end }}\n</tools>\n\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\n<tool_call>\n{\"name\": <function-name>, \"arguments\": <args-json-object>}\n</tool_call>\n{{- end }}<|im_end|>\n{{ end }}\n{{- range $i, $_ := .Messages }}\n{{- $last := eq (len (slice $.Messages $i)) 1 -}}\n{{- if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ if .Content }}{{ .Content }}\n{{- else if .ToolCalls }}<tool_call>\n{{ range .ToolCalls }}{\"name\": \"{{ .Function.Name }}\", \"arguments\": {{ .Function.Arguments }}}\n{{ end }}</tool_call>\n{{- end }}{{ if not $last }}<|im_end|>\n{{ end }}\n{{- else if eq .Role \"tool\" }}<|im_start|>user\n<tool_response>\n{{ .Content }}\n</tool_response><|im_end|>\n{{ end }}\n{{- if and (ne .Role \"assistant\") $last }}<|im_start|>assistant\n{{ end }}\n{{- end }}\n{{- else }}\n{{- if .System }}<|im_start|>system\n{{ .System }}<|im_end|>\n{{ end }}{{ if .Prompt }}<|im_start|>user\n{{ .Prompt }}<|im_end|>\n{{ end }}<|im_start|>assistant\n{{ end }}{{ .Response }}{{ if .Response }}<|im_end|>{{ end }}"
+      },
+      "llama3.2:3b": {
+        "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "llama",
+          "families": [
+            "llama"
+          ],
+          "parameter_size": "3.2B",
+          "quantization_level": "Q4_K_M"
+        },
+        "parameters": "stop                           \"<|start_header_id|>\"\nstop                           \"<|end_header_id|>\"\nstop                           \"<|eot_id|>\"",
+        "template": "<|start_header_id|>system<|end_header_id|>\n\nCutting Knowledge Date: December 2023\n\n{{ if .System }}{{ .System }}\n{{- end }}\n{{- if .Tools }}When you receive a tool call response, use the output to format an answer to the orginal user question.\n\nYou are a helpful assistant with tool calling capabilities.\n{{- end }}<|eot_id|>\n{{- range $i, $_ := .Messages }}\n{{- $last := eq (len (slice $.Messages $i)) 1 }}\n{{- if eq .Role \"user\" }}<|start_header_id|>user<|end_header_id|>\n{{- if and $.Tools $last }}\n\nGiven the following functions, please respond with a JSON for a function call with its proper arguments that best answers the given prompt.\n\nRespond in the format {\"name\": function name, \"parameters\": dictionary of argument name and its value}. Do not use variables.\n\n{{ range $.Tools }}\n{{- . }}\n{{ end }}\n{{ .Content }}<|eot_id|>\n{{- else }}\n\n{{ .Content }}<|eot_id|>\n{{- end }}{{ if $last }}<|start_header_id|>assistant<|end_header_id|>\n\n{{ end }}\n{{- else if eq .Role \"assistant\" }}<|start_header_id|>assistant<|end_header_id|>\n{{- if .ToolCalls }}\n{{ range .ToolCalls }}\n{\"name\": \"{{ .Function.Name }}\", \"parameters\": {{ .Function.Arguments }}}{{ end }}\n{{- else }}\n\n{{ .Content }}\n{{- end }}{{ if not $last }}<|eot_id|>{{ end }}\n{{- else if eq .Role \"tool\" }}<|start_header_id|>ipython<|end_header_id|>\n\n{{ .Content }}<|eot_id|>{{ if $last }}<|start_header_id|>assistant<|end_header_id|>\n\n{{ end }}\n{{- end }}\n{{- end }}"
+      },
+      "gemma3:4b": {
+        "digest": "a2af6cc3eb7fa8be8504abaf9b04e88f17a119ec3f04a3addf55f92841195f5a",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "gemma3",
+          "families": [
+            "gemma3"
+          ],
+          "parameter_size": "4.3B",
+          "quantization_level": "Q4_K_M"
+        },
+        "parameters": "stop                           \"<end_of_turn>\"\ntemperature                    1\ntop_k                          64\ntop_p                          0.95",
+        "template": "{{- range $i, $_ := .Messages }}\n{{- $last := eq (len (slice $.Messages $i)) 1 }}\n{{- if or (eq .Role \"user\") (eq .Role \"system\") }}<start_of_turn>user\n{{ .Content }}<end_of_turn>\n{{ if $last }}<start_of_turn>model\n{{ end }}\n{{- else if eq .Role \"assistant\" }}<start_of_turn>model\n{{ .Content }}{{ if not $last }}<end_of_turn>\n{{ end }}\n{{- end }}\n{{- end }}"
+      },
+      "mistral:7b": {
+        "digest": "6577803aa9a036369e481d648a2baebb381ebc6e897f2bb9a766a2aa7bfbc1cf",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "llama",
+          "families": [
+            "llama"
+          ],
+          "parameter_size": "7.2B",
+          "quantization_level": "Q4_K_M"
+        },
+        "parameters": "stop                           \"[INST]\"\nstop                           \"[/INST]\"",
+        "template": "{{- if .Messages }}\n{{- range $index, $_ := .Messages }}\n{{- if eq .Role \"user\" }}\n{{- if and (eq (len (slice $.Messages $index)) 1) $.Tools }}[AVAILABLE_TOOLS] {{ $.Tools }}[/AVAILABLE_TOOLS]\n{{- end }}[INST] {{ if and $.System (eq (len (slice $.Messages $index)) 1) }}{{ $.System }}\n\n{{ end }}{{ .Content }}[/INST]\n{{- else if eq .Role \"assistant\" }}\n{{- if .Content }}{{ .Content }}\n{{- else if .ToolCalls }}[TOOL_CALLS] [\n{{- range .ToolCalls }}{\"name\": \"{{ .Function.Name }}\", \"arguments\": {{ .Function.Arguments }}}\n{{- end }}]\n{{- end }}</s>\n{{- else if eq .Role \"tool\" }}[TOOL_RESULTS] {\"content\": {{ .Content }}} [/TOOL_RESULTS]\n{{- end }}\n{{- end }}\n{{- else }}[INST] {{ if .System }}{{ .System }}\n\n{{ end }}{{ .Prompt }}[/INST]\n{{- end }}{{ .Response }}\n{{- if .Response }}</s>\n{{- end }}"
+      }
+    }
+  },
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+  "os": "Windows-11-10.0.26300-SP0",
+  "processor": "AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD"
+}

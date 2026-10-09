@@ -1,0 +1,3891 @@
+{
+  "timestamp": "2026-10-06T15:46:18.378458+00:00",
+  "request": {
+    "model": "gemma3:4b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Представь, что ты крутейший историк, живущий в 3025 году. Напиши короткий очерк о жизни людей в далёком 2026 году, будто о древней эпохе. Придумай пять несуществующих обычая того времени. Каждый явно назови и заверши текст одним вопросительным предложением. Объём от 5 до 9 предложений"
+      }
+    ],
+    "stream": true,
+    "stream_options": {
+      "include_usage": true
+    },
+    "temperature": 0.9,
+    "top_p": 0.7,
+    "max_tokens": 200
+  },
+  "status": "ok",
+  "answer_full": "## О странном народе, обитавшем в эпохе \"Цифрового Сквозняка\" (2026 год)\n\nМы, жители 3025 года, изучаем остатки цивилизаций прошлого, и эпоха, которую мы называем \"Цифровым Сквозняком\" (2026 год), представляет собой явный парадокс. Эти люди, известные как \"Цифровики\", жили в мире, пропитанном мерцающими экранами и непрерывным потоком информации, которую они называли \"Социальным Потоком\". Они были, как нам кажется, одновременно невероятно продвинутыми и глубоко потерянными.  Их жизнь была тесно связана с маленькими, плоскими устройствами, которые они носили с собой, позволяя им общаться и потреблять информацию в мгновение ока.  \n\nОсобым ритуалом был \"Синхрон",
+  "finish_reason": "length",
+  "usage": {
+    "prompt_tokens": 99,
+    "prompt_tokens_details": {
+      "cached_tokens": 94
+    },
+    "completion_tokens": 200,
+    "total_tokens": 299
+  },
+  "error": null,
+  "latency_sec": 18.698758,
+  "ttft_sec": 0.22432460001436993,
+  "events": [
+    {
+      "received_sec": 0.224325,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "role": "assistant",
+              "content": "##"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 0.311346,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " О"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 0.399432,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " стран"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 0.487826,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ном"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 0.576106,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " на"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 0.661947,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "роде"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 0.749923,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 0.847632,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " обита"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 0.943203,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "в"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 1.039208,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "шем"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 1.13803,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " в"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 1.23923,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " эпо"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 1.332836,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "хе"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 1.428916,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " \""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 1.52526,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "Ци"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 1.62494,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "фро"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 1.72031,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "вого"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 1.814381,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " С"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 1.910072,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "к"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 2.006237,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "воз"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 2.108029,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ня"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 2.20862,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ка"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 2.304087,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 2.399674,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " ("
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 2.490549,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "2"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 2.591579,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "0"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 2.689695,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "2"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 2.785591,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "6"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 2.897869,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " год"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 3.021856,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ")"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 3.14695,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\n\n"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 3.247025,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "Мы"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 3.343029,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 3.43973,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " жители"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 3.540035,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " "
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 3.636581,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "3"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 3.729966,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "0"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 3.823825,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "2"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 3.913309,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "5"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.001906,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " года"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.094728,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.184035,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " изуча"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.275748,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ем"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.361614,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " оста"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.447266,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "тки"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.536228,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " ци"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.625262,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "вили"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.717312,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "за"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.803904,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ций"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.892062,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " прошлого"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.979353,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 5.068765,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " и"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 5.157488,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " эпо"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 5.248508,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ха"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 5.336362,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 5.426399,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " которую"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 5.513071,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " мы"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 5.600535,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " называ"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 5.692498,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ем"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 5.779027,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " \""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 5.864082,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "Ци"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 5.955295,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "фро"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 6.0486,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "вым"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 6.144762,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " С"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 6.242154,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "к"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 6.33656,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "воз"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 6.425056,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ня"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 6.513995,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ком"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 6.606526,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 6.699345,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " ("
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 6.787204,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "2"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 6.878175,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "0"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 6.96605,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "2"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 7.052356,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "6"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 7.147021,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " год"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 7.237137,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "),"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 7.324239,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " представляет"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 7.408267,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " собой"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 7.494531,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " яв"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 7.583663,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ный"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 7.673968,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " пара"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 7.763944,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "до"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 7.850511,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "кс"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 7.941435,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "."
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 8.02688,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " Эти"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 8.11868,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " люди"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 8.20701,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 8.298522,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " известные"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 8.384499,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " как"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 8.471695,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " \""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 8.560766,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "Ци"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 8.648587,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "фро"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 8.745562,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ви"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 8.831633,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ки"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 8.917015,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 9.008342,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " жили"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 9.098432,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " в"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 9.184833,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " мире"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 9.276087,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 9.362273,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " про"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 9.454277,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "питан"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 9.540821,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ном"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 9.629522,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " мер"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 9.718903,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ца"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 9.806545,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ющими"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 9.897893,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " экра"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 9.984273,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "нами"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 10.071231,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " и"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 10.163037,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " непре"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 10.260755,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "рыв"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 10.355391,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ным"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 10.443974,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " пото"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 10.533764,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ком"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 10.624881,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " информации"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 10.716013,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 10.805831,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " которую"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 10.896554,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " они"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 10.98737,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " называ"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 11.079946,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ли"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 11.166629,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " \""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 11.254354,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "Со"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 11.342793,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "циа"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 11.461431,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "льным"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 11.550683,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " По"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 11.644231,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "то"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 11.80616,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ком"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 11.929233,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\"."
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 12.05217,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " Они"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 12.166453,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " были"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 12.279715,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 12.394202,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " как"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 12.499182,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " нам"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 12.610704,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " кажется"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 12.726128,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 12.824858,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " одновременно"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 12.918682,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " невероят"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 13.01072,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "но"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 13.102736,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " продви"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 13.195562,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ну"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 13.295815,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "тыми"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 13.401759,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " и"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 13.493382,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " глубо"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 13.583273,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ко"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 13.676642,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " потеря"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 13.764622,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "н"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 13.854389,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ными"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 13.946988,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "."
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 14.036896,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "  "
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 14.12808,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "И"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 14.221125,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "х"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 14.308647,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " жизнь"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 14.397679,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " была"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 14.486138,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " те"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 14.575232,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "сно"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 14.664086,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " связана"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 14.753195,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " с"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 14.841928,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " малень"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 14.928662,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "кими"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 15.018184,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 15.111697,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " пло"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 15.198703,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "скими"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 15.288554,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " устройства"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 15.379094,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ми"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 15.474437,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 15.563527,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " которые"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 15.656681,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " они"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 15.744535,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " но"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 15.833034,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "сили"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 15.921154,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " с"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 16.00855,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " собой"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 16.103026,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 16.192038,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " позволя"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 16.285141,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "я"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 16.374944,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " им"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 16.464868,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " об"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 16.553605,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "щаться"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 16.643142,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " и"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 16.731393,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " потреб"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 16.820311,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "лять"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 16.908735,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " информацию"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 16.997066,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " в"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 17.090715,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " мг"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 17.18112,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "новение"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 17.269728,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " ока"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 17.357641,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "."
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 17.446333,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "  "
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 17.53682,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\n\n"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 17.62572,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "О"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 17.717471,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "со"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 17.807719,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "бы"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 17.895554,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "м"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 17.984073,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " ри"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 18.077398,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "туа"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 18.165175,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "лом"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 18.256718,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " был"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 18.344774,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " \""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 18.432162,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "С"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 18.519892,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ин"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 18.611344,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "х"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 18.698176,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "рон"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 18.698501,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {},
+            "finish_reason": "length"
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 18.69854,
+      "event": {
+        "id": "chatcmpl-547",
+        "object": "chat.completion.chunk",
+        "created": 1791301578,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [],
+        "usage": {
+          "prompt_tokens": 99,
+          "prompt_tokens_details": {
+            "cached_tokens": 94
+          },
+          "completion_tokens": 200,
+          "total_tokens": 299
+        },
+        "timings": {
+          "prompt_n": 99,
+          "prompt_ms": 210,
+          "prompt_per_token_ms": 2.121212121212121,
+          "prompt_per_second": 471.42857142857144,
+          "predicted_n": 200,
+          "predicted_ms": 18473,
+          "predicted_per_token_ms": 92.365,
+          "predicted_per_second": 10.826611811833487
+        }
+      }
+    }
+  ],
+  "input_tokens": 99,
+  "output_tokens": 200,
+  "cached_input_tokens": 94,
+  "e2e_output_tok_per_sec": 10.695897556404548,
+  "job_id": 78,
+  "model": "gemma3:4b",
+  "prompt": "P1",
+  "mode": "B_tuned",
+  "repeat": 3
+}

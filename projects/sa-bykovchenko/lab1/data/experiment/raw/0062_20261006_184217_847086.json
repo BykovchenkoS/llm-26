@@ -1,0 +1,2406 @@
+{
+  "timestamp": "2026-10-06T15:42:05.552570+00:00",
+  "request": {
+    "model": "gemma3:4b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Извлеки данные о блюде из описания в строгий JSON\nТребуемые ключи: dish (строка), ingredients (массив строк), water_ml (целое), cook_time_min (целое), servings (целое), is_vegan (логическое значение определи сам), contains_meat (логическое значение определи сам), calories_kcal (целое или null, если не указано).\nВыведи только JSON, без маркдаун обёртки и пояснений.\n\nОписание: «Овсяная каша на воде: возьми 100 г овсяных хлопьев, 400 мл воды, щепотку соли и 1 чайную ложку сахара. Вари 7 минут на среднем огне, помешивая. В конце добавь банан. Блюдо рассчитано на 2 порции.»"
+      }
+    ],
+    "stream": true,
+    "stream_options": {
+      "include_usage": true
+    }
+  },
+  "status": "ok",
+  "answer_full": "```json\n{\n  \"dish\": \"Овсяная каша на воде\",\n  \"ingredients\": [\n    \"овсяные хлопья\",\n    \"вода\",\n    \"соль\",\n    \"сахар\",\n    \"банан\"\n  ],\n  \"water_ml\": 400,\n  \"cook_time_min\": 7,\n  \"servings\": 2,\n  \"is_vegan\": true,\n  \"contains_meat\": false,\n  \"calories_kcal\": null\n}\n```",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 196,
+    "prompt_tokens_details": {
+      "cached_tokens": 191
+    },
+    "completion_tokens": 123,
+    "total_tokens": 319
+  },
+  "error": null,
+  "latency_sec": 12.294237,
+  "ttft_sec": 0.2647945000207983,
+  "events": [
+    {
+      "received_sec": 0.264795,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "role": "assistant",
+              "content": "```"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 0.352498,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "json"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 0.438431,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\n"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 0.525743,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "{"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 0.615813,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\n"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 0.707891,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "  "
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 0.798135,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 0.885349,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "dish"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 0.97411,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\":"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 1.062234,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " \""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 1.151548,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "О"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 1.240307,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "вся"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 1.326266,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ная"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 1.417056,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " ка"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 1.505513,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ша"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 1.592819,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " на"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 1.681114,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " воде"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 1.76867,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 1.856447,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\n"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 1.962081,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "  "
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 2.063818,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 2.163889,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ingredients"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 2.263371,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\":"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 2.361403,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " ["
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 2.458988,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\n"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 2.557254,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "    "
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 2.653461,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 2.749877,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "о"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 2.846366,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "вся"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 2.948835,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ные"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 3.04748,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " хлоп"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 3.143831,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ья"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 3.242119,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 3.338305,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\n"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 3.435274,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "    "
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 3.53421,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 3.629442,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "вода"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 3.726643,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 3.823064,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\n"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 3.924472,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "    "
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.027532,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.129082,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "со"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.229936,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ль"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.326965,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.426056,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\n"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.521821,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "    "
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.621827,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.719611,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "са"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.814039,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "хар"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.904022,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 4.992497,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\n"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 5.081824,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "    "
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 5.168768,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 5.258898,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ба"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 5.346692,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "нан"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 5.434355,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 5.529991,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\n"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 5.630254,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "  "
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 5.738871,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "],"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 5.844311,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\n"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 5.951773,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "  "
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 6.061131,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 6.161591,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "water"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 6.272676,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "_"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 6.376215,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ml"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 6.478193,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\":"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 6.596631,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " "
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 6.700111,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "4"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 6.807129,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "0"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 6.917004,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "0"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 7.025525,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 7.135977,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\n"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 7.242446,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "  "
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 7.343162,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 7.441146,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "cook"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 7.540467,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "_"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 7.639355,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "time"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 7.728848,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "_"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 7.820754,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "min"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 7.915344,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\":"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 8.005439,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " "
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 8.097003,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "7"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 8.188027,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 8.27916,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\n"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 8.37037,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "  "
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 8.465405,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 8.57593,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "serv"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 8.688603,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "ings"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 8.805666,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\":"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 8.916296,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " "
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 9.057683,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "2"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 9.175071,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 9.338432,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\n"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 9.486588,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "  "
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 9.604254,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 9.714099,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "is"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 9.825303,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "_"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 9.939377,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "vegan"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 10.044899,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\":"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 10.15944,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " true"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 10.258489,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 10.346276,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\n"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 10.445532,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "  "
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 10.546318,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 10.64341,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "contains"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 10.733014,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "_"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 10.821748,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "meat"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 10.914185,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\":"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 11.005905,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " false"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 11.104077,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": ","
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 11.213972,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\n"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 11.303909,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "  "
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 11.393811,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\""
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 11.483003,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "calories"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 11.572797,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "_"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 11.662305,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "kcal"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 11.752559,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\":"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 11.840774,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": " null"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 11.931727,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\n"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 12.021292,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "}"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 12.114158,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "\n"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 12.204139,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {
+              "content": "```"
+            },
+            "finish_reason": null
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 12.293993,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [
+          {
+            "index": 0,
+            "delta": {},
+            "finish_reason": "stop"
+          }
+        ]
+      }
+    },
+    {
+      "received_sec": 12.294122,
+      "event": {
+        "id": "chatcmpl-236",
+        "object": "chat.completion.chunk",
+        "created": 1791301325,
+        "model": "gemma3:4b",
+        "system_fingerprint": "fp_ollama",
+        "choices": [],
+        "usage": {
+          "prompt_tokens": 196,
+          "prompt_tokens_details": {
+            "cached_tokens": 191
+          },
+          "completion_tokens": 123,
+          "total_tokens": 319
+        },
+        "timings": {
+          "prompt_n": 196,
+          "prompt_ms": 232,
+          "prompt_per_token_ms": 1.183673469387755,
+          "prompt_per_second": 844.8275862068965,
+          "predicted_n": 123,
+          "predicted_ms": 12029,
+          "predicted_per_token_ms": 97.79674796747967,
+          "predicted_per_second": 10.225288885194114
+        }
+      }
+    }
+  ],
+  "input_tokens": 196,
+  "output_tokens": 123,
+  "cached_input_tokens": 191,
+  "e2e_output_tok_per_sec": 10.004687562148021,
+  "job_id": 62,
+  "model": "gemma3:4b",
+  "prompt": "P3",
+  "mode": "A_base",
+  "repeat": 2
+}
