@@ -1,0 +1,17 @@
+{
+  "sources": [
+    {
+      "id": "apollo11_mission_report_1969_nasa359",
+      "title": "Apollo 11 Mission Report",
+      "report_number": "MSC-00171",
+      "publication_month": "1969-11",
+      "retrieved_date": "2026-10-08",
+      "language": "en",
+      "url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf",
+      "catalog_url": "https://ntrs.nasa.gov/citations/19700008096",
+      "path": "data/raw/apollo11_mission_report.pdf",
+      "pdf_pages": 359,
+      "sha256": "5b9d033c7b9dd604220f439cddc8a53ad08e3e9c43c83f7342d7e61ef32a1baa"
+    }
+  ]
+}

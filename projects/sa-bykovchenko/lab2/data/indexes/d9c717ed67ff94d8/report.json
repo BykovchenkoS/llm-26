@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "stage": "representations",
+  "build_id": "d9c717ed67ff94d8",
+  "chunk_count": 376,
+  "vectorization": "dense",
+  "model": "intfloat/multilingual-e5-small",
+  "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "device": "cpu",
+  "pooling": "attention-mask mean",
+  "normalization": "L2",
+  "python": "3.11.17",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "created_at_utc": "2026-10-08T10:52:06.284203+00:00",
+  "dense_seconds_including_model_load": 68.42922560003353,
+  "dense_vectors_shape": [
+    376,
+    384
+  ],
+  "finite_unit_vectors_checked": true,
+  "total_seconds_this_run": 81.49299710005289,
+  "artifact_sha256": {
+    "chunks.jsonl": "5d70eccb50236848b5586a7b6f6fdc16c448fdd432197876bf9b4df2c33c80ee",
+    "build_config.json": "c92a8c4a750550e6251ef347c420eae51f0b23ba14d166ce73c363b2798eacd9",
+    "embeddings.npy": "ae4b79a488758a21f5ae6b533a028ad01a828e605818f3edc9205307b8be3aa5"
+  }
+}

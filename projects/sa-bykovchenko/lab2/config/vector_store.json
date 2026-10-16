@@ -1,0 +1,8 @@
+{
+  "collection": "apollo11",
+  "m": 16,
+  "ef_construction": 100,
+  "ef_search": 64,
+  "threads": 1,
+  "quantization": "none"
+}

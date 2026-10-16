@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "profile": "apollo11_text_first_v1",
+  "description": "Narrative pages selected by layout. Other pages remain in the export but are excluded from retrieval until reviewed. No new OCR or LLM rewriting.",
+  "prose_page_ranges": [[12,16],[30,61],[103,106],[109,115],[130,131],[133,139],[148,150],[152,153],[158,164],[176,176],[179,180],[184,184],[186,187],[194,223],[254,263],[269,272],[275,277],[279,301],[324,334],[341,341],[346,346],[349,349]],
+  "review_preview_pages": [12,42,63,212,219,259,291],
+  "line_y_tolerance": 3.0,
+  "paragraph_gap": 6.0,
+  "chapters": [
+    [12,"1","SUMMARY"],[14,"2","INTRODUCTION"],[15,"3","MISSION DESCRIPTION"],
+    [30,"4","PILOTS' REPORT"],[50,"5","LUNAR DESCENT AND ASCENT"],[103,"6","COMMUNICATIONS"],
+    [109,"7","TRAJECTORY"],[130,"8","COMMAND AND SERVICE MODULE PERFORMANCE"],
+    [158,"9","LUNAR MODULE PERFORMANCE"],[194,"10","EXTRAVEHICULAR MOBILITY UNIT PERFORMANCE"],
+    [198,"11","THE LUNAR SURFACE"],[254,"12","BIOMEDICAL EVALUATION"],
+    [269,"13","MISSION SUPPORT PERFORMANCE"],[275,"14","ASSESSMENT OF MISSION OBJECTIVES"],
+    [279,"15","LAUNCH VEHICLE SUMMARY"],[280,"16","ANOMALY SUMMARY"],[324,"17","CONCLUSIONS"],
+    [325,"A","VEHICLE DESCRIPTIONS"],[341,"B","SPACECRAFT HISTORIES"],
+    [346,"C","POSTFLIGHT TESTING"],[349,"D","DATA AVAILABILITY"],
+    [355,"E","GLOSSARY"],[357,"REFERENCES","REFERENCES"],[359,"BACK","BACK COVER"]
+  ],
+  "printed_page_overrides": {"36":"4-7","38":"4-9","50":"5-1","63":"5-14","259":"12-6"}
+}

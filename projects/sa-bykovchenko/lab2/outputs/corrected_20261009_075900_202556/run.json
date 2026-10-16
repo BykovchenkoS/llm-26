@@ -1,0 +1,16 @@
+{
+  "indexes": [
+    "data\\indexes\\beae25d7ff554a1c",
+    "data\\indexes\\b407ce44e74c983a",
+    "data\\indexes\\bd3323d4f46e67af"
+  ],
+  "status": "qa_review_completed_human",
+  "store": "data\\vector_stores\\apollo11\\287eb2598f5a23fc",
+  "review": {
+    "date": "2026-10-15",
+    "independent_human_validation": true,
+    "reviewer": "Быковченко Софья (автор) — ручная человеческая оценка",
+    "qa_summary": "README.md",
+    "note": "QA-сводка приведена в README.md"
+  }
+}

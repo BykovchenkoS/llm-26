@@ -1,0 +1,6655 @@
+{
+  "encode_seconds": 98.206,
+  "k": [
+    5,
+    10
+  ],
+  "qrels": "data\\qrels.json",
+  "reports": [
+    {
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2\\data\\indexes\\beae25d7ff554a1c",
+      "build_id": "beae25d7ff554a1c",
+      "chunk_size": 256,
+      "overlap": 32,
+      "chunk_count": 516,
+      "dense_seconds_including_model_load": 60.2977927000029,
+      "modes": {
+        "dense": {
+          "metrics": {
+            "recall@5": 0.3822,
+            "recall@10": 0.5119,
+            "precision@5": 0.2267,
+            "precision@10": 0.1467,
+            "page_recall@5": 0.5556,
+            "page_recall@10": 0.7056,
+            "mrr": 0.5239,
+            "hit@1": 0.3333,
+            "avg_retrieve_ms": 0.18
+          },
+          "per_question": [
+            {
+              "id": "Q01",
+              "relevant_chunks": 6,
+              "first_relevant_rank": 3,
+              "top_pages": [
+                [
+                  275
+                ],
+                [
+                  280
+                ],
+                [
+                  12
+                ],
+                [
+                  220
+                ],
+                [
+                  275
+                ],
+                [
+                  15
+                ],
+                [
+                  113
+                ],
+                [
+                  334
+                ],
+                [
+                  276,
+                  277
+                ],
+                [
+                  198
+                ]
+              ],
+              "top_chunk_ids": [
+                "40854bbff78f36a57561fdf9",
+                "439c6551ba8332562f17960c",
+                "353176097a75e7b63c44a35c",
+                "92f8f1f2002eb553e920e7dd",
+                "a20148605efcd1bf9cfdcfc5",
+                "480edecf7f6241da90d85dcb",
+                "f6af3c9e2ab38441d2be4549",
+                "3f23489e9f7815225dc846e5",
+                "1b071ebcfdca784cfeed3bc8",
+                "2fdfe6685bd20a5ff3ec1c33"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.16666666666666666,
+                "recall@10": 0.16666666666666666,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 0.5,
+                "page_recall@10": 0.5
+              }
+            },
+            {
+              "id": "Q02",
+              "relevant_chunks": 4,
+              "first_relevant_rank": 8,
+              "top_pages": [
+                [
+                  194,
+                  195
+                ],
+                [
+                  44
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  41
+                ],
+                [
+                  47
+                ],
+                [
+                  35
+                ],
+                [
+                  37,
+                  38
+                ],
+                [
+                  43
+                ],
+                [
+                  104
+                ]
+              ],
+              "top_chunk_ids": [
+                "4d12362ecb34ca8f345ba3f1",
+                "a5e83c5736851756394df14d",
+                "80e3915cf4c1346dc40426f8",
+                "aa8bf492cb4bc520c7cf3b77",
+                "699da85c4a72761ecd272b7a",
+                "7a57007985f6610de847bbeb",
+                "96631144ef8848be97cd45e2",
+                "35538bc61956f74b560a850e",
+                "3b819bc565d6abe4aefbc1b9",
+                "c9fc3b6a874f9a45b21581b3"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 0.25,
+                "precision@5": 0.0,
+                "precision@10": 0.1,
+                "page_recall@5": 0.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q03",
+              "relevant_chunks": 4,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  40
+                ],
+                [
+                  42
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  324
+                ],
+                [
+                  198
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  42
+                ],
+                [
+                  38
+                ],
+                [
+                  198,
+                  199
+                ],
+                [
+                  40
+                ]
+              ],
+              "top_chunk_ids": [
+                "460c28e8c79d42c61094b90a",
+                "4ca3c3a43407cb055dbb3d0e",
+                "d5d3aef5af02e497991cfdc8",
+                "12bd5df0e7c7b7e0d0b3c914",
+                "2fdfe6685bd20a5ff3ec1c33",
+                "aa8bf492cb4bc520c7cf3b77",
+                "46a5fa4953fc4da70be0156b",
+                "1c575fa2771ede97e85a1d81",
+                "0f52beac4c52c615c80160a3",
+                "99953579db3519ea3edf2e13"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "metrics": {
+                "recall@5": 0.25,
+                "recall@10": 0.5,
+                "precision@5": 0.2,
+                "precision@10": 0.2,
+                "page_recall@5": 0.5,
+                "page_recall@10": 0.5
+              }
+            },
+            {
+              "id": "Q04",
+              "relevant_chunks": 4,
+              "first_relevant_rank": 4,
+              "top_pages": [
+                [
+                  42,
+                  43
+                ],
+                [
+                  42
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  40
+                ],
+                [
+                  324
+                ],
+                [
+                  198,
+                  199
+                ],
+                [
+                  43
+                ],
+                [
+                  43
+                ],
+                [
+                  42
+                ],
+                [
+                  38
+                ]
+              ],
+              "top_chunk_ids": [
+                "aa8bf492cb4bc520c7cf3b77",
+                "4ca3c3a43407cb055dbb3d0e",
+                "d5d3aef5af02e497991cfdc8",
+                "460c28e8c79d42c61094b90a",
+                "12bd5df0e7c7b7e0d0b3c914",
+                "0f52beac4c52c615c80160a3",
+                "e18381b1ebe7e9e8ffe5ef21",
+                "3b819bc565d6abe4aefbc1b9",
+                "46a5fa4953fc4da70be0156b",
+                "1c575fa2771ede97e85a1d81"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.25,
+                "recall@10": 0.25,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 0.5,
+                "page_recall@10": 0.5
+              }
+            },
+            {
+              "id": "Q05",
+              "relevant_chunks": 9,
+              "first_relevant_rank": 6,
+              "top_pages": [
+                [
+                  300
+                ],
+                [
+                  159,
+                  160
+                ],
+                [
+                  103,
+                  104
+                ],
+                [
+                  104,
+                  105
+                ],
+                [
+                  104
+                ],
+                [
+                  41
+                ],
+                [
+                  105
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  294
+                ],
+                [
+                  326
+                ]
+              ],
+              "top_chunk_ids": [
+                "d4693ba197d438632b816745",
+                "dce50a96aa994c92bdc29320",
+                "5066481e92ad475f7607cf8d",
+                "07d20477af0835d8315856ec",
+                "c9fc3b6a874f9a45b21581b3",
+                "699da85c4a72761ecd272b7a",
+                "2bc97b269aab4d663226e12e",
+                "80e3915cf4c1346dc40426f8",
+                "85f7a9b87423283f978c75c2",
+                "9c9dccd990d19800403201ab"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 0.1111111111111111,
+                "precision@5": 0.0,
+                "precision@10": 0.1,
+                "page_recall@5": 0.0,
+                "page_recall@10": 0.25
+              }
+            },
+            {
+              "id": "Q06",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  45
+                ],
+                [
+                  41
+                ],
+                [
+                  153
+                ],
+                [
+                  186
+                ],
+                [
+                  111
+                ],
+                [
+                  61
+                ],
+                [
+                  260
+                ],
+                [
+                  194,
+                  195
+                ],
+                [
+                  260
+                ],
+                [
+                  194
+                ]
+              ],
+              "top_chunk_ids": [
+                "c5811fbc7739934df425ab5a",
+                "699da85c4a72761ecd272b7a",
+                "bb508032159a4a41086873e5",
+                "e955a5bbfd4f84dfc7425e13",
+                "85de2f5f3e982c961a8b66ca",
+                "75e67939830199899c969da7",
+                "394d4cc4798b0092a9c483d5",
+                "4d12362ecb34ca8f345ba3f1",
+                "99a93a55b3500025b70ca525",
+                "6d2c23d8cdc6d647647f1842"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.5,
+                "recall@10": 0.5,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q07",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 7,
+              "top_pages": [
+                [
+                  38
+                ],
+                [
+                  32
+                ],
+                [
+                  164
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  269
+                ],
+                [
+                  41
+                ],
+                [
+                  49
+                ],
+                [
+                  270
+                ],
+                [
+                  37,
+                  38
+                ],
+                [
+                  283
+                ]
+              ],
+              "top_chunk_ids": [
+                "1c575fa2771ede97e85a1d81",
+                "0eaddb807838b51f005824dd",
+                "217d2c46bd0748d26175c032",
+                "80e3915cf4c1346dc40426f8",
+                "1d715296c1bb458de7048ccf",
+                "431179469dae1962eb832132",
+                "a9a2f7ccd89531a08d5d9e6f",
+                "e2f9ae6be7fbd8fb2866bda7",
+                "35538bc61956f74b560a850e",
+                "72c1562edbcfe11637fb3d72"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 1.0,
+                "precision@5": 0.0,
+                "precision@10": 0.1,
+                "page_recall@5": 0.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q08",
+              "relevant_chunks": 5,
+              "first_relevant_rank": 3,
+              "top_pages": [
+                [
+                  333
+                ],
+                [
+                  217
+                ],
+                [
+                  214
+                ],
+                [
+                  333
+                ],
+                [
+                  214
+                ],
+                [
+                  218
+                ],
+                [
+                  198
+                ],
+                [
+                  217,
+                  218
+                ],
+                [
+                  218
+                ],
+                [
+                  217
+                ]
+              ],
+              "top_chunk_ids": [
+                "9cf04fa84c8bde35ddbf7a5c",
+                "1f6b43d048593b19bdf9e7f9",
+                "1f3ff3f06ce4228ea4e6c601",
+                "fc5a19b4ece0df2d6827efe1",
+                "ba8fc62499eda16ae6fc318a",
+                "0af9135842a8775094e3c618",
+                "2fdfe6685bd20a5ff3ec1c33",
+                "c8dc540de176af89c861bc69",
+                "e89917fdacebee5ee645c129",
+                "6bb3f4b2b0f49a8b75c11ac6"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.4,
+                "recall@10": 0.4,
+                "precision@5": 0.4,
+                "precision@10": 0.2,
+                "page_recall@5": 0.5,
+                "page_recall@10": 0.5
+              }
+            },
+            {
+              "id": "Q09",
+              "relevant_chunks": 3,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  219,
+                  220
+                ],
+                [
+                  36
+                ],
+                [
+                  219
+                ],
+                [
+                  219
+                ],
+                [
+                  332
+                ],
+                [
+                  223
+                ],
+                [
+                  203
+                ],
+                [
+                  39
+                ],
+                [
+                  60
+                ],
+                [
+                  47
+                ]
+              ],
+              "top_chunk_ids": [
+                "0e3e8e73f704c688adfbd154",
+                "29de236419d55734c5153531",
+                "3233c4fe530bbd4f022d9865",
+                "83cce6cbe6f70337d1c37600",
+                "c9d3e69aaea79d37339200cc",
+                "c073c4a066e984b1e6f6324d",
+                "16d2937289b5cf64903abcf2",
+                "c85f1c951e0c45640b78b5be",
+                "12206bbe442d4ea9c684395a",
+                "3e8436452689ae640dc9d2f1"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.6,
+                "precision@10": 0.3,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q10",
+              "relevant_chunks": 3,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  332
+                ],
+                [
+                  219,
+                  220
+                ],
+                [
+                  36
+                ],
+                [
+                  198
+                ],
+                [
+                  52
+                ],
+                [
+                  219
+                ],
+                [
+                  115
+                ],
+                [
+                  115
+                ],
+                [
+                  31,
+                  32
+                ],
+                [
+                  37
+                ]
+              ],
+              "top_chunk_ids": [
+                "c9d3e69aaea79d37339200cc",
+                "0e3e8e73f704c688adfbd154",
+                "29de236419d55734c5153531",
+                "2fdfe6685bd20a5ff3ec1c33",
+                "1c18216cae7567af34aee890",
+                "3233c4fe530bbd4f022d9865",
+                "77977bd71ffff2f8ed67c32d",
+                "f19c4d3ea63b63f3e8dd4e24",
+                "d54b7a1de7b7334e05a8d9f6",
+                "cfb4d0724d192061cb7fffea"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.3333333333333333,
+                "recall@10": 0.6666666666666666,
+                "precision@5": 0.2,
+                "precision@10": 0.2,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q11",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  220
+                ],
+                [
+                  332
+                ],
+                [
+                  220
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  52
+                ],
+                [
+                  217
+                ],
+                [
+                  211
+                ],
+                [
+                  333
+                ],
+                [
+                  207,
+                  208
+                ],
+                [
+                  214
+                ]
+              ],
+              "top_chunk_ids": [
+                "68dbb0e2ebcd2ba3573e1cb8",
+                "1224944c933bff70cd6438f6",
+                "1793c4222532154787a47a54",
+                "aa8bf492cb4bc520c7cf3b77",
+                "1c18216cae7567af34aee890",
+                "1f6b43d048593b19bdf9e7f9",
+                "73041e649df3f23bf2d2c717",
+                "fc5a19b4ece0df2d6827efe1",
+                "f5e47e1e19b331999bb30dee",
+                "1f3ff3f06ce4228ea4e6c601"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.4,
+                "precision@10": 0.2,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q12",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 142,
+              "top_pages": [
+                [
+                  37,
+                  38
+                ],
+                [
+                  58
+                ],
+                [
+                  57,
+                  58
+                ],
+                [
+                  138
+                ],
+                [
+                  162
+                ],
+                [
+                  150
+                ],
+                [
+                  37
+                ],
+                [
+                  184
+                ],
+                [
+                  37
+                ],
+                [
+                  52
+                ]
+              ],
+              "top_chunk_ids": [
+                "35538bc61956f74b560a850e",
+                "d8bddffb9b38638768d04a0e",
+                "bc8f34d6eb2168764224772c",
+                "ff7cc83155a32580fa8bff1a",
+                "750ebeaed2ca72a3aa228f42",
+                "24d05dd773878281a6952b77",
+                "cfb4d0724d192061cb7fffea",
+                "f4e34b58fd998c3dc107ffb4",
+                "46c364107b361222830164a5",
+                "1c18216cae7567af34aee890"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 0.0,
+                "precision@5": 0.0,
+                "precision@10": 0.0,
+                "page_recall@5": 0.0,
+                "page_recall@10": 0.0
+              }
+            },
+            {
+              "id": "Q13",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  259
+                ],
+                [
+                  263
+                ],
+                [
+                  324
+                ],
+                [
+                  259
+                ],
+                [
+                  261,
+                  262
+                ],
+                [
+                  211
+                ],
+                [
+                  198,
+                  199
+                ],
+                [
+                  262,
+                  263
+                ],
+                [
+                  199
+                ],
+                [
+                  198
+                ]
+              ],
+              "top_chunk_ids": [
+                "ae9ecd48cfe6b43a0ea49b31",
+                "fbf0dd623218fc2b2f83f605",
+                "12bd5df0e7c7b7e0d0b3c914",
+                "0b285a6c39a0333943c90b34",
+                "a8f50cc1451e8d84fa3fb73c",
+                "73041e649df3f23bf2d2c717",
+                "0f52beac4c52c615c80160a3",
+                "36613441df407d029cbd59de",
+                "608513227a8f86c29b4c3f4c",
+                "2fdfe6685bd20a5ff3ec1c33"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.4,
+                "precision@10": 0.2,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q14",
+              "relevant_chunks": 3,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  47,
+                  48
+                ],
+                [
+                  260
+                ],
+                [
+                  260
+                ],
+                [
+                  33,
+                  34
+                ],
+                [
+                  41
+                ],
+                [
+                  35
+                ],
+                [
+                  186
+                ],
+                [
+                  194
+                ],
+                [
+                  61
+                ],
+                [
+                  194
+                ]
+              ],
+              "top_chunk_ids": [
+                "97ac7c4715ef6c098ff978f0",
+                "99a93a55b3500025b70ca525",
+                "394d4cc4798b0092a9c483d5",
+                "a3a71c85aa7d4a892e49350e",
+                "699da85c4a72761ecd272b7a",
+                "27c33a104dac660976e5e28f",
+                "e1eab8815b5ca6acfc6717a4",
+                "6d2c23d8cdc6d647647f1842",
+                "75e67939830199899c969da7",
+                "ad6ca68c999b145518477435"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.6666666666666666,
+                "recall@10": 0.6666666666666666,
+                "precision@5": 0.4,
+                "precision@10": 0.2,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q15",
+              "relevant_chunks": 6,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  37,
+                  38
+                ],
+                [
+                  291
+                ],
+                [
+                  270,
+                  271
+                ],
+                [
+                  269
+                ],
+                [
+                  299
+                ],
+                [
+                  103,
+                  104
+                ],
+                [
+                  283
+                ],
+                [
+                  139
+                ],
+                [
+                  164
+                ],
+                [
+                  270
+                ]
+              ],
+              "top_chunk_ids": [
+                "35538bc61956f74b560a850e",
+                "0b7ab58a56cc46d93c7098f7",
+                "4370206bc5d9e1f9641d02e7",
+                "8b9438c6cbdc6236ee7d6d26",
+                "7f8c07540a95df01e8700aab",
+                "5066481e92ad475f7607cf8d",
+                "72c1562edbcfe11637fb3d72",
+                "2153951ff660da4e88c16f00",
+                "bce36c3c48e408151fad6f44",
+                "e2f9ae6be7fbd8fb2866bda7"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.16666666666666666,
+                "recall@10": 0.16666666666666666,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 0.3333333333333333,
+                "page_recall@10": 0.3333333333333333
+              }
+            }
+          ]
+        },
+        "hybrid": {
+          "metrics": {
+            "recall@5": 0.3711,
+            "recall@10": 0.523,
+            "precision@5": 0.2133,
+            "precision@10": 0.1533,
+            "page_recall@5": 0.5222,
+            "page_recall@10": 0.7389,
+            "mrr": 0.51,
+            "hit@1": 0.3333,
+            "avg_retrieve_ms": 0.418
+          },
+          "per_question": [
+            {
+              "id": "Q01",
+              "relevant_chunks": 6,
+              "first_relevant_rank": 8,
+              "top_pages": [
+                [
+                  280
+                ],
+                [
+                  275
+                ],
+                [
+                  15
+                ],
+                [
+                  220
+                ],
+                [
+                  325
+                ],
+                [
+                  113
+                ],
+                [
+                  275
+                ],
+                [
+                  12
+                ],
+                [
+                  198
+                ],
+                [
+                  13
+                ]
+              ],
+              "top_chunk_ids": [
+                "439c6551ba8332562f17960c",
+                "40854bbff78f36a57561fdf9",
+                "480edecf7f6241da90d85dcb",
+                "92f8f1f2002eb553e920e7dd",
+                "60bb5235406255a19f01c87b",
+                "f6af3c9e2ab38441d2be4549",
+                "a20148605efcd1bf9cfdcfc5",
+                "353176097a75e7b63c44a35c",
+                "125a08433460d621e61f6edd",
+                "90b95859fce21719ef0631b0"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                true
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 0.3333333333333333,
+                "precision@5": 0.0,
+                "precision@10": 0.2,
+                "page_recall@5": 0.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q02",
+              "relevant_chunks": 4,
+              "first_relevant_rank": 8,
+              "top_pages": [
+                [
+                  194,
+                  195
+                ],
+                [
+                  44
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  41
+                ],
+                [
+                  47
+                ],
+                [
+                  35
+                ],
+                [
+                  37,
+                  38
+                ],
+                [
+                  43
+                ],
+                [
+                  104
+                ]
+              ],
+              "top_chunk_ids": [
+                "4d12362ecb34ca8f345ba3f1",
+                "a5e83c5736851756394df14d",
+                "80e3915cf4c1346dc40426f8",
+                "aa8bf492cb4bc520c7cf3b77",
+                "699da85c4a72761ecd272b7a",
+                "7a57007985f6610de847bbeb",
+                "96631144ef8848be97cd45e2",
+                "35538bc61956f74b560a850e",
+                "3b819bc565d6abe4aefbc1b9",
+                "c9fc3b6a874f9a45b21581b3"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 0.25,
+                "precision@5": 0.0,
+                "precision@10": 0.1,
+                "page_recall@5": 0.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q03",
+              "relevant_chunks": 4,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  40
+                ],
+                [
+                  42
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  324
+                ],
+                [
+                  198
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  42
+                ],
+                [
+                  38
+                ],
+                [
+                  198,
+                  199
+                ],
+                [
+                  40
+                ]
+              ],
+              "top_chunk_ids": [
+                "460c28e8c79d42c61094b90a",
+                "4ca3c3a43407cb055dbb3d0e",
+                "d5d3aef5af02e497991cfdc8",
+                "12bd5df0e7c7b7e0d0b3c914",
+                "2fdfe6685bd20a5ff3ec1c33",
+                "aa8bf492cb4bc520c7cf3b77",
+                "46a5fa4953fc4da70be0156b",
+                "1c575fa2771ede97e85a1d81",
+                "0f52beac4c52c615c80160a3",
+                "99953579db3519ea3edf2e13"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "metrics": {
+                "recall@5": 0.25,
+                "recall@10": 0.5,
+                "precision@5": 0.2,
+                "precision@10": 0.2,
+                "page_recall@5": 0.5,
+                "page_recall@10": 0.5
+              }
+            },
+            {
+              "id": "Q04",
+              "relevant_chunks": 4,
+              "first_relevant_rank": 4,
+              "top_pages": [
+                [
+                  42,
+                  43
+                ],
+                [
+                  42
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  40
+                ],
+                [
+                  324
+                ],
+                [
+                  198,
+                  199
+                ],
+                [
+                  43
+                ],
+                [
+                  43
+                ],
+                [
+                  42
+                ],
+                [
+                  38
+                ]
+              ],
+              "top_chunk_ids": [
+                "aa8bf492cb4bc520c7cf3b77",
+                "4ca3c3a43407cb055dbb3d0e",
+                "d5d3aef5af02e497991cfdc8",
+                "460c28e8c79d42c61094b90a",
+                "12bd5df0e7c7b7e0d0b3c914",
+                "0f52beac4c52c615c80160a3",
+                "e18381b1ebe7e9e8ffe5ef21",
+                "3b819bc565d6abe4aefbc1b9",
+                "46a5fa4953fc4da70be0156b",
+                "1c575fa2771ede97e85a1d81"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.25,
+                "recall@10": 0.25,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 0.5,
+                "page_recall@10": 0.5
+              }
+            },
+            {
+              "id": "Q05",
+              "relevant_chunks": 9,
+              "first_relevant_rank": 6,
+              "top_pages": [
+                [
+                  300
+                ],
+                [
+                  159,
+                  160
+                ],
+                [
+                  103,
+                  104
+                ],
+                [
+                  104,
+                  105
+                ],
+                [
+                  104
+                ],
+                [
+                  41
+                ],
+                [
+                  105
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  294
+                ],
+                [
+                  326
+                ]
+              ],
+              "top_chunk_ids": [
+                "d4693ba197d438632b816745",
+                "dce50a96aa994c92bdc29320",
+                "5066481e92ad475f7607cf8d",
+                "07d20477af0835d8315856ec",
+                "c9fc3b6a874f9a45b21581b3",
+                "699da85c4a72761ecd272b7a",
+                "2bc97b269aab4d663226e12e",
+                "80e3915cf4c1346dc40426f8",
+                "85f7a9b87423283f978c75c2",
+                "9c9dccd990d19800403201ab"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 0.1111111111111111,
+                "precision@5": 0.0,
+                "precision@10": 0.1,
+                "page_recall@5": 0.0,
+                "page_recall@10": 0.25
+              }
+            },
+            {
+              "id": "Q06",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  45
+                ],
+                [
+                  41
+                ],
+                [
+                  153
+                ],
+                [
+                  186
+                ],
+                [
+                  111
+                ],
+                [
+                  61
+                ],
+                [
+                  260
+                ],
+                [
+                  194,
+                  195
+                ],
+                [
+                  260
+                ],
+                [
+                  194
+                ]
+              ],
+              "top_chunk_ids": [
+                "c5811fbc7739934df425ab5a",
+                "699da85c4a72761ecd272b7a",
+                "bb508032159a4a41086873e5",
+                "e955a5bbfd4f84dfc7425e13",
+                "85de2f5f3e982c961a8b66ca",
+                "75e67939830199899c969da7",
+                "394d4cc4798b0092a9c483d5",
+                "4d12362ecb34ca8f345ba3f1",
+                "99a93a55b3500025b70ca525",
+                "6d2c23d8cdc6d647647f1842"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.5,
+                "recall@10": 0.5,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q07",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 7,
+              "top_pages": [
+                [
+                  38
+                ],
+                [
+                  32
+                ],
+                [
+                  164
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  269
+                ],
+                [
+                  41
+                ],
+                [
+                  49
+                ],
+                [
+                  270
+                ],
+                [
+                  37,
+                  38
+                ],
+                [
+                  283
+                ]
+              ],
+              "top_chunk_ids": [
+                "1c575fa2771ede97e85a1d81",
+                "0eaddb807838b51f005824dd",
+                "217d2c46bd0748d26175c032",
+                "80e3915cf4c1346dc40426f8",
+                "1d715296c1bb458de7048ccf",
+                "431179469dae1962eb832132",
+                "a9a2f7ccd89531a08d5d9e6f",
+                "e2f9ae6be7fbd8fb2866bda7",
+                "35538bc61956f74b560a850e",
+                "72c1562edbcfe11637fb3d72"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 1.0,
+                "precision@5": 0.0,
+                "precision@10": 0.1,
+                "page_recall@5": 0.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q08",
+              "relevant_chunks": 5,
+              "first_relevant_rank": 3,
+              "top_pages": [
+                [
+                  333
+                ],
+                [
+                  217
+                ],
+                [
+                  214
+                ],
+                [
+                  333
+                ],
+                [
+                  214
+                ],
+                [
+                  218
+                ],
+                [
+                  198
+                ],
+                [
+                  217,
+                  218
+                ],
+                [
+                  218
+                ],
+                [
+                  217
+                ]
+              ],
+              "top_chunk_ids": [
+                "9cf04fa84c8bde35ddbf7a5c",
+                "1f6b43d048593b19bdf9e7f9",
+                "1f3ff3f06ce4228ea4e6c601",
+                "fc5a19b4ece0df2d6827efe1",
+                "ba8fc62499eda16ae6fc318a",
+                "0af9135842a8775094e3c618",
+                "2fdfe6685bd20a5ff3ec1c33",
+                "c8dc540de176af89c861bc69",
+                "e89917fdacebee5ee645c129",
+                "6bb3f4b2b0f49a8b75c11ac6"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                true,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.4,
+                "recall@10": 0.4,
+                "precision@5": 0.4,
+                "precision@10": 0.2,
+                "page_recall@5": 0.5,
+                "page_recall@10": 0.5
+              }
+            },
+            {
+              "id": "Q09",
+              "relevant_chunks": 3,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  219,
+                  220
+                ],
+                [
+                  36
+                ],
+                [
+                  219
+                ],
+                [
+                  219
+                ],
+                [
+                  332
+                ],
+                [
+                  223
+                ],
+                [
+                  203
+                ],
+                [
+                  39
+                ],
+                [
+                  60
+                ],
+                [
+                  47
+                ]
+              ],
+              "top_chunk_ids": [
+                "0e3e8e73f704c688adfbd154",
+                "29de236419d55734c5153531",
+                "3233c4fe530bbd4f022d9865",
+                "83cce6cbe6f70337d1c37600",
+                "c9d3e69aaea79d37339200cc",
+                "c073c4a066e984b1e6f6324d",
+                "16d2937289b5cf64903abcf2",
+                "c85f1c951e0c45640b78b5be",
+                "12206bbe442d4ea9c684395a",
+                "3e8436452689ae640dc9d2f1"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.6,
+                "precision@10": 0.3,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q10",
+              "relevant_chunks": 3,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  332
+                ],
+                [
+                  219,
+                  220
+                ],
+                [
+                  36
+                ],
+                [
+                  198
+                ],
+                [
+                  52
+                ],
+                [
+                  219
+                ],
+                [
+                  115
+                ],
+                [
+                  115
+                ],
+                [
+                  31,
+                  32
+                ],
+                [
+                  37
+                ]
+              ],
+              "top_chunk_ids": [
+                "c9d3e69aaea79d37339200cc",
+                "0e3e8e73f704c688adfbd154",
+                "29de236419d55734c5153531",
+                "2fdfe6685bd20a5ff3ec1c33",
+                "1c18216cae7567af34aee890",
+                "3233c4fe530bbd4f022d9865",
+                "77977bd71ffff2f8ed67c32d",
+                "f19c4d3ea63b63f3e8dd4e24",
+                "d54b7a1de7b7334e05a8d9f6",
+                "cfb4d0724d192061cb7fffea"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.3333333333333333,
+                "recall@10": 0.6666666666666666,
+                "precision@5": 0.2,
+                "precision@10": 0.2,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q11",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  220
+                ],
+                [
+                  332
+                ],
+                [
+                  220
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  52
+                ],
+                [
+                  217
+                ],
+                [
+                  211
+                ],
+                [
+                  333
+                ],
+                [
+                  207,
+                  208
+                ],
+                [
+                  214
+                ]
+              ],
+              "top_chunk_ids": [
+                "68dbb0e2ebcd2ba3573e1cb8",
+                "1224944c933bff70cd6438f6",
+                "1793c4222532154787a47a54",
+                "aa8bf492cb4bc520c7cf3b77",
+                "1c18216cae7567af34aee890",
+                "1f6b43d048593b19bdf9e7f9",
+                "73041e649df3f23bf2d2c717",
+                "fc5a19b4ece0df2d6827efe1",
+                "f5e47e1e19b331999bb30dee",
+                "1f3ff3f06ce4228ea4e6c601"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.4,
+                "precision@10": 0.2,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q12",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 142,
+              "top_pages": [
+                [
+                  37,
+                  38
+                ],
+                [
+                  58
+                ],
+                [
+                  57,
+                  58
+                ],
+                [
+                  138
+                ],
+                [
+                  162
+                ],
+                [
+                  150
+                ],
+                [
+                  37
+                ],
+                [
+                  184
+                ],
+                [
+                  37
+                ],
+                [
+                  52
+                ]
+              ],
+              "top_chunk_ids": [
+                "35538bc61956f74b560a850e",
+                "d8bddffb9b38638768d04a0e",
+                "bc8f34d6eb2168764224772c",
+                "ff7cc83155a32580fa8bff1a",
+                "750ebeaed2ca72a3aa228f42",
+                "24d05dd773878281a6952b77",
+                "cfb4d0724d192061cb7fffea",
+                "f4e34b58fd998c3dc107ffb4",
+                "46c364107b361222830164a5",
+                "1c18216cae7567af34aee890"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 0.0,
+                "precision@5": 0.0,
+                "precision@10": 0.0,
+                "page_recall@5": 0.0,
+                "page_recall@10": 0.0
+              }
+            },
+            {
+              "id": "Q13",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  259
+                ],
+                [
+                  263
+                ],
+                [
+                  324
+                ],
+                [
+                  259
+                ],
+                [
+                  261,
+                  262
+                ],
+                [
+                  211
+                ],
+                [
+                  198,
+                  199
+                ],
+                [
+                  262,
+                  263
+                ],
+                [
+                  199
+                ],
+                [
+                  198
+                ]
+              ],
+              "top_chunk_ids": [
+                "ae9ecd48cfe6b43a0ea49b31",
+                "fbf0dd623218fc2b2f83f605",
+                "12bd5df0e7c7b7e0d0b3c914",
+                "0b285a6c39a0333943c90b34",
+                "a8f50cc1451e8d84fa3fb73c",
+                "73041e649df3f23bf2d2c717",
+                "0f52beac4c52c615c80160a3",
+                "36613441df407d029cbd59de",
+                "608513227a8f86c29b4c3f4c",
+                "2fdfe6685bd20a5ff3ec1c33"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.4,
+                "precision@10": 0.2,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q14",
+              "relevant_chunks": 3,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  47,
+                  48
+                ],
+                [
+                  260
+                ],
+                [
+                  260
+                ],
+                [
+                  33,
+                  34
+                ],
+                [
+                  41
+                ],
+                [
+                  35
+                ],
+                [
+                  186
+                ],
+                [
+                  194
+                ],
+                [
+                  61
+                ],
+                [
+                  194
+                ]
+              ],
+              "top_chunk_ids": [
+                "97ac7c4715ef6c098ff978f0",
+                "99a93a55b3500025b70ca525",
+                "394d4cc4798b0092a9c483d5",
+                "a3a71c85aa7d4a892e49350e",
+                "699da85c4a72761ecd272b7a",
+                "27c33a104dac660976e5e28f",
+                "e1eab8815b5ca6acfc6717a4",
+                "6d2c23d8cdc6d647647f1842",
+                "75e67939830199899c969da7",
+                "ad6ca68c999b145518477435"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.6666666666666666,
+                "recall@10": 0.6666666666666666,
+                "precision@5": 0.4,
+                "precision@10": 0.2,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q15",
+              "relevant_chunks": 6,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  37,
+                  38
+                ],
+                [
+                  291
+                ],
+                [
+                  270,
+                  271
+                ],
+                [
+                  269
+                ],
+                [
+                  299
+                ],
+                [
+                  103,
+                  104
+                ],
+                [
+                  283
+                ],
+                [
+                  139
+                ],
+                [
+                  164
+                ],
+                [
+                  270
+                ]
+              ],
+              "top_chunk_ids": [
+                "35538bc61956f74b560a850e",
+                "0b7ab58a56cc46d93c7098f7",
+                "4370206bc5d9e1f9641d02e7",
+                "8b9438c6cbdc6236ee7d6d26",
+                "7f8c07540a95df01e8700aab",
+                "5066481e92ad475f7607cf8d",
+                "72c1562edbcfe11637fb3d72",
+                "2153951ff660da4e88c16f00",
+                "bce36c3c48e408151fad6f44",
+                "e2f9ae6be7fbd8fb2866bda7"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.16666666666666666,
+                "recall@10": 0.16666666666666666,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 0.3333333333333333,
+                "page_recall@10": 0.3333333333333333
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2\\data\\indexes\\b407ce44e74c983a",
+      "build_id": "b407ce44e74c983a",
+      "chunk_size": 384,
+      "overlap": 64,
+      "chunk_count": 376,
+      "dense_seconds_including_model_load": 62.89579759998014,
+      "modes": {
+        "dense": {
+          "metrics": {
+            "recall@5": 0.5344,
+            "recall@10": 0.6978,
+            "precision@5": 0.2133,
+            "precision@10": 0.1533,
+            "page_recall@5": 0.6833,
+            "page_recall@10": 0.8833,
+            "mrr": 0.5402,
+            "hit@1": 0.3333,
+            "avg_retrieve_ms": 0.038
+          },
+          "per_question": [
+            {
+              "id": "Q01",
+              "relevant_chunks": 4,
+              "first_relevant_rank": 4,
+              "top_pages": [
+                [
+                  280
+                ],
+                [
+                  275
+                ],
+                [
+                  220
+                ],
+                [
+                  12
+                ],
+                [
+                  113
+                ],
+                [
+                  334
+                ],
+                [
+                  276,
+                  277
+                ],
+                [
+                  15
+                ],
+                [
+                  13
+                ],
+                [
+                  198
+                ]
+              ],
+              "top_chunk_ids": [
+                "1246ba125513aa05787a8274",
+                "9d9d4a49dea88b23307082b9",
+                "e957dbea5b2de6e65984422a",
+                "111360c194d56ead1354ce95",
+                "9e584ef864c1de0a3893aba4",
+                "71aa9366be7fcbc8c84f26bc",
+                "a32583b8ae2e93b2c4a6002e",
+                "aebfd51eba5803ac662a44b3",
+                "2f54d9394532eec71aa7414a",
+                "4039881278d4339690f0ce67"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.25,
+                "recall@10": 0.5,
+                "precision@5": 0.2,
+                "precision@10": 0.2,
+                "page_recall@5": 0.5,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q02",
+              "relevant_chunks": 3,
+              "first_relevant_rank": 9,
+              "top_pages": [
+                [
+                  40,
+                  41
+                ],
+                [
+                  44
+                ],
+                [
+                  41
+                ],
+                [
+                  194,
+                  195
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  111
+                ],
+                [
+                  60,
+                  61
+                ],
+                [
+                  37,
+                  38
+                ],
+                [
+                  287,
+                  288
+                ]
+              ],
+              "top_chunk_ids": [
+                "368bd2675dd9f498aebc9aed",
+                "279b723ee98a2045c5f824c2",
+                "6d7af8781bbd90692329cc01",
+                "2894ee45dc09bf6ac02fb26e",
+                "efbe97b46d19d962dd50e8cf",
+                "f44023a514b40682cb1fa8d7",
+                "9c46f2a8e41035c5df70a3a9",
+                "9cbc509b2f76467b99f07d9f",
+                "e6b07770eb4f933d66b34774",
+                "f3d94fff37ec6f4a509e9bcd"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 0.3333333333333333,
+                "precision@5": 0.0,
+                "precision@10": 0.1,
+                "page_recall@5": 0.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q03",
+              "relevant_chunks": 3,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  40
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  42
+                ],
+                [
+                  324
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  44
+                ],
+                [
+                  41
+                ],
+                [
+                  324
+                ],
+                [
+                  44
+                ]
+              ],
+              "top_chunk_ids": [
+                "287610918e2a4f3ffc04b534",
+                "efbe97b46d19d962dd50e8cf",
+                "f44023a514b40682cb1fa8d7",
+                "c7ad721b497a01562e5d48eb",
+                "c113fd10c449624d4a279924",
+                "368bd2675dd9f498aebc9aed",
+                "279b723ee98a2045c5f824c2",
+                "6d7af8781bbd90692329cc01",
+                "c5de4b4d4f2e3610384716f3",
+                "b6e1585ff7fdc8aa194e669b"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.3333333333333333,
+                "recall@10": 0.6666666666666666,
+                "precision@5": 0.2,
+                "precision@10": 0.2,
+                "page_recall@5": 0.5,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q04",
+              "relevant_chunks": 3,
+              "first_relevant_rank": 5,
+              "top_pages": [
+                [
+                  42,
+                  43
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  324
+                ],
+                [
+                  43
+                ],
+                [
+                  40
+                ],
+                [
+                  42
+                ],
+                [
+                  44
+                ],
+                [
+                  44
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  37,
+                  38
+                ]
+              ],
+              "top_chunk_ids": [
+                "efbe97b46d19d962dd50e8cf",
+                "f44023a514b40682cb1fa8d7",
+                "c113fd10c449624d4a279924",
+                "c4a23d884179e16b45d6fcf3",
+                "287610918e2a4f3ffc04b534",
+                "c7ad721b497a01562e5d48eb",
+                "b6e1585ff7fdc8aa194e669b",
+                "279b723ee98a2045c5f824c2",
+                "368bd2675dd9f498aebc9aed",
+                "e6b07770eb4f933d66b34774"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                true,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.3333333333333333,
+                "recall@10": 0.6666666666666666,
+                "precision@5": 0.2,
+                "precision@10": 0.2,
+                "page_recall@5": 0.5,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q05",
+              "relevant_chunks": 6,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  300
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  270
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  104,
+                  105
+                ],
+                [
+                  103,
+                  104
+                ],
+                [
+                  210,
+                  211
+                ],
+                [
+                  159,
+                  160
+                ],
+                [
+                  104,
+                  105
+                ],
+                [
+                  104
+                ]
+              ],
+              "top_chunk_ids": [
+                "fc1a0f3db49e210d3368dbac",
+                "f44023a514b40682cb1fa8d7",
+                "9678fb504184060276dd8e63",
+                "368bd2675dd9f498aebc9aed",
+                "1d7e3c7f3a9861f4a8d3a70a",
+                "7c08835b3a43d807da0e8edd",
+                "fc5fc521e407e89d32fba037",
+                "ed081bab2fc342131b3169bd",
+                "610dfc753f3438a3e23afda8",
+                "ba84860ce00059a1729e4ed5"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.16666666666666666,
+                "recall@10": 0.16666666666666666,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 0.75,
+                "page_recall@10": 0.75
+              }
+            },
+            {
+              "id": "Q06",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  45
+                ],
+                [
+                  194
+                ],
+                [
+                  153
+                ],
+                [
+                  194,
+                  195
+                ],
+                [
+                  111
+                ],
+                [
+                  186
+                ],
+                [
+                  41
+                ],
+                [
+                  260
+                ],
+                [
+                  260
+                ],
+                [
+                  15,
+                  16
+                ]
+              ],
+              "top_chunk_ids": [
+                "ca4deb23c0328ae41b31e2e8",
+                "e1888ea840058d2f82f0ff4b",
+                "1aaa88f3df623b2b366d17a5",
+                "2894ee45dc09bf6ac02fb26e",
+                "9c46f2a8e41035c5df70a3a9",
+                "18b8ff5eb377b764e6b308ec",
+                "6d7af8781bbd90692329cc01",
+                "96950d52ed6a612db743fba2",
+                "7d83cf99a904df47b185a0cf",
+                "ab1ff9c03da3e822f7744d1a"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q07",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 5,
+              "top_pages": [
+                [
+                  37,
+                  38
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  53,
+                  54
+                ],
+                [
+                  164
+                ],
+                [
+                  49
+                ],
+                [
+                  53
+                ],
+                [
+                  269
+                ],
+                [
+                  54
+                ],
+                [
+                  160,
+                  161
+                ],
+                [
+                  104,
+                  105
+                ]
+              ],
+              "top_chunk_ids": [
+                "e6b07770eb4f933d66b34774",
+                "368bd2675dd9f498aebc9aed",
+                "18d8d86a2a5241917caf738c",
+                "b2b3b01f2e5f4c6e0f5e4a34",
+                "2149e573fb472153b96e9147",
+                "81aa0c8e7a767dec31041da8",
+                "fe05efe6e5e4c8135f9b067c",
+                "5330d55bffd957127a7f1cd5",
+                "274a1202b103b0650173000b",
+                "1d7e3c7f3a9861f4a8d3a70a"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q08",
+              "relevant_chunks": 3,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  217
+                ],
+                [
+                  214
+                ],
+                [
+                  333
+                ],
+                [
+                  218
+                ],
+                [
+                  217,
+                  218
+                ],
+                [
+                  12,
+                  13
+                ],
+                [
+                  218,
+                  219
+                ],
+                [
+                  324
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  15
+                ]
+              ],
+              "top_chunk_ids": [
+                "d53fc88f5962268244a7108e",
+                "c289db3231342e36cddf1188",
+                "5336682d2c51b25eddf00890",
+                "41d06c2fad4aa24084bbc8fa",
+                "943a587b4470a0c024b74f02",
+                "7ba4bf17191a14afdc28c073",
+                "cce880d4d0f9b0df33bcc866",
+                "c5de4b4d4f2e3610384716f3",
+                "f44023a514b40682cb1fa8d7",
+                "4cce741e361fc0e22f13128e"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.3333333333333333,
+                "recall@10": 0.3333333333333333,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 0.5,
+                "page_recall@10": 0.5
+              }
+            },
+            {
+              "id": "Q09",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 3,
+              "top_pages": [
+                [
+                  36
+                ],
+                [
+                  47
+                ],
+                [
+                  219
+                ],
+                [
+                  200
+                ],
+                [
+                  203
+                ],
+                [
+                  332
+                ],
+                [
+                  219,
+                  220
+                ],
+                [
+                  203
+                ],
+                [
+                  60
+                ],
+                [
+                  38,
+                  39
+                ]
+              ],
+              "top_chunk_ids": [
+                "7f1ef695842d1eb0649d70e9",
+                "6ff1de482aa17d93f2300b3e",
+                "89a0791eabc23d8ef0728548",
+                "d7e5723903319b216145fe6f",
+                "45cca4bb45f5663ff49389df",
+                "8edb00f677e3bafccc40a9ed",
+                "d94650a560541843320de26b",
+                "0f9fc6be8f6fea2b0c43e3b6",
+                "45e6f2afe1894f2c8538d31e",
+                "097c68c49ccb2fa78e7b9fca"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.5,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.2,
+                "page_recall@5": 0.5,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q10",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  332
+                ],
+                [
+                  219,
+                  220
+                ],
+                [
+                  36
+                ],
+                [
+                  52
+                ],
+                [
+                  42
+                ],
+                [
+                  219
+                ],
+                [
+                  37
+                ],
+                [
+                  51,
+                  52
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  203,
+                  204
+                ]
+              ],
+              "top_chunk_ids": [
+                "8edb00f677e3bafccc40a9ed",
+                "d94650a560541843320de26b",
+                "7f1ef695842d1eb0649d70e9",
+                "51355c10973be40fbf178124",
+                "c7ad721b497a01562e5d48eb",
+                "89a0791eabc23d8ef0728548",
+                "f0957d79d48bbd34bb0c2e5b",
+                "67d8d77884be28b3ad1f6610",
+                "f44023a514b40682cb1fa8d7",
+                "47c2dd0e88e52ca121a964fc"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.5,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.2,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q11",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  220
+                ],
+                [
+                  332
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  217
+                ],
+                [
+                  211
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  205,
+                  206
+                ],
+                [
+                  333
+                ],
+                [
+                  214
+                ],
+                [
+                  12,
+                  13
+                ]
+              ],
+              "top_chunk_ids": [
+                "d2b9006d270141c38c71c01b",
+                "1500d09e9b382df40ef7db8c",
+                "f44023a514b40682cb1fa8d7",
+                "d53fc88f5962268244a7108e",
+                "75118e171b0a3f8fe9a152d1",
+                "efbe97b46d19d962dd50e8cf",
+                "fa45d4df3b242da923147142",
+                "5336682d2c51b25eddf00890",
+                "c289db3231342e36cddf1188",
+                "7ba4bf17191a14afdc28c073"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q12",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 118,
+              "top_pages": [
+                [
+                  162
+                ],
+                [
+                  37,
+                  38
+                ],
+                [
+                  52
+                ],
+                [
+                  37,
+                  38
+                ],
+                [
+                  57,
+                  58
+                ],
+                [
+                  37
+                ],
+                [
+                  58
+                ],
+                [
+                  40
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  138
+                ]
+              ],
+              "top_chunk_ids": [
+                "7110be3f15a8878c11b3e26d",
+                "841af55a7841134f708d3d51",
+                "252d84f5eaed9aa17f9e4328",
+                "e6b07770eb4f933d66b34774",
+                "8882474d06ca57bc2d1b6f3d",
+                "f0957d79d48bbd34bb0c2e5b",
+                "3cefa2eec6fa183dfb6b8b5e",
+                "287610918e2a4f3ffc04b534",
+                "368bd2675dd9f498aebc9aed",
+                "04b11bc823649a4016b07453"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 0.0,
+                "precision@5": 0.0,
+                "precision@10": 0.0,
+                "page_recall@5": 0.0,
+                "page_recall@10": 0.0
+              }
+            },
+            {
+              "id": "Q13",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  259
+                ],
+                [
+                  324
+                ],
+                [
+                  262,
+                  263
+                ],
+                [
+                  324
+                ],
+                [
+                  262
+                ],
+                [
+                  211
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  50
+                ],
+                [
+                  257
+                ],
+                [
+                  221
+                ]
+              ],
+              "top_chunk_ids": [
+                "2c3eaaa98601b1679b45c2b7",
+                "c5de4b4d4f2e3610384716f3",
+                "dec57001e338d32b1450b45f",
+                "c113fd10c449624d4a279924",
+                "79e52ae3725dc4da2a4aa552",
+                "75118e171b0a3f8fe9a152d1",
+                "f44023a514b40682cb1fa8d7",
+                "1385b9df20fa0cf02b6b7567",
+                "de5ecb8ce161eeb7ba369abc",
+                "55f1001a3adc5dfe2c3be724"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q14",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  260
+                ],
+                [
+                  260
+                ],
+                [
+                  47,
+                  48
+                ],
+                [
+                  194
+                ],
+                [
+                  41
+                ],
+                [
+                  33,
+                  34
+                ],
+                [
+                  194,
+                  195
+                ],
+                [
+                  60,
+                  61
+                ],
+                [
+                  44
+                ],
+                [
+                  40,
+                  41
+                ]
+              ],
+              "top_chunk_ids": [
+                "96950d52ed6a612db743fba2",
+                "7d83cf99a904df47b185a0cf",
+                "9166dc98f9df82c49213089a",
+                "e1888ea840058d2f82f0ff4b",
+                "6d7af8781bbd90692329cc01",
+                "be4932849fb9434d9120cc9c",
+                "2894ee45dc09bf6ac02fb26e",
+                "9cbc509b2f76467b99f07d9f",
+                "279b723ee98a2045c5f824c2",
+                "368bd2675dd9f498aebc9aed"
+              ],
+              "top_relevance": [
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.4,
+                "precision@10": 0.2,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q15",
+              "relevant_chunks": 5,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  164
+                ],
+                [
+                  291
+                ],
+                [
+                  292,
+                  293
+                ],
+                [
+                  292
+                ],
+                [
+                  139
+                ],
+                [
+                  164
+                ],
+                [
+                  269
+                ],
+                [
+                  292
+                ],
+                [
+                  270,
+                  271
+                ],
+                [
+                  37,
+                  38
+                ]
+              ],
+              "top_chunk_ids": [
+                "3378ff749a25055de65f20d7",
+                "0fe6602d98fc7c5d334f7989",
+                "7710327975a66de09bed51fe",
+                "c715708c8b83e2c53dce1e75",
+                "82da29715919a9504af17dbb",
+                "5267bd54b30cdff6ae03137b",
+                "fe05efe6e5e4c8135f9b067c",
+                "052483a999995ad912ce891c",
+                "346b4659ad4fc921e63485bc",
+                "e6b07770eb4f933d66b34774"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.6,
+                "recall@10": 0.8,
+                "precision@5": 0.6,
+                "precision@10": 0.4,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            }
+          ]
+        },
+        "hybrid": {
+          "metrics": {
+            "recall@5": 0.5178,
+            "recall@10": 0.6644,
+            "precision@5": 0.2,
+            "precision@10": 0.14,
+            "page_recall@5": 0.65,
+            "page_recall@10": 0.8167,
+            "mrr": 0.5283,
+            "hit@1": 0.3333,
+            "avg_retrieve_ms": 0.32
+          },
+          "per_question": [
+            {
+              "id": "Q01",
+              "relevant_chunks": 4,
+              "first_relevant_rank": 14,
+              "top_pages": [
+                [
+                  280
+                ],
+                [
+                  275
+                ],
+                [
+                  220
+                ],
+                [
+                  113
+                ],
+                [
+                  15
+                ],
+                [
+                  113,
+                  114
+                ],
+                [
+                  201
+                ],
+                [
+                  114
+                ],
+                [
+                  200
+                ],
+                [
+                  334
+                ]
+              ],
+              "top_chunk_ids": [
+                "1246ba125513aa05787a8274",
+                "9d9d4a49dea88b23307082b9",
+                "e957dbea5b2de6e65984422a",
+                "9e584ef864c1de0a3893aba4",
+                "aebfd51eba5803ac662a44b3",
+                "28a287673b6e5604402b77fc",
+                "94c41bb9a5805c75f7d617a2",
+                "94c26ce81538e4de0ec2b494",
+                "9627d84a3a5a4e1b3fb63339",
+                "71aa9366be7fcbc8c84f26bc"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 0.0,
+                "precision@5": 0.0,
+                "precision@10": 0.0,
+                "page_recall@5": 0.0,
+                "page_recall@10": 0.0
+              }
+            },
+            {
+              "id": "Q02",
+              "relevant_chunks": 3,
+              "first_relevant_rank": 9,
+              "top_pages": [
+                [
+                  40,
+                  41
+                ],
+                [
+                  44
+                ],
+                [
+                  41
+                ],
+                [
+                  194,
+                  195
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  111
+                ],
+                [
+                  60,
+                  61
+                ],
+                [
+                  37,
+                  38
+                ],
+                [
+                  287,
+                  288
+                ]
+              ],
+              "top_chunk_ids": [
+                "368bd2675dd9f498aebc9aed",
+                "279b723ee98a2045c5f824c2",
+                "6d7af8781bbd90692329cc01",
+                "2894ee45dc09bf6ac02fb26e",
+                "efbe97b46d19d962dd50e8cf",
+                "f44023a514b40682cb1fa8d7",
+                "9c46f2a8e41035c5df70a3a9",
+                "9cbc509b2f76467b99f07d9f",
+                "e6b07770eb4f933d66b34774",
+                "f3d94fff37ec6f4a509e9bcd"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 0.3333333333333333,
+                "precision@5": 0.0,
+                "precision@10": 0.1,
+                "page_recall@5": 0.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q03",
+              "relevant_chunks": 3,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  40
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  42
+                ],
+                [
+                  324
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  44
+                ],
+                [
+                  41
+                ],
+                [
+                  324
+                ],
+                [
+                  44
+                ]
+              ],
+              "top_chunk_ids": [
+                "287610918e2a4f3ffc04b534",
+                "efbe97b46d19d962dd50e8cf",
+                "f44023a514b40682cb1fa8d7",
+                "c7ad721b497a01562e5d48eb",
+                "c113fd10c449624d4a279924",
+                "368bd2675dd9f498aebc9aed",
+                "279b723ee98a2045c5f824c2",
+                "6d7af8781bbd90692329cc01",
+                "c5de4b4d4f2e3610384716f3",
+                "b6e1585ff7fdc8aa194e669b"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.3333333333333333,
+                "recall@10": 0.6666666666666666,
+                "precision@5": 0.2,
+                "precision@10": 0.2,
+                "page_recall@5": 0.5,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q04",
+              "relevant_chunks": 3,
+              "first_relevant_rank": 5,
+              "top_pages": [
+                [
+                  42,
+                  43
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  324
+                ],
+                [
+                  43
+                ],
+                [
+                  40
+                ],
+                [
+                  42
+                ],
+                [
+                  44
+                ],
+                [
+                  44
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  37,
+                  38
+                ]
+              ],
+              "top_chunk_ids": [
+                "efbe97b46d19d962dd50e8cf",
+                "f44023a514b40682cb1fa8d7",
+                "c113fd10c449624d4a279924",
+                "c4a23d884179e16b45d6fcf3",
+                "287610918e2a4f3ffc04b534",
+                "c7ad721b497a01562e5d48eb",
+                "b6e1585ff7fdc8aa194e669b",
+                "279b723ee98a2045c5f824c2",
+                "368bd2675dd9f498aebc9aed",
+                "e6b07770eb4f933d66b34774"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                true,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.3333333333333333,
+                "recall@10": 0.6666666666666666,
+                "precision@5": 0.2,
+                "precision@10": 0.2,
+                "page_recall@5": 0.5,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q05",
+              "relevant_chunks": 6,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  300
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  270
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  104,
+                  105
+                ],
+                [
+                  103,
+                  104
+                ],
+                [
+                  210,
+                  211
+                ],
+                [
+                  159,
+                  160
+                ],
+                [
+                  104,
+                  105
+                ],
+                [
+                  104
+                ]
+              ],
+              "top_chunk_ids": [
+                "fc1a0f3db49e210d3368dbac",
+                "f44023a514b40682cb1fa8d7",
+                "9678fb504184060276dd8e63",
+                "368bd2675dd9f498aebc9aed",
+                "1d7e3c7f3a9861f4a8d3a70a",
+                "7c08835b3a43d807da0e8edd",
+                "fc5fc521e407e89d32fba037",
+                "ed081bab2fc342131b3169bd",
+                "610dfc753f3438a3e23afda8",
+                "ba84860ce00059a1729e4ed5"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.16666666666666666,
+                "recall@10": 0.16666666666666666,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 0.75,
+                "page_recall@10": 0.75
+              }
+            },
+            {
+              "id": "Q06",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  45
+                ],
+                [
+                  194
+                ],
+                [
+                  153
+                ],
+                [
+                  194,
+                  195
+                ],
+                [
+                  111
+                ],
+                [
+                  186
+                ],
+                [
+                  41
+                ],
+                [
+                  260
+                ],
+                [
+                  260
+                ],
+                [
+                  15,
+                  16
+                ]
+              ],
+              "top_chunk_ids": [
+                "ca4deb23c0328ae41b31e2e8",
+                "e1888ea840058d2f82f0ff4b",
+                "1aaa88f3df623b2b366d17a5",
+                "2894ee45dc09bf6ac02fb26e",
+                "9c46f2a8e41035c5df70a3a9",
+                "18b8ff5eb377b764e6b308ec",
+                "6d7af8781bbd90692329cc01",
+                "96950d52ed6a612db743fba2",
+                "7d83cf99a904df47b185a0cf",
+                "ab1ff9c03da3e822f7744d1a"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q07",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 5,
+              "top_pages": [
+                [
+                  37,
+                  38
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  53,
+                  54
+                ],
+                [
+                  164
+                ],
+                [
+                  49
+                ],
+                [
+                  53
+                ],
+                [
+                  269
+                ],
+                [
+                  54
+                ],
+                [
+                  160,
+                  161
+                ],
+                [
+                  104,
+                  105
+                ]
+              ],
+              "top_chunk_ids": [
+                "e6b07770eb4f933d66b34774",
+                "368bd2675dd9f498aebc9aed",
+                "18d8d86a2a5241917caf738c",
+                "b2b3b01f2e5f4c6e0f5e4a34",
+                "2149e573fb472153b96e9147",
+                "81aa0c8e7a767dec31041da8",
+                "fe05efe6e5e4c8135f9b067c",
+                "5330d55bffd957127a7f1cd5",
+                "274a1202b103b0650173000b",
+                "1d7e3c7f3a9861f4a8d3a70a"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q08",
+              "relevant_chunks": 3,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  217
+                ],
+                [
+                  214
+                ],
+                [
+                  333
+                ],
+                [
+                  218
+                ],
+                [
+                  217,
+                  218
+                ],
+                [
+                  12,
+                  13
+                ],
+                [
+                  218,
+                  219
+                ],
+                [
+                  324
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  15
+                ]
+              ],
+              "top_chunk_ids": [
+                "d53fc88f5962268244a7108e",
+                "c289db3231342e36cddf1188",
+                "5336682d2c51b25eddf00890",
+                "41d06c2fad4aa24084bbc8fa",
+                "943a587b4470a0c024b74f02",
+                "7ba4bf17191a14afdc28c073",
+                "cce880d4d0f9b0df33bcc866",
+                "c5de4b4d4f2e3610384716f3",
+                "f44023a514b40682cb1fa8d7",
+                "4cce741e361fc0e22f13128e"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.3333333333333333,
+                "recall@10": 0.3333333333333333,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 0.5,
+                "page_recall@10": 0.5
+              }
+            },
+            {
+              "id": "Q09",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 3,
+              "top_pages": [
+                [
+                  36
+                ],
+                [
+                  47
+                ],
+                [
+                  219
+                ],
+                [
+                  200
+                ],
+                [
+                  203
+                ],
+                [
+                  332
+                ],
+                [
+                  219,
+                  220
+                ],
+                [
+                  203
+                ],
+                [
+                  60
+                ],
+                [
+                  38,
+                  39
+                ]
+              ],
+              "top_chunk_ids": [
+                "7f1ef695842d1eb0649d70e9",
+                "6ff1de482aa17d93f2300b3e",
+                "89a0791eabc23d8ef0728548",
+                "d7e5723903319b216145fe6f",
+                "45cca4bb45f5663ff49389df",
+                "8edb00f677e3bafccc40a9ed",
+                "d94650a560541843320de26b",
+                "0f9fc6be8f6fea2b0c43e3b6",
+                "45e6f2afe1894f2c8538d31e",
+                "097c68c49ccb2fa78e7b9fca"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.5,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.2,
+                "page_recall@5": 0.5,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q10",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  332
+                ],
+                [
+                  219,
+                  220
+                ],
+                [
+                  36
+                ],
+                [
+                  52
+                ],
+                [
+                  42
+                ],
+                [
+                  219
+                ],
+                [
+                  37
+                ],
+                [
+                  51,
+                  52
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  203,
+                  204
+                ]
+              ],
+              "top_chunk_ids": [
+                "8edb00f677e3bafccc40a9ed",
+                "d94650a560541843320de26b",
+                "7f1ef695842d1eb0649d70e9",
+                "51355c10973be40fbf178124",
+                "c7ad721b497a01562e5d48eb",
+                "89a0791eabc23d8ef0728548",
+                "f0957d79d48bbd34bb0c2e5b",
+                "67d8d77884be28b3ad1f6610",
+                "f44023a514b40682cb1fa8d7",
+                "47c2dd0e88e52ca121a964fc"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.5,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.2,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q11",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  220
+                ],
+                [
+                  332
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  217
+                ],
+                [
+                  211
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  205,
+                  206
+                ],
+                [
+                  333
+                ],
+                [
+                  214
+                ],
+                [
+                  12,
+                  13
+                ]
+              ],
+              "top_chunk_ids": [
+                "d2b9006d270141c38c71c01b",
+                "1500d09e9b382df40ef7db8c",
+                "f44023a514b40682cb1fa8d7",
+                "d53fc88f5962268244a7108e",
+                "75118e171b0a3f8fe9a152d1",
+                "efbe97b46d19d962dd50e8cf",
+                "fa45d4df3b242da923147142",
+                "5336682d2c51b25eddf00890",
+                "c289db3231342e36cddf1188",
+                "7ba4bf17191a14afdc28c073"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q12",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 118,
+              "top_pages": [
+                [
+                  162
+                ],
+                [
+                  37,
+                  38
+                ],
+                [
+                  52
+                ],
+                [
+                  37,
+                  38
+                ],
+                [
+                  57,
+                  58
+                ],
+                [
+                  37
+                ],
+                [
+                  58
+                ],
+                [
+                  40
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  138
+                ]
+              ],
+              "top_chunk_ids": [
+                "7110be3f15a8878c11b3e26d",
+                "841af55a7841134f708d3d51",
+                "252d84f5eaed9aa17f9e4328",
+                "e6b07770eb4f933d66b34774",
+                "8882474d06ca57bc2d1b6f3d",
+                "f0957d79d48bbd34bb0c2e5b",
+                "3cefa2eec6fa183dfb6b8b5e",
+                "287610918e2a4f3ffc04b534",
+                "368bd2675dd9f498aebc9aed",
+                "04b11bc823649a4016b07453"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 0.0,
+                "precision@5": 0.0,
+                "precision@10": 0.0,
+                "page_recall@5": 0.0,
+                "page_recall@10": 0.0
+              }
+            },
+            {
+              "id": "Q13",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  259
+                ],
+                [
+                  324
+                ],
+                [
+                  262,
+                  263
+                ],
+                [
+                  324
+                ],
+                [
+                  262
+                ],
+                [
+                  211
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  50
+                ],
+                [
+                  257
+                ],
+                [
+                  221
+                ]
+              ],
+              "top_chunk_ids": [
+                "2c3eaaa98601b1679b45c2b7",
+                "c5de4b4d4f2e3610384716f3",
+                "dec57001e338d32b1450b45f",
+                "c113fd10c449624d4a279924",
+                "79e52ae3725dc4da2a4aa552",
+                "75118e171b0a3f8fe9a152d1",
+                "f44023a514b40682cb1fa8d7",
+                "1385b9df20fa0cf02b6b7567",
+                "de5ecb8ce161eeb7ba369abc",
+                "55f1001a3adc5dfe2c3be724"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q14",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  260
+                ],
+                [
+                  260
+                ],
+                [
+                  47,
+                  48
+                ],
+                [
+                  194
+                ],
+                [
+                  41
+                ],
+                [
+                  33,
+                  34
+                ],
+                [
+                  194,
+                  195
+                ],
+                [
+                  60,
+                  61
+                ],
+                [
+                  44
+                ],
+                [
+                  40,
+                  41
+                ]
+              ],
+              "top_chunk_ids": [
+                "96950d52ed6a612db743fba2",
+                "7d83cf99a904df47b185a0cf",
+                "9166dc98f9df82c49213089a",
+                "e1888ea840058d2f82f0ff4b",
+                "6d7af8781bbd90692329cc01",
+                "be4932849fb9434d9120cc9c",
+                "2894ee45dc09bf6ac02fb26e",
+                "9cbc509b2f76467b99f07d9f",
+                "279b723ee98a2045c5f824c2",
+                "368bd2675dd9f498aebc9aed"
+              ],
+              "top_relevance": [
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.4,
+                "precision@10": 0.2,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q15",
+              "relevant_chunks": 5,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  164
+                ],
+                [
+                  291
+                ],
+                [
+                  292,
+                  293
+                ],
+                [
+                  292
+                ],
+                [
+                  139
+                ],
+                [
+                  164
+                ],
+                [
+                  269
+                ],
+                [
+                  292
+                ],
+                [
+                  270,
+                  271
+                ],
+                [
+                  37,
+                  38
+                ]
+              ],
+              "top_chunk_ids": [
+                "3378ff749a25055de65f20d7",
+                "0fe6602d98fc7c5d334f7989",
+                "7710327975a66de09bed51fe",
+                "c715708c8b83e2c53dce1e75",
+                "82da29715919a9504af17dbb",
+                "5267bd54b30cdff6ae03137b",
+                "fe05efe6e5e4c8135f9b067c",
+                "052483a999995ad912ce891c",
+                "346b4659ad4fc921e63485bc",
+                "e6b07770eb4f933d66b34774"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.6,
+                "recall@10": 0.8,
+                "precision@5": 0.6,
+                "precision@10": 0.4,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2\\data\\indexes\\bd3323d4f46e67af",
+      "build_id": "bd3323d4f46e67af",
+      "chunk_size": 480,
+      "overlap": 80,
+      "chunk_count": 313,
+      "dense_seconds_including_model_load": 62.11934500001371,
+      "modes": {
+        "dense": {
+          "metrics": {
+            "recall@5": 0.5611,
+            "recall@10": 0.6744,
+            "precision@5": 0.1867,
+            "precision@10": 0.12,
+            "page_recall@5": 0.6833,
+            "page_recall@10": 0.7833,
+            "mrr": 0.4909,
+            "hit@1": 0.2667,
+            "avg_retrieve_ms": 0.032
+          },
+          "per_question": [
+            {
+              "id": "Q01",
+              "relevant_chunks": 3,
+              "first_relevant_rank": 4,
+              "top_pages": [
+                [
+                  280
+                ],
+                [
+                  275
+                ],
+                [
+                  220
+                ],
+                [
+                  12
+                ],
+                [
+                  113
+                ],
+                [
+                  334
+                ],
+                [
+                  276,
+                  277
+                ],
+                [
+                  15
+                ],
+                [
+                  198,
+                  199
+                ],
+                [
+                  14
+                ]
+              ],
+              "top_chunk_ids": [
+                "09ab9cb310b7468e7f44259e",
+                "dc8d53a9940423763937d4cd",
+                "69725dbdcb2661e1726fb8e5",
+                "a43c4222c74ecda5a6305783",
+                "6d92ec2a25abce5f472998ba",
+                "32669084163545e7b1d56ca1",
+                "ba1fb6b9e0cb931b3da7db80",
+                "ce4d245244d0c0deff86a773",
+                "3bdc9b2aa3ec07a857799a8c",
+                "de4d5fbc55c57680f4ade565"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.3333333333333333,
+                "recall@10": 0.3333333333333333,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 0.5,
+                "page_recall@10": 0.5
+              }
+            },
+            {
+              "id": "Q02",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 10,
+              "top_pages": [
+                [
+                  42,
+                  43
+                ],
+                [
+                  44
+                ],
+                [
+                  41
+                ],
+                [
+                  43
+                ],
+                [
+                  194,
+                  195
+                ],
+                [
+                  43,
+                  44
+                ],
+                [
+                  111
+                ],
+                [
+                  60,
+                  61
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  38
+                ]
+              ],
+              "top_chunk_ids": [
+                "a9271a65a3ccc7f37dd367b3",
+                "3b49a12cb2e72494d3c5cf3c",
+                "65ea3cd9d0a8909e5e27af28",
+                "ed20be419fd870ee767e3f0e",
+                "432ac48968956106938ef747",
+                "a7f19e02d63e03546d4ebb60",
+                "576dc1b92547ef9b2375e071",
+                "7f4c4f7aa70ccd31d7ecc53e",
+                "532872c97e7e2bbdcaf3d41d",
+                "79826d255abb2bea082daff0"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 0.5,
+                "precision@5": 0.0,
+                "precision@10": 0.1,
+                "page_recall@5": 0.0,
+                "page_recall@10": 0.5
+              }
+            },
+            {
+              "id": "Q03",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  42,
+                  43
+                ],
+                [
+                  40
+                ],
+                [
+                  42
+                ],
+                [
+                  44
+                ],
+                [
+                  41
+                ],
+                [
+                  324
+                ],
+                [
+                  43,
+                  44
+                ],
+                [
+                  38
+                ],
+                [
+                  43
+                ],
+                [
+                  269
+                ]
+              ],
+              "top_chunk_ids": [
+                "a9271a65a3ccc7f37dd367b3",
+                "1bf0dc8e840b150fae5e4244",
+                "ff1413df83b0bd1a41c8a4c1",
+                "3b49a12cb2e72494d3c5cf3c",
+                "65ea3cd9d0a8909e5e27af28",
+                "85a1736eafe34e37f4c2d29c",
+                "a7f19e02d63e03546d4ebb60",
+                "79826d255abb2bea082daff0",
+                "ed20be419fd870ee767e3f0e",
+                "db73b692228be7fbfa83343e"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.5,
+                "recall@10": 0.5,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q04",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 7,
+              "top_pages": [
+                [
+                  42,
+                  43
+                ],
+                [
+                  43
+                ],
+                [
+                  43,
+                  44
+                ],
+                [
+                  324
+                ],
+                [
+                  42
+                ],
+                [
+                  44
+                ],
+                [
+                  40
+                ],
+                [
+                  198,
+                  199
+                ],
+                [
+                  38
+                ],
+                [
+                  41
+                ]
+              ],
+              "top_chunk_ids": [
+                "a9271a65a3ccc7f37dd367b3",
+                "ed20be419fd870ee767e3f0e",
+                "a7f19e02d63e03546d4ebb60",
+                "85a1736eafe34e37f4c2d29c",
+                "ff1413df83b0bd1a41c8a4c1",
+                "3b49a12cb2e72494d3c5cf3c",
+                "1bf0dc8e840b150fae5e4244",
+                "503440a1a8c01b0b73e67d4b",
+                "79826d255abb2bea082daff0",
+                "65ea3cd9d0a8909e5e27af28"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 0.5,
+                "precision@5": 0.0,
+                "precision@10": 0.1,
+                "page_recall@5": 0.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q05",
+              "relevant_chunks": 5,
+              "first_relevant_rank": 9,
+              "top_pages": [
+                [
+                  300
+                ],
+                [
+                  159,
+                  160
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  104,
+                  105
+                ],
+                [
+                  270
+                ],
+                [
+                  104
+                ],
+                [
+                  103,
+                  104
+                ],
+                [
+                  105,
+                  106
+                ],
+                [
+                  41
+                ],
+                [
+                  105
+                ]
+              ],
+              "top_chunk_ids": [
+                "f7a7ff10e073767ffd756c7f",
+                "1c7c7f594ad1855338e57489",
+                "532872c97e7e2bbdcaf3d41d",
+                "7af87ed0063865dab9ec92b8",
+                "07f4b4bc7e4744557b2303ee",
+                "cac8ec9aa8912275fb396709",
+                "1dd6587a0964b2a985464e0f",
+                "a863d7a24dbe4482050a7b99",
+                "65ea3cd9d0a8909e5e27af28",
+                "c260fb20888838bfe7cac43f"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 0.2,
+                "precision@5": 0.0,
+                "precision@10": 0.1,
+                "page_recall@5": 0.25,
+                "page_recall@10": 0.25
+              }
+            },
+            {
+              "id": "Q06",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  194,
+                  195
+                ],
+                [
+                  45
+                ],
+                [
+                  153
+                ],
+                [
+                  111
+                ],
+                [
+                  186,
+                  187
+                ],
+                [
+                  41
+                ],
+                [
+                  43,
+                  44
+                ],
+                [
+                  15,
+                  16
+                ],
+                [
+                  60,
+                  61
+                ],
+                [
+                  187
+                ]
+              ],
+              "top_chunk_ids": [
+                "432ac48968956106938ef747",
+                "a1ee7a7defb16f073c42ef08",
+                "ccdb8a4e11412f7c0ec83e46",
+                "576dc1b92547ef9b2375e071",
+                "6eec86614be5863ea7b8404b",
+                "65ea3cd9d0a8909e5e27af28",
+                "a7f19e02d63e03546d4ebb60",
+                "ccfb2c3500e7cb2f08f380ec",
+                "7f4c4f7aa70ccd31d7ecc53e",
+                "a9b4c6b9452debeba3b9b7c4"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q07",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 4,
+              "top_pages": [
+                [
+                  38
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  164
+                ],
+                [
+                  49
+                ],
+                [
+                  269
+                ],
+                [
+                  43,
+                  44
+                ],
+                [
+                  54
+                ],
+                [
+                  53,
+                  54
+                ],
+                [
+                  163
+                ],
+                [
+                  32
+                ]
+              ],
+              "top_chunk_ids": [
+                "79826d255abb2bea082daff0",
+                "532872c97e7e2bbdcaf3d41d",
+                "1d06f8c8f2cce704da2664ea",
+                "d097a97921a7cfdd7e6fb0ef",
+                "db73b692228be7fbfa83343e",
+                "a7f19e02d63e03546d4ebb60",
+                "d39cefdbe0c5901d86c5fba8",
+                "dd90458db7c23f8d12a848a9",
+                "74a5c4b5727552538123df87",
+                "9558d1c4eb47092aefc83e31"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q08",
+              "relevant_chunks": 3,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  214
+                ],
+                [
+                  333
+                ],
+                [
+                  217,
+                  218
+                ],
+                [
+                  217,
+                  218
+                ],
+                [
+                  218
+                ],
+                [
+                  16
+                ],
+                [
+                  218,
+                  219
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  15,
+                  16
+                ],
+                [
+                  15,
+                  16
+                ]
+              ],
+              "top_chunk_ids": [
+                "fbdcae2bbcfe67b6f7201e8f",
+                "ca4b0985aa18ac8c90d1529b",
+                "57a91dbb05921d6feba95dda",
+                "a1941960d0b190e21bc6f82a",
+                "2aac6117837807092aa806c3",
+                "56733068c4d9fb4d6ae99046",
+                "f01351f4c6077f62673dae33",
+                "a9271a65a3ccc7f37dd367b3",
+                "ccfb2c3500e7cb2f08f380ec",
+                "05c16474da537279703b348a"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.3333333333333333,
+                "recall@10": 0.3333333333333333,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 0.5,
+                "page_recall@10": 0.5
+              }
+            },
+            {
+              "id": "Q09",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  36
+                ],
+                [
+                  219,
+                  220
+                ],
+                [
+                  219
+                ],
+                [
+                  332
+                ],
+                [
+                  47
+                ],
+                [
+                  39
+                ],
+                [
+                  200,
+                  201
+                ],
+                [
+                  203
+                ],
+                [
+                  15,
+                  16
+                ],
+                [
+                  203
+                ]
+              ],
+              "top_chunk_ids": [
+                "73068170abfbc1d08ba0efab",
+                "b94817ff52ca2ffb9f71536c",
+                "c3a43dbab314ab5a0618f75c",
+                "570292753a5bbc0d0a13ecd6",
+                "2b470db5b37cb61146f8a812",
+                "d1874bf863f2a85ad6da4c4b",
+                "34836b6ff008915659d5a12a",
+                "a32608770c812b10be95544c",
+                "05c16474da537279703b348a",
+                "b75d1b96dc5ea08027e00121"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.4,
+                "precision@10": 0.2,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q10",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  332
+                ],
+                [
+                  219,
+                  220
+                ],
+                [
+                  36
+                ],
+                [
+                  37
+                ],
+                [
+                  52
+                ],
+                [
+                  219
+                ],
+                [
+                  42
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  50
+                ],
+                [
+                  31,
+                  32
+                ]
+              ],
+              "top_chunk_ids": [
+                "570292753a5bbc0d0a13ecd6",
+                "b94817ff52ca2ffb9f71536c",
+                "73068170abfbc1d08ba0efab",
+                "2cc33fd15ad53b204890f9b2",
+                "a36ff7b0c16646fa7b7de0aa",
+                "c3a43dbab314ab5a0618f75c",
+                "ff1413df83b0bd1a41c8a4c1",
+                "a9271a65a3ccc7f37dd367b3",
+                "c0b6ba01c5185890aa1bdefe",
+                "4eb334fd69d6ca85a22e4257"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.5,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.2,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q11",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  220
+                ],
+                [
+                  332
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  211
+                ],
+                [
+                  205,
+                  206
+                ],
+                [
+                  205,
+                  206
+                ],
+                [
+                  333
+                ],
+                [
+                  214
+                ],
+                [
+                  52
+                ],
+                [
+                  219
+                ]
+              ],
+              "top_chunk_ids": [
+                "3aed22c2d417cf4cf064239f",
+                "c7154f7d4e770716bad02177",
+                "a9271a65a3ccc7f37dd367b3",
+                "32eb78bc9e90413a065c631f",
+                "96a638bb0b32252d8d4236f7",
+                "3b0afd054256e268506f7efd",
+                "ca4b0985aa18ac8c90d1529b",
+                "fbdcae2bbcfe67b6f7201e8f",
+                "a36ff7b0c16646fa7b7de0aa",
+                "c3a43dbab314ab5a0618f75c"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q12",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 99,
+              "top_pages": [
+                [
+                  37,
+                  38
+                ],
+                [
+                  58
+                ],
+                [
+                  52
+                ],
+                [
+                  37
+                ],
+                [
+                  40
+                ],
+                [
+                  138
+                ],
+                [
+                  55
+                ],
+                [
+                  58
+                ],
+                [
+                  36,
+                  37
+                ],
+                [
+                  30,
+                  31
+                ]
+              ],
+              "top_chunk_ids": [
+                "a7344d280f03977b41a42d2e",
+                "1b94d957d03bb4e6681730b4",
+                "f67fcc4c5b3a1feaad788363",
+                "2cc33fd15ad53b204890f9b2",
+                "1bf0dc8e840b150fae5e4244",
+                "a79ec57a239c55bd4ed1d428",
+                "87c136601ac73a0c95c1882e",
+                "398324622628c5717d56ed30",
+                "9d203148e7c6e88b3b2a063a",
+                "15370d433d545efe4bbdfff5"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 0.0,
+                "precision@5": 0.0,
+                "precision@10": 0.0,
+                "page_recall@5": 0.0,
+                "page_recall@10": 0.0
+              }
+            },
+            {
+              "id": "Q13",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  259
+                ],
+                [
+                  324
+                ],
+                [
+                  211
+                ],
+                [
+                  262,
+                  263
+                ],
+                [
+                  47
+                ],
+                [
+                  257
+                ],
+                [
+                  261,
+                  262
+                ],
+                [
+                  221
+                ],
+                [
+                  198,
+                  199
+                ],
+                [
+                  16
+                ]
+              ],
+              "top_chunk_ids": [
+                "7ca89ba3246b6127a7992838",
+                "85a1736eafe34e37f4c2d29c",
+                "32eb78bc9e90413a065c631f",
+                "f3bda6bc506e61bc62d88d27",
+                "2b470db5b37cb61146f8a812",
+                "c7f2a4b2d1bd8379c9d81220",
+                "19abb32b9bc472ec602a41f6",
+                "4d7d00d7d2343c614c6a4470",
+                "503440a1a8c01b0b73e67d4b",
+                "56733068c4d9fb4d6ae99046"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q14",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  194,
+                  195
+                ],
+                [
+                  260
+                ],
+                [
+                  47,
+                  48
+                ],
+                [
+                  41
+                ],
+                [
+                  186
+                ],
+                [
+                  33,
+                  34
+                ],
+                [
+                  44
+                ],
+                [
+                  60,
+                  61
+                ],
+                [
+                  111
+                ],
+                [
+                  186,
+                  187
+                ]
+              ],
+              "top_chunk_ids": [
+                "432ac48968956106938ef747",
+                "65324f7bbe274b3ad8a0ed33",
+                "f54dcc11c40a78e90e45b48f",
+                "65ea3cd9d0a8909e5e27af28",
+                "ab461aee1946b095ddae1980",
+                "0a0666198faf74e16af9f1f1",
+                "3b49a12cb2e72494d3c5cf3c",
+                "7f4c4f7aa70ccd31d7ecc53e",
+                "576dc1b92547ef9b2375e071",
+                "6eec86614be5863ea7b8404b"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q15",
+              "relevant_chunks": 4,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  292
+                ],
+                [
+                  292,
+                  293
+                ],
+                [
+                  291
+                ],
+                [
+                  270,
+                  271
+                ],
+                [
+                  164
+                ],
+                [
+                  37,
+                  38
+                ],
+                [
+                  58
+                ],
+                [
+                  290,
+                  291
+                ],
+                [
+                  283
+                ],
+                [
+                  299
+                ]
+              ],
+              "top_chunk_ids": [
+                "ed274e96baeac3bd34537dbb",
+                "8b571dd60e456956a4cad9a7",
+                "ef04e5eb8a4a731eb61774d9",
+                "7ea9786beb2694f6ea15f63c",
+                "c54b26062a02ba631cead7a9",
+                "a7344d280f03977b41a42d2e",
+                "1b94d957d03bb4e6681730b4",
+                "7b963a8ac2a4afeedcb88a85",
+                "599ba687d9444ef2c83314d6",
+                "66a93395400ec032be6a5ab8"
+              ],
+              "top_relevance": [
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.75,
+                "recall@10": 0.75,
+                "precision@5": 0.6,
+                "precision@10": 0.3,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            }
+          ]
+        },
+        "hybrid": {
+          "metrics": {
+            "recall@5": 0.5389,
+            "recall@10": 0.6522,
+            "precision@5": 0.1733,
+            "precision@10": 0.1133,
+            "page_recall@5": 0.65,
+            "page_recall@10": 0.75,
+            "mrr": 0.4794,
+            "hit@1": 0.2667,
+            "avg_retrieve_ms": 0.246
+          },
+          "per_question": [
+            {
+              "id": "Q01",
+              "relevant_chunks": 3,
+              "first_relevant_rank": 13,
+              "top_pages": [
+                [
+                  275
+                ],
+                [
+                  280
+                ],
+                [
+                  220
+                ],
+                [
+                  15
+                ],
+                [
+                  113
+                ],
+                [
+                  113,
+                  114
+                ],
+                [
+                  201,
+                  202
+                ],
+                [
+                  198,
+                  199
+                ],
+                [
+                  325
+                ],
+                [
+                  14
+                ]
+              ],
+              "top_chunk_ids": [
+                "dc8d53a9940423763937d4cd",
+                "09ab9cb310b7468e7f44259e",
+                "69725dbdcb2661e1726fb8e5",
+                "ce4d245244d0c0deff86a773",
+                "6d92ec2a25abce5f472998ba",
+                "f17e622c90eb2fea03e860e5",
+                "25508af4ea5d70d8971db046",
+                "3bdc9b2aa3ec07a857799a8c",
+                "d105e80ff3391cf42da3a70c",
+                "de4d5fbc55c57680f4ade565"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 0.0,
+                "precision@5": 0.0,
+                "precision@10": 0.0,
+                "page_recall@5": 0.0,
+                "page_recall@10": 0.0
+              }
+            },
+            {
+              "id": "Q02",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 10,
+              "top_pages": [
+                [
+                  42,
+                  43
+                ],
+                [
+                  44
+                ],
+                [
+                  41
+                ],
+                [
+                  43
+                ],
+                [
+                  194,
+                  195
+                ],
+                [
+                  43,
+                  44
+                ],
+                [
+                  111
+                ],
+                [
+                  60,
+                  61
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  38
+                ]
+              ],
+              "top_chunk_ids": [
+                "a9271a65a3ccc7f37dd367b3",
+                "3b49a12cb2e72494d3c5cf3c",
+                "65ea3cd9d0a8909e5e27af28",
+                "ed20be419fd870ee767e3f0e",
+                "432ac48968956106938ef747",
+                "a7f19e02d63e03546d4ebb60",
+                "576dc1b92547ef9b2375e071",
+                "7f4c4f7aa70ccd31d7ecc53e",
+                "532872c97e7e2bbdcaf3d41d",
+                "79826d255abb2bea082daff0"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 0.5,
+                "precision@5": 0.0,
+                "precision@10": 0.1,
+                "page_recall@5": 0.0,
+                "page_recall@10": 0.5
+              }
+            },
+            {
+              "id": "Q03",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  42,
+                  43
+                ],
+                [
+                  40
+                ],
+                [
+                  42
+                ],
+                [
+                  44
+                ],
+                [
+                  41
+                ],
+                [
+                  324
+                ],
+                [
+                  43,
+                  44
+                ],
+                [
+                  38
+                ],
+                [
+                  43
+                ],
+                [
+                  269
+                ]
+              ],
+              "top_chunk_ids": [
+                "a9271a65a3ccc7f37dd367b3",
+                "1bf0dc8e840b150fae5e4244",
+                "ff1413df83b0bd1a41c8a4c1",
+                "3b49a12cb2e72494d3c5cf3c",
+                "65ea3cd9d0a8909e5e27af28",
+                "85a1736eafe34e37f4c2d29c",
+                "a7f19e02d63e03546d4ebb60",
+                "79826d255abb2bea082daff0",
+                "ed20be419fd870ee767e3f0e",
+                "db73b692228be7fbfa83343e"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.5,
+                "recall@10": 0.5,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q04",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 7,
+              "top_pages": [
+                [
+                  42,
+                  43
+                ],
+                [
+                  43
+                ],
+                [
+                  43,
+                  44
+                ],
+                [
+                  324
+                ],
+                [
+                  42
+                ],
+                [
+                  44
+                ],
+                [
+                  40
+                ],
+                [
+                  198,
+                  199
+                ],
+                [
+                  38
+                ],
+                [
+                  41
+                ]
+              ],
+              "top_chunk_ids": [
+                "a9271a65a3ccc7f37dd367b3",
+                "ed20be419fd870ee767e3f0e",
+                "a7f19e02d63e03546d4ebb60",
+                "85a1736eafe34e37f4c2d29c",
+                "ff1413df83b0bd1a41c8a4c1",
+                "3b49a12cb2e72494d3c5cf3c",
+                "1bf0dc8e840b150fae5e4244",
+                "503440a1a8c01b0b73e67d4b",
+                "79826d255abb2bea082daff0",
+                "65ea3cd9d0a8909e5e27af28"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 0.5,
+                "precision@5": 0.0,
+                "precision@10": 0.1,
+                "page_recall@5": 0.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q05",
+              "relevant_chunks": 5,
+              "first_relevant_rank": 9,
+              "top_pages": [
+                [
+                  300
+                ],
+                [
+                  159,
+                  160
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  104,
+                  105
+                ],
+                [
+                  270
+                ],
+                [
+                  104
+                ],
+                [
+                  103,
+                  104
+                ],
+                [
+                  105,
+                  106
+                ],
+                [
+                  41
+                ],
+                [
+                  105
+                ]
+              ],
+              "top_chunk_ids": [
+                "f7a7ff10e073767ffd756c7f",
+                "1c7c7f594ad1855338e57489",
+                "532872c97e7e2bbdcaf3d41d",
+                "7af87ed0063865dab9ec92b8",
+                "07f4b4bc7e4744557b2303ee",
+                "cac8ec9aa8912275fb396709",
+                "1dd6587a0964b2a985464e0f",
+                "a863d7a24dbe4482050a7b99",
+                "65ea3cd9d0a8909e5e27af28",
+                "c260fb20888838bfe7cac43f"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 0.2,
+                "precision@5": 0.0,
+                "precision@10": 0.1,
+                "page_recall@5": 0.25,
+                "page_recall@10": 0.25
+              }
+            },
+            {
+              "id": "Q06",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  194,
+                  195
+                ],
+                [
+                  45
+                ],
+                [
+                  153
+                ],
+                [
+                  111
+                ],
+                [
+                  186,
+                  187
+                ],
+                [
+                  41
+                ],
+                [
+                  43,
+                  44
+                ],
+                [
+                  15,
+                  16
+                ],
+                [
+                  60,
+                  61
+                ],
+                [
+                  187
+                ]
+              ],
+              "top_chunk_ids": [
+                "432ac48968956106938ef747",
+                "a1ee7a7defb16f073c42ef08",
+                "ccdb8a4e11412f7c0ec83e46",
+                "576dc1b92547ef9b2375e071",
+                "6eec86614be5863ea7b8404b",
+                "65ea3cd9d0a8909e5e27af28",
+                "a7f19e02d63e03546d4ebb60",
+                "ccfb2c3500e7cb2f08f380ec",
+                "7f4c4f7aa70ccd31d7ecc53e",
+                "a9b4c6b9452debeba3b9b7c4"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q07",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 4,
+              "top_pages": [
+                [
+                  38
+                ],
+                [
+                  40,
+                  41
+                ],
+                [
+                  164
+                ],
+                [
+                  49
+                ],
+                [
+                  269
+                ],
+                [
+                  43,
+                  44
+                ],
+                [
+                  54
+                ],
+                [
+                  53,
+                  54
+                ],
+                [
+                  163
+                ],
+                [
+                  32
+                ]
+              ],
+              "top_chunk_ids": [
+                "79826d255abb2bea082daff0",
+                "532872c97e7e2bbdcaf3d41d",
+                "1d06f8c8f2cce704da2664ea",
+                "d097a97921a7cfdd7e6fb0ef",
+                "db73b692228be7fbfa83343e",
+                "a7f19e02d63e03546d4ebb60",
+                "d39cefdbe0c5901d86c5fba8",
+                "dd90458db7c23f8d12a848a9",
+                "74a5c4b5727552538123df87",
+                "9558d1c4eb47092aefc83e31"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q08",
+              "relevant_chunks": 3,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  214
+                ],
+                [
+                  333
+                ],
+                [
+                  217,
+                  218
+                ],
+                [
+                  217,
+                  218
+                ],
+                [
+                  218
+                ],
+                [
+                  16
+                ],
+                [
+                  218,
+                  219
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  15,
+                  16
+                ],
+                [
+                  15,
+                  16
+                ]
+              ],
+              "top_chunk_ids": [
+                "fbdcae2bbcfe67b6f7201e8f",
+                "ca4b0985aa18ac8c90d1529b",
+                "57a91dbb05921d6feba95dda",
+                "a1941960d0b190e21bc6f82a",
+                "2aac6117837807092aa806c3",
+                "56733068c4d9fb4d6ae99046",
+                "f01351f4c6077f62673dae33",
+                "a9271a65a3ccc7f37dd367b3",
+                "ccfb2c3500e7cb2f08f380ec",
+                "05c16474da537279703b348a"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.3333333333333333,
+                "recall@10": 0.3333333333333333,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 0.5,
+                "page_recall@10": 0.5
+              }
+            },
+            {
+              "id": "Q09",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  36
+                ],
+                [
+                  219,
+                  220
+                ],
+                [
+                  219
+                ],
+                [
+                  332
+                ],
+                [
+                  47
+                ],
+                [
+                  39
+                ],
+                [
+                  200,
+                  201
+                ],
+                [
+                  203
+                ],
+                [
+                  15,
+                  16
+                ],
+                [
+                  203
+                ]
+              ],
+              "top_chunk_ids": [
+                "73068170abfbc1d08ba0efab",
+                "b94817ff52ca2ffb9f71536c",
+                "c3a43dbab314ab5a0618f75c",
+                "570292753a5bbc0d0a13ecd6",
+                "2b470db5b37cb61146f8a812",
+                "d1874bf863f2a85ad6da4c4b",
+                "34836b6ff008915659d5a12a",
+                "a32608770c812b10be95544c",
+                "05c16474da537279703b348a",
+                "b75d1b96dc5ea08027e00121"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.4,
+                "precision@10": 0.2,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q10",
+              "relevant_chunks": 2,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  332
+                ],
+                [
+                  219,
+                  220
+                ],
+                [
+                  36
+                ],
+                [
+                  37
+                ],
+                [
+                  52
+                ],
+                [
+                  219
+                ],
+                [
+                  42
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  50
+                ],
+                [
+                  31,
+                  32
+                ]
+              ],
+              "top_chunk_ids": [
+                "570292753a5bbc0d0a13ecd6",
+                "b94817ff52ca2ffb9f71536c",
+                "73068170abfbc1d08ba0efab",
+                "2cc33fd15ad53b204890f9b2",
+                "a36ff7b0c16646fa7b7de0aa",
+                "c3a43dbab314ab5a0618f75c",
+                "ff1413df83b0bd1a41c8a4c1",
+                "a9271a65a3ccc7f37dd367b3",
+                "c0b6ba01c5185890aa1bdefe",
+                "4eb334fd69d6ca85a22e4257"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                true,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.5,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.2,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q11",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  220
+                ],
+                [
+                  332
+                ],
+                [
+                  42,
+                  43
+                ],
+                [
+                  211
+                ],
+                [
+                  205,
+                  206
+                ],
+                [
+                  205,
+                  206
+                ],
+                [
+                  333
+                ],
+                [
+                  214
+                ],
+                [
+                  52
+                ],
+                [
+                  219
+                ]
+              ],
+              "top_chunk_ids": [
+                "3aed22c2d417cf4cf064239f",
+                "c7154f7d4e770716bad02177",
+                "a9271a65a3ccc7f37dd367b3",
+                "32eb78bc9e90413a065c631f",
+                "96a638bb0b32252d8d4236f7",
+                "3b0afd054256e268506f7efd",
+                "ca4b0985aa18ac8c90d1529b",
+                "fbdcae2bbcfe67b6f7201e8f",
+                "a36ff7b0c16646fa7b7de0aa",
+                "c3a43dbab314ab5a0618f75c"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q12",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 99,
+              "top_pages": [
+                [
+                  37,
+                  38
+                ],
+                [
+                  58
+                ],
+                [
+                  52
+                ],
+                [
+                  37
+                ],
+                [
+                  40
+                ],
+                [
+                  138
+                ],
+                [
+                  55
+                ],
+                [
+                  58
+                ],
+                [
+                  36,
+                  37
+                ],
+                [
+                  30,
+                  31
+                ]
+              ],
+              "top_chunk_ids": [
+                "a7344d280f03977b41a42d2e",
+                "1b94d957d03bb4e6681730b4",
+                "f67fcc4c5b3a1feaad788363",
+                "2cc33fd15ad53b204890f9b2",
+                "1bf0dc8e840b150fae5e4244",
+                "a79ec57a239c55bd4ed1d428",
+                "87c136601ac73a0c95c1882e",
+                "398324622628c5717d56ed30",
+                "9d203148e7c6e88b3b2a063a",
+                "15370d433d545efe4bbdfff5"
+              ],
+              "top_relevance": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.0,
+                "recall@10": 0.0,
+                "precision@5": 0.0,
+                "precision@10": 0.0,
+                "page_recall@5": 0.0,
+                "page_recall@10": 0.0
+              }
+            },
+            {
+              "id": "Q13",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  259
+                ],
+                [
+                  324
+                ],
+                [
+                  211
+                ],
+                [
+                  262,
+                  263
+                ],
+                [
+                  47
+                ],
+                [
+                  257
+                ],
+                [
+                  261,
+                  262
+                ],
+                [
+                  221
+                ],
+                [
+                  198,
+                  199
+                ],
+                [
+                  16
+                ]
+              ],
+              "top_chunk_ids": [
+                "7ca89ba3246b6127a7992838",
+                "85a1736eafe34e37f4c2d29c",
+                "32eb78bc9e90413a065c631f",
+                "f3bda6bc506e61bc62d88d27",
+                "2b470db5b37cb61146f8a812",
+                "c7f2a4b2d1bd8379c9d81220",
+                "19abb32b9bc472ec602a41f6",
+                "4d7d00d7d2343c614c6a4470",
+                "503440a1a8c01b0b73e67d4b",
+                "56733068c4d9fb4d6ae99046"
+              ],
+              "top_relevance": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q14",
+              "relevant_chunks": 1,
+              "first_relevant_rank": 2,
+              "top_pages": [
+                [
+                  194,
+                  195
+                ],
+                [
+                  260
+                ],
+                [
+                  47,
+                  48
+                ],
+                [
+                  41
+                ],
+                [
+                  186
+                ],
+                [
+                  33,
+                  34
+                ],
+                [
+                  44
+                ],
+                [
+                  60,
+                  61
+                ],
+                [
+                  111
+                ],
+                [
+                  186,
+                  187
+                ]
+              ],
+              "top_chunk_ids": [
+                "432ac48968956106938ef747",
+                "65324f7bbe274b3ad8a0ed33",
+                "f54dcc11c40a78e90e45b48f",
+                "65ea3cd9d0a8909e5e27af28",
+                "ab461aee1946b095ddae1980",
+                "0a0666198faf74e16af9f1f1",
+                "3b49a12cb2e72494d3c5cf3c",
+                "7f4c4f7aa70ccd31d7ecc53e",
+                "576dc1b92547ef9b2375e071",
+                "6eec86614be5863ea7b8404b"
+              ],
+              "top_relevance": [
+                false,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 1.0,
+                "recall@10": 1.0,
+                "precision@5": 0.2,
+                "precision@10": 0.1,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            },
+            {
+              "id": "Q15",
+              "relevant_chunks": 4,
+              "first_relevant_rank": 1,
+              "top_pages": [
+                [
+                  292
+                ],
+                [
+                  292,
+                  293
+                ],
+                [
+                  291
+                ],
+                [
+                  270,
+                  271
+                ],
+                [
+                  164
+                ],
+                [
+                  37,
+                  38
+                ],
+                [
+                  58
+                ],
+                [
+                  290,
+                  291
+                ],
+                [
+                  283
+                ],
+                [
+                  299
+                ]
+              ],
+              "top_chunk_ids": [
+                "ed274e96baeac3bd34537dbb",
+                "8b571dd60e456956a4cad9a7",
+                "ef04e5eb8a4a731eb61774d9",
+                "7ea9786beb2694f6ea15f63c",
+                "c54b26062a02ba631cead7a9",
+                "a7344d280f03977b41a42d2e",
+                "1b94d957d03bb4e6681730b4",
+                "7b963a8ac2a4afeedcb88a85",
+                "599ba687d9444ef2c83314d6",
+                "66a93395400ec032be6a5ab8"
+              ],
+              "top_relevance": [
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "metrics": {
+                "recall@5": 0.75,
+                "recall@10": 0.75,
+                "precision@5": 0.6,
+                "precision@10": 0.3,
+                "page_recall@5": 1.0,
+                "page_recall@10": 1.0
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "evaluation_version": 2,
+  "python": "3.11.17",
+  "qrels_sha256": "059a2ebc1ecd3127d84e97afd76f41cb12410af72a3ecedcb5071347cc35ddd1",
+  "evaluator_sha256": "07c07d8670ec63748f9995e0b7ea59acac76746fdb16a424363fad79747ed97d",
+  "embedding_config": {
+    "splitter": "section",
+    "chunk_size": 256,
+    "overlap": 32,
+    "include_headings": true,
+    "embedding_model": "intfloat/multilingual-e5-small",
+    "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "max_input_tokens": 512,
+    "passage_prefix": "passage: ",
+    "query_prefix": "query: ",
+    "vectorization": "hybrid",
+    "batch_size": 8,
+    "threads": 4,
+    "bm25_k1": 1.5,
+    "bm25_b": 0.75,
+    "rrf_k": 60
+  },
+  "timing_note": "Per-query vector dot product, sorting and optional BM25/RRF; excludes embedding, I/O and result formatting",
+  "limitations": "Section-level qrels are incomplete; page coverage is a proxy, affected by chunk size. No held-out test set."
+}

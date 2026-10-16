@@ -1,0 +1,320 @@
+{
+  "source_sha256": "5b9d033c7b9dd604220f439cddc8a53ad08e3e9c43c83f7342d7e61ef32a1baa",
+  "config": {
+    "schema_version": 1,
+    "profile": "apollo11_text_first_v1",
+    "description": "Narrative pages selected by layout. Other pages remain in the export but are excluded from retrieval until reviewed. No new OCR or LLM rewriting.",
+    "prose_page_ranges": [
+      [
+        12,
+        16
+      ],
+      [
+        30,
+        61
+      ],
+      [
+        103,
+        106
+      ],
+      [
+        109,
+        115
+      ],
+      [
+        130,
+        131
+      ],
+      [
+        133,
+        139
+      ],
+      [
+        148,
+        150
+      ],
+      [
+        152,
+        153
+      ],
+      [
+        158,
+        164
+      ],
+      [
+        176,
+        176
+      ],
+      [
+        179,
+        180
+      ],
+      [
+        184,
+        184
+      ],
+      [
+        186,
+        187
+      ],
+      [
+        194,
+        223
+      ],
+      [
+        254,
+        263
+      ],
+      [
+        269,
+        272
+      ],
+      [
+        275,
+        277
+      ],
+      [
+        279,
+        301
+      ],
+      [
+        324,
+        334
+      ],
+      [
+        341,
+        341
+      ],
+      [
+        346,
+        346
+      ],
+      [
+        349,
+        349
+      ]
+    ],
+    "review_preview_pages": [
+      12,
+      42,
+      63,
+      212,
+      219,
+      259,
+      291
+    ],
+    "line_y_tolerance": 3.0,
+    "paragraph_gap": 6.0,
+    "chapters": [
+      [
+        12,
+        "1",
+        "SUMMARY"
+      ],
+      [
+        14,
+        "2",
+        "INTRODUCTION"
+      ],
+      [
+        15,
+        "3",
+        "MISSION DESCRIPTION"
+      ],
+      [
+        30,
+        "4",
+        "PILOTS' REPORT"
+      ],
+      [
+        50,
+        "5",
+        "LUNAR DESCENT AND ASCENT"
+      ],
+      [
+        103,
+        "6",
+        "COMMUNICATIONS"
+      ],
+      [
+        109,
+        "7",
+        "TRAJECTORY"
+      ],
+      [
+        130,
+        "8",
+        "COMMAND AND SERVICE MODULE PERFORMANCE"
+      ],
+      [
+        158,
+        "9",
+        "LUNAR MODULE PERFORMANCE"
+      ],
+      [
+        194,
+        "10",
+        "EXTRAVEHICULAR MOBILITY UNIT PERFORMANCE"
+      ],
+      [
+        198,
+        "11",
+        "THE LUNAR SURFACE"
+      ],
+      [
+        254,
+        "12",
+        "BIOMEDICAL EVALUATION"
+      ],
+      [
+        269,
+        "13",
+        "MISSION SUPPORT PERFORMANCE"
+      ],
+      [
+        275,
+        "14",
+        "ASSESSMENT OF MISSION OBJECTIVES"
+      ],
+      [
+        279,
+        "15",
+        "LAUNCH VEHICLE SUMMARY"
+      ],
+      [
+        280,
+        "16",
+        "ANOMALY SUMMARY"
+      ],
+      [
+        324,
+        "17",
+        "CONCLUSIONS"
+      ],
+      [
+        325,
+        "A",
+        "VEHICLE DESCRIPTIONS"
+      ],
+      [
+        341,
+        "B",
+        "SPACECRAFT HISTORIES"
+      ],
+      [
+        346,
+        "C",
+        "POSTFLIGHT TESTING"
+      ],
+      [
+        349,
+        "D",
+        "DATA AVAILABILITY"
+      ],
+      [
+        355,
+        "E",
+        "GLOSSARY"
+      ],
+      [
+        357,
+        "REFERENCES",
+        "REFERENCES"
+      ],
+      [
+        359,
+        "BACK",
+        "BACK COVER"
+      ]
+    ],
+    "printed_page_overrides": {
+      "36": "4-7",
+      "38": "4-9",
+      "50": "5-1",
+      "63": "5-14",
+      "259": "12-6"
+    }
+  },
+  "tables": {
+    "63": {
+      "method": "manual_transcription_visually_checked_against_source_page",
+      "source_sha256_prefix": "5b9d033c7b9d",
+      "reviewed_date": "2026-10-08",
+      "tables": [
+        {
+          "title": "TABLE 5-II. MANEUVER RESIDUALS - DESCENT ORBIT INSERTION",
+          "headers": [
+            "Axis",
+            "Velocity residual before trimming (ft/sec)",
+            "Velocity residual after trimming (ft/sec)"
+          ],
+          "rows": [
+            [
+              "X",
+              "-0.1",
+              "0.0"
+            ],
+            [
+              "Y",
+              "-0.4",
+              "-0.4"
+            ],
+            [
+              "Z",
+              "-0.1",
+              "0.0"
+            ]
+          ],
+          "note": "Merged header Velocity residual, ft/sec expanded into each column."
+        },
+        {
+          "title": "TABLE 5-III. POWERED DESCENT INITIATION STATE VECTORS",
+          "headers": [
+            "Parameter",
+            "Operational trajectory",
+            "Best estimate trajectory",
+            "Primary guidance computer"
+          ],
+          "rows": [
+            [
+              "Latitude (deg)",
+              "0.9614",
+              "1.037",
+              "1.17"
+            ],
+            [
+              "Longitude (deg)",
+              "39.607",
+              "39.371",
+              "39.48"
+            ],
+            [
+              "Altitude (ft)",
+              "50 000",
+              "49 376",
+              "49 955"
+            ]
+          ],
+          "note": "Units preserved; no conversions or numerical inference."
+        }
+      ]
+    }
+  },
+  "source_metadata": {
+    "id": "apollo11_mission_report_1969_nasa359",
+    "title": "Apollo 11 Mission Report",
+    "report_number": "MSC-00171",
+    "publication_month": "1969-11",
+    "retrieved_date": "2026-10-08",
+    "language": "en",
+    "url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf",
+    "catalog_url": "https://ntrs.nasa.gov/citations/19700008096",
+    "path": "data/raw/apollo11_mission_report.pdf",
+    "pdf_pages": 359,
+    "sha256": "5b9d033c7b9dd604220f439cddc8a53ad08e3e9c43c83f7342d7e61ef32a1baa"
+  },
+  "parser_version": "2.0.0",
+  "script_sha256": "7e224e99184084f91d4badfef76d8d59fd1a2f0ce37c6f78b76166ffad395faf",
+  "pymupdf": "1.26.6",
+  "render_review": true
+}

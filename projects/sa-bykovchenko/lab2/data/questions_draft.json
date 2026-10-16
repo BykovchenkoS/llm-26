@@ -1,0 +1,184 @@
+[
+  {
+    "id": "Q01",
+    "question_ru": "Какова была основная цель Apollo 11 и как распределялись роли между членами экипажа?",
+    "task_type": "факты",
+    "source_id": "apollo11_mission_report_1969_nasa359",
+    "section": "1.0",
+    "verified_seed_pdf_pages": [
+      12
+    ],
+    "expected_answer_ru": "Высадить людей на Луну и безопасно вернуть на Землю. Армстронг — командир, Коллинз — пилот командного модуля, Олдрин — пилот лунного модуля.",
+    "annotation_status": "seed_evidence_checked_full_relevance_review_pending"
+  },
+  {
+    "id": "Q02",
+    "question_ru": "Почему при посадке экипаж отказался от первоначальной площадки и перешёл к ручному управлению?",
+    "task_type": "причины",
+    "source_id": "apollo11_mission_report_1969_nasa359",
+    "section": "4.10.3",
+    "verified_seed_pdf_pages": [
+      38
+    ],
+    "expected_answer_ru": "Автоматическое снижение вело к полю валунов вокруг крупного кратера с острым краем. Экипаж увеличил дальность и выбрал более ровную площадку.",
+    "annotation_status": "seed_evidence_checked_full_relevance_review_pending"
+  },
+  {
+    "id": "Q03",
+    "question_ru": "Почему выход на поверхность решили провести до первого запланированного отдыха?",
+    "task_type": "причины",
+    "source_id": "apollo11_mission_report_1969_nasa359",
+    "section": "4.12.2",
+    "verified_seed_pdf_pages": [
+      40
+    ],
+    "expected_answer_ru": "После посадки не возникло ожидаемых возможных трудностей, экипаж не был чрезмерно утомлён и хорошо приспособился к пониженной гравитации.",
+    "annotation_status": "seed_evidence_checked_full_relevance_review_pending"
+  },
+  {
+    "id": "Q04",
+    "question_ru": "Почему подготовка к выходу на поверхность заняла больше времени, чем предполагали тренировки?",
+    "task_type": "объяснение",
+    "source_id": "apollo11_mission_report_1969_nasa359",
+    "section": "4.12.2",
+    "verified_seed_pdf_pages": [
+      40
+    ],
+    "expected_answer_ru": "В реальной кабине мешали дополнительные предметы; требовались осторожная подготовка и решения по неучтённым мелочам. Соединение электрического разъёма также вызвало задержку.",
+    "annotation_status": "seed_evidence_checked_full_relevance_review_pending"
+  },
+  {
+    "id": "Q05",
+    "question_ru": "Как лунная пыль мешала переносу оборудования и использованию телевизионного кабеля?",
+    "task_type": "несколько фрагментов",
+    "source_id": "apollo11_mission_report_1969_nasa359",
+    "section": "4.12.3–4.12.4",
+    "verified_seed_pdf_pages": [
+      41,
+      42
+    ],
+    "expected_answer_ru": "С загрязнённых ремней пыль падала на астронавта и в кабину, транспортёр требовал усилий. Покрытый пылью телевизионный кабель стал хуже виден и путался под ногами.",
+    "annotation_status": "seed_evidence_checked_full_relevance_review_pending"
+  },
+  {
+    "id": "Q06",
+    "question_ru": "Какие проблемы мешали экипажу выспаться в лунном модуле?",
+    "task_type": "суммаризация",
+    "source_id": "apollo11_mission_report_1969_nasa359",
+    "section": "4.12.6",
+    "verified_seed_pdf_pages": [
+      45
+    ],
+    "expected_answer_ru": "Мешали холод, шум насосов и освещение из окон, приборов и телескопа. Олдрин оценил прерывистый сон примерно в два часа, Армстронг не спал.",
+    "annotation_status": "seed_evidence_checked_full_relevance_review_pending"
+  },
+  {
+    "id": "Q07",
+    "question_ru": "Почему изменили район приводнения и как это повлияло на программу входа в атмосферу?",
+    "task_type": "причины и следствия",
+    "source_id": "apollo11_mission_report_1969_nasa359",
+    "section": "4.19",
+    "verified_seed_pdf_pages": [
+      49
+    ],
+    "expected_answer_ru": "Из-за гроз перенесли точку с дальности 1285 до 1500 миль от границы входа. Потребовалась дополнительная программа P65 для траектории с увеличенной дальностью.",
+    "annotation_status": "seed_evidence_checked_full_relevance_review_pending"
+  },
+  {
+    "id": "Q08",
+    "question_ru": "Как работал пассивный сейсмический эксперимент в первые две недели, несмотря на температуру?",
+    "task_type": "результаты эксперимента",
+    "source_id": "apollo11_mission_report_1969_nasa359",
+    "section": "11.4",
+    "verified_seed_pdf_pages": [
+      214
+    ],
+    "expected_answer_ru": "Эксперимент выполнил требования, существенных недостатков приборов не обнаружили; максимальная температура превысила расчётную до 50 градусов Фаренгейта. Все четыре сейсмометра работали правильно.",
+    "annotation_status": "seed_evidence_checked_full_relevance_review_pending"
+  },
+  {
+    "id": "Q09",
+    "question_ru": "Где относительно лунного модуля установили лазерный отражатель?",
+    "task_type": "извлечение",
+    "source_id": "apollo11_mission_report_1969_nasa359",
+    "section": "11.5",
+    "verified_seed_pdf_pages": [
+      219
+    ],
+    "expected_answer_ru": "Примерно в 14 метрах к юго-юго-западу, на относительно ровном участке.",
+    "annotation_status": "seed_evidence_checked_full_relevance_review_pending"
+  },
+  {
+    "id": "Q10",
+    "question_ru": "Для каких научных целей предназначалось лазерное измерение расстояния и какая точность требовалась?",
+    "task_type": "цель и параметр",
+    "source_id": "apollo11_mission_report_1969_nasa359",
+    "section": "11.5",
+    "verified_seed_pdf_pages": [
+      220
+    ],
+    "expected_answer_ru": "Изучение гравитации, относительности, физики Земли и Луны; требовались многолетние измерения изменений расстояния с неопределённостью около 15 см.",
+    "annotation_status": "seed_evidence_checked_full_relevance_review_pending"
+  },
+  {
+    "id": "Q11",
+    "question_ru": "Как собирали частицы солнечного ветра и сколько времени экспонировали фольгу?",
+    "task_type": "процедура",
+    "source_id": "apollo11_mission_report_1969_nasa359",
+    "section": "11.6",
+    "verified_seed_pdf_pages": [
+      220
+    ],
+    "expected_answer_ru": "Частицы захватывались специально подготовленной алюминиевой фольгой; экспозиция составила 77 минут, после чего фольгу вернули для анализа.",
+    "annotation_status": "seed_evidence_checked_full_relevance_review_pending"
+  },
+  {
+    "id": "Q12",
+    "question_ru": "Как оценённые энергозатраты астронавтов во время выхода соотносились с предполётными оценками?",
+    "task_type": "сравнение",
+    "source_id": "apollo11_mission_report_1969_nasa359",
+    "section": "12.3",
+    "verified_seed_pdf_pages": [
+      258
+    ],
+    "expected_answer_ru": "Оценённые средние значения: 900 Btu/ч у командира и 1200 у пилота лунного модуля, ниже предполётных 1350 и 1275 Btu/ч соответственно.",
+    "annotation_status": "seed_evidence_checked_full_relevance_review_pending"
+  },
+  {
+    "id": "Q13",
+    "question_ru": "Какие две задачи решала программа обращения с лунными образцами и зачем предусматривался карантин?",
+    "task_type": "суммаризация",
+    "source_id": "apollo11_mission_report_1969_nasa359",
+    "section": "12.5",
+    "verified_seed_pdf_pages": [
+      259
+    ],
+    "expected_answer_ru": "Сохранить образцы близкими к исходному состоянию и защитить земную биосферу от возможных вредных лунных веществ. Планировался 21-дневный карантин экипажа для контроля потенциальных инфекционных рисков.",
+    "annotation_status": "seed_evidence_checked_full_relevance_review_pending"
+  },
+  {
+    "id": "Q14",
+    "question_ru": "Как очищали кабины от лунной пыли перед переходом в командный модуль и на обратном пути?",
+    "task_type": "процедура",
+    "source_id": "apollo11_mission_report_1969_nasa359",
+    "section": "12.5.1",
+    "verified_seed_pdf_pages": [
+      260
+    ],
+    "expected_answer_ru": "Применяли щётку-пылесос, поток воздуха и фильтры; оборудование упаковывали в мешки. Перед переходом создавали поток газа из командного модуля в лунный. Командный модуль очищали каждые 24 часа щёткой-пылесосом и полотенцами.",
+    "annotation_status": "seed_evidence_checked_full_relevance_review_pending"
+  },
+  {
+    "id": "Q15",
+    "question_ru": "Чем были вызваны сигналы перегрузки компьютера во время снижения и нарушили ли они наведение?",
+    "task_type": "техническое объяснение",
+    "source_id": "apollo11_mission_report_1969_nasa359",
+    "section": "16.2.5",
+    "verified_seed_pdf_pages": [
+      291,
+      292
+    ],
+    "expected_answer_ru": "Неожиданные счётные прерывания от интерфейса радара сближения занимали процессорное время, вызывая повторное планирование задач и Executive overflow. Согласно отчёту, выполнение функций наведения и управления не пострадало.",
+    "annotation_status": "seed_evidence_checked_full_relevance_review_pending"
+  }
+]

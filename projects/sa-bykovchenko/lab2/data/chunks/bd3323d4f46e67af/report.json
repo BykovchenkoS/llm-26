@@ -1,0 +1,19 @@
+{
+  "status": "completed",
+  "stage": "chunks",
+  "build_id": "bd3323d4f46e67af",
+  "chunk_count": 313,
+  "source_pages": 160,
+  "token_count_min": 34,
+  "token_count_max": 476,
+  "token_count_mean": 306.6421725239617,
+  "short_chunks_below_100": 20,
+  "chunking_seconds": 0.8951729999971576,
+  "full_source_coverage_checked": true,
+  "source_spans_checked": true,
+  "token_count_includes": "prefix, optional headings, body and special tokens",
+  "artifact_sha256": {
+    "chunks.jsonl": "ae121ed3ed8ca955229d8c51587086a08260baa25c15d7069c9f6c534461fdbb",
+    "build_config.json": "a3c720d1314b3ed87df1ccb69510cd5b37ff8ea5b25ce1f55e633a90767c4d10"
+  }
+}

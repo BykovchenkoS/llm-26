@@ -1,0 +1,17 @@
+{
+  "splitter": "section",
+  "chunk_size": 384,
+  "overlap": 64,
+  "include_headings": true,
+  "embedding_model": "intfloat/multilingual-e5-small",
+  "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "max_input_tokens": 512,
+  "passage_prefix": "passage: ",
+  "query_prefix": "query: ",
+  "vectorization": "dense",
+  "batch_size": 8,
+  "threads": 4,
+  "bm25_k1": 1.5,
+  "bm25_b": 0.75,
+  "rrf_k": 60
+}
