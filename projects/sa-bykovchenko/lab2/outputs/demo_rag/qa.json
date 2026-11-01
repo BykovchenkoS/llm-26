@@ -1,0 +1,156 @@
+{
+  "status": "completed",
+  "qrels_sha256": null,
+  "source_type": "store",
+  "index_build_id": null,
+  "store_id": "d7480cdd57ba6157",
+  "retrieval": {
+    "mode": "hybrid",
+    "backend": "hnsw",
+    "k": 6,
+    "candidate_k": 50,
+    "ef_search": null
+  },
+  "generation": {
+    "models": [
+      "apollo-gemma:16k"
+    ],
+    "temperature": 0.0,
+    "max_tokens": 300,
+    "max_context_bytes": 24000,
+    "base_url": "http://localhost:11434/v1/chat/completions",
+    "system_prompt": "Ты — помощник по техническому отчёту NASA «Apollo 11 Mission Report» (MSC-00171, ноябрь 1969). Отвечай ТОЛЬКО на основе приведённых фрагментов, на русском языке, без выдумок и внешних знаний.\nФормат ответа — строго JSON-объект со схемой:\n{\"status\": \"answer\" | \"refusal\", \"answer\": \"строка\", \"citation_ids\": [целые числа], \"missing_information\": \"строка или null\"}\nПравила:\n1. status=\"answer\" — если фрагменты содержат достаточные основания; иначе status=\"refusal\", answer=\"В документе нет оснований для ответа\".\n2. В answer ссылайся на фрагменты их номерами в квадратных скобках, например [1] или [2][4]. citation_ids — те же номера списком.\n3. Не используй номера, которых нет среди фрагментов.\n4. missing_information заполняй, если ответ неполон (чего не хватает).\nВыводи ТОЛЬКО JSON без пояснений вокруг.",
+    "answer_schema": "RagAnswer (Pydantic): status/answer/citation_ids/missing_information"
+  },
+  "models": {
+    "apollo-gemma:16k": {
+      "answers": [
+        {
+          "question": "Какова была основная цель миссии Apollo 11?",
+          "status": "answer",
+          "answer": "Основная цель миссии Apollo 11, как указано в разделе 1.0 [5], заключалась в выполнении пилотируемой посадки на Луну и безопасном возвращении на Землю. Также были определены 11 вторичных целей, включая селенологический осмотр и выборку образцов [5].",
+          "citation_ids": [
+            5
+          ],
+          "missing_information": null,
+          "refusal": false,
+          "parse_error": null,
+          "invalid_citation_ids": [],
+          "citation_text_ids": [
+            5
+          ],
+          "invalid_citation_text_ids": [],
+          "citation_mismatched_ids": [],
+          "citation_consistent": true,
+          "cited_pages": [
+            275
+          ],
+          "support_hint": 0.1154,
+          "support_hint_note": "лексическая эвристика, НЕ фактологическая проверка",
+          "context": "[1] (PDF стр. 15; раздел 3.0): The Apollo 11 mission accomplished the basic mission of the Apollo\nProgram; that is, to land two men on the lunar surface and return them  \nsafely to earth. As a part of this first lunar landing, three basic\nexperiment packages were deployed, lunar material samples were collected,\nand surface photographs were taken. Two of the experiments were a part\nof the early Apollo scientific experiment package which was developed for\ndeployment on the lunar surface. The sequence of events and the flight\nplan of the Apollo ll mission are shown in table 3-I and figure 3-l, respectively.  \nThe Apollo 11 space vehicle was launched on July 16, 1969, at\n8:32 a.m. e.s.t., as planned. The spacecraft and S-IVB were inserted\ninto a 100.7-by 99.2-mile earth parking orbit. After a 2-1/2-hour\ncheckout period, the spacecraft/S-IVB combination was injected into the\n\n[2] (PDF стр. 3; раздел FRONT): MSC-00171  \nAPOLLO 11 MISSION REPORT  \nPREPARED BY  \nMission Evaluation Team  \nAPPROVED BY  \nGeorge M. Low �\nL.c.r-Manager, Apollo Spacecraft Program  \nNATIONAL AERONAUTICS AND SPACE ADMINISTRATION  \nMANNED SPACECRAFT CENTER  \nHOUSTON, TEXAS  \nNovember 1969\n\n[3] (PDF стр. 13; раздел 1.0): 3 hours after landing.  \nWith the completion of Apollo 11, the national objective of landing\nmen on the moon and returning them safely to earth before the end of the  \ndecade had been accomplished.\n\n[4] (PDF стр. 280; раздел 16.0): This section contains a discussion of the significant problems or\ndiscrepancies noted during the Apollo 11 mission.\n\n[5] (PDF стр. 275; раздел 14.0): The single primary mission objective for the Apollo 11 mission, as\ndefined in reference 12, was to perform a manned lunar landing and return safely to earth. In addition to the single primary objective,\n11 secondary objectives were delineated from the following two general\ncategories :  \nPerform selenological inspection and sampling '  \nb. Obtain data to assess the capability and limitations of a man\nand his equipment in the lunar environment.  \nThe 11 secondary objectives are listed in table 14-I and are described\nin detail in reference 13.  \nThe following experiments were assigned to the Apollo 11 mission:  \na. Passive seismic experiment (S-031)  \nb. Lunar field geology (S-059)  \nc. Laser ranging retro-reflector (S-078)  \nSolar wind composition (S-080)  \ne. Cosmic ray detection (S-151)  \nThe single primary objective was met. All secondary objectives and\nexperiments were fully satisfied except for the following:  \na. Objective G: Location of landed lunar module.\n\n[6] (PDF стр. 220; раздел 11.7): A preliminary analysis of the Apollo ll photographic activities is\ndiscussed in the following paragraphs. During the mission, all nine of\nthe 70-mm and all 13 of the 16-mm film magazines carried onboard the  \nspacecraft were exposed. Approximately 90 percent of the photographic\nobjectives were accomplished, including about 85 percent of the requested\nlunar photography and about 46 percent of the targets of opportunity.",
+          "context_bytes": 3078,
+          "dropped_fragments": [],
+          "sources": [
+            {
+              "citation_id": 1,
+              "chunk_id": "6b5277245b081c8b6877c21b",
+              "pdf_page": 15,
+              "printed_page": null,
+              "section_id": "3.0",
+              "score": 0.031498,
+              "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=15",
+              "snippet": "The Apollo 11 mission accomplished the basic mission of the Apollo Program; that is, to land two men on the lunar surface and return them safely to earth. As a part of this first lunar landing, three basic experiment packages were deployed, lunar material samples were collected, and surface photographs were taken. Two of the experiments were a part of the early Apollo scientific experiment package which was developed for deployment on the lunar surface. The sequence of events and the flight plan of the Apollo ll mission are shown in table 3-I and figure 3-l, respectively. The Apollo 11 space v"
+            },
+            {
+              "citation_id": 2,
+              "chunk_id": "5a25af840c9ace17680b2baa",
+              "pdf_page": 3,
+              "printed_page": null,
+              "section_id": "FRONT",
+              "score": 0.030769,
+              "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=3",
+              "snippet": "MSC-00171 APOLLO 11 MISSION REPORT PREPARED BY Mission Evaluation Team APPROVED BY George M. Low � L.c.r-Manager, Apollo Spacecraft Program NATIONAL AERONAUTICS AND SPACE ADMINISTRATION MANNED SPACECRAFT CENTER HOUSTON, TEXAS November 1969"
+            },
+            {
+              "citation_id": 3,
+              "chunk_id": "49f6bff19f44305b430693b9",
+              "pdf_page": 13,
+              "printed_page": "1-2",
+              "section_id": "1.0",
+              "score": 0.029644,
+              "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=13",
+              "snippet": "3 hours after landing. With the completion of Apollo 11, the national objective of landing men on the moon and returning them safely to earth before the end of the decade had been accomplished."
+            },
+            {
+              "citation_id": 4,
+              "chunk_id": "2e32f9e39c2a0ff2ddfb827e",
+              "pdf_page": 280,
+              "printed_page": null,
+              "section_id": "16.0",
+              "score": 0.029631,
+              "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=280",
+              "snippet": "This section contains a discussion of the significant problems or discrepancies noted during the Apollo 11 mission."
+            },
+            {
+              "citation_id": 5,
+              "chunk_id": "957efc9dc6f76adf3812027c",
+              "pdf_page": 275,
+              "printed_page": null,
+              "section_id": "14.0",
+              "score": 0.029551,
+              "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=275",
+              "snippet": "The single primary mission objective for the Apollo 11 mission, as defined in reference 12, was to perform a manned lunar landing and return safely to earth. In addition to the single primary objective, 11 secondary objectives were delineated from the following two general categories : Perform selenological inspection and sampling ' b. Obtain data to assess the capability and limitations of a man and his equipment in the lunar environment. The 11 secondary objectives are listed in table 14-I and are described in detail in reference 13. The following experiments were assigned to the Apollo 11 m"
+            },
+            {
+              "citation_id": 6,
+              "chunk_id": "97622832d325ae635f168de6",
+              "pdf_page": 220,
+              "printed_page": "11-23",
+              "section_id": "11.7",
+              "score": 0.02748,
+              "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=220",
+              "snippet": "A preliminary analysis of the Apollo ll photographic activities is discussed in the following paragraphs. During the mission, all nine of the 70-mm and all 13 of the 16-mm film magazines carried onboard the spacecraft were exposed. Approximately 90 percent of the photographic objectives were accomplished, including about 85 percent of the requested lunar photography and about 46 percent of the targets of opportunity."
+            }
+          ],
+          "timings": {
+            "query_embedding_seconds": 0.0312,
+            "retrieval_seconds": 0.0026,
+            "llm_seconds": 42.79,
+            "hnsw_search_seconds": 0.00015900004655122757,
+            "effective_ef_search": 64,
+            "fusion_seconds": 0.0025459000607952476
+          },
+          "llm_usage": {
+            "prompt_tokens": 1143,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            },
+            "completion_tokens": 98,
+            "total_tokens": 1241
+          },
+          "llm_finish_reason": "stop",
+          "llm_attempts": [
+            {
+              "attempt": 1,
+              "ok": true
+            }
+          ],
+          "raw_answer": "{\"status\": \"answer\", \"answer\": \"Основная цель миссии Apollo 11, как указано в разделе 1.0 [5], заключалась в выполнении пилотируемой посадки на Луну и безопасном возвращении на Землю. Также были определены 11 вторичных целей, включая селенологический осмотр и выборку образцов [5].\", \"citation_ids\": [5], \"missing_information\": null}",
+          "id": "adhoc",
+          "answerable": null
+        }
+      ],
+      "summary": {
+        "n": 1,
+        "parse_failures": 0,
+        "refusals_total": 0,
+        "refusals_on_answerable": 0,
+        "correct_refusals_on_unanswerable": 0,
+        "invalid_citation_rate": 0.0,
+        "citation_mismatch_rate": 0.0,
+        "mean_llm_seconds": 42.79,
+        "note": "правильность/полнота/поддержка цитат оцениваются вручную (manual_review); citation_ids, ссылки [n] в тексте и страницы проверены автоматически"
+      }
+    }
+  }
+}

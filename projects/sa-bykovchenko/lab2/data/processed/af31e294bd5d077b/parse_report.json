@@ -1,0 +1,23 @@
+{
+  "status": "completed",
+  "build_id": "af31e294bd5d077b",
+  "parser_version": "3.1.0",
+  "created_at_utc": "2026-10-21T12:02:57.252527+00:00",
+  "pdf_pages": 359,
+  "retrieval_eligible_pages": 250,
+  "eligible_text_rich_pages": 233,
+  "pages_with_tables": 65,
+  "pages_with_section_headers": 118,
+  "section_headers_total": 206,
+  "printed_page_identified": 194,
+  "excluded_pages": 109,
+  "exclusion_rule": {
+    "min_chars": 200,
+    "max_nonascii_alpha_ratio": 0.05
+  },
+  "limitation": "Извлечение идёт по встроенному OCR-слою исходного скана: сохраняются его ошибки (пробелы внутри слов, 1/l); таблицы реконструируются pymupdf4llm lines_strict и наследуют шум слоя. Списки не преобразуются в markdown-списки.",
+  "exclusion_reason_counts": {
+    "insufficient_text": 106,
+    "suspected_corrupt_text_layer": 3
+  }
+}

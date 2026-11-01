@@ -1,0 +1,23 @@
+{
+  "parse_build": "6e5690ec4f885c88",
+  "builds": [
+    "data\\indexes\\e22ed5c33c9a82e8",
+    "data\\indexes\\d4dfec5ee7ec7490",
+    "data\\indexes\\0d030f727d7b272b",
+    "data\\indexes\\cab40e9b428e70e0"
+  ],
+  "selected": {
+    "build": "e22ed5c33c9a82e8",
+    "mode": "hybrid"
+  },
+  "store": "data\\vector_stores\\apollo11\\efa0f2936c31e621",
+  "status": "retrieval_complete",
+  "qa_blocked_reason": null,
+  "test_status": "reevaluation",
+  "selection_rule": {
+    "primary": "mean(fact_coverage@5) по {ru dense, en dense} на DEV",
+    "mode": "dense против hybrid: при |diff| < 0.02 выбирается dense (проще)",
+    "tiebreak": "mean(MRR@10) по ru/en, затем меньше чанков",
+    "registered": "зафиксировано в source/run_experiments.py до первого тест прогона"
+  }
+}

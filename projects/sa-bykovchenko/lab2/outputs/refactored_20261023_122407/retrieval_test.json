@@ -1,0 +1,3728 @@
+{
+  "created_at_utc": "2026-10-23T12:29:38.089727+00:00",
+  "qrels": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\qrels_evidence.json",
+  "qrels_sha256": "f400384c48ce20f2e5f9a204f7ee1d82712cbc797dda58334dd341d43b617136",
+  "split": "test",
+  "test_status": "reevaluation",
+  "k": [
+    5,
+    10
+  ],
+  "embedding_config": {
+    "embedding_model": "intfloat/multilingual-e5-small",
+    "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "max_input_tokens": 512
+  },
+  "candidate_k": 50,
+  "ef_search": null,
+  "evaluator_sha256": "0b4cf2f1b7f011d3bdf289044aa85cf757caa02adb188c36135b64a7d56b6bca",
+  "evaluation_sha256": "3bac23e616ac40b0e2e9fa51989b06e02fa1872ad09e537d7daf619076c8a2c9",
+  "python": "3.11.17",
+  "runs": [
+    {
+      "mode": "dense",
+      "backend": "flat_ip",
+      "language": "ru",
+      "n_questions": 12,
+      "chunk_count": 832,
+      "metrics": {
+        "MRR@10": 0.5833,
+        "R@5": 0.75,
+        "P@5": 0.1833,
+        "R@10": 0.75,
+        "nDCG@10": 0.5934,
+        "P@10": 0.0917,
+        "evidence_hit@5": 0.8333,
+        "fact_coverage@5": 0.75,
+        "evidence_hit@10": 0.8333,
+        "fact_coverage@10": 0.75
+      },
+      "per_question": [
+        {
+          "id": "Q01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            275,
+            12,
+            276,
+            280,
+            3,
+            220,
+            15,
+            13,
+            275,
+            113
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q03",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            42,
+            40,
+            43,
+            324,
+            44,
+            18,
+            41,
+            42,
+            16,
+            40
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q04",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.3333333333333333,
+            "10": 0.3333333333333333
+          },
+          "top_pages": [
+            42,
+            43,
+            44,
+            40,
+            42,
+            324,
+            324,
+            44,
+            43,
+            18
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q06",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            45,
+            255,
+            186,
+            111,
+            40,
+            44,
+            186,
+            153,
+            295,
+            41
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q07",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            38,
+            290,
+            164,
+            49,
+            41,
+            54,
+            70,
+            166,
+            163,
+            70
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q09",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            36,
+            219,
+            220,
+            47,
+            200,
+            64,
+            221,
+            35,
+            44,
+            200
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q10",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            332,
+            198,
+            36,
+            42,
+            70,
+            332,
+            43,
+            70,
+            32
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q12",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            188,
+            193,
+            162,
+            55,
+            138,
+            189,
+            150,
+            70,
+            185,
+            324
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q13",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            259,
+            324,
+            259,
+            263,
+            260,
+            16,
+            265,
+            268,
+            265,
+            265
+          ],
+          "top_relevant": [
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q15",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.6666666666666666,
+            "10": 0.6666666666666666
+          },
+          "top_pages": [
+            291,
+            270,
+            292,
+            164,
+            283,
+            293,
+            269,
+            139,
+            326,
+            139
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            12,
+            3,
+            200,
+            15,
+            359,
+            13,
+            14,
+            113,
+            280,
+            2
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N03",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            211,
+            200,
+            70,
+            212,
+            203,
+            221,
+            70,
+            102,
+            220,
+            70
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "e22ed5c33c9a82e8",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\e22ed5c33c9a82e8",
+      "chunk_size": 256,
+      "overlap": 32,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "dense",
+      "backend": "hnsw",
+      "language": "ru",
+      "n_questions": 12,
+      "chunk_count": 832,
+      "metrics": {
+        "MRR@10": 0.5833,
+        "R@5": 0.75,
+        "P@5": 0.1833,
+        "R@10": 0.75,
+        "nDCG@10": 0.5934,
+        "P@10": 0.0917,
+        "evidence_hit@5": 0.8333,
+        "fact_coverage@5": 0.75,
+        "evidence_hit@10": 0.8333,
+        "fact_coverage@10": 0.75
+      },
+      "per_question": [
+        {
+          "id": "Q01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            275,
+            12,
+            276,
+            280,
+            3,
+            220,
+            15,
+            13,
+            275,
+            113
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q03",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            42,
+            40,
+            43,
+            324,
+            44,
+            41,
+            42,
+            16,
+            40,
+            269
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q04",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.3333333333333333,
+            "10": 0.3333333333333333
+          },
+          "top_pages": [
+            42,
+            43,
+            44,
+            40,
+            42,
+            324,
+            324,
+            44,
+            43,
+            42
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q06",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            45,
+            255,
+            186,
+            111,
+            40,
+            44,
+            186,
+            153,
+            295,
+            41
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q07",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            38,
+            290,
+            164,
+            49,
+            41,
+            54,
+            70,
+            166,
+            163,
+            70
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q09",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            36,
+            219,
+            220,
+            47,
+            200,
+            64,
+            221,
+            35,
+            44,
+            200
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q10",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            332,
+            198,
+            36,
+            42,
+            70,
+            332,
+            43,
+            70,
+            32
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q12",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            188,
+            193,
+            162,
+            55,
+            138,
+            189,
+            150,
+            324,
+            270,
+            37
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q13",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            259,
+            324,
+            259,
+            263,
+            260,
+            16,
+            265,
+            268,
+            265,
+            265
+          ],
+          "top_relevant": [
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q15",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.6666666666666666,
+            "10": 0.6666666666666666
+          },
+          "top_pages": [
+            291,
+            270,
+            292,
+            164,
+            283,
+            293,
+            269,
+            139,
+            326,
+            139
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            12,
+            3,
+            200,
+            15,
+            359,
+            13,
+            14,
+            280,
+            2,
+            275
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N03",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            211,
+            200,
+            70,
+            212,
+            203,
+            221,
+            70,
+            102,
+            220,
+            70
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "e22ed5c33c9a82e8",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\e22ed5c33c9a82e8",
+      "chunk_size": 256,
+      "overlap": 32,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "hybrid",
+      "backend": "flat_ip",
+      "language": "ru",
+      "n_questions": 12,
+      "chunk_count": 832,
+      "metrics": {
+        "MRR@10": 0.4343,
+        "R@5": 0.5833,
+        "P@5": 0.15,
+        "R@10": 0.75,
+        "nDCG@10": 0.4842,
+        "P@10": 0.0917,
+        "evidence_hit@5": 0.6667,
+        "fact_coverage@5": 0.5833,
+        "evidence_hit@10": 0.8333,
+        "fact_coverage@10": 0.75
+      },
+      "per_question": [
+        {
+          "id": "Q01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            15,
+            3,
+            280,
+            275,
+            325,
+            13,
+            132,
+            220,
+            276,
+            12
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true
+          ]
+        },
+        {
+          "id": "Q03",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            42,
+            40,
+            43,
+            324,
+            44,
+            18,
+            41,
+            42,
+            16,
+            40
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q04",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.3333333333333333,
+            "10": 0.3333333333333333
+          },
+          "top_pages": [
+            42,
+            43,
+            44,
+            40,
+            42,
+            324,
+            324,
+            44,
+            43,
+            18
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q06",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            45,
+            255,
+            186,
+            111,
+            40,
+            44,
+            186,
+            153,
+            295,
+            41
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q07",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            38,
+            290,
+            164,
+            49,
+            41,
+            54,
+            70,
+            166,
+            163,
+            70
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q09",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            36,
+            219,
+            220,
+            47,
+            200,
+            64,
+            221,
+            35,
+            44,
+            200
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q10",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            332,
+            198,
+            36,
+            42,
+            70,
+            332,
+            43,
+            70,
+            32
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q12",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            70,
+            188,
+            193,
+            162,
+            55,
+            138,
+            189,
+            150,
+            70,
+            185
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q13",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            70,
+            259,
+            324,
+            259,
+            263,
+            260,
+            16,
+            265,
+            268,
+            265
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q15",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.6666666666666666,
+            "10": 0.6666666666666666
+          },
+          "top_pages": [
+            291,
+            270,
+            292,
+            164,
+            283,
+            293,
+            269,
+            139,
+            326,
+            139
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            3,
+            15,
+            359,
+            280,
+            13,
+            325,
+            132,
+            14,
+            12,
+            201
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false
+          ]
+        },
+        {
+          "id": "N03",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            211,
+            200,
+            70,
+            212,
+            203,
+            221,
+            70,
+            102,
+            220,
+            70
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "e22ed5c33c9a82e8",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\e22ed5c33c9a82e8",
+      "chunk_size": 256,
+      "overlap": 32,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "hybrid",
+      "backend": "hnsw",
+      "language": "ru",
+      "n_questions": 12,
+      "chunk_count": 832,
+      "metrics": {
+        "MRR@10": 0.425,
+        "R@5": 0.5833,
+        "P@5": 0.15,
+        "R@10": 0.6667,
+        "nDCG@10": 0.4591,
+        "P@10": 0.0833,
+        "evidence_hit@5": 0.6667,
+        "fact_coverage@5": 0.5833,
+        "evidence_hit@10": 0.75,
+        "fact_coverage@10": 0.6667
+      },
+      "per_question": [
+        {
+          "id": "Q01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            15,
+            3,
+            280,
+            275,
+            325,
+            13,
+            132,
+            220,
+            276,
+            12
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true
+          ]
+        },
+        {
+          "id": "Q03",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            42,
+            40,
+            43,
+            324,
+            44,
+            41,
+            42,
+            16,
+            40,
+            269
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q04",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.3333333333333333,
+            "10": 0.3333333333333333
+          },
+          "top_pages": [
+            42,
+            43,
+            44,
+            40,
+            42,
+            324,
+            324,
+            44,
+            43,
+            42
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q06",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            45,
+            255,
+            186,
+            111,
+            40,
+            44,
+            186,
+            153,
+            295,
+            41
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q07",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            38,
+            290,
+            164,
+            49,
+            41,
+            54,
+            70,
+            166,
+            163,
+            70
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q09",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            36,
+            219,
+            220,
+            47,
+            200,
+            64,
+            221,
+            35,
+            44,
+            200
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q10",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            332,
+            198,
+            36,
+            42,
+            70,
+            332,
+            43,
+            70,
+            32
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q12",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            70,
+            188,
+            193,
+            162,
+            55,
+            138,
+            189,
+            150,
+            324,
+            270
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q13",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            70,
+            259,
+            324,
+            259,
+            263,
+            260,
+            16,
+            265,
+            268,
+            265
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q15",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.6666666666666666,
+            "10": 0.6666666666666666
+          },
+          "top_pages": [
+            291,
+            270,
+            292,
+            164,
+            283,
+            293,
+            269,
+            139,
+            326,
+            139
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            3,
+            15,
+            359,
+            280,
+            13,
+            325,
+            132,
+            201,
+            275,
+            14
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N03",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            211,
+            200,
+            70,
+            212,
+            203,
+            221,
+            70,
+            102,
+            220,
+            70
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "e22ed5c33c9a82e8",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\e22ed5c33c9a82e8",
+      "chunk_size": 256,
+      "overlap": 32,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "dense",
+      "backend": "flat_ip",
+      "language": "en",
+      "n_questions": 12,
+      "chunk_count": 832,
+      "metrics": {
+        "MRR@10": 0.7639,
+        "R@5": 0.75,
+        "P@5": 0.1833,
+        "R@10": 0.875,
+        "nDCG@10": 0.7518,
+        "P@10": 0.1083,
+        "evidence_hit@5": 0.8333,
+        "fact_coverage@5": 0.75,
+        "evidence_hit@10": 0.9167,
+        "fact_coverage@10": 0.8611
+      },
+      "per_question": [
+        {
+          "id": "Q01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            12,
+            15,
+            275,
+            269,
+            113,
+            276,
+            198,
+            3,
+            271,
+            187
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q03",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            40,
+            16,
+            43,
+            12,
+            45,
+            35,
+            42,
+            15,
+            42,
+            199
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q04",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.3333333333333333,
+            "10": 0.3333333333333333
+          },
+          "top_pages": [
+            43,
+            40,
+            42,
+            42,
+            42,
+            43,
+            40,
+            44,
+            12,
+            43
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q06",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            255,
+            45,
+            186,
+            255,
+            12,
+            33,
+            187,
+            186,
+            15,
+            188
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q07",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            49,
+            38,
+            43,
+            32,
+            270,
+            44,
+            42,
+            41,
+            42,
+            271
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q09",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            219,
+            219,
+            13,
+            198,
+            332,
+            12,
+            295,
+            47,
+            198,
+            16
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q10",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            36,
+            219,
+            332,
+            198,
+            332,
+            38,
+            35,
+            32,
+            43
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q12",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            40,
+            198,
+            198,
+            255,
+            188,
+            258,
+            43,
+            287,
+            194,
+            40
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q13",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            259,
+            16,
+            263,
+            17,
+            259,
+            262,
+            273,
+            324,
+            272,
+            268
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q15",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.6666666666666666,
+            "10": 1.0
+          },
+          "top_pages": [
+            291,
+            164,
+            292,
+            53,
+            326,
+            293,
+            291,
+            269,
+            292,
+            38
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false
+          ]
+        },
+        {
+          "id": "N02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            12,
+            3,
+            200,
+            15,
+            13,
+            359,
+            13,
+            14,
+            198,
+            201
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N03",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            211,
+            212,
+            198,
+            220,
+            198,
+            13,
+            41,
+            210,
+            333,
+            359
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "e22ed5c33c9a82e8",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\e22ed5c33c9a82e8",
+      "chunk_size": 256,
+      "overlap": 32,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "dense",
+      "backend": "hnsw",
+      "language": "en",
+      "n_questions": 12,
+      "chunk_count": 832,
+      "metrics": {
+        "MRR@10": 0.7639,
+        "R@5": 0.75,
+        "P@5": 0.1833,
+        "R@10": 0.875,
+        "nDCG@10": 0.7518,
+        "P@10": 0.1083,
+        "evidence_hit@5": 0.8333,
+        "fact_coverage@5": 0.75,
+        "evidence_hit@10": 0.9167,
+        "fact_coverage@10": 0.8611
+      },
+      "per_question": [
+        {
+          "id": "Q01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            12,
+            15,
+            275,
+            269,
+            276,
+            198,
+            3,
+            271,
+            187,
+            276
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q03",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            40,
+            16,
+            43,
+            12,
+            45,
+            35,
+            42,
+            15,
+            42,
+            199
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q04",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.3333333333333333,
+            "10": 0.3333333333333333
+          },
+          "top_pages": [
+            43,
+            40,
+            42,
+            42,
+            42,
+            43,
+            40,
+            44,
+            12,
+            43
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q06",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            255,
+            45,
+            186,
+            255,
+            12,
+            33,
+            187,
+            186,
+            15,
+            188
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q07",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            49,
+            38,
+            43,
+            32,
+            270,
+            44,
+            42,
+            41,
+            42,
+            269
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q09",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            219,
+            219,
+            13,
+            198,
+            332,
+            12,
+            295,
+            47,
+            198,
+            16
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q10",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            36,
+            219,
+            332,
+            198,
+            332,
+            38,
+            35,
+            32,
+            43
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q12",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            40,
+            198,
+            198,
+            255,
+            188,
+            258,
+            43,
+            287,
+            194,
+            40
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q13",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            259,
+            16,
+            263,
+            17,
+            259,
+            262,
+            273,
+            324,
+            272,
+            268
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q15",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.6666666666666666,
+            "10": 1.0
+          },
+          "top_pages": [
+            291,
+            164,
+            292,
+            53,
+            326,
+            293,
+            291,
+            269,
+            292,
+            38
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false
+          ]
+        },
+        {
+          "id": "N02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            12,
+            3,
+            200,
+            15,
+            13,
+            359,
+            13,
+            14,
+            198,
+            201
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N03",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            211,
+            212,
+            198,
+            220,
+            198,
+            13,
+            41,
+            210,
+            333,
+            359
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "e22ed5c33c9a82e8",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\e22ed5c33c9a82e8",
+      "chunk_size": 256,
+      "overlap": 32,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "hybrid",
+      "backend": "flat_ip",
+      "language": "en",
+      "n_questions": 12,
+      "chunk_count": 832,
+      "metrics": {
+        "MRR@10": 0.7708,
+        "R@5": 0.875,
+        "P@5": 0.2167,
+        "R@10": 0.875,
+        "nDCG@10": 0.7874,
+        "P@10": 0.1083,
+        "evidence_hit@5": 0.9167,
+        "fact_coverage@5": 0.8889,
+        "evidence_hit@10": 0.9167,
+        "fact_coverage@10": 0.8889
+      },
+      "per_question": [
+        {
+          "id": "Q01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            12,
+            269,
+            275,
+            15,
+            187,
+            3,
+            271,
+            198,
+            276,
+            280
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q03",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            40,
+            16,
+            45,
+            35,
+            57,
+            12,
+            199,
+            45,
+            15,
+            12
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q04",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            40,
+            40,
+            41,
+            34,
+            40,
+            35,
+            42,
+            41,
+            203,
+            45
+          ],
+          "top_relevant": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q06",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            187,
+            188,
+            270,
+            33,
+            41,
+            111,
+            15,
+            153,
+            186,
+            186
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q07",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            49,
+            38,
+            32,
+            43,
+            53,
+            45,
+            256,
+            328,
+            325,
+            45
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q09",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            219,
+            219,
+            13,
+            332,
+            16,
+            12,
+            220,
+            198,
+            198,
+            60
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q10",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            219,
+            332,
+            332,
+            198,
+            43,
+            36,
+            38,
+            219,
+            47
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q12",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            203,
+            287,
+            255,
+            258,
+            40,
+            33,
+            198,
+            45,
+            153,
+            269
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q13",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            259,
+            259,
+            262,
+            324,
+            263,
+            268,
+            198,
+            276,
+            260,
+            272
+          ],
+          "top_relevant": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q15",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.6666666666666666,
+            "10": 0.6666666666666666
+          },
+          "top_pages": [
+            53,
+            291,
+            164,
+            292,
+            269,
+            138,
+            37,
+            293,
+            269,
+            291
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            12,
+            15,
+            3,
+            359,
+            13,
+            280,
+            201,
+            325,
+            114,
+            14
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N03",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            13,
+            220,
+            16,
+            211,
+            198,
+            12,
+            201,
+            211,
+            332,
+            213
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "e22ed5c33c9a82e8",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\e22ed5c33c9a82e8",
+      "chunk_size": 256,
+      "overlap": 32,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "hybrid",
+      "backend": "hnsw",
+      "language": "en",
+      "n_questions": 12,
+      "chunk_count": 832,
+      "metrics": {
+        "MRR@10": 0.7708,
+        "R@5": 0.875,
+        "P@5": 0.2167,
+        "R@10": 0.875,
+        "nDCG@10": 0.7874,
+        "P@10": 0.1083,
+        "evidence_hit@5": 0.9167,
+        "fact_coverage@5": 0.8889,
+        "evidence_hit@10": 0.9167,
+        "fact_coverage@10": 0.8889
+      },
+      "per_question": [
+        {
+          "id": "Q01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            12,
+            269,
+            275,
+            15,
+            187,
+            3,
+            271,
+            198,
+            280,
+            276
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q03",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            40,
+            16,
+            45,
+            35,
+            57,
+            12,
+            199,
+            45,
+            15,
+            12
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q04",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            40,
+            40,
+            41,
+            34,
+            40,
+            35,
+            42,
+            41,
+            203,
+            45
+          ],
+          "top_relevant": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q06",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            187,
+            188,
+            270,
+            33,
+            41,
+            111,
+            15,
+            153,
+            186,
+            186
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q07",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            49,
+            38,
+            32,
+            43,
+            53,
+            45,
+            256,
+            328,
+            325,
+            45
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q09",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            219,
+            219,
+            13,
+            332,
+            16,
+            12,
+            220,
+            198,
+            198,
+            60
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q10",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            219,
+            332,
+            332,
+            198,
+            43,
+            36,
+            38,
+            219,
+            47
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q12",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            203,
+            287,
+            255,
+            258,
+            40,
+            33,
+            198,
+            45,
+            153,
+            269
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q13",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            259,
+            259,
+            262,
+            324,
+            263,
+            268,
+            198,
+            276,
+            260,
+            272
+          ],
+          "top_relevant": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q15",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.6666666666666666,
+            "10": 0.6666666666666666
+          },
+          "top_pages": [
+            53,
+            291,
+            164,
+            292,
+            269,
+            138,
+            37,
+            293,
+            269,
+            291
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            12,
+            15,
+            3,
+            359,
+            13,
+            280,
+            325,
+            201,
+            114,
+            14
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N03",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            13,
+            220,
+            16,
+            211,
+            198,
+            12,
+            201,
+            211,
+            332,
+            213
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "e22ed5c33c9a82e8",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\e22ed5c33c9a82e8",
+      "chunk_size": 256,
+      "overlap": 32,
+      "splitter": "markdown_header"
+    }
+  ],
+  "note": "P/R/MRR/nDCG — ir_measures по чанковой релевантности (чанк содержит >=1 полную evidence-цитату); EH/FC — предметные метрики. Пустой sparse (русский запрос к английскому BM25) не меняет dense в hybrid."
+}

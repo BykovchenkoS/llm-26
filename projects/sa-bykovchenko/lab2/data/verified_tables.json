@@ -1,0 +1,21 @@
+{
+  "63": {
+    "method": "manual_transcription_visually_checked_against_source_page",
+    "source_sha256_prefix": "5b9d033c7b9d",
+    "reviewed_date": "2026-10-08",
+    "tables": [
+      {
+        "title": "TABLE 5-II. MANEUVER RESIDUALS - DESCENT ORBIT INSERTION",
+        "headers": ["Axis", "Velocity residual before trimming (ft/sec)", "Velocity residual after trimming (ft/sec)"],
+        "rows": [["X","-0.1","0.0"],["Y","-0.4","-0.4"],["Z","-0.1","0.0"]],
+        "note": "Merged header Velocity residual, ft/sec expanded into each column."
+      },
+      {
+        "title": "TABLE 5-III. POWERED DESCENT INITIATION STATE VECTORS",
+        "headers": ["Parameter", "Operational trajectory", "Best estimate trajectory", "Primary guidance computer"],
+        "rows": [["Latitude (deg)","0.9614","1.037","1.17"],["Longitude (deg)","39.607","39.371","39.48"],["Altitude (ft)","50 000","49 376","49 955"]],
+        "note": "Units preserved; no conversions or numerical inference."
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "status": "reviewed",
+  "models": [
+    "apollo-gemma:16k",
+    "apollo-qwen:16k"
+  ],
+  "live_answers_generated": true,
+  "protocol": "balanced / dense / hnsw / k=6 / ru / all / temperature=0",
+  "note": "Фиксированный диагностический протокол, не новый подбор победителя DEV.",
+  "ollama": {
+    "version": {
+      "version": "0.40.5"
+    },
+    "models": {
+      "apollo-gemma:16k": {
+        "digest": "2f74d5c115b7cae4234e052d2d0e7509125d7e11efe28a4d85683236f6b561c3",
+        "parameters": "num_ctx                        16384\nstop                           \"<end_of_turn>\"\ntemperature                    1\ntop_k                          64\ntop_p                          0.95",
+        "details": {
+          "parent_model": "gemma3:4b",
+          "format": "gguf",
+          "family": "gemma3",
+          "families": [
+            "gemma3",
+            "clip"
+          ],
+          "parameter_size": "3.9B",
+          "quantization_level": "Q4_K_M",
+          "runner": "llamacpp"
+        }
+      },
+      "apollo-qwen:16k": {
+        "digest": "78aaea55e7a9a5162f6514b69b4506593df92e190dde2d00157c398991ba7477",
+        "parameters": "num_ctx                        16384",
+        "details": {
+          "parent_model": "qwen2.5:3b",
+          "format": "gguf",
+          "family": "qwen2",
+          "families": [
+            "qwen2"
+          ],
+          "parameter_size": "3.1B",
+          "quantization_level": "Q4_K_M",
+          "runner": "llamacpp"
+        }
+      }
+    }
+  },
+  "index": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\0c5de11aa49985aa",
+  "store": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\vector_stores\\apollo11\\32a587ae42c7ed1b",
+  "qrels_sha256": "f400384c48ce20f2e5f9a204f7ee1d82712cbc797dda58334dd341d43b617136",
+  "qa_sha256": "be6c85479ef4956ac73f33ec4320c60de0e24f4022e1c6a1436fb3fffce5f091",
+  "review_status": "human_confirmed",
+  "reviewer": "Софья Быковченко",
+  "manual_review": "manual_review.json",
+  "manual_summary": "manual_summary.json",
+  "review_report": "REVIEW_REPORT.md",
+  "review_metrics": {
+    "apollo-gemma:16k": {
+      "n_total": 20,
+      "answerable": 18,
+      "fully_correct": 9,
+      "complete": 8,
+      "supported_citations": 10,
+      "correct_refusals": 0,
+      "unanswerable": 2
+    },
+    "apollo-qwen:16k": {
+      "n_total": 20,
+      "answerable": 18,
+      "fully_correct": 7,
+      "complete": 3,
+      "supported_citations": 6,
+      "correct_refusals": 0,
+      "unanswerable": 2
+    }
+  }
+}

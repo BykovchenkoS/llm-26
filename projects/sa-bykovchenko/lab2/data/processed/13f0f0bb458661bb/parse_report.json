@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "build_id": "13f0f0bb458661bb",
+  "parser_version": "2.0.0",
+  "created_at_utc": "2026-10-08T09:42:44.207808+00:00",
+  "pdf_pages": 359,
+  "retrieval_eligible_pages": 160,
+  "eligible_text_rich_pages": 159,
+  "blocks": 1120,
+  "verified_markdown_tables": 2,
+  "headings": 223,
+  "list_items": 56,
+  "source_fallback_or_review_pages": 199,
+  "all_question_seed_pages_eligible": true,
+  "warning_counts": {
+    "layout_not_validated_for_retrieval": 199,
+    "printed_page_not_identified_use_pdf_page": 107,
+    "ocr_not_fully_proofread": 159
+  },
+  "limitation": "Eligible prose has not been exhaustively proofread; diagrams and unverified tables are excluded from retrieval."
+}

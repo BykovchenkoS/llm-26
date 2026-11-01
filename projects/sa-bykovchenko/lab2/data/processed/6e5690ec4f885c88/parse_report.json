@@ -1,0 +1,28 @@
+{
+  "status": "completed",
+  "build_id": "6e5690ec4f885c88",
+  "parser_version": "3.2.0",
+  "created_at_utc": "2026-10-22T10:51:58.647935+00:00",
+  "pdf_pages": 359,
+  "retrieval_eligible_pages": 250,
+  "eligible_text_rich_pages": 233,
+  "pages_with_tables": 65,
+  "pages_with_section_headers": 118,
+  "section_headers_total": 206,
+  "printed_page_identified": 195,
+  "excluded_pages": 109,
+  "pages_with_line_order_fallback": 3,
+  "line_order_fallback_rule": {
+    "enabled": true,
+    "max_gap_pt": 12.0
+  },
+  "exclusion_rule": {
+    "min_chars": 200,
+    "max_nonascii_alpha_ratio": 0.05
+  },
+  "limitation": "Извлечение идёт по встроенному OCR-слою исходного скана: сохраняются его ошибки (1/l, отдельные неверные символы); таблицы реконструируются pymupdf4llm lines_strict и наследуют шум слоя. Списки не преобразуются в markdown-списки. Fallback порядка строк применяется только к prose-страницам с разорванными блоками и фиксируется постранично.",
+  "exclusion_reason_counts": {
+    "insufficient_text": 106,
+    "suspected_corrupt_text_layer": 3
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "reviewer": "Софья Быковченко",
+  "review_status": "human_confirmed",
+  "qa_sha256": "be6c85479ef4956ac73f33ec4320c60de0e24f4022e1c6a1436fb3fffce5f091",
+  "models": {
+    "apollo-gemma:16k": {
+      "n_total": 20,
+      "answerable": 18,
+      "fully_correct": 9,
+      "complete": 8,
+      "supported_citations": 10,
+      "correct_refusals": 0,
+      "unanswerable": 2
+    },
+    "apollo-qwen:16k": {
+      "n_total": 20,
+      "answerable": 18,
+      "fully_correct": 7,
+      "complete": 3,
+      "supported_citations": 6,
+      "correct_refusals": 0,
+      "unanswerable": 2
+    }
+  }
+}

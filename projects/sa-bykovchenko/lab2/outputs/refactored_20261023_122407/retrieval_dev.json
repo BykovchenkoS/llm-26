@@ -1,0 +1,5424 @@
+{
+  "created_at_utc": "2026-10-23T12:29:19.365067+00:00",
+  "qrels": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\qrels_evidence.json",
+  "qrels_sha256": "f400384c48ce20f2e5f9a204f7ee1d82712cbc797dda58334dd341d43b617136",
+  "split": "dev",
+  "test_status": "dev",
+  "k": [
+    5,
+    10
+  ],
+  "embedding_config": {
+    "embedding_model": "intfloat/multilingual-e5-small",
+    "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "max_input_tokens": 512
+  },
+  "candidate_k": 50,
+  "ef_search": null,
+  "evaluator_sha256": "0b4cf2f1b7f011d3bdf289044aa85cf757caa02adb188c36135b64a7d56b6bca",
+  "evaluation_sha256": "3bac23e616ac40b0e2e9fa51989b06e02fa1872ad09e537d7daf619076c8a2c9",
+  "python": "3.11.17",
+  "runs": [
+    {
+      "mode": "dense",
+      "backend": "flat_ip",
+      "language": "ru",
+      "n_questions": 6,
+      "chunk_count": 832,
+      "metrics": {
+        "nDCG@10": 0.5148,
+        "R@10": 0.75,
+        "MRR@10": 0.4722,
+        "P@10": 0.1333,
+        "R@5": 0.75,
+        "P@5": 0.2667,
+        "evidence_hit@5": 0.8333,
+        "fact_coverage@5": 0.7917,
+        "evidence_hit@10": 0.8333,
+        "fact_coverage@10": 0.7917
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.75,
+            "10": 0.75
+          },
+          "top_pages": [
+            44,
+            44,
+            38,
+            111,
+            42,
+            41,
+            41,
+            43,
+            61,
+            43
+          ],
+          "top_relevant": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            300,
+            12,
+            295,
+            41,
+            42,
+            294,
+            40,
+            44,
+            41,
+            104
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            217,
+            333,
+            218,
+            214,
+            46,
+            218,
+            218,
+            217,
+            218,
+            198
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            220,
+            70,
+            221,
+            332,
+            42,
+            333,
+            70,
+            200,
+            71
+          ],
+          "top_relevant": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            260,
+            48,
+            41,
+            35,
+            260,
+            44,
+            42,
+            111,
+            41,
+            61
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            111,
+            44,
+            42,
+            43,
+            200,
+            221,
+            224,
+            45,
+            198,
+            35
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "e22ed5c33c9a82e8",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\e22ed5c33c9a82e8",
+      "chunk_size": 256,
+      "overlap": 32,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "sparse",
+      "backend": "flat_ip",
+      "language": "ru",
+      "n_questions": 6,
+      "chunk_count": 832,
+      "metrics": {
+        "nDCG@10": 0.0,
+        "R@10": 0.0,
+        "MRR@10": 0.0,
+        "P@10": 0.0,
+        "R@5": 0.0,
+        "P@5": 0.0,
+        "evidence_hit@5": 0.0,
+        "fact_coverage@5": 0.0,
+        "evidence_hit@10": 0.0,
+        "fact_coverage@10": 0.0
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "e22ed5c33c9a82e8",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\e22ed5c33c9a82e8",
+      "chunk_size": 256,
+      "overlap": 32,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "hybrid",
+      "backend": "flat_ip",
+      "language": "ru",
+      "n_questions": 6,
+      "chunk_count": 832,
+      "metrics": {
+        "nDCG@10": 0.5148,
+        "R@10": 0.75,
+        "MRR@10": 0.4722,
+        "P@10": 0.1333,
+        "R@5": 0.75,
+        "P@5": 0.2667,
+        "evidence_hit@5": 0.8333,
+        "fact_coverage@5": 0.7917,
+        "evidence_hit@10": 0.8333,
+        "fact_coverage@10": 0.7917
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.75,
+            "10": 0.75
+          },
+          "top_pages": [
+            44,
+            44,
+            38,
+            111,
+            42,
+            41,
+            41,
+            43,
+            61,
+            43
+          ],
+          "top_relevant": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            300,
+            12,
+            295,
+            41,
+            42,
+            294,
+            40,
+            44,
+            41,
+            104
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            217,
+            333,
+            218,
+            214,
+            46,
+            218,
+            218,
+            217,
+            218,
+            198
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            220,
+            70,
+            221,
+            332,
+            42,
+            333,
+            70,
+            200,
+            71
+          ],
+          "top_relevant": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            260,
+            48,
+            41,
+            35,
+            260,
+            44,
+            42,
+            111,
+            41,
+            61
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            111,
+            44,
+            42,
+            43,
+            200,
+            221,
+            224,
+            45,
+            198,
+            35
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "e22ed5c33c9a82e8",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\e22ed5c33c9a82e8",
+      "chunk_size": 256,
+      "overlap": 32,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "dense",
+      "backend": "flat_ip",
+      "language": "en",
+      "n_questions": 6,
+      "chunk_count": 832,
+      "metrics": {
+        "nDCG@10": 0.8078,
+        "R@10": 0.9167,
+        "MRR@10": 0.8611,
+        "P@10": 0.15,
+        "R@5": 0.75,
+        "P@5": 0.2667,
+        "evidence_hit@5": 0.8333,
+        "fact_coverage@5": 0.7917,
+        "evidence_hit@10": 1.0,
+        "fact_coverage@10": 0.9583
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.75,
+            "10": 0.75
+          },
+          "top_pages": [
+            38,
+            47,
+            53,
+            163,
+            34,
+            47,
+            269,
+            32,
+            60,
+            139
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            42,
+            41,
+            300,
+            12,
+            211,
+            105,
+            295,
+            43,
+            270,
+            104
+          ],
+          "top_relevant": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            214,
+            217,
+            218,
+            333,
+            218,
+            217,
+            218,
+            198,
+            215,
+            42
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            220,
+            332,
+            207,
+            42,
+            42,
+            12,
+            217,
+            333,
+            221
+          ],
+          "top_relevant": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            260,
+            48,
+            41,
+            260,
+            35,
+            48,
+            42,
+            33,
+            272,
+            12
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            198,
+            15,
+            12,
+            198,
+            12,
+            13,
+            35,
+            43,
+            44,
+            40
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "e22ed5c33c9a82e8",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\e22ed5c33c9a82e8",
+      "chunk_size": 256,
+      "overlap": 32,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "sparse",
+      "backend": "flat_ip",
+      "language": "en",
+      "n_questions": 6,
+      "chunk_count": 832,
+      "metrics": {
+        "nDCG@10": 0.5291,
+        "R@10": 0.8333,
+        "MRR@10": 0.4222,
+        "P@10": 0.1333,
+        "R@5": 0.75,
+        "P@5": 0.2333,
+        "evidence_hit@5": 0.8333,
+        "fact_coverage@5": 0.7222,
+        "evidence_hit@10": 0.8333,
+        "fact_coverage@10": 0.8333
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            53,
+            60,
+            50,
+            51,
+            203,
+            71,
+            54,
+            73,
+            50,
+            203
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.3333333333333333,
+            "10": 1.0
+          },
+          "top_pages": [
+            300,
+            211,
+            134,
+            260,
+            42,
+            260,
+            265,
+            41,
+            103,
+            265
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            218,
+            219,
+            214,
+            333,
+            217,
+            218,
+            218,
+            217,
+            216,
+            275
+          ],
+          "top_relevant": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            332,
+            220,
+            207,
+            213,
+            332,
+            16,
+            212,
+            331,
+            265
+          ],
+          "top_relevant": [
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            48,
+            260,
+            260,
+            219,
+            265,
+            262,
+            13,
+            219,
+            41,
+            209
+          ],
+          "top_relevant": [
+            false,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            203,
+            13,
+            34,
+            198,
+            194,
+            198,
+            324,
+            34,
+            359,
+            261
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "e22ed5c33c9a82e8",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\e22ed5c33c9a82e8",
+      "chunk_size": 256,
+      "overlap": 32,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "hybrid",
+      "backend": "flat_ip",
+      "language": "en",
+      "n_questions": 6,
+      "chunk_count": 832,
+      "metrics": {
+        "nDCG@10": 0.7647,
+        "R@10": 0.9167,
+        "MRR@10": 0.6667,
+        "P@10": 0.15,
+        "R@5": 0.9167,
+        "P@5": 0.3,
+        "evidence_hit@5": 1.0,
+        "fact_coverage@5": 0.9583,
+        "evidence_hit@10": 1.0,
+        "fact_coverage@10": 0.9583
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.75,
+            "10": 0.75
+          },
+          "top_pages": [
+            53,
+            38,
+            51,
+            50,
+            276,
+            328,
+            61,
+            54,
+            324,
+            50
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            300,
+            42,
+            211,
+            41,
+            12,
+            160,
+            187,
+            16,
+            105,
+            199
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            214,
+            217,
+            218,
+            333,
+            218,
+            218,
+            217,
+            215,
+            198,
+            216
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            220,
+            332,
+            207,
+            16,
+            42,
+            332,
+            265,
+            12,
+            265
+          ],
+          "top_relevant": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            48,
+            260,
+            260,
+            41,
+            262,
+            13,
+            265,
+            33,
+            272,
+            188
+          ],
+          "top_relevant": [
+            false,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            198,
+            13,
+            198,
+            203,
+            40,
+            15,
+            12,
+            16,
+            199,
+            45
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "e22ed5c33c9a82e8",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\e22ed5c33c9a82e8",
+      "chunk_size": 256,
+      "overlap": 32,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "dense",
+      "backend": "flat_ip",
+      "language": "ru",
+      "n_questions": 6,
+      "chunk_count": 634,
+      "metrics": {
+        "nDCG@10": 0.4826,
+        "R@10": 0.6667,
+        "MRR@10": 0.4167,
+        "P@10": 0.1,
+        "R@5": 0.5833,
+        "P@5": 0.1667,
+        "evidence_hit@5": 0.6667,
+        "fact_coverage@5": 0.5556,
+        "evidence_hit@10": 0.6667,
+        "fact_coverage@10": 0.6667
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            47,
+            41,
+            44,
+            44,
+            111,
+            41,
+            43,
+            110,
+            61,
+            35
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.3333333333333333,
+            "10": 1.0
+          },
+          "top_pages": [
+            300,
+            42,
+            70,
+            294,
+            105,
+            40,
+            270,
+            41,
+            41,
+            160
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false
+          ]
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            217,
+            214,
+            218,
+            333,
+            218,
+            218,
+            217,
+            16,
+            215,
+            214
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            70,
+            332,
+            221,
+            42,
+            200,
+            71,
+            70,
+            26,
+            50
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            48,
+            260,
+            260,
+            41,
+            44,
+            186,
+            34,
+            111,
+            41,
+            33
+          ],
+          "top_relevant": [
+            false,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            111,
+            44,
+            224,
+            198,
+            42,
+            43,
+            200,
+            221,
+            45,
+            47
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "d4dfec5ee7ec7490",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\d4dfec5ee7ec7490",
+      "chunk_size": 384,
+      "overlap": 64,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "sparse",
+      "backend": "flat_ip",
+      "language": "ru",
+      "n_questions": 6,
+      "chunk_count": 634,
+      "metrics": {
+        "nDCG@10": 0.0,
+        "R@10": 0.0,
+        "MRR@10": 0.0,
+        "P@10": 0.0,
+        "R@5": 0.0,
+        "P@5": 0.0,
+        "evidence_hit@5": 0.0,
+        "fact_coverage@5": 0.0,
+        "evidence_hit@10": 0.0,
+        "fact_coverage@10": 0.0
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "d4dfec5ee7ec7490",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\d4dfec5ee7ec7490",
+      "chunk_size": 384,
+      "overlap": 64,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "hybrid",
+      "backend": "flat_ip",
+      "language": "ru",
+      "n_questions": 6,
+      "chunk_count": 634,
+      "metrics": {
+        "nDCG@10": 0.4826,
+        "R@10": 0.6667,
+        "MRR@10": 0.4167,
+        "P@10": 0.1,
+        "R@5": 0.5833,
+        "P@5": 0.1667,
+        "evidence_hit@5": 0.6667,
+        "fact_coverage@5": 0.5556,
+        "evidence_hit@10": 0.6667,
+        "fact_coverage@10": 0.6667
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            47,
+            41,
+            44,
+            44,
+            111,
+            41,
+            43,
+            110,
+            61,
+            35
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.3333333333333333,
+            "10": 1.0
+          },
+          "top_pages": [
+            300,
+            42,
+            70,
+            294,
+            105,
+            40,
+            270,
+            41,
+            41,
+            160
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false
+          ]
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            217,
+            214,
+            218,
+            333,
+            218,
+            218,
+            217,
+            16,
+            215,
+            214
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            70,
+            332,
+            221,
+            42,
+            200,
+            71,
+            70,
+            26,
+            50
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            48,
+            260,
+            260,
+            41,
+            44,
+            186,
+            34,
+            111,
+            41,
+            33
+          ],
+          "top_relevant": [
+            false,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            111,
+            44,
+            224,
+            198,
+            42,
+            43,
+            200,
+            221,
+            45,
+            47
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "d4dfec5ee7ec7490",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\d4dfec5ee7ec7490",
+      "chunk_size": 384,
+      "overlap": 64,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "dense",
+      "backend": "flat_ip",
+      "language": "en",
+      "n_questions": 6,
+      "chunk_count": 634,
+      "metrics": {
+        "nDCG@10": 0.7718,
+        "R@10": 1.0,
+        "MRR@10": 0.7,
+        "P@10": 0.1333,
+        "R@5": 1.0,
+        "P@5": 0.2667,
+        "evidence_hit@5": 1.0,
+        "fact_coverage@5": 1.0,
+        "evidence_hit@10": 1.0,
+        "fact_coverage@10": 1.0
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            38,
+            163,
+            53,
+            47,
+            47,
+            50,
+            135,
+            60,
+            51,
+            44
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            42,
+            300,
+            41,
+            270,
+            44,
+            105,
+            42,
+            295,
+            105,
+            211
+          ],
+          "top_relevant": [
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            217,
+            214,
+            333,
+            218,
+            215,
+            218,
+            216,
+            16,
+            214,
+            42
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            332,
+            207,
+            207,
+            42,
+            16,
+            16,
+            217,
+            221,
+            43
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            48,
+            260,
+            260,
+            42,
+            41,
+            272,
+            33,
+            188,
+            47,
+            48
+          ],
+          "top_relevant": [
+            false,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            198,
+            12,
+            15,
+            42,
+            13,
+            16,
+            35,
+            203,
+            16,
+            12
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "d4dfec5ee7ec7490",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\d4dfec5ee7ec7490",
+      "chunk_size": 384,
+      "overlap": 64,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "sparse",
+      "backend": "flat_ip",
+      "language": "en",
+      "n_questions": 6,
+      "chunk_count": 634,
+      "metrics": {
+        "nDCG@10": 0.5118,
+        "R@10": 0.75,
+        "MRR@10": 0.4639,
+        "P@10": 0.1,
+        "R@5": 0.75,
+        "P@5": 0.2,
+        "evidence_hit@5": 0.8333,
+        "fact_coverage@5": 0.7222,
+        "evidence_hit@10": 0.8333,
+        "fact_coverage@10": 0.7222
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            50,
+            60,
+            53,
+            203,
+            50,
+            51,
+            71,
+            327,
+            287,
+            54
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.3333333333333333,
+            "10": 0.3333333333333333
+          },
+          "top_pages": [
+            300,
+            134,
+            211,
+            42,
+            260,
+            265,
+            265,
+            260,
+            187,
+            160
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            219,
+            218,
+            214,
+            217,
+            333,
+            216,
+            218,
+            215,
+            275,
+            218
+          ],
+          "top_relevant": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            332,
+            207,
+            213,
+            265,
+            207,
+            202,
+            265,
+            212,
+            16
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            260,
+            48,
+            260,
+            262,
+            273,
+            265,
+            209,
+            13,
+            219,
+            48
+          ],
+          "top_relevant": [
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            198,
+            203,
+            194,
+            34,
+            13,
+            359,
+            324,
+            198,
+            276,
+            131
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "d4dfec5ee7ec7490",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\d4dfec5ee7ec7490",
+      "chunk_size": 384,
+      "overlap": 64,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "hybrid",
+      "backend": "flat_ip",
+      "language": "en",
+      "n_questions": 6,
+      "chunk_count": 634,
+      "metrics": {
+        "nDCG@10": 0.7003,
+        "R@10": 1.0,
+        "MRR@10": 0.5278,
+        "P@10": 0.1333,
+        "R@5": 1.0,
+        "P@5": 0.2667,
+        "evidence_hit@5": 1.0,
+        "fact_coverage@5": 1.0,
+        "evidence_hit@10": 1.0,
+        "fact_coverage@10": 1.0
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            53,
+            50,
+            38,
+            51,
+            50,
+            324,
+            60,
+            61,
+            15,
+            45
+          ],
+          "top_relevant": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            300,
+            42,
+            211,
+            41,
+            270,
+            160,
+            134,
+            260,
+            105,
+            42
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            217,
+            214,
+            218,
+            333,
+            215,
+            218,
+            216,
+            216,
+            214,
+            16
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            332,
+            207,
+            207,
+            16,
+            16,
+            265,
+            42,
+            265,
+            12
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            48,
+            260,
+            260,
+            41,
+            262,
+            13,
+            188,
+            272,
+            44,
+            33
+          ],
+          "top_relevant": [
+            false,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            198,
+            203,
+            13,
+            198,
+            34,
+            12,
+            15,
+            42,
+            199,
+            16
+          ],
+          "top_relevant": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "d4dfec5ee7ec7490",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\d4dfec5ee7ec7490",
+      "chunk_size": 384,
+      "overlap": 64,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "dense",
+      "backend": "flat_ip",
+      "language": "ru",
+      "n_questions": 6,
+      "chunk_count": 555,
+      "metrics": {
+        "nDCG@10": 0.4373,
+        "R@10": 0.6667,
+        "MRR@10": 0.3519,
+        "P@10": 0.0833,
+        "R@5": 0.5,
+        "P@5": 0.1,
+        "evidence_hit@5": 0.5,
+        "fact_coverage@5": 0.5,
+        "evidence_hit@10": 0.6667,
+        "fact_coverage@10": 0.6667
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            42,
+            41,
+            44,
+            111,
+            44,
+            41,
+            43,
+            32,
+            110,
+            61
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": false,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            300,
+            42,
+            70,
+            295,
+            40,
+            104,
+            12,
+            41,
+            42,
+            41
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            217,
+            214,
+            218,
+            218,
+            333,
+            218,
+            215,
+            214,
+            216,
+            44
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            70,
+            332,
+            221,
+            42,
+            200,
+            26,
+            265,
+            50,
+            70
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            48,
+            260,
+            42,
+            41,
+            111,
+            41,
+            44,
+            33,
+            188,
+            44
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            111,
+            44,
+            42,
+            200,
+            221,
+            45,
+            40,
+            43,
+            41,
+            70
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "0d030f727d7b272b",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\0d030f727d7b272b",
+      "chunk_size": 480,
+      "overlap": 80,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "sparse",
+      "backend": "flat_ip",
+      "language": "ru",
+      "n_questions": 6,
+      "chunk_count": 555,
+      "metrics": {
+        "nDCG@10": 0.0,
+        "R@10": 0.0,
+        "MRR@10": 0.0,
+        "P@10": 0.0,
+        "R@5": 0.0,
+        "P@5": 0.0,
+        "evidence_hit@5": 0.0,
+        "fact_coverage@5": 0.0,
+        "evidence_hit@10": 0.0,
+        "fact_coverage@10": 0.0
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "0d030f727d7b272b",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\0d030f727d7b272b",
+      "chunk_size": 480,
+      "overlap": 80,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "hybrid",
+      "backend": "flat_ip",
+      "language": "ru",
+      "n_questions": 6,
+      "chunk_count": 555,
+      "metrics": {
+        "nDCG@10": 0.4373,
+        "R@10": 0.6667,
+        "MRR@10": 0.3519,
+        "P@10": 0.0833,
+        "R@5": 0.5,
+        "P@5": 0.1,
+        "evidence_hit@5": 0.5,
+        "fact_coverage@5": 0.5,
+        "evidence_hit@10": 0.6667,
+        "fact_coverage@10": 0.6667
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            42,
+            41,
+            44,
+            111,
+            44,
+            41,
+            43,
+            32,
+            110,
+            61
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": false,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            300,
+            42,
+            70,
+            295,
+            40,
+            104,
+            12,
+            41,
+            42,
+            41
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            217,
+            214,
+            218,
+            218,
+            333,
+            218,
+            215,
+            214,
+            216,
+            44
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            70,
+            332,
+            221,
+            42,
+            200,
+            26,
+            265,
+            50,
+            70
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            48,
+            260,
+            42,
+            41,
+            111,
+            41,
+            44,
+            33,
+            188,
+            44
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            111,
+            44,
+            42,
+            200,
+            221,
+            45,
+            40,
+            43,
+            41,
+            70
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "0d030f727d7b272b",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\0d030f727d7b272b",
+      "chunk_size": 480,
+      "overlap": 80,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "dense",
+      "backend": "flat_ip",
+      "language": "en",
+      "n_questions": 6,
+      "chunk_count": 555,
+      "metrics": {
+        "nDCG@10": 0.6388,
+        "R@10": 0.8333,
+        "MRR@10": 0.5556,
+        "P@10": 0.1,
+        "R@5": 0.8333,
+        "P@5": 0.2,
+        "evidence_hit@5": 0.8333,
+        "fact_coverage@5": 0.8333,
+        "evidence_hit@10": 0.8333,
+        "fact_coverage@10": 0.8333
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            38,
+            53,
+            269,
+            163,
+            47,
+            32,
+            50,
+            135,
+            34,
+            51
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            300,
+            42,
+            42,
+            41,
+            12,
+            211,
+            295,
+            160,
+            43,
+            44
+          ],
+          "top_relevant": [
+            false,
+            false,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            217,
+            214,
+            218,
+            218,
+            333,
+            215,
+            216,
+            214,
+            216,
+            42
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            332,
+            42,
+            207,
+            12,
+            42,
+            217,
+            43,
+            16,
+            221
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            48,
+            260,
+            42,
+            41,
+            33,
+            12,
+            188,
+            47,
+            48,
+            16
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            198,
+            12,
+            15,
+            203,
+            35,
+            16,
+            16,
+            44,
+            40,
+            42
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "0d030f727d7b272b",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\0d030f727d7b272b",
+      "chunk_size": 480,
+      "overlap": 80,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "sparse",
+      "backend": "flat_ip",
+      "language": "en",
+      "n_questions": 6,
+      "chunk_count": 555,
+      "metrics": {
+        "nDCG@10": 0.5634,
+        "R@10": 0.9167,
+        "MRR@10": 0.4627,
+        "P@10": 0.1,
+        "R@5": 0.6667,
+        "P@5": 0.1333,
+        "evidence_hit@5": 0.6667,
+        "fact_coverage@5": 0.6667,
+        "evidence_hit@10": 1.0,
+        "fact_coverage@10": 0.8889
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            53,
+            50,
+            50,
+            203,
+            51,
+            324,
+            54,
+            287,
+            71,
+            38
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true
+          ]
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": false,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.3333333333333333
+          },
+          "top_pages": [
+            300,
+            260,
+            134,
+            211,
+            265,
+            42,
+            42,
+            103,
+            160,
+            187
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            218,
+            219,
+            214,
+            217,
+            333,
+            218,
+            215,
+            275,
+            216,
+            218
+          ],
+          "top_relevant": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            332,
+            207,
+            265,
+            213,
+            212,
+            202,
+            201,
+            16,
+            331
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            260,
+            48,
+            219,
+            265,
+            262,
+            273,
+            209,
+            13,
+            48,
+            26
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            198,
+            203,
+            194,
+            34,
+            13,
+            359,
+            276,
+            324,
+            261,
+            131
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "0d030f727d7b272b",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\0d030f727d7b272b",
+      "chunk_size": 480,
+      "overlap": 80,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "hybrid",
+      "backend": "flat_ip",
+      "language": "en",
+      "n_questions": 6,
+      "chunk_count": 555,
+      "metrics": {
+        "nDCG@10": 0.6125,
+        "R@10": 1.0,
+        "MRR@10": 0.5556,
+        "P@10": 0.1167,
+        "R@5": 1.0,
+        "P@5": 0.2333,
+        "evidence_hit@5": 1.0,
+        "fact_coverage@5": 1.0,
+        "evidence_hit@10": 1.0,
+        "fact_coverage@10": 1.0
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            53,
+            50,
+            38,
+            51,
+            324,
+            50,
+            60,
+            53,
+            61,
+            45
+          ],
+          "top_relevant": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            300,
+            42,
+            42,
+            211,
+            41,
+            160,
+            12,
+            134,
+            270,
+            260
+          ],
+          "top_relevant": [
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            218,
+            217,
+            214,
+            218,
+            333,
+            215,
+            216,
+            216,
+            214,
+            219
+          ],
+          "top_relevant": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            332,
+            207,
+            16,
+            12,
+            265,
+            265,
+            42,
+            333,
+            198
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            48,
+            260,
+            41,
+            262,
+            13,
+            188,
+            48,
+            42,
+            33,
+            44
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            198,
+            203,
+            13,
+            16,
+            12,
+            42,
+            15,
+            45,
+            324,
+            16
+          ],
+          "top_relevant": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "0d030f727d7b272b",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\0d030f727d7b272b",
+      "chunk_size": 480,
+      "overlap": 80,
+      "splitter": "markdown_header"
+    },
+    {
+      "mode": "dense",
+      "backend": "flat_ip",
+      "language": "ru",
+      "n_questions": 6,
+      "chunk_count": 532,
+      "metrics": {
+        "nDCG@10": 0.4845,
+        "R@10": 0.6667,
+        "MRR@10": 0.5278,
+        "P@10": 0.1,
+        "R@5": 0.5,
+        "P@5": 0.1667,
+        "evidence_hit@5": 0.6667,
+        "fact_coverage@5": 0.4722,
+        "evidence_hit@10": 0.8333,
+        "fact_coverage@10": 0.6389
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            43,
+            41,
+            44,
+            40,
+            61,
+            38,
+            70,
+            110,
+            44,
+            348
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.3333333333333333,
+            "10": 0.3333333333333333
+          },
+          "top_pages": [
+            42,
+            70,
+            40,
+            105,
+            104,
+            105,
+            102,
+            270,
+            224,
+            294
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            333,
+            214,
+            218,
+            217,
+            217,
+            218,
+            13,
+            43,
+            70,
+            28
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.5,
+            "10": 0.5
+          },
+          "top_pages": [
+            70,
+            220,
+            332,
+            42,
+            265,
+            73,
+            70,
+            26,
+            66,
+            71
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            260,
+            41,
+            260,
+            33,
+            194,
+            224,
+            47,
+            152,
+            61,
+            44
+          ],
+          "top_relevant": [
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            224,
+            102,
+            200,
+            70,
+            217,
+            198,
+            199,
+            198,
+            71,
+            203
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "cab40e9b428e70e0",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\cab40e9b428e70e0",
+      "chunk_size": 384,
+      "overlap": 64,
+      "splitter": "page_recursive"
+    },
+    {
+      "mode": "sparse",
+      "backend": "flat_ip",
+      "language": "ru",
+      "n_questions": 6,
+      "chunk_count": 532,
+      "metrics": {
+        "nDCG@10": 0.0,
+        "R@10": 0.0,
+        "MRR@10": 0.0,
+        "P@10": 0.0,
+        "R@5": 0.0,
+        "P@5": 0.0,
+        "evidence_hit@5": 0.0,
+        "fact_coverage@5": 0.0,
+        "evidence_hit@10": 0.0,
+        "fact_coverage@10": 0.0
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [],
+          "top_relevant": []
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "cab40e9b428e70e0",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\cab40e9b428e70e0",
+      "chunk_size": 384,
+      "overlap": 64,
+      "splitter": "page_recursive"
+    },
+    {
+      "mode": "hybrid",
+      "backend": "flat_ip",
+      "language": "ru",
+      "n_questions": 6,
+      "chunk_count": 532,
+      "metrics": {
+        "nDCG@10": 0.4845,
+        "R@10": 0.6667,
+        "MRR@10": 0.5278,
+        "P@10": 0.1,
+        "R@5": 0.5,
+        "P@5": 0.1667,
+        "evidence_hit@5": 0.6667,
+        "fact_coverage@5": 0.4722,
+        "evidence_hit@10": 0.8333,
+        "fact_coverage@10": 0.6389
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            43,
+            41,
+            44,
+            40,
+            61,
+            38,
+            70,
+            110,
+            44,
+            348
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.3333333333333333,
+            "10": 0.3333333333333333
+          },
+          "top_pages": [
+            42,
+            70,
+            40,
+            105,
+            104,
+            105,
+            102,
+            270,
+            224,
+            294
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            333,
+            214,
+            218,
+            217,
+            217,
+            218,
+            13,
+            43,
+            70,
+            28
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.5,
+            "10": 0.5
+          },
+          "top_pages": [
+            70,
+            220,
+            332,
+            42,
+            265,
+            73,
+            70,
+            26,
+            66,
+            71
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            260,
+            41,
+            260,
+            33,
+            194,
+            224,
+            47,
+            152,
+            61,
+            44
+          ],
+          "top_relevant": [
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            224,
+            102,
+            200,
+            70,
+            217,
+            198,
+            199,
+            198,
+            71,
+            203
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "cab40e9b428e70e0",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\cab40e9b428e70e0",
+      "chunk_size": 384,
+      "overlap": 64,
+      "splitter": "page_recursive"
+    },
+    {
+      "mode": "dense",
+      "backend": "flat_ip",
+      "language": "en",
+      "n_questions": 6,
+      "chunk_count": 532,
+      "metrics": {
+        "nDCG@10": 0.7281,
+        "R@10": 1.0,
+        "MRR@10": 0.7321,
+        "P@10": 0.15,
+        "R@5": 0.8333,
+        "P@5": 0.2667,
+        "evidence_hit@5": 0.8333,
+        "fact_coverage@5": 0.8333,
+        "evidence_hit@10": 1.0,
+        "fact_coverage@10": 1.0
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            38,
+            51,
+            53,
+            43,
+            47,
+            61,
+            12,
+            163,
+            139,
+            55
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            42,
+            211,
+            40,
+            105,
+            41,
+            270,
+            105,
+            295,
+            43,
+            217
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            333,
+            218,
+            217,
+            214,
+            217,
+            218,
+            42,
+            43,
+            32,
+            176
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            332,
+            42,
+            220,
+            207,
+            42,
+            12,
+            208,
+            265,
+            43
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            260,
+            42,
+            41,
+            260,
+            43,
+            33,
+            48,
+            48,
+            43,
+            45
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            198,
+            15,
+            12,
+            16,
+            198,
+            16,
+            13,
+            33,
+            35,
+            203
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "cab40e9b428e70e0",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\cab40e9b428e70e0",
+      "chunk_size": 384,
+      "overlap": 64,
+      "splitter": "page_recursive"
+    },
+    {
+      "mode": "sparse",
+      "backend": "flat_ip",
+      "language": "en",
+      "n_questions": 6,
+      "chunk_count": 532,
+      "metrics": {
+        "nDCG@10": 0.4914,
+        "R@10": 0.75,
+        "MRR@10": 0.45,
+        "P@10": 0.1167,
+        "R@5": 0.75,
+        "P@5": 0.2333,
+        "evidence_hit@5": 0.8333,
+        "fact_coverage@5": 0.7222,
+        "evidence_hit@10": 0.8333,
+        "fact_coverage@10": 0.7222
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": false,
+            "10": false
+          },
+          "fact_coverage@k": {
+            "5": 0.0,
+            "10": 0.0
+          },
+          "top_pages": [
+            53,
+            50,
+            60,
+            50,
+            203,
+            297,
+            51,
+            55,
+            287,
+            327
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 0.3333333333333333,
+            "10": 0.3333333333333333
+          },
+          "top_pages": [
+            211,
+            42,
+            265,
+            260,
+            300,
+            134,
+            260,
+            187,
+            103,
+            103
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            218,
+            214,
+            217,
+            219,
+            333,
+            275,
+            217,
+            218,
+            216,
+            278
+          ],
+          "top_relevant": [
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            332,
+            207,
+            213,
+            220,
+            265,
+            12,
+            16,
+            265,
+            202
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            48,
+            260,
+            260,
+            219,
+            273,
+            13,
+            265,
+            262,
+            34,
+            265
+          ],
+          "top_relevant": [
+            false,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            203,
+            194,
+            198,
+            34,
+            13,
+            198,
+            359,
+            222,
+            131,
+            276
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "cab40e9b428e70e0",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\cab40e9b428e70e0",
+      "chunk_size": 384,
+      "overlap": 64,
+      "splitter": "page_recursive"
+    },
+    {
+      "mode": "hybrid",
+      "backend": "flat_ip",
+      "language": "en",
+      "n_questions": 6,
+      "chunk_count": 532,
+      "metrics": {
+        "nDCG@10": 0.7046,
+        "R@10": 1.0,
+        "MRR@10": 0.5694,
+        "P@10": 0.15,
+        "R@5": 1.0,
+        "P@5": 0.3,
+        "evidence_hit@5": 1.0,
+        "fact_coverage@5": 1.0,
+        "evidence_hit@10": 1.0,
+        "fact_coverage@10": 1.0
+      },
+      "per_question": [
+        {
+          "id": "Q02",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            53,
+            51,
+            38,
+            55,
+            50,
+            50,
+            61,
+            54,
+            45,
+            276
+          ],
+          "top_relevant": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q05",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            42,
+            211,
+            41,
+            40,
+            270,
+            217,
+            300,
+            105,
+            105,
+            103
+          ],
+          "top_relevant": [
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q08",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            218,
+            333,
+            214,
+            217,
+            217,
+            218,
+            216,
+            219,
+            42,
+            215
+          ],
+          "top_relevant": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q11",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            220,
+            332,
+            207,
+            220,
+            12,
+            42,
+            265,
+            16,
+            265,
+            42
+          ],
+          "top_relevant": [
+            true,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "Q14",
+          "relevant_chunks": 2,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            260,
+            260,
+            48,
+            41,
+            13,
+            33,
+            217,
+            262,
+            265,
+            44
+          ],
+          "top_relevant": [
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "id": "N01",
+          "relevant_chunks": 1,
+          "evidence_hit@k": {
+            "5": true,
+            "10": true
+          },
+          "fact_coverage@k": {
+            "5": 1.0,
+            "10": 1.0
+          },
+          "top_pages": [
+            198,
+            203,
+            198,
+            13,
+            15,
+            16,
+            42,
+            199,
+            16,
+            34
+          ],
+          "top_relevant": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        }
+      ],
+      "metric_definitions": {
+        "ir_measures": "P@k, R@k, MRR@10, nDCG@10 — чанк релевантен, если содержит >=1 полную evidence-цитату на той же странице (и источнике, если он указан)",
+        "evidence_hit@k": "доля вопросов с >=1 полной цитатой в top-k (текст + страница + источник)",
+        "fact_coverage@k": "средняя доля фактов, покрытых цитатами из top-k; факт без корректной ссылки не засчитывается"
+      },
+      "build_id": "cab40e9b428e70e0",
+      "index_dir": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab2_check3\\data\\indexes\\cab40e9b428e70e0",
+      "chunk_size": 384,
+      "overlap": 64,
+      "splitter": "page_recursive"
+    }
+  ],
+  "note": "P/R/MRR/nDCG — ir_measures по чанковой релевантности (чанк содержит >=1 полную evidence-цитату); EH/FC — предметные метрики. Пустой sparse (русский запрос к английскому BM25) не меняет dense в hybrid."
+}

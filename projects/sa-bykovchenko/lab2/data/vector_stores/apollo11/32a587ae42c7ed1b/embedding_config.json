@@ -1,0 +1,44 @@
+{
+  "config": {
+    "splitter": "markdown_header",
+    "chunk_size": 384,
+    "overlap": 64,
+    "min_chunk_tokens": 64,
+    "include_headings": true,
+    "special_tokens_reserve": 4,
+    "embedding_model": "intfloat/multilingual-e5-small",
+    "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "max_input_tokens": 512,
+    "passage_prefix": "passage: ",
+    "query_prefix": "query: ",
+    "vectorization": "hybrid",
+    "batch_size": 16,
+    "threads": 4,
+    "bm25": {
+      "k1": 1.5,
+      "b": 0.75,
+      "remove_stopwords": true,
+      "stemming": false
+    },
+    "rrf_k": 60
+  },
+  "parser_build_id": "af31e294bd5d077b",
+  "pages_sha256": "8bc3920c98c3aa3190b257be4ef2161ac42cfffb4055db3f578ffd7328157b69",
+  "chunking_sha256": "8d44dbf9046923a1dec28ea563f71741fc1e1cb929789bea832a4b7443fc4507",
+  "embeddings_sha256": "43d4eed5a8c13a1b63c981256e716752eb36b9fef20857ce61a1931e5e6598b4",
+  "sparse_sha256": "f2e367bbefa1aa3ebed612c6f39c877c7811df35747b496201eacab4030ee4c2",
+  "builder_sha256": "4e638b4bd883caf41fadce6744446c484f7e063d85c55e3c837392f64eec5476",
+  "packages": {
+    "numpy": "2.2.6",
+    "torch": "2.8.0+cpu",
+    "transformers": "5.20.2",
+    "tokenizers": "0.23.3",
+    "sentence-transformers": "6.1.0",
+    "huggingface-hub": "1.33.0",
+    "safetensors": "0.8.0",
+    "rank_bm25": "0.2.2",
+    "langchain-text-splitters": "1.1.3",
+    "faiss-cpu": "1.12.0",
+    "pymupdf4llm": "1.28.2"
+  }
+}

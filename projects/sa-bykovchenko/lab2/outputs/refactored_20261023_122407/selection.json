@@ -1,0 +1,42 @@
+{
+  "rule": {
+    "primary": "mean(fact_coverage@5) по {ru dense, en dense} на DEV",
+    "mode": "dense против hybrid: при |diff| < 0.02 выбирается dense (проще)",
+    "tiebreak": "mean(MRR@10) по ru/en, затем меньше чанков",
+    "registered": "зафиксировано в source/run_experiments.py до первого тест прогона"
+  },
+  "scores": [
+    {
+      "build": "e22ed5c33c9a82e8",
+      "mean_FC@5(ru,en dense)": 0.7917,
+      "mean_MRR@10": 0.6666,
+      "chunks": 832
+    },
+    {
+      "build": "d4dfec5ee7ec7490",
+      "mean_FC@5(ru,en dense)": 0.7778,
+      "mean_MRR@10": 0.5584,
+      "chunks": 634
+    },
+    {
+      "build": "0d030f727d7b272b",
+      "mean_FC@5(ru,en dense)": 0.6666,
+      "mean_MRR@10": 0.4537,
+      "chunks": 555
+    },
+    {
+      "build": "cab40e9b428e70e0",
+      "mean_FC@5(ru,en dense)": 0.6528,
+      "mean_MRR@10": 0.63,
+      "chunks": 532
+    }
+  ],
+  "winner": {
+    "build": "e22ed5c33c9a82e8",
+    "mode": "hybrid"
+  },
+  "hybrid_vs_dense_FC@5": {
+    "dense": 0.7917,
+    "hybrid": 0.875
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "parser_version": "3.1.0",
+  "source_sha256": "5b9d033c7b9dd604220f439cddc8a53ad08e3e9c43c83f7342d7e61ef32a1baa",
+  "source_metadata": {
+    "id": "apollo11_mission_report_1969_nasa359",
+    "title": "Apollo 11 Mission Report",
+    "report_number": "MSC-00171",
+    "publication_month": "1969-11",
+    "retrieved_date": "2026-10-08",
+    "language": "en",
+    "url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf",
+    "catalog_url": "https://ntrs.nasa.gov/citations/19700008096",
+    "path": "data/raw/apollo11_mission_report.pdf",
+    "pdf_pages": 359,
+    "sha256": "5b9d033c7b9dd604220f439cddc8a53ad08e3e9c43c83f7342d7e61ef32a1baa"
+  },
+  "config": {
+    "schema_version": 3,
+    "profile": "apollo11_pymupdf4llm_v3",
+    "description": "Парсинг всех 359 страниц pymupdf4llm (legacy-путь, встроенный OCR-слой, без системного Tesseract). Отбор страниц в retrieval — общее правило по объёму текста и доле не-ASCII букв, причина исключения сохраняется постранично. Ручные диапазоны страниц версии 2.x удалены. Флаг inhibit_spaces подавляет синтезируемые MuPDF пробелы внутри слов (см. source/parsing.py).",
+    "extraction": {
+      "tool": "pymupdf4llm",
+      "path": "legacy",
+      "table_strategy": "lines_strict",
+      "margins": 0,
+      "inhibit_spaces": true
+    },
+    "page_eligibility": {
+      "min_chars": 200,
+      "max_nonascii_alpha_ratio": 0.05
+    },
+    "headings": {
+      "inject_chapter_headers": true,
+      "max_title_len": 115
+    },
+    "chapters": [
+      [
+        12,
+        "1",
+        "SUMMARY"
+      ],
+      [
+        14,
+        "2",
+        "INTRODUCTION"
+      ],
+      [
+        15,
+        "3",
+        "MISSION DESCRIPTION"
+      ],
+      [
+        30,
+        "4",
+        "PILOTS' REPORT"
+      ],
+      [
+        50,
+        "5",
+        "LUNAR DESCENT AND ASCENT"
+      ],
+      [
+        103,
+        "6",
+        "COMMUNICATIONS"
+      ],
+      [
+        109,
+        "7",
+        "TRAJECTORY"
+      ],
+      [
+        130,
+        "8",
+        "COMMAND AND SERVICE MODULE PERFORMANCE"
+      ],
+      [
+        158,
+        "9",
+        "LUNAR MODULE PERFORMANCE"
+      ],
+      [
+        194,
+        "10",
+        "EXTRAVEHICULAR MOBILITY UNIT PERFORMANCE"
+      ],
+      [
+        198,
+        "11",
+        "THE LUNAR SURFACE"
+      ],
+      [
+        254,
+        "12",
+        "BIOMEDICAL EVALUATION"
+      ],
+      [
+        269,
+        "13",
+        "MISSION SUPPORT PERFORMANCE"
+      ],
+      [
+        275,
+        "14",
+        "ASSESSMENT OF MISSION OBJECTIVES"
+      ],
+      [
+        279,
+        "15",
+        "LAUNCH VEHICLE SUMMARY"
+      ],
+      [
+        280,
+        "16",
+        "ANOMALY SUMMARY"
+      ],
+      [
+        324,
+        "17",
+        "CONCLUSIONS"
+      ],
+      [
+        325,
+        "A",
+        "VEHICLE DESCRIPTIONS"
+      ],
+      [
+        341,
+        "B",
+        "SPACECRAFT HISTORIES"
+      ],
+      [
+        346,
+        "C",
+        "POSTFLIGHT TESTING"
+      ],
+      [
+        349,
+        "D",
+        "DATA AVAILABILITY"
+      ],
+      [
+        355,
+        "E",
+        "GLOSSARY"
+      ],
+      [
+        357,
+        "REFERENCES",
+        "REFERENCES"
+      ],
+      [
+        359,
+        "BACK",
+        "BACK COVER"
+      ]
+    ],
+    "printed_page_overrides": {
+      "36": "4-7",
+      "38": "4-9",
+      "50": "5-1",
+      "63": "5-14",
+      "259": "12-6"
+    }
+  },
+  "parsing_sha256": "572fbf4d72e0af31cd9b8d7a5a4473d96e4958adf5b2982a65c2cf888b25e1cf",
+  "pymupdf": "1.28.2",
+  "pymupdf4llm": "1.28.2",
+  "pymupdf4llm_path": "legacy(use_layout=False)"
+}

@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "stage": "representations",
+  "build_id": "cab40e9b428e70e0",
+  "chunk_count": 532,
+  "vectorization": "hybrid",
+  "embedding_model": "intfloat/multilingual-e5-small",
+  "model_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "device": "cpu",
+  "created_at_utc": "2026-10-23T12:28:04.055356+00:00",
+  "python": "3.11.17",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "dense_seconds_including_model_load": 55.89,
+  "dense_vectors_shape": [
+    532,
+    384
+  ],
+  "pooling": "sentence-transformers mean + L2 (модули репозитория E5)",
+  "bm25_build_seconds": 0.08,
+  "total_seconds_this_run": 66.36,
+  "artifact_sha256": {
+    "chunks.jsonl": "6721fda1a90077ed63605bdab18527781261e997c0039b1cd3b9ac9d08a2b392",
+    "build_config.json": "7474914e75a41459fbea837b139b7369c5cc1855010e8305ee1d15aa3eadeb75",
+    "embeddings.npy": "54d1cdddffcecbf76fd0447d28d365953846a386cf2a5f6b503b05d1efe00766",
+    "bm25.json": "6edcd59226dfbf8d4429ff70685b62445bc644765f5e57de253569d3abc548a1"
+  }
+}

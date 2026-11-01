@@ -1,0 +1,17 @@
+{
+  "status": "completed",
+  "stage": "chunks",
+  "build_id": "0d030f727d7b272b",
+  "chunk_count": 555,
+  "source_pages": 250,
+  "token_count_min": 9,
+  "token_count_max": 476,
+  "token_count_mean": 253.8,
+  "short_chunks_below_100": 96,
+  "chunking_seconds": 3.1,
+  "token_count_includes": "префикс passage:, контекст заголовков, тело, спецтокены",
+  "artifact_sha256": {
+    "chunks.jsonl": "b73210ec5196fa4b5aeba9811020b65bee8e85c88f9329953a6647abaec26c19",
+    "build_config.json": "ac94e2307ca9795e80192d56709c25a921c12c92d4bd4c094dd4663ffd930b9e"
+  }
+}

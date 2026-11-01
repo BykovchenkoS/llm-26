@@ -1,0 +1,9 @@
+{
+  "question": "Чем были вызваны сигналы перегрузки компьютера во время снижения и нарушили ли они наведение?",
+  "model": "apollo-gemma:16k",
+  "k": 6,
+  "mode": "hybrid",
+  "backend": "hnsw",
+  "temperature": 0.0,
+  "max_tokens": 400
+}

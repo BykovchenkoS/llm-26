@@ -1,0 +1,49 @@
+{
+  "owner": "apollo11_faiss_store_v2",
+  "status": "completed",
+  "store_id": "32a587ae42c7ed1b",
+  "collection": "apollo11",
+  "backends": {
+    "ann": "Faiss IndexHNSWFlat (metric=inner_product, unit vectors)",
+    "exact": "Faiss IndexFlatIP (baseline/контроль)"
+  },
+  "metric": "inner_product_on_unit_vectors_cosine",
+  "quantization": "none",
+  "vector_count": 631,
+  "dimensions": 384,
+  "row_mapping": "строка i FAISS = строка i+1 chunks.jsonl",
+  "source_build_id": "0c5de11aa49985aa",
+  "signature": {
+    "source_build_id": "0c5de11aa49985aa",
+    "source_artifact_sha256": {
+      "chunks.jsonl": "1fc92808698bc4ae912febd9e316a20f84cb496b9ee4cd4b18bb563cf72020d3",
+      "embeddings.npy": "cde157a0997ca49265a0cd0da3965503169e154aba9ae6dbc442c1679381bcf2",
+      "build_config.json": "c138f39f2dd57a3a810a424700d94ee4e2762056162693ce7da0ad2d7e4fa469",
+      "bm25.json": "776707ca3d2ac2fb40d8aeafad0554f4dbc4195c5e0f29606105b0a872a9e4a1"
+    },
+    "store_config": {
+      "collection": "apollo11",
+      "m": 16,
+      "ef_construction": 100,
+      "ef_search": 64,
+      "threads": 1,
+      "quantization": "none"
+    },
+    "faiss_version": "1.12.0",
+    "code_sha256": "13dcbe06c06e27ca19db4a1e67b23adf2a08c29cc2d164a5fd0cd26ba3dddd6d"
+  },
+  "created_at_utc": "2026-10-21T12:28:48.323221+00:00",
+  "hnsw_build_seconds": 0.026,
+  "flat_build_seconds": 0.0003,
+  "index_bytes": 1059854,
+  "flat_index_bytes": 969261,
+  "artifact_sha256": {
+    "index.faiss": "cb0c70d2669c66de46d0f4ee4bbf0764e95953b0cf9bc09ffe7ea50c1cee3026",
+    "flat.faiss": "94baf64e1e3d59b3f4b865b5fb747ebdf41f7d0c2a77284946c98e3debbdae06",
+    "chunks.jsonl": "1fc92808698bc4ae912febd9e316a20f84cb496b9ee4cd4b18bb563cf72020d3",
+    "embeddings.npy": "cde157a0997ca49265a0cd0da3965503169e154aba9ae6dbc442c1679381bcf2",
+    "embedding_config.json": "c138f39f2dd57a3a810a424700d94ee4e2762056162693ce7da0ad2d7e4fa469",
+    "store_config.json": "4dbf2c3a92dde9725f28ad1669d0f47a841356277dd40dbabd95cabc898b3d85",
+    "bm25.json": "776707ca3d2ac2fb40d8aeafad0554f4dbc4195c5e0f29606105b0a872a9e4a1"
+  }
+}

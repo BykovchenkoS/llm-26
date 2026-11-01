@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "source_id": "apollo11_mission_report_1969_nasa359",
+    "created": "2026-10-08",
+    "relevance_policy": "full_section_level_review",
+    "description": "English-query diagnostic twin of data/qrels.json. The field question_ru holds an English translation of each question; relevance is identical, so RU vs EN results measure the cross-lingual retrieval gap for the same information need.",
+    "mapping_rule": "Same as data/qrels.json: a chunk is relevant if its section_ids intersect relevant_sections."
+  },
+  "questions": [
+    {"id": "Q01", "question_ru": "What was the primary purpose of the Apollo 11 mission and how were the roles distributed among the crew members?", "relevant_sections": ["1"], "relevant_pdf_pages": [12, 13]},
+    {"id": "Q02", "question_ru": "Why did the crew reject the initial landing site and switch to manual control during the landing?", "relevant_sections": ["4.10.3"], "relevant_pdf_pages": [37, 38]},
+    {"id": "Q03", "question_ru": "Why was the surface EVA scheduled before the first planned rest period?", "relevant_sections": ["4.12.2"], "relevant_pdf_pages": [40, 41]},
+    {"id": "Q04", "question_ru": "Why did preparation for the surface EVA take longer than the training had suggested?", "relevant_sections": ["4.12.2"], "relevant_pdf_pages": [40, 41]},
+    {"id": "Q05", "question_ru": "How did lunar dust hinder equipment transfer and the use of the television cable?", "relevant_sections": ["4.12.3", "4.12.4"], "relevant_pdf_pages": [41, 42, 43, 44]},
+    {"id": "Q06", "question_ru": "What problems prevented the crew from sleeping well in the lunar module?", "relevant_sections": ["4.12.6"], "relevant_pdf_pages": [45]},
+    {"id": "Q07", "question_ru": "Why was the splashdown area changed and how did it affect the atmospheric entry program?", "relevant_sections": ["4.19"], "relevant_pdf_pages": [49]},
+    {"id": "Q08", "question_ru": "How did the passive seismic experiment perform during the first two weeks despite the temperature?", "relevant_sections": ["11.4", "11.4.1"], "relevant_pdf_pages": [214, 215]},
+    {"id": "Q09", "question_ru": "Where relative to the lunar module was the laser retro-reflector deployed?", "relevant_sections": ["11.5"], "relevant_pdf_pages": [219, 220]},
+    {"id": "Q10", "question_ru": "For what scientific purposes was the laser ranging intended and what accuracy was required?", "relevant_sections": ["11.5"], "relevant_pdf_pages": [219, 220]},
+    {"id": "Q11", "question_ru": "How were the solar wind particles collected and how long was the foil exposed?", "relevant_sections": ["11.6"], "relevant_pdf_pages": [220]},
+    {"id": "Q12", "question_ru": "How did the estimated crew energy expenditure during the EVA compare with the preflight estimates?", "relevant_sections": ["12.3"], "relevant_pdf_pages": [258]},
+    {"id": "Q13", "question_ru": "What two responsibilities did the lunar sample program serve and why was quarantine planned?", "relevant_sections": ["12.5"], "relevant_pdf_pages": [259]},
+    {"id": "Q14", "question_ru": "How were the cabins cleaned of lunar dust before transfer to the command module and on the return trip?", "relevant_sections": ["12.5.1"], "relevant_pdf_pages": [260]},
+    {"id": "Q15", "question_ru": "What caused the computer overload alarms during descent and did they disrupt the guidance?", "relevant_sections": ["16.2.5"], "relevant_pdf_pages": [291, 292, 293]}
+  ]
+}

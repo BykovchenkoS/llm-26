@@ -1,0 +1,267 @@
+{
+  "_meta": {
+    "schema_version": 3,
+    "source_id": "apollo11_mission_report_1969_nasa359",
+    "created": "2026-10-17",
+    "annotation_policy": "evidence_level",
+    "description": "Разметка на уровне конкретных доказательств (evidence) из исходного PDF, а не целых разделов. Каждая цитата взята из нормализованного корпуса (data/processed/<build>/pages.jsonl, детерминированное извлечение pymupdf4llm) и проверяется скриптом verify на вхождение в указанную страницу. Чанк считается релевантным вопросу, если содержит хотя бы одну полную цитату (сравнение без пробелов/пунктуации). Цитаты НЕ подгонялись под конкретную нарезку чанков: при другом chunk_size часть цитат может не помещаться в один чанк — это измеряемое свойство конфигурации.",
+    "split_policy": "DEV/TEST зафиксированы ДО любых измерений retrieval на новой разметке. Гиперпараметры (chunk_size, overlap, режимы, k) подбираются ТОЛЬКО на DEV; TEST используется один раз для финальной оценки. Стратификация: разные главы, разные типы вопросов, в обоих сплитах есть unanswerable.",
+    "unanswerable_policy": "Вопросы вне корпуса без evidence; используются только в QA-оценке отказа (правильный отказ — успех), в retrieval-метриках не участвуют.",
+    "notes": "Цитаты сохраняют OCR-особенности слоя (пробелы внутри слов, 'pla n ned' и т.п.) — это текст реального корпуса. 20 вопросов: 18 answerable + 2 unanswerable (в пределах 10-20 по заданию считаются answerable для retrieval)."
+  },
+  "questions": [
+    {
+      "id": "Q01", "split": "test", "answerable": true,
+      "question_ru": "Какова была основная цель Apollo 11 и как распределялись роли между членами экипажа?",
+      "question_en": "What was the primary purpose of the Apollo 11 mission and how were the roles distributed among the crew members?",
+      "expected_answer_ru": "Высадить людей на Луну и безопасно вернуть на Землю. Армстронг — командир, Коллинз — пилот командного модуля, Олдрин — пилот лунного модуля.",
+      "facts": [
+        {"id": "Q01.1", "text": "цель: посадка людей на лунную поверхность и безопасное возвращение", "evidence": [0]},
+        {"id": "Q01.2", "text": "роли: Армстронг (командир), Коллинз (пилот КМ), Олдрин (пилот ЛМ)", "evidence": [1]}
+      ],
+      "evidence": [
+        {"page": 12, "quote": "The purpose of the Apollo 11 mission was to land men on the lunar surface and to return them safely to earth"},
+        {"page": 12, "quote": "The crew were Neil A. Armstrong, Commander; Michael Collins, Command Module Pilot; and Edwin E. Aldrin, Jr., Lunar Module Pilot"}
+      ]
+    },
+    {
+      "id": "Q02", "split": "dev", "answerable": true,
+      "question_ru": "Почему при посадке экипаж отказался от первоначальной площадки и перешёл к ручному управлению?",
+      "question_en": "Why did the crew reject the initial landing site and switch to manual control during the landing?",
+      "expected_answer_ru": "Автоматическое снижение вело к полю валунов вокруг крупного кратера с острым краем. Экипаж увеличил дальность и выбрал более ровную площадку.",
+      "facts": [
+        {"id": "Q02.1", "text": "автоматическое снижение вело к полю валунов у кратера с острым краем; переход на ручное управление и увеличение дальности", "evidence": [0]}
+      ],
+      "evidence": [
+        {"page": 38, "quote": "After it became clear that an automatic descent would terminate in a boulder field surrounding a large sharp-rimmed crater, manual control was again assumed, and the range was extended to avoid the unsatisfactory landing area"}
+      ]
+    },
+    {
+      "id": "Q03", "split": "test", "answerable": true,
+      "question_ru": "Почему выход на поверхность решили провести до первого запланированного отдыха?",
+      "question_en": "Why was the surface EVA scheduled before the first planned rest period?",
+      "expected_answer_ru": "Ожидавшихся трудностей после посадки не возникло, экипаж не был чрезмерно утомлён и хорошо приспособился к 1/6 g; решение проведено в действие в 104:40:00.",
+      "facts": [
+        {"id": "Q03.1", "text": "трудности не возникли, экипаж не устал, адаптация к 1/6 g прошла без проблем — решение выйти до первого отдыха", "evidence": [0]}
+      ],
+      "evidence": [
+        {"page": 40, "quote": "These difficulties did not materialize, the crew were not overly tired, and no problem was experienced in adjusting to the 1/6-g environment. Based on these facts, the decision was made at 104:40:00 to proceed with the extravehicular activity prior to the first rest period"}
+      ]
+    },
+    {
+      "id": "Q04", "split": "test", "answerable": true,
+      "question_ru": "Почему подготовка к выходу на поверхность заняла больше времени, чем предполагали тренировки?",
+      "question_en": "Why did preparation for the surface EVA take longer than the training had suggested?",
+      "expected_answer_ru": "В симуляциях хватало 2 часов, но в реальной кабине были чек-листы, еда, монокуляр и другие предметы, мешавшие orderly подготовке; требовались решения в реальном времени.",
+      "facts": [
+        {"id": "Q04.1", "text": "в симуляциях 2 часа; в кабине лишние предметы (чек-листы, еда, монокуляр) мешали подготовке и требовали решений", "evidence": [0]}
+      ],
+      "evidence": [
+        {"page": 40, "quote": "In simulations, 2 hours had been found to be a reasonable allocation; however, everything had also been laid out in an orderly maer in the cockpit, and only those n items involved in the extravehicular activity were present. In fact, there were checklists, food packets, monoculars, and other miscellaneous items that interfered with an orderly preparation"}
+      ]
+    },
+    {
+      "id": "Q05", "split": "dev", "answerable": true,
+      "question_ru": "Как лунная пыль мешала переносу оборудования и использованию телевизионного кабеля?",
+      "question_en": "How did lunar dust hinder equipment transfer and the use of the television cable?",
+      "expected_answer_ru": "Пыль с ремней транспортёра падала на астронавта и в кабину и мешала транспортёру; покрытый пылью белый телевизионный кабель стал плохо виден.",
+      "facts": [
+        {"id": "Q05.1", "text": "пыль с ремней падала на нижнего члена экипажа и в кабину, транспортёр требовал усилий", "evidence": [0]},
+        {"id": "Q05.2", "text": "белый ТВ-кабель покрылся пылью и стал трудноразличим", "evidence": [1]}
+      ],
+      "evidence": [
+        {"page": 41, "quote": "The initial operation of the lunar equipment conveyor in lowering the camera was satisfactory, but after the straps had become covered with lunar surface material, a problem arose in transporting the equipment back into the lunar module"},
+        {"page": 42, "quote": "At first, the white cord showed up well, but it soon became covered with dust and was therefore more difficult to see"}
+      ]
+    },
+    {
+      "id": "Q06", "split": "test", "answerable": true,
+      "question_ru": "Какие проблемы мешали экипажу выспаться в лунном модуле?",
+      "question_en": "What problems prevented the crew from sleeping well in the lunar module?",
+      "expected_answer_ru": "Мешали шум (насосы гликоля), освещение и прохлада; Олдрин проспал около 2 часов, Армстронг не спал вовсе.",
+      "facts": [
+        {"id": "Q06.1", "text": "шум, освещение и пониженная температура мешали сну", "evidence": [0, 1]},
+        {"id": "Q06.2", "text": "Олдрин спал ~2 часа, командир не спал", "evidence": [2]}
+      ],
+      "evidence": [
+        {"page": 45, "quote": "But noise, lighting, and a lower-thandesired temperature were a n oying"},
+        {"page": 45, "quote": "the noise from the glycol pumps was then loud enough to interrupt sleep"},
+        {"page": 45, "quote": "The Lunar Module Pilot estimated he slept fitfully for perhaps 2 hours and the Commander did not sleep at all"}
+      ]
+    },
+    {
+      "id": "Q07", "split": "test", "answerable": true,
+      "question_ru": "Почему изменили район приводнения и как это повлияло на программу входа в атмосферу?",
+      "question_en": "Why was the splashdown area changed and how did it affect the atmospheric entry program?",
+      "expected_answer_ru": "Из-за гроз в основном районе приводнения точку перенесли с 1285 до 1500 миль от границы входа; потребовалась программа P65 (skipup control).",
+      "facts": [
+        {"id": "Q07.1", "text": "грозы; точку перенесли с 1285 на 1500 миль", "evidence": [0]},
+        {"id": "Q07.2", "text": "потребовалась программа P65 (skipup control routine)", "evidence": [1]}
+      ],
+      "evidence": [
+        {"page": 49, "quote": "Because of the presence of thunderstorms in the primary recovery area (1285 miles downrange from the entry interface of 400 000 feet), the targeted landing point was moved to a range of 1500 miles from entry interface"},
+        {"page": 49, "quote": "This change required the use of computer program P65 (skipup control routine) in the computer, in addition to those programs used for the planned shorter range entry"}
+      ]
+    },
+    {
+      "id": "Q08", "split": "dev", "answerable": true,
+      "question_ru": "Как работал пассивный сейсмический эксперимент в первые две недели, несмотря на температуру?",
+      "question_en": "How did the passive seismic experiment perform during the first two weeks despite the temperature?",
+      "expected_answer_ru": "Система сейсмометров удовлетворила требованиям эксперимента первые 2 недели; существенных недостатков приборов не было, несмотря на превышение расчётной температуры до 50°F.",
+      "facts": [
+        {"id": "Q08.1", "text": "требования эксперимента выполнены первые 2 недели, существенных недостатков приборов нет", "evidence": [0]},
+        {"id": "Q08.2", "text": "максимальная температура превысила расчётную до 50°F", "evidence": [1]}
+      ],
+      "evidence": [
+        {"page": 214, "quote": "The early Apollo scientific experiment package seismometer system met the reQuirements of the experiment for the first 2 weeks of its operation"},
+        {"page": 214, "quote": "No significant instrumental deficiencies were encountered despite the fact that maximum operating temperatures exceeded those pla n ed for the instrument by as much as 50° F"}
+      ]
+    },
+    {
+      "id": "Q09", "split": "test", "answerable": true,
+      "question_ru": "Где относительно лунного модуля установили лазерный отражатель?",
+      "question_en": "Where relative to the lunar module was the laser retro-reflector deployed?",
+      "expected_answer_ru": "Примерно в 14 метрах к юго-юго-западу, на относительно ровном участке.",
+      "facts": [
+        {"id": "Q09.1", "text": "примерно 14 метров к юго-юго-западу на ровном участке", "evidence": [0]}
+      ],
+      "evidence": [
+        {"page": 219, "quote": "The laser ranging retro-reflector was deployed approximately 1 4 meters south-southwest of the lunar module in a relatively smooth area"}
+      ]
+    },
+    {
+      "id": "Q10", "split": "test", "answerable": true,
+      "question_ru": "Для каких научных целей предназначалось лазерное измерение расстояния и какая точность требовалась?",
+      "question_en": "For what scientific purposes was the laser ranging intended and what accuracy was required?",
+      "expected_answer_ru": "Изучение гравитации, относительности, физики Земли и Луны; неопределённость около 15 см на многолетнем периоде наблюдений.",
+      "facts": [
+        {"id": "Q10.1", "text": "цели: гравитация, относительность, физика Земли и Луны", "evidence": [0]},
+        {"id": "Q10.2", "text": "точность ~15 сантиметров на протяжении многих лет", "evidence": [1]}
+      ],
+      "evidence": [
+        {"page": 220, "quote": "The scientific objectives of the laser ranging experiment --studies of gravitation, relativity, and·earth and lunar physics --can be achieved"},
+        {"page": 220, "quote": "only by successfully moni taring the changes in the distances from stations on earth to the laser beam reflector on the moon with an uncertainty of about 15 centimeters over a period of many years"}
+      ]
+    },
+    {
+      "id": "Q11", "split": "dev", "answerable": true,
+      "question_ru": "Как собирали частицы солнечного ветра и сколько времени экспонировали фольгу?",
+      "question_en": "How were the solar wind particles collected and how long was the foil exposed?",
+      "expected_answer_ru": "Частицы захватывались специально подготовленной алюминиевой фольгой; экспозиция 77 минут, затем фольгу вернули.",
+      "facts": [
+        {"id": "Q11.1", "text": "алюминиевая фольга; экспозиция 77 минут", "evidence": [0]}
+      ],
+      "evidence": [
+        {"page": 220, "quote": "The foil was retreived after 77 minutes exposure to the lunar environment"}
+      ]
+    },
+    {
+      "id": "Q12", "split": "test", "answerable": true,
+      "question_ru": "Как оценённые энергозатраты астронавтов во время выхода соотносились с предполётными оценками?",
+      "question_en": "How did the estimated crew energy expenditure during the EVA compare with the preflight estimates?",
+      "expected_answer_ru": "Фактически ~900 Btu/ч (командир) и ~1200 (пилот ЛМ) — ниже предполётных 1350 и 1275 Btu/ч.",
+      "facts": [
+        {"id": "Q12.1", "text": "900 Btu у командира и 1200 у пилота ЛМ", "evidence": [0]},
+        {"id": "Q12.2", "text": "ниже предполётных 1350 и 1275 Btu", "evidence": [1]}
+      ],
+      "evidence": [
+        {"page": 258, "quote": "The actual average metabolic production per hour was estimated to be 900 Btu for the Commander and 1200 Btu for the Lunar Module Pilot"},
+        {"page": 258, "quote": "These values are less than the preflight estimates of 1350 and 1275 Btu for the respective crewmen"}
+      ]
+    },
+    {
+      "id": "Q13", "split": "test", "answerable": true,
+      "question_ru": "Какие две задачи решала программа обращения с лунными образцами и зачем предусматривался карантин?",
+      "question_en": "What two responsibilities did the lunar sample program serve and why was quarantine planned?",
+      "expected_answer_ru": "Сохранить образцы в исходном состоянии и защитить земную экологию от возможной вредной лунной субстанции; карантин — для контроля инфекционных рисков.",
+      "facts": [
+        {"id": "Q13.1", "text": "две задачи: сохранение образцов и защита экологии Земли", "evidence": [0]},
+        {"id": "Q13.2", "text": "карантин в Lunar Receiving Laboratory, ежедневные проверки", "evidence": [1]}
+      ],
+      "evidence": [
+        {"page": 259, "quote": "The two fundamental responsibilities of the lunar sample program were to preserve the integrity of the returned lunar samples in the original or near-original state and to make practical provisions to protect the earth's ecology from possible contamination by lunar substances that might be infectious, toxic, or otherwise harmful to man, animals, or plants"},
+        {"page": 259, "quote": "Follow-up evaluations were conducted daily during the quarantine period in the Lunar Receiving Laboratory, and the immunohematology and microbiology revealed no changes attributable to exposure to the lunar surface material"}
+      ]
+    },
+    {
+      "id": "Q14", "split": "dev", "answerable": true,
+      "question_ru": "Как очищали кабины от лунной пыли перед переходом в командный модуль и на обратном пути?",
+      "question_en": "How were the cabins cleaned of lunar dust before transfer to the command module and on the return trip?",
+      "expected_answer_ru": "Щётка-пылесос и избыточное давление воздуха из шлангов скафандров с фильтрами LiOH; командный модуль чистили каждые 24 часа щёткой и полотенцами.",
+      "facts": [
+        {"id": "Q14.1", "text": "щётка-пылесос + поток воздуха, частицы в LiOH-фильтры", "evidence": [0]},
+        {"id": "Q14.2", "text": "КМ чистили каждые 24 часа щёткой и полотенцами", "evidence": [1]}
+      ],
+      "evidence": [
+        {"page": 260, "quote": "The cabin cleaning procedure involved the use of a vacuum-brush device and positive air pressure from the suit supply hoses to blow remote particles into the atmosphere for collection in the lithium hydroxide filters in the environmental control system"},
+        {"page": 260, "quote": "The command module was cleaned during the return to earth at 2 4 -hour intervals using the vacuum brush and towels"}
+      ]
+    },
+    {
+      "id": "Q15", "split": "test", "answerable": true,
+      "question_ru": "Чем были вызваны сигналы перегрузки компьютера во время снижения и нарушили ли они наведение?",
+      "question_en": "What caused the computer overload alarms during descent and did they disrupt the guidance?",
+      "expected_answer_ru": "Неожиданные счётные прерывания от rendezvous radar coupling data unit вызывали Executive overflow; функции наведения и управления не пострадали.",
+      "facts": [
+        {"id": "Q15.1", "text": "Executive overflow: компьютер не успевал обрабатывать данные за цикл", "evidence": [0]},
+        {"id": "Q15.2", "text": "причина: счётные прерывания от rendezvous radar coupling data unit", "evidence": [1]}
+      ],
+      "evidence": [
+        {"page": 291, "quote": "The alarms were of the Executive overflow type, which signify that the guidance computer ca n ot accomplish all of the data processing requested in a computation cycle"},
+        {"page": 292, "quote": "The cause for the multiple scheduling of jobs has been identified by analyses and simulations to be primarily counter interrupts from the rendezvous radar coupling data unit"}
+      ]
+    },
+    {
+      "id": "N01", "split": "dev", "answerable": true,
+      "question_ru": "Сколько времени отвели на выход на поверхность Луны и уложились ли экипаж?",
+      "question_en": "How much time was allotted for the lunar surface EVA and did the crew fit into it?",
+      "expected_answer_ru": "2,5 часа; исследование поверхности завершилось в отведённое время, экипаж вернулся в ЛМ на 111-й час.",
+      "facts": [
+        {"id": "N01.1", "text": "отведённое время 2,5 часа; завершили вовремя", "evidence": [0]}
+      ],
+      "evidence": [
+        {"page": 13, "quote": "The surface exploration was concluded in the allotted time of 2-l/2 hours, and the crew reentered the lunar module at lll-l/2 hours"}
+      ]
+    },
+    {
+      "id": "N02", "split": "test", "answerable": true,
+      "question_ru": "Когда и откуда был запущен Apollo 11?",
+      "question_en": "When and from where was Apollo 11 launched?",
+      "expected_answer_ru": "16 июля 1969, 8:32 утра E.T., из Космического центра имени Кеннеди, Флорида.",
+      "facts": [
+        {"id": "N02.1", "text": "запуск 16 июля 1969 в 8:32 утра из Kennedy Space Center, Флорида", "evidence": [0]}
+      ],
+      "evidence": [
+        {"page": 12, "quote": "The space vehicle was launched from Kennedy Space Center, Florida, at 8:32:00 a. m., e.s.t., July 16, 1969"}
+      ]
+    },
+    {
+      "id": "N03", "split": "test", "answerable": true,
+      "question_ru": "Сколько лунного материала собрали для возвращения на Землю?",
+      "question_en": "How much lunar material was collected for return to Earth?",
+      "expected_answer_ru": "Сорок семь фунтов лунного поверхностного материала.",
+      "facts": [
+        {"id": "N03.1", "text": "47 фунтов лунного материала", "evidence": [0]}
+      ],
+      "evidence": [
+        {"page": 13, "quote": "Forty-seven pounds of lunar surface material were collected to be returned for analysis"}
+      ]
+    },
+    {
+      "id": "N04", "split": "dev", "answerable": false,
+      "question_ru": "Что астронавты ели на завтрак на Луне и как оценивали его вкус?",
+      "question_en": "What did the astronauts eat for breakfast on the Moon and how did they rate its taste?",
+      "expected_answer_ru": "Отказ: в отчёте нет меню завтрака на Луне и его вкусовых оценок.",
+      "facts": [],
+      "evidence": []
+    },
+    {
+      "id": "N05", "split": "test", "answerable": false,
+      "question_ru": "Сколько пусков Saturn V закончились авариями до миссии Apollo 11?",
+      "question_en": "How many Saturn V launches ended in failure before the Apollo 11 mission?",
+      "expected_answer_ru": "Отказ: в отчёте Apollo 11 нет статистики аварий Saturn V (тема близка — глава 15 о launch vehicle — но данных нет).",
+      "facts": [],
+      "evidence": []
+    }
+  ]
+}
