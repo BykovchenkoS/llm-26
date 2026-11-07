@@ -1,0 +1,1355 @@
+{
+  "generated_at": "2026-11-05T15:07:59.206314+00:00",
+  "run_kind": "post_hoc_full_metric_audit",
+  "sources": {
+    "langgraph": "Langfuse GENERATION observations by thread_id",
+    "opencode_full": "Langfuse proxy opencode_llm_call generations",
+    "opencode_crosscheck": "native Langfuse generations and saved step_finish events",
+    "opencode_stdout_dir": "outputs\\final_opencode\\20261105-125108"
+  },
+  "methodology": {
+    "llm_calls_langgraph": "logged GENERATION count + model retry attempts beyond the first (retry attempts without a separate generation are counted as calls, not as extra tokens)",
+    "tokens_langgraph": "sum of input/output/cache across all Langfuse GENERATION observations for the task; includes summarization",
+    "llm_calls_opencode": "sum of upstream attempt counts recorded by the proxy; includes extra/retry requests",
+    "tokens_opencode": "sum across proxy generations; native and step_finish totals are cross-checks and are not added again",
+    "agent_steps": "llm_calls + tool_calls_total",
+    "max_context_langgraph": "max tokens_before across context_diagnostics",
+    "max_context_opencode": "max prompt_incl_cache across proxy generations",
+    "cost": "direct API cost is zero for local Ollama; hardware and electricity costs were not measured"
+  },
+  "previous_metrics": {
+    "langgraph_mean_total_tokens_ok": 4137.6,
+    "opencode_mean_total_tokens_ok": 4474.1,
+    "langgraph_mean_output_tokens_ok": 187.5,
+    "opencode_mean_output_tokens_ok": 136.2
+  },
+  "langgraph": {
+    "tasks": [
+      {
+        "agent": "langgraph",
+        "task": "F01",
+        "category": "factual",
+        "difficulty": "medium",
+        "task_type": "single",
+        "status": "ok",
+        "turns_executed": 1,
+        "duration_s": 149.793,
+        "llm_calls": 2,
+        "generation_count": 2,
+        "summary_generations": 0,
+        "retry_count": 0,
+        "tool_calls_total": 1,
+        "tool_calls_by_name": {
+          "search_documents": 1
+        },
+        "agent_steps": 3,
+        "max_context_tokens": 3864,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 2842,
+          "prompt_incl_cache": 4674,
+          "cached": 1832,
+          "output": 541,
+          "total": 5215
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 2793,
+          "prompt_incl_cache": 3740,
+          "cached": 947,
+          "output": 454,
+          "total": 4194
+        }
+      },
+      {
+        "agent": "langgraph",
+        "task": "F03",
+        "category": "factual",
+        "difficulty": "easy",
+        "task_type": "single",
+        "status": "ok",
+        "turns_executed": 1,
+        "duration_s": 100.734,
+        "llm_calls": 3,
+        "generation_count": 2,
+        "summary_generations": 0,
+        "retry_count": 1,
+        "tool_calls_total": 1,
+        "tool_calls_by_name": {
+          "search_documents": 1
+        },
+        "agent_steps": 4,
+        "max_context_tokens": 3691,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 2657,
+          "prompt_incl_cache": 4505,
+          "cached": 1848,
+          "output": 279,
+          "total": 4784
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 2643,
+          "prompt_incl_cache": 3567,
+          "cached": 924,
+          "output": 201,
+          "total": 3768
+        }
+      },
+      {
+        "agent": "langgraph",
+        "task": "F05",
+        "category": "factual",
+        "difficulty": "hard",
+        "task_type": "single",
+        "status": "ok",
+        "turns_executed": 1,
+        "duration_s": 68.756,
+        "llm_calls": 2,
+        "generation_count": 2,
+        "summary_generations": 0,
+        "retry_count": 0,
+        "tool_calls_total": 1,
+        "tool_calls_by_name": {
+          "search_documents": 1
+        },
+        "agent_steps": 3,
+        "max_context_tokens": 2995,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 1973,
+          "prompt_incl_cache": 3806,
+          "cached": 1833,
+          "output": 237,
+          "total": 4043
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 1923,
+          "prompt_incl_cache": 2871,
+          "cached": 948,
+          "output": 139,
+          "total": 3010
+        }
+      },
+      {
+        "agent": "langgraph",
+        "task": "F08",
+        "category": "factual",
+        "difficulty": "medium",
+        "task_type": "single",
+        "status": "ok",
+        "turns_executed": 1,
+        "duration_s": 101.696,
+        "llm_calls": 2,
+        "generation_count": 2,
+        "summary_generations": 0,
+        "retry_count": 0,
+        "tool_calls_total": 1,
+        "tool_calls_by_name": {
+          "search_documents": 1
+        },
+        "agent_steps": 3,
+        "max_context_tokens": 3397,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 2374,
+          "prompt_incl_cache": 4211,
+          "cached": 1837,
+          "output": 365,
+          "total": 4576
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 2322,
+          "prompt_incl_cache": 3273,
+          "cached": 951,
+          "output": 267,
+          "total": 3540
+        }
+      },
+      {
+        "agent": "langgraph",
+        "task": "F11",
+        "category": "factual",
+        "difficulty": "easy",
+        "task_type": "single",
+        "status": "ok",
+        "turns_executed": 1,
+        "duration_s": 88.923,
+        "llm_calls": 3,
+        "generation_count": 2,
+        "summary_generations": 0,
+        "retry_count": 1,
+        "tool_calls_total": 1,
+        "tool_calls_by_name": {
+          "search_documents": 1
+        },
+        "agent_steps": 4,
+        "max_context_tokens": 3532,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 2496,
+          "prompt_incl_cache": 4346,
+          "cached": 1850,
+          "output": 221,
+          "total": 4567
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 2483,
+          "prompt_incl_cache": 3408,
+          "cached": 925,
+          "output": 134,
+          "total": 3542
+        }
+      },
+      {
+        "agent": "langgraph",
+        "task": "F13",
+        "category": "factual",
+        "difficulty": "medium",
+        "task_type": "single",
+        "status": "ok",
+        "turns_executed": 1,
+        "duration_s": 89.681,
+        "llm_calls": 2,
+        "generation_count": 2,
+        "summary_generations": 0,
+        "retry_count": 0,
+        "tool_calls_total": 1,
+        "tool_calls_by_name": {
+          "search_documents": 1
+        },
+        "agent_steps": 3,
+        "max_context_tokens": 3314,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 2291,
+          "prompt_incl_cache": 4127,
+          "cached": 1836,
+          "output": 346,
+          "total": 4473
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 2240,
+          "prompt_incl_cache": 3190,
+          "cached": 950,
+          "output": 273,
+          "total": 3463
+        }
+      },
+      {
+        "agent": "langgraph",
+        "task": "F15",
+        "category": "factual",
+        "difficulty": "hard",
+        "task_type": "single",
+        "status": "empty_response",
+        "turns_executed": 1,
+        "duration_s": 34.291,
+        "llm_calls": 3,
+        "generation_count": 1,
+        "summary_generations": 0,
+        "retry_count": 2,
+        "tool_calls_total": 0,
+        "tool_calls_by_name": {},
+        "agent_steps": 3,
+        "max_context_tokens": 1055,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 11,
+          "prompt_incl_cache": 943,
+          "cached": 932,
+          "output": 107,
+          "total": 1050
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 0,
+          "prompt_incl_cache": 0,
+          "cached": 0,
+          "output": 0,
+          "total": 0
+        }
+      },
+      {
+        "agent": "langgraph",
+        "task": "X01",
+        "category": "multi_fact",
+        "difficulty": "medium",
+        "task_type": "single",
+        "status": "ok",
+        "turns_executed": 1,
+        "duration_s": 110.985,
+        "llm_calls": 2,
+        "generation_count": 2,
+        "summary_generations": 0,
+        "retry_count": 0,
+        "tool_calls_total": 1,
+        "tool_calls_by_name": {
+          "search_documents": 1
+        },
+        "agent_steps": 3,
+        "max_context_tokens": 3835,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 2813,
+          "prompt_incl_cache": 4645,
+          "cached": 1832,
+          "output": 410,
+          "total": 5055
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 2764,
+          "prompt_incl_cache": 3711,
+          "cached": 947,
+          "output": 325,
+          "total": 4036
+        }
+      },
+      {
+        "agent": "langgraph",
+        "task": "X02",
+        "category": "multi_fact",
+        "difficulty": "hard",
+        "task_type": "single",
+        "status": "ok",
+        "turns_executed": 1,
+        "duration_s": 161.602,
+        "llm_calls": 2,
+        "generation_count": 2,
+        "summary_generations": 0,
+        "retry_count": 0,
+        "tool_calls_total": 1,
+        "tool_calls_by_name": {
+          "search_documents": 1
+        },
+        "agent_steps": 3,
+        "max_context_tokens": 3334,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 2312,
+          "prompt_incl_cache": 4137,
+          "cached": 1825,
+          "output": 920,
+          "total": 5057
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 2270,
+          "prompt_incl_cache": 3210,
+          "cached": 940,
+          "output": 847,
+          "total": 4057
+        }
+      },
+      {
+        "agent": "langgraph",
+        "task": "C01",
+        "category": "retrieval_calculation",
+        "difficulty": "hard",
+        "task_type": "single",
+        "status": "ok",
+        "turns_executed": 1,
+        "duration_s": 99.513,
+        "llm_calls": 3,
+        "generation_count": 2,
+        "summary_generations": 0,
+        "retry_count": 1,
+        "tool_calls_total": 1,
+        "tool_calls_by_name": {
+          "search_documents": 1
+        },
+        "agent_steps": 4,
+        "max_context_tokens": 3807,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 2735,
+          "prompt_incl_cache": 4659,
+          "cached": 1924,
+          "output": 219,
+          "total": 4878
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 2721,
+          "prompt_incl_cache": 3683,
+          "cached": 962,
+          "output": 68,
+          "total": 3751
+        }
+      },
+      {
+        "agent": "langgraph",
+        "task": "C02",
+        "category": "retrieval_calculation",
+        "difficulty": "medium",
+        "task_type": "single",
+        "status": "ok",
+        "turns_executed": 1,
+        "duration_s": 84.569,
+        "llm_calls": 2,
+        "generation_count": 2,
+        "summary_generations": 0,
+        "retry_count": 0,
+        "tool_calls_total": 1,
+        "tool_calls_by_name": {
+          "search_documents": 1
+        },
+        "agent_steps": 3,
+        "max_context_tokens": 3646,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 2621,
+          "prompt_incl_cache": 4475,
+          "cached": 1854,
+          "output": 280,
+          "total": 4755
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 2556,
+          "prompt_incl_cache": 3522,
+          "cached": 966,
+          "output": 167,
+          "total": 3689
+        }
+      },
+      {
+        "agent": "langgraph",
+        "task": "U01",
+        "category": "unanswerable",
+        "difficulty": "easy",
+        "task_type": "single",
+        "status": "ok",
+        "turns_executed": 1,
+        "duration_s": 67.652,
+        "llm_calls": 2,
+        "generation_count": 2,
+        "summary_generations": 0,
+        "retry_count": 0,
+        "tool_calls_total": 1,
+        "tool_calls_by_name": {
+          "search_documents": 1
+        },
+        "agent_steps": 3,
+        "max_context_tokens": 3507,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 2484,
+          "prompt_incl_cache": 4320,
+          "cached": 1836,
+          "output": 115,
+          "total": 4435
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 2433,
+          "prompt_incl_cache": 3383,
+          "cached": 950,
+          "output": 34,
+          "total": 3417
+        }
+      },
+      {
+        "agent": "langgraph",
+        "task": "U02",
+        "category": "unanswerable",
+        "difficulty": "easy",
+        "task_type": "single",
+        "status": "ok",
+        "turns_executed": 1,
+        "duration_s": 66.737,
+        "llm_calls": 2,
+        "generation_count": 2,
+        "summary_generations": 0,
+        "retry_count": 0,
+        "tool_calls_total": 1,
+        "tool_calls_by_name": {
+          "search_documents": 1
+        },
+        "agent_steps": 3,
+        "max_context_tokens": 3435,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 2412,
+          "prompt_incl_cache": 4236,
+          "cached": 1824,
+          "output": 115,
+          "total": 4351
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 2373,
+          "prompt_incl_cache": 3311,
+          "cached": 938,
+          "output": 58,
+          "total": 3369
+        }
+      },
+      {
+        "agent": "langgraph",
+        "task": "D01",
+        "category": "long_dialogue",
+        "difficulty": "hard",
+        "task_type": "dialogue",
+        "status": "ok",
+        "turns_executed": 5,
+        "duration_s": 382.426,
+        "llm_calls": 10,
+        "generation_count": 9,
+        "summary_generations": 1,
+        "retry_count": 1,
+        "tool_calls_total": 3,
+        "tool_calls_by_name": {
+          "search_documents": 3
+        },
+        "agent_steps": 13,
+        "max_context_tokens": 8061,
+        "compaction_count": 1,
+        "tokens_full": {
+          "prompt_uncached": 9974,
+          "prompt_incl_cache": 34977,
+          "cached": 25003,
+          "output": 1155,
+          "total": 36132
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 7060,
+          "prompt_incl_cache": 21744,
+          "cached": 14684,
+          "output": 723,
+          "total": 22467
+        }
+      },
+      {
+        "agent": "langgraph",
+        "task": "D02",
+        "category": "long_dialogue",
+        "difficulty": "hard",
+        "task_type": "dialogue",
+        "status": "ok",
+        "turns_executed": 5,
+        "duration_s": 178.131,
+        "llm_calls": 8,
+        "generation_count": 8,
+        "summary_generations": 0,
+        "retry_count": 0,
+        "tool_calls_total": 3,
+        "tool_calls_by_name": {
+          "search_documents": 2,
+          "calculate": 1
+        },
+        "agent_steps": 11,
+        "max_context_tokens": 5691,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 4250,
+          "prompt_incl_cache": 33649,
+          "cached": 29399,
+          "output": 560,
+          "total": 34209
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 4148,
+          "prompt_incl_cache": 24291,
+          "cached": 20143,
+          "output": 434,
+          "total": 24725
+        }
+      }
+    ],
+    "aggregate": {
+      "status_counts": {
+        "ok": 14,
+        "empty_response": 1
+      },
+      "tool_calls_by_name": {
+        "search_documents": 17,
+        "calculate": 1
+      },
+      "tasks": 15,
+      "tasks_with_usage": 15,
+      "sum_total_tokens_full": 127580,
+      "mean_total_tokens_full_per_task": 8505.3,
+      "sum_output_tokens_full": 5870,
+      "mean_output_tokens_full_per_task": 391.3,
+      "sum_prompt_uncached_full": 44245,
+      "sum_cached_full": 77465,
+      "sum_llm_calls": 48,
+      "mean_llm_calls_per_task": 3.2,
+      "sum_tool_calls": 18,
+      "mean_tool_calls_per_task": 1.2,
+      "sum_agent_steps": 66,
+      "sum_retries": 6,
+      "sum_compactions": 1,
+      "max_context_tokens": 8061,
+      "sum_duration_s": 1785.489,
+      "mean_duration_s": 119.033
+    }
+  },
+  "opencode": {
+    "tasks": [
+      {
+        "agent": "opencode",
+        "task": "F01",
+        "category": "factual",
+        "difficulty": "medium",
+        "task_type": "single",
+        "status": "timeout",
+        "turns_executed": 1,
+        "duration_s": 180.456,
+        "llm_calls": 4,
+        "proxy_generations": 2,
+        "native_generations": 0,
+        "step_finish_count": 0,
+        "retry_count": 4,
+        "tool_calls_total": 0,
+        "tool_calls_by_name": {},
+        "agent_steps": 4,
+        "max_context_tokens": 1086,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 568,
+          "prompt_incl_cache": 1659,
+          "cached": 1091,
+          "output": 106,
+          "total": 1765
+        },
+        "tokens_native_success": {
+          "prompt_uncached": 0,
+          "prompt_incl_cache": 0,
+          "cached": 0,
+          "output": 0,
+          "total": 0
+        },
+        "tokens_step_finish_success": {
+          "prompt_uncached": 0,
+          "prompt_incl_cache": 0,
+          "cached": 0,
+          "output": 0,
+          "total": 0
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 0,
+          "prompt_incl_cache": 0,
+          "cached": 0,
+          "output": 0,
+          "total": 0
+        }
+      },
+      {
+        "agent": "opencode",
+        "task": "F03",
+        "category": "factual",
+        "difficulty": "easy",
+        "task_type": "single",
+        "status": "ok",
+        "turns_executed": 1,
+        "duration_s": 137.895,
+        "llm_calls": 4,
+        "proxy_generations": 4,
+        "native_generations": 2,
+        "step_finish_count": 2,
+        "retry_count": 2,
+        "tool_calls_total": 1,
+        "tool_calls_by_name": {
+          "search_documents": 1
+        },
+        "agent_steps": 5,
+        "max_context_tokens": 3669,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 5047,
+          "prompt_incl_cache": 8805,
+          "cached": 3758,
+          "output": 571,
+          "total": 9376
+        },
+        "tokens_native_success": {
+          "prompt_uncached": 2435,
+          "prompt_incl_cache": 4568,
+          "cached": 2133,
+          "output": 246,
+          "total": 4814
+        },
+        "tokens_step_finish_success": {
+          "prompt_uncached": 2435,
+          "prompt_incl_cache": 4568,
+          "cached": 2133,
+          "output": 246,
+          "total": 4814
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 2390,
+          "prompt_incl_cache": 3487,
+          "cached": 1097,
+          "output": 158,
+          "total": 3645
+        }
+      },
+      {
+        "agent": "opencode",
+        "task": "F05",
+        "category": "factual",
+        "difficulty": "hard",
+        "task_type": "single",
+        "status": "ok",
+        "turns_executed": 1,
+        "duration_s": 107.507,
+        "llm_calls": 3,
+        "proxy_generations": 3,
+        "native_generations": 2,
+        "step_finish_count": 2,
+        "retry_count": 1,
+        "tool_calls_total": 1,
+        "tool_calls_by_name": {
+          "search_documents": 1
+        },
+        "agent_steps": 4,
+        "max_context_tokens": 2870,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 1869,
+          "prompt_incl_cache": 4531,
+          "cached": 2662,
+          "output": 247,
+          "total": 4778
+        },
+        "tokens_native_success": {
+          "prompt_uncached": 1818,
+          "prompt_incl_cache": 3957,
+          "cached": 2139,
+          "output": 235,
+          "total": 4192
+        },
+        "tokens_step_finish_success": {
+          "prompt_uncached": 1818,
+          "prompt_incl_cache": 3957,
+          "cached": 2139,
+          "output": 235,
+          "total": 4192
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 1767,
+          "prompt_incl_cache": 2870,
+          "cached": 1103,
+          "output": 143,
+          "total": 3013
+        }
+      },
+      {
+        "agent": "opencode",
+        "task": "F08",
+        "category": "factual",
+        "difficulty": "medium",
+        "task_type": "single",
+        "status": "timeout",
+        "turns_executed": 1,
+        "duration_s": 180.169,
+        "llm_calls": 2,
+        "proxy_generations": 2,
+        "native_generations": 0,
+        "step_finish_count": 0,
+        "retry_count": 2,
+        "tool_calls_total": 0,
+        "tool_calls_by_name": {},
+        "agent_steps": 2,
+        "max_context_tokens": 1090,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 106,
+          "prompt_incl_cache": 1667,
+          "cached": 1561,
+          "output": 97,
+          "total": 1764
+        },
+        "tokens_native_success": {
+          "prompt_uncached": 0,
+          "prompt_incl_cache": 0,
+          "cached": 0,
+          "output": 0,
+          "total": 0
+        },
+        "tokens_step_finish_success": {
+          "prompt_uncached": 0,
+          "prompt_incl_cache": 0,
+          "cached": 0,
+          "output": 0,
+          "total": 0
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 0,
+          "prompt_incl_cache": 0,
+          "cached": 0,
+          "output": 0,
+          "total": 0
+        }
+      },
+      {
+        "agent": "opencode",
+        "task": "F11",
+        "category": "factual",
+        "difficulty": "easy",
+        "task_type": "single",
+        "status": "empty_response",
+        "turns_executed": 1,
+        "duration_s": 46.796,
+        "llm_calls": 5,
+        "proxy_generations": 3,
+        "native_generations": 1,
+        "step_finish_count": 1,
+        "retry_count": 4,
+        "tool_calls_total": 0,
+        "tool_calls_by_name": {},
+        "agent_steps": 5,
+        "max_context_tokens": 3157,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 2097,
+          "prompt_incl_cache": 4808,
+          "cached": 2711,
+          "output": 917,
+          "total": 5725
+        },
+        "tokens_native_success": {
+          "prompt_uncached": 1,
+          "prompt_incl_cache": 1082,
+          "cached": 1081,
+          "output": 73,
+          "total": 1155
+        },
+        "tokens_step_finish_success": {
+          "prompt_uncached": 1,
+          "prompt_incl_cache": 1082,
+          "cached": 1081,
+          "output": 73,
+          "total": 1155
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 1,
+          "prompt_incl_cache": 1082,
+          "cached": 1081,
+          "output": 73,
+          "total": 1155
+        }
+      },
+      {
+        "agent": "opencode",
+        "task": "F13",
+        "category": "factual",
+        "difficulty": "medium",
+        "task_type": "single",
+        "status": "timeout",
+        "turns_executed": 1,
+        "duration_s": 180.157,
+        "llm_calls": 2,
+        "proxy_generations": 2,
+        "native_generations": 0,
+        "step_finish_count": 0,
+        "retry_count": 2,
+        "tool_calls_total": 0,
+        "tool_calls_by_name": {},
+        "agent_steps": 2,
+        "max_context_tokens": 1089,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 104,
+          "prompt_incl_cache": 1665,
+          "cached": 1561,
+          "output": 94,
+          "total": 1759
+        },
+        "tokens_native_success": {
+          "prompt_uncached": 0,
+          "prompt_incl_cache": 0,
+          "cached": 0,
+          "output": 0,
+          "total": 0
+        },
+        "tokens_step_finish_success": {
+          "prompt_uncached": 0,
+          "prompt_incl_cache": 0,
+          "cached": 0,
+          "output": 0,
+          "total": 0
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 0,
+          "prompt_incl_cache": 0,
+          "cached": 0,
+          "output": 0,
+          "total": 0
+        }
+      },
+      {
+        "agent": "opencode",
+        "task": "F15",
+        "category": "factual",
+        "difficulty": "hard",
+        "task_type": "single",
+        "status": "ok",
+        "turns_executed": 1,
+        "duration_s": 168.723,
+        "llm_calls": 4,
+        "proxy_generations": 4,
+        "native_generations": 2,
+        "step_finish_count": 2,
+        "retry_count": 2,
+        "tool_calls_total": 1,
+        "tool_calls_by_name": {
+          "search_documents": 1
+        },
+        "agent_steps": 5,
+        "max_context_tokens": 3251,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 4297,
+          "prompt_incl_cache": 8065,
+          "cached": 3768,
+          "output": 1013,
+          "total": 9078
+        },
+        "tokens_native_success": {
+          "prompt_uncached": 2199,
+          "prompt_incl_cache": 4339,
+          "cached": 2140,
+          "output": 390,
+          "total": 4729
+        },
+        "tokens_step_finish_success": {
+          "prompt_uncached": 2199,
+          "prompt_incl_cache": 4339,
+          "cached": 2140,
+          "output": 390,
+          "total": 4729
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 2147,
+          "prompt_incl_cache": 3251,
+          "cached": 1104,
+          "output": 322,
+          "total": 3573
+        }
+      },
+      {
+        "agent": "opencode",
+        "task": "X01",
+        "category": "multi_fact",
+        "difficulty": "medium",
+        "task_type": "single",
+        "status": "ok",
+        "turns_executed": 1,
+        "duration_s": 172.027,
+        "llm_calls": 3,
+        "proxy_generations": 3,
+        "native_generations": 2,
+        "step_finish_count": 2,
+        "retry_count": 1,
+        "tool_calls_total": 1,
+        "tool_calls_by_name": {
+          "search_documents": 1
+        },
+        "agent_steps": 4,
+        "max_context_tokens": 3656,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 2654,
+          "prompt_incl_cache": 5315,
+          "cached": 2661,
+          "output": 315,
+          "total": 5630
+        },
+        "tokens_native_success": {
+          "prompt_uncached": 2604,
+          "prompt_incl_cache": 4742,
+          "cached": 2138,
+          "output": 293,
+          "total": 5035
+        },
+        "tokens_step_finish_success": {
+          "prompt_uncached": 2604,
+          "prompt_incl_cache": 4742,
+          "cached": 2138,
+          "output": 293,
+          "total": 5035
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 2554,
+          "prompt_incl_cache": 3656,
+          "cached": 1102,
+          "output": 201,
+          "total": 3857
+        }
+      },
+      {
+        "agent": "opencode",
+        "task": "X02",
+        "category": "multi_fact",
+        "difficulty": "hard",
+        "task_type": "single",
+        "status": "timeout",
+        "turns_executed": 1,
+        "duration_s": 180.313,
+        "llm_calls": 2,
+        "proxy_generations": 2,
+        "native_generations": 0,
+        "step_finish_count": 0,
+        "retry_count": 2,
+        "tool_calls_total": 0,
+        "tool_calls_by_name": {},
+        "agent_steps": 2,
+        "max_context_tokens": 1079,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 86,
+          "prompt_incl_cache": 1645,
+          "cached": 1559,
+          "output": 90,
+          "total": 1735
+        },
+        "tokens_native_success": {
+          "prompt_uncached": 0,
+          "prompt_incl_cache": 0,
+          "cached": 0,
+          "output": 0,
+          "total": 0
+        },
+        "tokens_step_finish_success": {
+          "prompt_uncached": 0,
+          "prompt_incl_cache": 0,
+          "cached": 0,
+          "output": 0,
+          "total": 0
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 0,
+          "prompt_incl_cache": 0,
+          "cached": 0,
+          "output": 0,
+          "total": 0
+        }
+      },
+      {
+        "agent": "opencode",
+        "task": "C01",
+        "category": "retrieval_calculation",
+        "difficulty": "hard",
+        "task_type": "single",
+        "status": "timeout",
+        "turns_executed": 1,
+        "duration_s": 180.219,
+        "llm_calls": 3,
+        "proxy_generations": 3,
+        "native_generations": 0,
+        "step_finish_count": 0,
+        "retry_count": 3,
+        "tool_calls_total": 0,
+        "tool_calls_by_name": {},
+        "agent_steps": 3,
+        "max_context_tokens": 3167,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 2238,
+          "prompt_incl_cache": 4892,
+          "cached": 2654,
+          "output": 873,
+          "total": 5765
+        },
+        "tokens_native_success": {
+          "prompt_uncached": 0,
+          "prompt_incl_cache": 0,
+          "cached": 0,
+          "output": 0,
+          "total": 0
+        },
+        "tokens_step_finish_success": {
+          "prompt_uncached": 0,
+          "prompt_incl_cache": 0,
+          "cached": 0,
+          "output": 0,
+          "total": 0
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 0,
+          "prompt_incl_cache": 0,
+          "cached": 0,
+          "output": 0,
+          "total": 0
+        }
+      },
+      {
+        "agent": "opencode",
+        "task": "C02",
+        "category": "retrieval_calculation",
+        "difficulty": "medium",
+        "task_type": "single",
+        "status": "ok",
+        "turns_executed": 1,
+        "duration_s": 152.643,
+        "llm_calls": 5,
+        "proxy_generations": 5,
+        "native_generations": 3,
+        "step_finish_count": 3,
+        "retry_count": 2,
+        "tool_calls_total": 2,
+        "tool_calls_by_name": {
+          "search_documents": 1,
+          "calculate": 1
+        },
+        "agent_steps": 7,
+        "max_context_tokens": 3609,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 4952,
+          "prompt_incl_cache": 12310,
+          "cached": 7358,
+          "output": 610,
+          "total": 12920
+        },
+        "tokens_native_success": {
+          "prompt_uncached": 2412,
+          "prompt_incl_cache": 8109,
+          "cached": 5697,
+          "output": 403,
+          "total": 8512
+        },
+        "tokens_step_finish_success": {
+          "prompt_uncached": 2412,
+          "prompt_incl_cache": 8109,
+          "cached": 5697,
+          "output": 403,
+          "total": 8512
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 39,
+          "prompt_incl_cache": 3576,
+          "cached": 3537,
+          "output": 141,
+          "total": 3717
+        }
+      },
+      {
+        "agent": "opencode",
+        "task": "U01",
+        "category": "unanswerable",
+        "difficulty": "easy",
+        "task_type": "single",
+        "status": "ok",
+        "turns_executed": 1,
+        "duration_s": 110.041,
+        "llm_calls": 3,
+        "proxy_generations": 3,
+        "native_generations": 2,
+        "step_finish_count": 2,
+        "retry_count": 1,
+        "tool_calls_total": 1,
+        "tool_calls_by_name": {
+          "search_documents": 1
+        },
+        "agent_steps": 4,
+        "max_context_tokens": 3345,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 2345,
+          "prompt_incl_cache": 5008,
+          "cached": 2663,
+          "output": 114,
+          "total": 5122
+        },
+        "tokens_native_success": {
+          "prompt_uncached": 2293,
+          "prompt_incl_cache": 4433,
+          "cached": 2140,
+          "output": 104,
+          "total": 4537
+        },
+        "tokens_step_finish_success": {
+          "prompt_uncached": 2293,
+          "prompt_incl_cache": 4433,
+          "cached": 2140,
+          "output": 104,
+          "total": 4537
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 2241,
+          "prompt_incl_cache": 3345,
+          "cached": 1104,
+          "output": 20,
+          "total": 3365
+        }
+      },
+      {
+        "agent": "opencode",
+        "task": "U02",
+        "category": "unanswerable",
+        "difficulty": "easy",
+        "task_type": "single",
+        "status": "ok",
+        "turns_executed": 1,
+        "duration_s": 137.038,
+        "llm_calls": 4,
+        "proxy_generations": 3,
+        "native_generations": 2,
+        "step_finish_count": 2,
+        "retry_count": 2,
+        "tool_calls_total": 1,
+        "tool_calls_by_name": {
+          "search_documents": 1
+        },
+        "agent_steps": 5,
+        "max_context_tokens": 3433,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 2381,
+          "prompt_incl_cache": 5072,
+          "cached": 2691,
+          "output": 196,
+          "total": 5268
+        },
+        "tokens_native_success": {
+          "prompt_uncached": 2342,
+          "prompt_incl_cache": 4509,
+          "cached": 2167,
+          "output": 183,
+          "total": 4692
+        },
+        "tokens_step_finish_success": {
+          "prompt_uncached": 2342,
+          "prompt_incl_cache": 4509,
+          "cached": 2167,
+          "output": 183,
+          "total": 4692
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 2341,
+          "prompt_incl_cache": 3433,
+          "cached": 1092,
+          "output": 102,
+          "total": 3535
+        }
+      },
+      {
+        "agent": "opencode",
+        "task": "D01",
+        "category": "long_dialogue",
+        "difficulty": "hard",
+        "task_type": "dialogue",
+        "status": "timeout",
+        "turns_executed": 4,
+        "duration_s": 508.572,
+        "llm_calls": 9,
+        "proxy_generations": 7,
+        "native_generations": 6,
+        "step_finish_count": 5,
+        "retry_count": 4,
+        "tool_calls_total": 2,
+        "tool_calls_by_name": {
+          "search_documents": 2
+        },
+        "agent_steps": 11,
+        "max_context_tokens": 5911,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 4297,
+          "prompt_incl_cache": 25411,
+          "cached": 21114,
+          "output": 728,
+          "total": 26139
+        },
+        "tokens_native_success": {
+          "prompt_uncached": 4269,
+          "prompt_incl_cache": 24860,
+          "cached": 20591,
+          "output": 723,
+          "total": 25583
+        },
+        "tokens_step_finish_success": {
+          "prompt_uncached": 4240,
+          "prompt_incl_cache": 18949,
+          "cached": 14709,
+          "output": 665,
+          "total": 19614
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 4215,
+          "prompt_incl_cache": 14451,
+          "cached": 10236,
+          "output": 550,
+          "total": 15001
+        }
+      },
+      {
+        "agent": "opencode",
+        "task": "D02",
+        "category": "long_dialogue",
+        "difficulty": "hard",
+        "task_type": "dialogue",
+        "status": "ok",
+        "turns_executed": 5,
+        "duration_s": 460.433,
+        "llm_calls": 11,
+        "proxy_generations": 11,
+        "native_generations": 9,
+        "step_finish_count": 9,
+        "retry_count": 2,
+        "tool_calls_total": 4,
+        "tool_calls_by_name": {
+          "search_documents": 3,
+          "calculate": 1
+        },
+        "agent_steps": 15,
+        "max_context_tokens": 8621,
+        "compaction_count": 0,
+        "tokens_full": {
+          "prompt_uncached": 9895,
+          "prompt_incl_cache": 50076,
+          "cached": 40181,
+          "output": 908,
+          "total": 50984
+        },
+        "tokens_native_success": {
+          "prompt_uncached": 8157,
+          "prompt_incl_cache": 41847,
+          "cached": 33690,
+          "output": 619,
+          "total": 42466
+        },
+        "tokens_step_finish_success": {
+          "prompt_uncached": 8157,
+          "prompt_incl_cache": 41847,
+          "cached": 33690,
+          "output": 619,
+          "total": 42466
+        },
+        "tokens_last_reported": {
+          "prompt_uncached": 6939,
+          "prompt_incl_cache": 27000,
+          "cached": 20061,
+          "output": 406,
+          "total": 27406
+        }
+      }
+    ],
+    "aggregate": {
+      "status_counts": {
+        "timeout": 6,
+        "ok": 8,
+        "empty_response": 1
+      },
+      "tool_calls_by_name": {
+        "search_documents": 12,
+        "calculate": 2
+      },
+      "tasks": 15,
+      "tasks_with_usage": 15,
+      "sum_total_tokens_full": 147808,
+      "mean_total_tokens_full_per_task": 9853.9,
+      "sum_output_tokens_full": 6879,
+      "mean_output_tokens_full_per_task": 458.6,
+      "sum_prompt_uncached_full": 42936,
+      "sum_cached_full": 97993,
+      "sum_llm_calls": 64,
+      "mean_llm_calls_per_task": 4.27,
+      "sum_tool_calls": 14,
+      "mean_tool_calls_per_task": 0.93,
+      "sum_agent_steps": 78,
+      "sum_retries": 34,
+      "sum_compactions": 0,
+      "max_context_tokens": 8621,
+      "sum_duration_s": 2902.989,
+      "mean_duration_s": 193.533
+    }
+  }
+}

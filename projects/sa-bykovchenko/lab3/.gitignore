@@ -1,0 +1,10 @@
+# Local experiment state
+data/*.sqlite
+data/*.sqlite-shm
+data/*.sqlite-wal
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+/.env

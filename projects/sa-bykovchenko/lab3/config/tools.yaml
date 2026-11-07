@@ -1,0 +1,27 @@
+search_documents:
+  description: >-
+    Search the Apollo 11 Mission Report for factual evidence.
+    Pass `question` with the user's exact current question, verbatim and in
+    its original language. Always pass `query`: a concise English
+    search query that preserves the question's event, timing, reason,
+    quantities, names, and before/after constraints. The tool fuses the
+    original question and the English query; `query` never replaces
+    `question`. Returns matching passages with chunk IDs, sections, PDF
+    pages, citations, and a heuristic `evidence` summary. If
+    `evidence.heuristic_sufficient` is false, reformulate `query` and search
+    again, keeping `question` unchanged.
+
+
+get_document_context:
+  description: >-
+    Retrieve additional context for a previously found chunk.
+    Use an exact chunk_id returned by search_documents.
+    This tool does not perform a new semantic search.
+
+
+calculate:
+  description: >-
+    Evaluate a basic arithmetic expression.
+    Use this tool for numerical calculations,
+    differences, percentages and ratios.
+    Convert input values to compatible units first.

@@ -1,0 +1,466 @@
+{
+  "model": "apollo-qwen:16k",
+  "model_config": {
+    "provider": "ollama",
+    "name": "apollo-qwen:16k",
+    "base_url": "http://127.0.0.1:11434/v1",
+    "temperature": 0.0,
+    "timeout_seconds": 600,
+    "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+    "tokenizers": {
+      "apollo-qwen:16k": "Qwen/Qwen2.5-3B-Instruct",
+      "apollo-llama:16k": "unsloth/Llama-3.2-3B-Instruct",
+      "gemma4:e2b": "google/gemma-4-E2B-it"
+    }
+  },
+  "agent_parameters": {
+    "max_model_calls": 8,
+    "max_tool_calls": 12,
+    "max_tool_retries": 1,
+    "timeout_seconds": 600
+  },
+  "context": {
+    "max_tokens": 8192,
+    "response_reserve": 512,
+    "strategy": "summarize",
+    "keep_recent_messages": 6
+  },
+  "retrieval": {
+    "store_id": "efa0f2936c31e621",
+    "mode": "hybrid",
+    "backend": "hnsw",
+    "top_k": 5,
+    "candidate_k": 50
+  },
+  "run_kind": "main",
+  "not_part_of_main_comparison": false,
+  "algorithm_version": "query-processing-v1",
+  "dataset": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab3\\data\\comparison_tasks.json",
+  "ids": [
+    "F03"
+  ],
+  "retry_policy": {
+    "empty_retry_attempts": 0,
+    "total_attempts_per_turn": 1,
+    "mechanism": "model_level",
+    "same_thread": false,
+    "nonce": "U+200B"
+  },
+  "warmup": {
+    "enabled": false,
+    "calls": 0,
+    "duration_s": 0.0
+  },
+  "results": [
+    {
+      "id": "F03",
+      "category": "factual",
+      "model": "apollo-qwen:16k",
+      "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+      "thread_id": "selected-F03-20261106-200219",
+      "status": "ok",
+      "failed": false,
+      "turns": [
+        {
+          "turn_id": 1,
+          "prompt": "Почему выход на поверхность решили провести до первого запланированного отдыха? В ответе укажи раздел и PDF-страницу отчета",
+          "reference": {
+            "answer": "После посадки не возникло ожидаемых возможных трудностей, экипаж не был чрезмерно утомлён и хорошо приспособился к пониженной гравитации.",
+            "section_ids": [
+              "4.12.2"
+            ],
+            "pdf_pages": [
+              40,
+              41
+            ]
+          },
+          "status": "ok",
+          "answer": "Раздел 4.12.2 отчета содержит информацию, объясняющую, почему выход на поверхность решили провести до первого запланированного отдыха. Это было сделано из-за того, что экипаж не был сильно утомлен и легко привык к гравитации 1/6-й. Также, экипаж решил выполнить эвакуационную часть миссии до периода сна, чтобы не ждать после первого запланированного сна. \n\nРаздел и PDF-страница отчета: 4.12.2, страница 40.",
+          "error": null,
+          "duration_s": 129.98,
+          "before_message_count": 0,
+          "after_message_count": 4,
+          "new_message_count": 4,
+          "context_last": {
+            "thread_id": "selected-F03-20261106-200219",
+            "context_limit": 8192,
+            "response_reserve": 512,
+            "input_budget": 7680,
+            "tokens_before": 3661,
+            "tokens_after": 3661,
+            "messages_before": 3,
+            "messages_after": 3,
+            "compacted": false,
+            "strategy": "summarize",
+            "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+            "current_user_message_preserved": true,
+            "fallback_used": false,
+            "truncated_tool_messages": 0,
+            "removed_message_ids": [],
+            "removed_message_types": [],
+            "summary_created": false,
+            "summary_retained": false,
+            "compaction_method": "none",
+            "summarized_message_ids": [],
+            "summarized_message_types": [],
+            "truncated_tool_message_ids": []
+          },
+          "attempts": [
+            {
+              "attempt": 0,
+              "prompt_variant": "original",
+              "status": "ok",
+              "duration_s": 129.98,
+              "empty": false,
+              "error": null
+            }
+          ],
+          "retry_count": 0,
+          "retry_extra_duration_s": 0,
+          "model_retry_events": [],
+          "model_retry_extra_duration_s": 0,
+          "tool_calls": [
+            {
+              "name": "search_documents",
+              "args": {
+                "question": "Почему выход на поверхность решили провести до первого запланированного отдыха? В ответе укажи раздел и PDF-страницу отчета",
+                "query": "выход на поверхность до первого отдыха"
+              },
+              "id": "call_lrbvzk6o"
+            }
+          ],
+          "tool_messages": [
+            {
+              "tool_call_id": "call_lrbvzk6o",
+              "name": "search_documents",
+              "status": "success",
+              "content": "{\"question\": \"Почему выход на поверхность решили провести до первого запланированного отдыха? В ответе укажи раздел и PDF-страницу отчета\", \"query\": \"выход на поверхность до первого отдыха\", \"k\": 5, \"algorithm_version\": \"query-processing-v1\", \"variants\": [{\"name\": \"original\", \"text\": \"Почему выход на поверхность решили провести до первого запланированного отдыха? В ответе укажи раздел и PDF-страницу отчета\"}, {\"name\": \"normalized\", \"text\": \"Почему выход на поверхность решили провести до первого запланированного отдыха?\"}, {\"name\": \"glossary_en\", \"text\": \"extravehicular activity surface decided conduct before first planned rest\"}, {\"name\": \"expanded_en\", \"text\": \"extravehicular activity surface decided conduct before first planned rest sleep\"}, {\"name\": \"agent_query\", \"text\": \"выход на поверхность до первого отдыха\"}, {\"name\": \"keywords\", \"text\": \"выход поверхность решили провести первого запланированного отдыха\"}], \"results\": [{\"rank\": 1, \"chunk_id\": \"464e03e594896c1c88bc101b\", \"section_id\": \"4.12.2\", \"pdf_page\": 40, \"heading_path\": [\"4. PILOTS' REPORT\", \"4.12 LUNAR SURFACE OPERATIONS\", \"4.12.2 Egress Preparation\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40\", \"score\": 0.094818, \"evidence_coverage\": 0.889, \"variant_ranks\": {\"original\": 1, \"normalized\": 2, \"glossary_en\": 1, \"expanded_en\": 1, \"keywords\": 1}, \"text\": \"The crew had given considerable thought to the advantage of beginning the extravehicular activity as soon as possible after landing instead\\nof following the flight plan schedule of having the surface operations between two rest periods. The initial rest period was planned to allow\\nflexibility in the event of unexpected difficulty with postlanding activities. These difficulties did not materialize, the crew were not overly\\ntired, and no problem was experienced in adjusting to the 1/6-g environment. Based on these facts, the decision was made at 104:40:00 to proceed with the extravehicular activity prior to the first rest period.  \\nPreparation for extravehicular activity began at 106:11:00. The estimate of the preparation time proved to be optimistic. In simulations,\\n2 hours had been found to be a reasonable allocation; however, everything\\nhad also been laid out in an orderly manner in the cockpit, and only those\\nitems involved in the extravehicular activity were present. In fact,\", \"truncated\": false}, {\"rank\": 2, \"chunk_id\": \"2644ab5d32510cb6c5a42690\", \"section_id\": \"12.2.3\", \"pdf_page\": 255, \"heading_path\": [\"12. BIOMEDICAL EVALUATION\", \"12.2 MEDICAL OBSERVATIONS\", \"12.2.3 Sleep\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=255\", \"score\": 0.032258, \"evidence_coverage\": 0.889, \"variant_ranks\": {\"expanded_en\": 2}, \"text\": \"It is interesting to note that the crewmen's subjective estimates\\nof amount of sleep were less than those based upon telemetered biomedical data, as shown in table 12-I. By either count, the crewmen slept\\nwell in the command module. The simultaneous sleep periods during the\\ntranslunar coast were carefully monitored, and the crew arrived on the  \\nlunar surface well rested. Therefore, it was not necessary to wait until\\nafter the first planned 4-hour sleep period before conducting the extravehicular activity. The crewmen slept very little in the lunar module\", \"truncated\": false}, {\"rank\": 3, \"chunk_id\": \"3cd27453294ca48a8285fdef\", \"section_id\": \"3.0\", \"pdf_page\": 16, \"heading_path\": [\"3. MISSION DESCRIPTION\", \"3.0 MISSION DESCRIPTION\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=16\", \"score\": 0.05506, \"evidence_coverage\": 0.778, \"variant_ranks\": {\"glossary_en\": 3, \"expanded_en\": 4}, \"text\": \"were 0 degree 41 minutes 15 seconds north latitude and 23 degrees 26 minutes east longitude, compared with the planned landing point of 0 degree\\n43 minutes 53 seconds north latitude and 23 degrees 38 minutes 51 seconds\\neast longitude. These coordinates are referenced to Lunar Map ORB-II-6\\n(100), first edition, dated December 1967.  \\nA 2-hour postlanding checkout was completed, followed by a partial\\npower-down of the spacecraft. A crew rest period was planned to precede\\nthe extravehicular activity to explore the lunar surface. However, the\\ncrew elected to perform the extravehicular portion of the mission prior\\nto the sleep period because they were not overly tired and were adjusting\\neasily to the l/6 gravity. After the crew donned their portable life support systems and completed the required checkouts, the Commander egressed\\nat about 109 hours. Prior to descending the ladder, the Commander deployed\\nthe equipment module in the descent stage. The television camera located\", \"truncated\": false}, {\"rank\": 4, \"chunk_id\": \"5388fda45dc9faf224e5f844\", \"section_id\": \"4.12.2\", \"pdf_page\": 40, \"heading_path\": [\"4. PILOTS' REPORT\", \"4.12 LUNAR SURFACE OPERATIONS\", \"4.12.2 Egress Preparation\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40\", \"score\": 0.054963, \"evidence_coverage\": 0.667, \"variant_ranks\": {\"glossary_en\": 2, \"expanded_en\": 5}, \"text\": \"items involved in the extravehicular activity were present. In fact,\\nthere were checklists, food packets, monoculars, and other miscellaneous  \\nitems that interfered with an orderly preparation. All these items re�uired some thought as to their possible interference or use in the extravehicular activity. This interference resulted in exceeding the timeline\\nestimate by a considerable amount. Preparation for egress was conducted\\nslowly, carefully, and deliberately, and future missions should be planned and conducted with the same philosophy. The extravehicular activity\\npreparation checklist was ade�uate and was closely followed. However,\\nminor items that re�uired a decision in real time or had not been considered before flight re�uired more time than anticipated.  \\nAn electrical connector on the cable that connects the remote control unit to the portable life support system gave some trouble in mating  \\n(see section 16.3.2). This problem had been occasionally encountered\", \"truncated\": false}, {\"rank\": 5, \"chunk_id\": \"6473b31b5c0892ba2bc9fdfd\", \"section_id\": \"4.12.4\", \"pdf_page\": 42, \"heading_path\": [\"4. PILOTS' REPORT\", \"4.12 LUNAR SURFACE OPERATIONS\", \"4.12.4 Surface Exploration\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=42\", \"score\": 0.037361, \"evidence_coverage\": 0.556, \"variant_ranks\": {\"original\": 2, \"normalized\": 1, \"keywords\": 2}, \"text\": \"Work in the 1/6-g environment was a pleasant experience. Adaptation\\nto movement was not difficult and seemed to be quite natural. Certain\\nspecific peculiarities, such as the effect of the mass versus the lack of\\ntraction, can be anticipated but complete familiarization need not be\\npursued.  \\nThe most effective means of walking seemed to be the lope that\\nevolved naturally. The fact that both feet were occasionally off the\\nground at the same time, plus the fact that the feet did not return to\\nthe surface as rapidly as on earth, required some anticipation before attempting to stop. Although movement was not difficult, there was noticeable resistance provided by the suit.  \\nOn future flights, crewmembers may want to consider kneeling in order\\nto work with their hands. Getting to and from the kneeling position would\\nbe no problem, and being able to do more work with the hands would increase\\nthe productive capability.  \\nPhotography with the Hasselblad cameras on the remote control unit\\nmounts produced no problems. The first panorama was taken while the\", \"truncated\": false}], \"evidence\": {\"heuristic_sufficient\": true, \"coverage\": 1.0, \"missing_terms\": [], \"matched_terms\": [\"extravehicular\", \"activity\", \"surface\", \"decided\", \"conduct\", \"before\", \"first\", \"planned\", \"rest\"], \"ocr_noise\": false, \"temporal_required\": [\"before\", \"first\"], \"temporal_found\": [\"before\", \"first\"], \"temporal_missing\": [], \"negation_required\": [], \"negation_found\": [], \"critical_missing_terms\": [], \"numeric_values\": [\"1\", \"6\", \"104\", \"40\", \"00\", \"106\", \"11\", \"2\", \"12\", \"4\", \"0\", \"41\", \"15\", \"23\", \"26\", \"43\", \"53\", \"38\", \"51\", \"100\"], \"unit_values\": [{\"value\": \"0\", \"unit\": \"degree\"}, {\"value\": \"41\", \"unit\": \"minutes\"}, {\"value\": \"15\", \"unit\": \"seconds\"}, {\"value\": \"23\", \"unit\": \"degrees\"}, {\"value\": \"26\", \"unit\": \"minutes\"}, {\"value\": \"43\", \"unit\": \"minutes\"}, {\"value\": \"53\", \"unit\": \"seconds\"}, {\"value\": \"38\", \"unit\": \"minutes\"}, {\"value\": \"51\", \"unit\": \"seconds\"}], \"calculation_requested\": false, \"calculation_hint\": null, \"multi_part\": false, \"reason\": \"ok\", \"note\": \"Heuristic lexical check; not a semantic entailment judge.\"}, \"context_chunks\": []}",
+              "content_json": {
+                "question": "Почему выход на поверхность решили провести до первого запланированного отдыха? В ответе укажи раздел и PDF-страницу отчета",
+                "query": "выход на поверхность до первого отдыха",
+                "k": 5,
+                "algorithm_version": "query-processing-v1",
+                "variants": [
+                  {
+                    "name": "original",
+                    "text": "Почему выход на поверхность решили провести до первого запланированного отдыха? В ответе укажи раздел и PDF-страницу отчета"
+                  },
+                  {
+                    "name": "normalized",
+                    "text": "Почему выход на поверхность решили провести до первого запланированного отдыха?"
+                  },
+                  {
+                    "name": "glossary_en",
+                    "text": "extravehicular activity surface decided conduct before first planned rest"
+                  },
+                  {
+                    "name": "expanded_en",
+                    "text": "extravehicular activity surface decided conduct before first planned rest sleep"
+                  },
+                  {
+                    "name": "agent_query",
+                    "text": "выход на поверхность до первого отдыха"
+                  },
+                  {
+                    "name": "keywords",
+                    "text": "выход поверхность решили провести первого запланированного отдыха"
+                  }
+                ],
+                "results": [
+                  {
+                    "rank": 1,
+                    "chunk_id": "464e03e594896c1c88bc101b",
+                    "section_id": "4.12.2",
+                    "pdf_page": 40,
+                    "heading_path": [
+                      "4. PILOTS' REPORT",
+                      "4.12 LUNAR SURFACE OPERATIONS",
+                      "4.12.2 Egress Preparation"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40",
+                    "score": 0.094818,
+                    "evidence_coverage": 0.889,
+                    "variant_ranks": {
+                      "original": 1,
+                      "normalized": 2,
+                      "glossary_en": 1,
+                      "expanded_en": 1,
+                      "keywords": 1
+                    },
+                    "text": "The crew had given considerable thought to the advantage of beginning the extravehicular activity as soon as possible after landing instead\nof following the flight plan schedule of having the surface operations between two rest periods. The initial rest period was planned to allow\nflexibility in the event of unexpected difficulty with postlanding activities. These difficulties did not materialize, the crew were not overly\ntired, and no problem was experienced in adjusting to the 1/6-g environment. Based on these facts, the decision was made at 104:40:00 to proceed with the extravehicular activity prior to the first rest period.  \nPreparation for extravehicular activity began at 106:11:00. The estimate of the preparation time proved to be optimistic. In simulations,\n2 hours had been found to be a reasonable allocation; however, everything\nhad also been laid out in an orderly manner in the cockpit, and only those\nitems involved in the extravehicular activity were present. In fact,",
+                    "truncated": false
+                  },
+                  {
+                    "rank": 2,
+                    "chunk_id": "2644ab5d32510cb6c5a42690",
+                    "section_id": "12.2.3",
+                    "pdf_page": 255,
+                    "heading_path": [
+                      "12. BIOMEDICAL EVALUATION",
+                      "12.2 MEDICAL OBSERVATIONS",
+                      "12.2.3 Sleep"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=255",
+                    "score": 0.032258,
+                    "evidence_coverage": 0.889,
+                    "variant_ranks": {
+                      "expanded_en": 2
+                    },
+                    "text": "It is interesting to note that the crewmen's subjective estimates\nof amount of sleep were less than those based upon telemetered biomedical data, as shown in table 12-I. By either count, the crewmen slept\nwell in the command module. The simultaneous sleep periods during the\ntranslunar coast were carefully monitored, and the crew arrived on the  \nlunar surface well rested. Therefore, it was not necessary to wait until\nafter the first planned 4-hour sleep period before conducting the extravehicular activity. The crewmen slept very little in the lunar module",
+                    "truncated": false
+                  },
+                  {
+                    "rank": 3,
+                    "chunk_id": "3cd27453294ca48a8285fdef",
+                    "section_id": "3.0",
+                    "pdf_page": 16,
+                    "heading_path": [
+                      "3. MISSION DESCRIPTION",
+                      "3.0 MISSION DESCRIPTION"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=16",
+                    "score": 0.05506,
+                    "evidence_coverage": 0.778,
+                    "variant_ranks": {
+                      "glossary_en": 3,
+                      "expanded_en": 4
+                    },
+                    "text": "were 0 degree 41 minutes 15 seconds north latitude and 23 degrees 26 minutes east longitude, compared with the planned landing point of 0 degree\n43 minutes 53 seconds north latitude and 23 degrees 38 minutes 51 seconds\neast longitude. These coordinates are referenced to Lunar Map ORB-II-6\n(100), first edition, dated December 1967.  \nA 2-hour postlanding checkout was completed, followed by a partial\npower-down of the spacecraft. A crew rest period was planned to precede\nthe extravehicular activity to explore the lunar surface. However, the\ncrew elected to perform the extravehicular portion of the mission prior\nto the sleep period because they were not overly tired and were adjusting\neasily to the l/6 gravity. After the crew donned their portable life support systems and completed the required checkouts, the Commander egressed\nat about 109 hours. Prior to descending the ladder, the Commander deployed\nthe equipment module in the descent stage. The television camera located",
+                    "truncated": false
+                  },
+                  {
+                    "rank": 4,
+                    "chunk_id": "5388fda45dc9faf224e5f844",
+                    "section_id": "4.12.2",
+                    "pdf_page": 40,
+                    "heading_path": [
+                      "4. PILOTS' REPORT",
+                      "4.12 LUNAR SURFACE OPERATIONS",
+                      "4.12.2 Egress Preparation"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40",
+                    "score": 0.054963,
+                    "evidence_coverage": 0.667,
+                    "variant_ranks": {
+                      "glossary_en": 2,
+                      "expanded_en": 5
+                    },
+                    "text": "items involved in the extravehicular activity were present. In fact,\nthere were checklists, food packets, monoculars, and other miscellaneous  \nitems that interfered with an orderly preparation. All these items re�uired some thought as to their possible interference or use in the extravehicular activity. This interference resulted in exceeding the timeline\nestimate by a considerable amount. Preparation for egress was conducted\nslowly, carefully, and deliberately, and future missions should be planned and conducted with the same philosophy. The extravehicular activity\npreparation checklist was ade�uate and was closely followed. However,\nminor items that re�uired a decision in real time or had not been considered before flight re�uired more time than anticipated.  \nAn electrical connector on the cable that connects the remote control unit to the portable life support system gave some trouble in mating  \n(see section 16.3.2). This problem had been occasionally encountered",
+                    "truncated": false
+                  },
+                  {
+                    "rank": 5,
+                    "chunk_id": "6473b31b5c0892ba2bc9fdfd",
+                    "section_id": "4.12.4",
+                    "pdf_page": 42,
+                    "heading_path": [
+                      "4. PILOTS' REPORT",
+                      "4.12 LUNAR SURFACE OPERATIONS",
+                      "4.12.4 Surface Exploration"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=42",
+                    "score": 0.037361,
+                    "evidence_coverage": 0.556,
+                    "variant_ranks": {
+                      "original": 2,
+                      "normalized": 1,
+                      "keywords": 2
+                    },
+                    "text": "Work in the 1/6-g environment was a pleasant experience. Adaptation\nto movement was not difficult and seemed to be quite natural. Certain\nspecific peculiarities, such as the effect of the mass versus the lack of\ntraction, can be anticipated but complete familiarization need not be\npursued.  \nThe most effective means of walking seemed to be the lope that\nevolved naturally. The fact that both feet were occasionally off the\nground at the same time, plus the fact that the feet did not return to\nthe surface as rapidly as on earth, required some anticipation before attempting to stop. Although movement was not difficult, there was noticeable resistance provided by the suit.  \nOn future flights, crewmembers may want to consider kneeling in order\nto work with their hands. Getting to and from the kneeling position would\nbe no problem, and being able to do more work with the hands would increase\nthe productive capability.  \nPhotography with the Hasselblad cameras on the remote control unit\nmounts produced no problems. The first panorama was taken while the",
+                    "truncated": false
+                  }
+                ],
+                "evidence": {
+                  "heuristic_sufficient": true,
+                  "coverage": 1.0,
+                  "missing_terms": [],
+                  "matched_terms": [
+                    "extravehicular",
+                    "activity",
+                    "surface",
+                    "decided",
+                    "conduct",
+                    "before",
+                    "first",
+                    "planned",
+                    "rest"
+                  ],
+                  "ocr_noise": false,
+                  "temporal_required": [
+                    "before",
+                    "first"
+                  ],
+                  "temporal_found": [
+                    "before",
+                    "first"
+                  ],
+                  "temporal_missing": [],
+                  "negation_required": [],
+                  "negation_found": [],
+                  "critical_missing_terms": [],
+                  "numeric_values": [
+                    "1",
+                    "6",
+                    "104",
+                    "40",
+                    "00",
+                    "106",
+                    "11",
+                    "2",
+                    "12",
+                    "4",
+                    "0",
+                    "41",
+                    "15",
+                    "23",
+                    "26",
+                    "43",
+                    "53",
+                    "38",
+                    "51",
+                    "100"
+                  ],
+                  "unit_values": [
+                    {
+                      "value": "0",
+                      "unit": "degree"
+                    },
+                    {
+                      "value": "41",
+                      "unit": "minutes"
+                    },
+                    {
+                      "value": "15",
+                      "unit": "seconds"
+                    },
+                    {
+                      "value": "23",
+                      "unit": "degrees"
+                    },
+                    {
+                      "value": "26",
+                      "unit": "minutes"
+                    },
+                    {
+                      "value": "43",
+                      "unit": "minutes"
+                    },
+                    {
+                      "value": "53",
+                      "unit": "seconds"
+                    },
+                    {
+                      "value": "38",
+                      "unit": "minutes"
+                    },
+                    {
+                      "value": "51",
+                      "unit": "seconds"
+                    }
+                  ],
+                  "calculation_requested": false,
+                  "calculation_hint": null,
+                  "multi_part": false,
+                  "reason": "ok",
+                  "note": "Heuristic lexical check; not a semantic entailment judge."
+                },
+                "context_chunks": []
+              },
+              "content_preview": "{\"question\": \"Почему выход на поверхность решили провести до первого запланированного отдыха? В ответе укажи раздел и PDF-страницу отчета\", \"query\": \"выход на поверхность до первого отдыха\", \"k\": 5, \"algorithm_version\": \"query-processing-v1\", \"variants\": [{\"name\": \"original\", \"text\": \"Почему выход на поверхность решили провести до первого запланированного отдыха? В ответе укажи раздел и PDF-страницу отчета\"}, {\"name\": \"normalized\", \"text\": \"Почему выход на поверхность решили провести до первого запланированного отдыха?\"}, {\"name\": \"glossary_en\", \"text\": \"extravehicular activity surface decided",
+              "content_length": 8831
+            }
+          ],
+          "llm_calls": 2,
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 150,
+              "prompt_tokens": 3537,
+              "total_tokens": 3687,
+              "completion_tokens_details": null,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cache_write_tokens": null,
+                "cached_tokens": 942,
+                "image_tokens": null,
+                "text_tokens": null
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "apollo-qwen:16k",
+            "system_fingerprint": "fp_ollama",
+            "id": "chatcmpl-67",
+            "finish_reason": "stop",
+            "logprobs": null
+          },
+          "usage_metadata": {
+            "input_tokens": 3537,
+            "output_tokens": 150,
+            "total_tokens": 3687,
+            "input_token_details": {
+              "cache_read": 942
+            },
+            "output_token_details": {}
+          },
+          "usage_metadata_all": {
+            "input_tokens": 4466,
+            "output_tokens": 222,
+            "total_tokens": 4688,
+            "input_token_details": {
+              "cache_read": 942
+            }
+          }
+        }
+      ],
+      "context_diagnostics": [
+        {
+          "thread_id": "selected-F03-20261106-200219",
+          "context_limit": 8192,
+          "response_reserve": 512,
+          "input_budget": 7680,
+          "tokens_before": 1048,
+          "tokens_after": 1048,
+          "messages_before": 1,
+          "messages_after": 1,
+          "compacted": false,
+          "strategy": "summarize",
+          "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+          "current_user_message_preserved": true,
+          "fallback_used": false,
+          "truncated_tool_messages": 0,
+          "removed_message_ids": [],
+          "removed_message_types": [],
+          "summary_created": false,
+          "summary_retained": false,
+          "compaction_method": "none",
+          "summarized_message_ids": [],
+          "summarized_message_types": [],
+          "truncated_tool_message_ids": []
+        },
+        {
+          "thread_id": "selected-F03-20261106-200219",
+          "context_limit": 8192,
+          "response_reserve": 512,
+          "input_budget": 7680,
+          "tokens_before": 3661,
+          "tokens_after": 3661,
+          "messages_before": 3,
+          "messages_after": 3,
+          "compacted": false,
+          "strategy": "summarize",
+          "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+          "current_user_message_preserved": true,
+          "fallback_used": false,
+          "truncated_tool_messages": 0,
+          "removed_message_ids": [],
+          "removed_message_types": [],
+          "summary_created": false,
+          "summary_retained": false,
+          "compaction_method": "none",
+          "summarized_message_ids": [],
+          "summarized_message_types": [],
+          "truncated_tool_message_ids": []
+        }
+      ]
+    }
+  ]
+}

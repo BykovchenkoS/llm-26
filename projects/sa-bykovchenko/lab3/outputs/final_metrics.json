@@ -1,0 +1,3320 @@
+{
+  "manifest": {
+    "created_at": "2026-11-05T08:03:44.023924+00:00",
+    "selection_policy": "Pre-registered final set: category/difficulty coverage was fixed before the final quality scoring. No task was removed because it failed. The list must not be changed after seeing final metrics.",
+    "ids": [
+      "F01",
+      "F03",
+      "F05",
+      "F08",
+      "F11",
+      "F13",
+      "F15",
+      "X01",
+      "X02",
+      "C01",
+      "C02",
+      "U01",
+      "U02",
+      "D01",
+      "D02"
+    ],
+    "task_count": 15,
+    "turn_count": 23,
+    "categories": {
+      "F01": "factual",
+      "F03": "factual",
+      "F05": "factual",
+      "F08": "factual",
+      "F11": "factual",
+      "F13": "factual",
+      "F15": "factual",
+      "X01": "multi_fact",
+      "X02": "multi_fact",
+      "C01": "retrieval_calculation",
+      "C02": "retrieval_calculation",
+      "U01": "unanswerable",
+      "U02": "unanswerable",
+      "D01": "long_dialogue",
+      "D02": "long_dialogue"
+    },
+    "model": {
+      "name": "apollo-qwen:16k",
+      "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+      "temperature": 0,
+      "base_url": "http://127.0.0.1:11434/v1"
+    },
+    "agent_parameters": {
+      "max_model_calls": 8,
+      "max_tool_calls": 12,
+      "max_tool_retries": 1,
+      "timeout_seconds": 600
+    },
+    "context": {
+      "max_tokens": 8192,
+      "response_reserve": 512,
+      "strategy": "summarize",
+      "keep_recent_messages": 6
+    },
+    "retrieval": {
+      "store_id": "efa0f2936c31e621",
+      "mode": "hybrid",
+      "backend": "hnsw",
+      "top_k": 5,
+      "candidate_k": 50,
+      "algorithm_version": "query-processing-v1"
+    },
+    "runtime_policy": {
+      "warmup": true,
+      "empty_retry_attempts": 2,
+      "retry_mechanism": "model_level",
+      "retry_same_thread": false,
+      "openai_compatible_non_streaming_upstream": true,
+      "openai_proxy": "source/llm_proxy.py",
+      "proxy_upstream_attempts": 3,
+      "proxy_upstream_mode": "non_streaming_with_sse_conversion",
+      "proxy_base_url": "http://127.0.0.1:11435/v1"
+    },
+    "hashes": {
+      "dataset_sha256": "6cdb62431fff09f9b3c0d2989c29f03d73b14ec076d655638228e347d2f33720",
+      "system_prompt_sha256": "c0deb61c9bf87ca3f159f880b6b0055aca6c419d8d39da5237a080ab35211159",
+      "opencode_prompt_sha256": "c24945a1c206e93caa7459109be31c0015d753ac664d2478e30e2296e7650176",
+      "agent_config_sha256": "8feaeb12c066dc82e8f7af59dff715602a2f166b65e4e1fd1c62d022a778f948",
+      "tools_config_sha256": "d3e75f593d4d33436e5a851420f0c26773dde9f06bc550437d7e0688a3ec8635"
+    },
+    "evaluation_protocol": {
+      "metrics": [
+        "task success (strict and partial)",
+        "fact coverage",
+        "citation accuracy",
+        "tool correctness",
+        "retrieval section_set_hit@5/page_set_hit@5/MRR",
+        "tokens, latency, context size",
+        "compacted before answer",
+        "error type"
+      ],
+      "per_agent": [
+        "langgraph",
+        "opencode"
+      ],
+      "notes": "Task-level and aggregate scores; failures and empty answers are retained, not filtered."
+    },
+    "opencode_model": "ollama/apollo-qwen:16k"
+  },
+  "rubric": {
+    "strict": "all required facts + required source correct",
+    "partial": "0/0.5/1 supported-content credit",
+    "citation": "0/1/2; None for unanswerable",
+    "history": "0/1 only for depends_on_history turns",
+    "token_normalization": "Legacy langgraph/opencode sections use the last model response per successful turn. Full post-hoc accounting is in token_accounting and task_metrics: LangGraph sums all GENERATION observations; OpenCode sums proxy generations. Native/step_finish values are cross-checks only."
+  },
+  "langgraph": {
+    "planned_tasks": 15,
+    "task_strict_success": 4,
+    "task_strict_rate": 0.267,
+    "mean_task_partial": 0.74,
+    "turn_count": 23,
+    "executed_turns": 23,
+    "ok": 22,
+    "timeout": 0,
+    "empty_response": 1,
+    "not_run": 0,
+    "error": 0,
+    "mean_duration_all_s": 77.63,
+    "total_duration_all_s": 1785.489,
+    "mean_duration_ok_s": 79.6,
+    "total_duration_ok_s": 1751.198,
+    "mean_total_tokens_ok": 4137.6,
+    "sum_total_tokens_ok": 91028,
+    "mean_output_tokens_ok": 187.5,
+    "sum_output_tokens_ok": 4124,
+    "mean_citation": 0.619,
+    "citation_n": 21,
+    "history_correct": 4,
+    "history_n": 6,
+    "tool_correct_tasks": 12
+  },
+  "opencode": {
+    "planned_tasks": 15,
+    "task_strict_success": 4,
+    "task_strict_rate": 0.267,
+    "mean_task_partial": 0.4,
+    "turn_count": 23,
+    "executed_turns": 22,
+    "ok": 15,
+    "timeout": 6,
+    "empty_response": 1,
+    "not_run": 1,
+    "error": 0,
+    "mean_duration_all_s": 131.954,
+    "total_duration_all_s": 2902.989,
+    "mean_duration_ok_s": 118.316,
+    "total_duration_ok_s": 1774.745,
+    "mean_total_tokens_ok": 4474.1,
+    "sum_total_tokens_ok": 67112,
+    "mean_output_tokens_ok": 136.2,
+    "sum_output_tokens_ok": 2043,
+    "mean_citation": 0.238,
+    "citation_n": 21,
+    "history_correct": 3,
+    "history_n": 5,
+    "tool_correct_tasks": 8
+  },
+  "langgraph_breakdown": {
+    "by_difficulty": {
+      "medium": {
+        "tasks": 5,
+        "strict_success": 1,
+        "strict_rate": 0.2,
+        "mean_partial": 0.9,
+        "mean_citation": 1.4,
+        "timeouts": 0,
+        "empty_response": 0,
+        "tool_correct": 4
+      },
+      "easy": {
+        "tasks": 4,
+        "strict_success": 3,
+        "strict_rate": 0.75,
+        "mean_partial": 1.0,
+        "mean_citation": 2,
+        "timeouts": 0,
+        "empty_response": 0,
+        "tool_correct": 4
+      },
+      "hard": {
+        "tasks": 6,
+        "strict_success": 0,
+        "strict_rate": 0.0,
+        "mean_partial": 0.433,
+        "mean_citation": 0.143,
+        "timeouts": 0,
+        "empty_response": 1,
+        "tool_correct": 4
+      }
+    },
+    "by_task_type": {
+      "single": {
+        "tasks": 13,
+        "strict_success": 4,
+        "strict_rate": 0.308,
+        "mean_partial": 0.769,
+        "mean_citation": 1,
+        "timeouts": 0,
+        "empty_response": 1,
+        "tool_correct": 10
+      },
+      "dialogue": {
+        "tasks": 2,
+        "strict_success": 0,
+        "strict_rate": 0.0,
+        "mean_partial": 0.55,
+        "mean_citation": 0.2,
+        "timeouts": 0,
+        "empty_response": 0,
+        "tool_correct": 2
+      }
+    },
+    "by_category": {
+      "factual": {
+        "tasks": 7,
+        "strict_success": 1,
+        "strict_rate": 0.143,
+        "mean_partial": 0.714,
+        "mean_citation": 1.143,
+        "timeouts": 0,
+        "empty_response": 1,
+        "tool_correct": 6
+      },
+      "multi_fact": {
+        "tasks": 2,
+        "strict_success": 1,
+        "strict_rate": 0.5,
+        "mean_partial": 1.0,
+        "mean_citation": 1,
+        "timeouts": 0,
+        "empty_response": 0,
+        "tool_correct": 2
+      },
+      "retrieval_calculation": {
+        "tasks": 2,
+        "strict_success": 0,
+        "strict_rate": 0.0,
+        "mean_partial": 0.5,
+        "mean_citation": 0.5,
+        "timeouts": 0,
+        "empty_response": 0,
+        "tool_correct": 0
+      },
+      "unanswerable": {
+        "tasks": 2,
+        "strict_success": 2,
+        "strict_rate": 1.0,
+        "mean_partial": 1.0,
+        "mean_citation": null,
+        "timeouts": 0,
+        "empty_response": 0,
+        "tool_correct": 2
+      },
+      "long_dialogue": {
+        "tasks": 2,
+        "strict_success": 0,
+        "strict_rate": 0.0,
+        "mean_partial": 0.55,
+        "mean_citation": 0.2,
+        "timeouts": 0,
+        "empty_response": 0,
+        "tool_correct": 2
+      }
+    }
+  },
+  "opencode_breakdown": {
+    "by_difficulty": {
+      "medium": {
+        "tasks": 5,
+        "strict_success": 1,
+        "strict_rate": 0.2,
+        "mean_partial": 0.3,
+        "mean_citation": 0.4,
+        "timeouts": 3,
+        "empty_response": 0,
+        "tool_correct": 2
+      },
+      "easy": {
+        "tasks": 4,
+        "strict_success": 3,
+        "strict_rate": 0.75,
+        "mean_partial": 0.75,
+        "mean_citation": 1,
+        "timeouts": 0,
+        "empty_response": 1,
+        "tool_correct": 3
+      },
+      "hard": {
+        "tasks": 6,
+        "strict_success": 0,
+        "strict_rate": 0.0,
+        "mean_partial": 0.25,
+        "mean_citation": 0.071,
+        "timeouts": 3,
+        "empty_response": 0,
+        "tool_correct": 3
+      }
+    },
+    "by_task_type": {
+      "single": {
+        "tasks": 13,
+        "strict_success": 4,
+        "strict_rate": 0.308,
+        "mean_partial": 0.423,
+        "mean_citation": 0.364,
+        "timeouts": 5,
+        "empty_response": 1,
+        "tool_correct": 7
+      },
+      "dialogue": {
+        "tasks": 2,
+        "strict_success": 0,
+        "strict_rate": 0.0,
+        "mean_partial": 0.25,
+        "mean_citation": 0.1,
+        "timeouts": 1,
+        "empty_response": 0,
+        "tool_correct": 1
+      }
+    },
+    "by_category": {
+      "factual": {
+        "tasks": 7,
+        "strict_success": 1,
+        "strict_rate": 0.143,
+        "mean_partial": 0.286,
+        "mean_citation": 0.286,
+        "timeouts": 3,
+        "empty_response": 1,
+        "tool_correct": 3
+      },
+      "multi_fact": {
+        "tasks": 2,
+        "strict_success": 0,
+        "strict_rate": 0.0,
+        "mean_partial": 0.25,
+        "mean_citation": 0.5,
+        "timeouts": 1,
+        "empty_response": 0,
+        "tool_correct": 1
+      },
+      "retrieval_calculation": {
+        "tasks": 2,
+        "strict_success": 1,
+        "strict_rate": 0.5,
+        "mean_partial": 0.5,
+        "mean_citation": 0.5,
+        "timeouts": 1,
+        "empty_response": 0,
+        "tool_correct": 1
+      },
+      "unanswerable": {
+        "tasks": 2,
+        "strict_success": 2,
+        "strict_rate": 1.0,
+        "mean_partial": 1.0,
+        "mean_citation": null,
+        "timeouts": 0,
+        "empty_response": 0,
+        "tool_correct": 2
+      },
+      "long_dialogue": {
+        "tasks": 2,
+        "strict_success": 0,
+        "strict_rate": 0.0,
+        "mean_partial": 0.25,
+        "mean_citation": 0.1,
+        "timeouts": 1,
+        "empty_response": 0,
+        "tool_correct": 1
+      }
+    }
+  },
+  "rows": [
+    {
+      "agent": "langgraph",
+      "task": "F01",
+      "category": "factual",
+      "difficulty": "medium",
+      "task_type": "single",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 149.793,
+      "tool_names": [
+        "search_documents"
+      ],
+      "strict": 0,
+      "partial": 1,
+      "citation": 1,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 4194,
+        "output": 454,
+        "prompt_incl_cache": 3740,
+        "prompt_uncached": 2793,
+        "cached": 947
+      },
+      "context": {
+        "thread_id": "selected-F01-20261105-121807",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 3864,
+        "tokens_after": 3864,
+        "messages_before": 3,
+        "messages_after": 3,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "Роли и цель верны; page 13 валидна, но запрошенный section не назван — strict=0."
+    },
+    {
+      "agent": "langgraph",
+      "task": "F03",
+      "category": "factual",
+      "difficulty": "easy",
+      "task_type": "single",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 100.734,
+      "tool_names": [
+        "search_documents"
+      ],
+      "strict": 1,
+      "partial": 1,
+      "citation": 2,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 3768,
+        "output": 201,
+        "prompt_incl_cache": 3567,
+        "prompt_uncached": 2643,
+        "cached": 924
+      },
+      "context": {
+        "thread_id": "selected-F03-20261105-122040",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 3691,
+        "tokens_after": 3691,
+        "messages_before": 3,
+        "messages_after": 3,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "Причина и 4.12.2/p.40 верны."
+    },
+    {
+      "agent": "langgraph",
+      "task": "F05",
+      "category": "factual",
+      "difficulty": "hard",
+      "task_type": "single",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 68.756,
+      "tool_names": [
+        "search_documents"
+      ],
+      "strict": 0,
+      "partial": 0.5,
+      "citation": 0,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 3010,
+        "output": 139,
+        "prompt_incl_cache": 2871,
+        "prompt_uncached": 1923,
+        "cached": 948
+      },
+      "context": {
+        "thread_id": "selected-F05-20261105-122221",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 2995,
+        "tokens_after": 2995,
+        "messages_before": 3,
+        "messages_after": 3,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "Неверный 16.3.1/p.300; ответ не подтверждён; нужный 4.12.3–4.12.4."
+    },
+    {
+      "agent": "langgraph",
+      "task": "F08",
+      "category": "factual",
+      "difficulty": "medium",
+      "task_type": "single",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 101.696,
+      "tool_names": [
+        "search_documents"
+      ],
+      "strict": 0,
+      "partial": 0.5,
+      "citation": 1,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 3540,
+        "output": 267,
+        "prompt_incl_cache": 3273,
+        "prompt_uncached": 2322,
+        "cached": 951
+      },
+      "context": {
+        "thread_id": "selected-F08-20261105-122330",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 3397,
+        "tokens_after": 3397,
+        "messages_before": 3,
+        "messages_after": 3,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "Тема верна, но нет 50F и четырёх сейсмометров; 11.4.4/p.217 вместо 11.4/p.214–215."
+    },
+    {
+      "agent": "langgraph",
+      "task": "F11",
+      "category": "factual",
+      "difficulty": "easy",
+      "task_type": "single",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 88.923,
+      "tool_names": [
+        "search_documents"
+      ],
+      "strict": 0,
+      "partial": 1,
+      "citation": 2,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 3542,
+        "output": 134,
+        "prompt_incl_cache": 3408,
+        "prompt_uncached": 2483,
+        "cached": 925
+      },
+      "context": {
+        "thread_id": "selected-F11-20261105-122512",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 3532,
+        "tokens_after": 3532,
+        "messages_before": 3,
+        "messages_after": 3,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "77 минут и 11.6/p.220 верны, но ответ содержит противоречие: «отчёт не даёт время» — strict=0."
+    },
+    {
+      "agent": "langgraph",
+      "task": "F13",
+      "category": "factual",
+      "difficulty": "medium",
+      "task_type": "single",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 89.681,
+      "tool_names": [
+        "search_documents"
+      ],
+      "strict": 0,
+      "partial": 1,
+      "citation": 2,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 3463,
+        "output": 273,
+        "prompt_incl_cache": 3190,
+        "prompt_uncached": 2240,
+        "cached": 950
+      },
+      "context": {
+        "thread_id": "selected-F13-20261105-122641",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 3314,
+        "tokens_after": 3314,
+        "messages_before": 3,
+        "messages_after": 3,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "Две задачи и 12.5/p.259 верны; 21-дневный карантин не назван, есть неподтверждённый «год»."
+    },
+    {
+      "agent": "langgraph",
+      "task": "F15",
+      "category": "factual",
+      "difficulty": "hard",
+      "task_type": "single",
+      "turn": 1,
+      "status": "empty_response",
+      "duration_s": 34.291,
+      "tool_names": [],
+      "strict": 0,
+      "partial": 0,
+      "citation": 0,
+      "history": null,
+      "tool_ok": false,
+      "error": "empty_response_after_retries",
+      "tokens": {
+        "total": null,
+        "output": null,
+        "prompt_incl_cache": null,
+        "prompt_uncached": null,
+        "cached": 0
+      },
+      "context": {
+        "thread_id": "selected-F15-20261105-122810",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 1055,
+        "tokens_after": 1055,
+        "messages_before": 1,
+        "messages_after": 1,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "empty_response после retry."
+    },
+    {
+      "agent": "langgraph",
+      "task": "X01",
+      "category": "multi_fact",
+      "difficulty": "medium",
+      "task_type": "single",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 110.985,
+      "tool_names": [
+        "search_documents"
+      ],
+      "strict": 1,
+      "partial": 1,
+      "citation": 2,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 4036,
+        "output": 325,
+        "prompt_incl_cache": 3711,
+        "prompt_uncached": 2764,
+        "cached": 947
+      },
+      "context": {
+        "thread_id": "selected-X01-20261105-122845",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 3835,
+        "tokens_after": 3835,
+        "messages_before": 3,
+        "messages_after": 3,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "Обе части и 4.12.2/p.40 верны."
+    },
+    {
+      "agent": "langgraph",
+      "task": "X02",
+      "category": "multi_fact",
+      "difficulty": "hard",
+      "task_type": "single",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 161.602,
+      "tool_names": [
+        "search_documents"
+      ],
+      "strict": 0,
+      "partial": 1,
+      "citation": 0,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 4057,
+        "output": 847,
+        "prompt_incl_cache": 3210,
+        "prompt_uncached": 2270,
+        "cached": 940
+      },
+      "context": {
+        "thread_id": "selected-X02-20261105-123036",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 3334,
+        "tokens_after": 3334,
+        "messages_before": 3,
+        "messages_after": 3,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "14 м, цели и 15 см есть; section/page не указаны, много лишнего."
+    },
+    {
+      "agent": "langgraph",
+      "task": "C01",
+      "category": "retrieval_calculation",
+      "difficulty": "hard",
+      "task_type": "single",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 99.513,
+      "tool_names": [
+        "search_documents"
+      ],
+      "strict": 0,
+      "partial": 0,
+      "citation": 0,
+      "history": null,
+      "tool_ok": false,
+      "error": null,
+      "tokens": {
+        "total": 3751,
+        "output": 68,
+        "prompt_incl_cache": 3683,
+        "prompt_uncached": 2721,
+        "cached": 962
+      },
+      "context": {
+        "thread_id": "selected-C01-20261105-123317",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 3807,
+        "tokens_after": 3807,
+        "messages_before": 3,
+        "messages_after": 3,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "Отказ, хотя данные есть; calculate не вызван."
+    },
+    {
+      "agent": "langgraph",
+      "task": "C02",
+      "category": "retrieval_calculation",
+      "difficulty": "medium",
+      "task_type": "single",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 84.569,
+      "tool_names": [
+        "search_documents"
+      ],
+      "strict": 0,
+      "partial": 1,
+      "citation": 1,
+      "history": null,
+      "tool_ok": false,
+      "error": null,
+      "tokens": {
+        "total": 3689,
+        "output": 167,
+        "prompt_incl_cache": 3522,
+        "prompt_uncached": 2556,
+        "cached": 966
+      },
+      "context": {
+        "thread_id": "selected-C02-20261105-123457",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 3646,
+        "tokens_after": 3646,
+        "messages_before": 3,
+        "messages_after": 3,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "215/p.49 верны, но первая фраза «1500 миль» противоречит; calculate не вызван."
+    },
+    {
+      "agent": "langgraph",
+      "task": "U01",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "task_type": "single",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 67.652,
+      "tool_names": [
+        "search_documents"
+      ],
+      "strict": 1,
+      "partial": 1,
+      "citation": null,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 3417,
+        "output": 34,
+        "prompt_incl_cache": 3383,
+        "prompt_uncached": 2433,
+        "cached": 950
+      },
+      "context": {
+        "thread_id": "selected-U01-20261105-123621",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 3507,
+        "tokens_after": 3507,
+        "messages_before": 3,
+        "messages_after": 3,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "Корректный отказ."
+    },
+    {
+      "agent": "langgraph",
+      "task": "U02",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "task_type": "single",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 66.737,
+      "tool_names": [
+        "search_documents"
+      ],
+      "strict": 1,
+      "partial": 1,
+      "citation": null,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 3369,
+        "output": 58,
+        "prompt_incl_cache": 3311,
+        "prompt_uncached": 2373,
+        "cached": 938
+      },
+      "context": {
+        "thread_id": "selected-U02-20261105-123729",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 3435,
+        "tokens_after": 3435,
+        "messages_before": 3,
+        "messages_after": 3,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "Корректный отказ."
+    },
+    {
+      "agent": "langgraph",
+      "task": "D01",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 86.328,
+      "tool_names": [
+        "search_documents"
+      ],
+      "strict": 0,
+      "partial": 1,
+      "citation": 0,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 3428,
+        "output": 241,
+        "prompt_incl_cache": 3187,
+        "prompt_uncached": 2279,
+        "cached": 908
+      },
+      "context": {
+        "thread_id": "selected-D01-20261105-123836",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 3311,
+        "tokens_after": 3311,
+        "messages_before": 3,
+        "messages_after": 3,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "Содержание в основном верно, источник не указан."
+    },
+    {
+      "agent": "langgraph",
+      "task": "D01",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "turn": 2,
+      "status": "ok",
+      "duration_s": 96.716,
+      "tool_names": [
+        "search_documents"
+      ],
+      "strict": 0,
+      "partial": 1,
+      "citation": 0,
+      "history": 1,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 5903,
+        "output": 149,
+        "prompt_incl_cache": 5754,
+        "prompt_uncached": 2243,
+        "cached": 3511
+      },
+      "context": {
+        "thread_id": "selected-D01-20261105-123836",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 5883,
+        "tokens_after": 5883,
+        "messages_before": 7,
+        "messages_after": 7,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "Причины задержки верны; источник не указан."
+    },
+    {
+      "agent": "langgraph",
+      "task": "D01",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "turn": 3,
+      "status": "ok",
+      "duration_s": 10.207,
+      "tool_names": [],
+      "strict": 1,
+      "partial": 1,
+      "citation": 2,
+      "history": 1,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 5980,
+        "output": 43,
+        "prompt_incl_cache": 5937,
+        "prompt_uncached": 43,
+        "cached": 5894
+      },
+      "context": {
+        "thread_id": "selected-D01-20261105-123836",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 6066,
+        "tokens_after": 6066,
+        "messages_before": 9,
+        "messages_after": 9,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "4.12.2 верно; страница не нужна по вопросу."
+    },
+    {
+      "agent": "langgraph",
+      "task": "D01",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "turn": 4,
+      "status": "ok",
+      "duration_s": 171.895,
+      "tool_names": [
+        "search_documents"
+      ],
+      "strict": 0,
+      "partial": 0,
+      "citation": 0,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 3487,
+        "output": 167,
+        "prompt_incl_cache": 3320,
+        "prompt_uncached": 2435,
+        "cached": 885
+      },
+      "context": {
+        "thread_id": "selected-D01-20261105-123836",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 8061,
+        "tokens_after": 3444,
+        "messages_before": 13,
+        "messages_after": 7,
+        "compacted": true,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": true,
+      "note": "После compaction ответ 4.11 и неверное описание пыли; нужный 4.12.3–4.12.4."
+    },
+    {
+      "agent": "langgraph",
+      "task": "D01",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "turn": 5,
+      "status": "ok",
+      "duration_s": 17.28,
+      "tool_names": [],
+      "strict": 0,
+      "partial": 0,
+      "citation": 0,
+      "history": 0,
+      "tool_ok": false,
+      "error": null,
+      "tokens": {
+        "total": 3669,
+        "output": 123,
+        "prompt_incl_cache": 3546,
+        "prompt_uncached": 60,
+        "cached": 3486
+      },
+      "context": {
+        "thread_id": "selected-D01-20261105-123836",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 3670,
+        "tokens_after": 3670,
+        "messages_before": 9,
+        "messages_after": 9,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "Итог не разделён корректно; пыль приписана 4.11; пропущены 4.12.2–4.12.4."
+    },
+    {
+      "agent": "langgraph",
+      "task": "D02",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 62.713,
+      "tool_names": [
+        "search_documents"
+      ],
+      "strict": 1,
+      "partial": 1,
+      "citation": 0,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 3020,
+        "output": 137,
+        "prompt_incl_cache": 2883,
+        "prompt_uncached": 1958,
+        "cached": 925
+      },
+      "context": {
+        "thread_id": "selected-D02-20261105-124458",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 3007,
+        "tokens_after": 3007,
+        "messages_before": 3,
+        "messages_after": 3,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "77 минут верно; section/page не указаны."
+    },
+    {
+      "agent": "langgraph",
+      "task": "D02",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "turn": 2,
+      "status": "ok",
+      "duration_s": 65.952,
+      "tool_names": [
+        "search_documents"
+      ],
+      "strict": 0,
+      "partial": 0,
+      "citation": 0,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 5208,
+        "output": 68,
+        "prompt_incl_cache": 5140,
+        "prompt_uncached": 2057,
+        "cached": 3083
+      },
+      "context": {
+        "thread_id": "selected-D02-20261105-124458",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 5269,
+        "tokens_after": 5269,
+        "messages_before": 7,
+        "messages_after": 7,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "1.4 м северо-запад вместо 14 м юго-юго-запад."
+    },
+    {
+      "agent": "langgraph",
+      "task": "D02",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "turn": 3,
+      "status": "ok",
+      "duration_s": 18.645,
+      "tool_names": [],
+      "strict": 0,
+      "partial": 0.5,
+      "citation": 0,
+      "history": 1,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 5353,
+        "output": 123,
+        "prompt_incl_cache": 5230,
+        "prompt_uncached": 23,
+        "cached": 5207
+      },
+      "context": {
+        "thread_id": "selected-D02-20261105-124458",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 5359,
+        "tokens_after": 5359,
+        "messages_before": 9,
+        "messages_after": 9,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "Цели названы, 15 см и источник отсутствуют."
+    },
+    {
+      "agent": "langgraph",
+      "task": "D02",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "turn": 4,
+      "status": "ok",
+      "duration_s": 17.72,
+      "tool_names": [
+        "calculate"
+      ],
+      "strict": 1,
+      "partial": 1,
+      "citation": 0,
+      "history": 1,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 5511,
+        "output": 32,
+        "prompt_incl_cache": 5479,
+        "prompt_uncached": 61,
+        "cached": 5418
+      },
+      "context": {
+        "thread_id": "selected-D02-20261105-124458",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 5611,
+        "tokens_after": 5611,
+        "messages_before": 13,
+        "messages_after": 13,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "calculate(77/60)=1.2833, ответ ≈1.28 ч верный; section/page не указаны."
+    },
+    {
+      "agent": "langgraph",
+      "task": "D02",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "turn": 5,
+      "status": "ok",
+      "duration_s": 13.101,
+      "tool_names": [],
+      "strict": 0,
+      "partial": 0,
+      "citation": 0,
+      "history": 0,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 5633,
+        "output": 74,
+        "prompt_incl_cache": 5559,
+        "prompt_uncached": 49,
+        "cached": 5510
+      },
+      "context": {
+        "thread_id": "selected-D02-20261105-124458",
+        "context_limit": 8192,
+        "response_reserve": 512,
+        "input_budget": 7680,
+        "tokens_before": 5691,
+        "tokens_after": 5691,
+        "messages_before": 15,
+        "messages_after": 15,
+        "compacted": false,
+        "strategy": "summarize",
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+        "current_user_message_preserved": true
+      },
+      "compacted": false,
+      "note": "Эксперименты/разделы названы неверно."
+    },
+    {
+      "agent": "opencode",
+      "task": "F01",
+      "category": "factual",
+      "difficulty": "medium",
+      "task_type": "single",
+      "turn": 1,
+      "status": "timeout",
+      "duration_s": 180.456,
+      "tool_names": [],
+      "strict": 0,
+      "partial": 0,
+      "citation": 0,
+      "history": null,
+      "tool_ok": false,
+      "error": "timeout 180s",
+      "tokens": {
+        "total": null,
+        "output": null,
+        "prompt_incl_cache": null,
+        "prompt_uncached": null,
+        "cached": 0
+      },
+      "context": null,
+      "compacted": false,
+      "note": "timeout 180 с, tool call не выполнен."
+    },
+    {
+      "agent": "opencode",
+      "task": "F03",
+      "category": "factual",
+      "difficulty": "easy",
+      "task_type": "single",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 137.895,
+      "tool_names": [
+        "apollo11_search_documents"
+      ],
+      "strict": 1,
+      "partial": 1,
+      "citation": 2,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 3645,
+        "output": 158,
+        "prompt_incl_cache": 3487,
+        "prompt_uncached": 2390,
+        "cached": 1097
+      },
+      "context": null,
+      "compacted": false,
+      "note": "4.12.2/p.40, tool call выполнен; перевод плохой, факты верны."
+    },
+    {
+      "agent": "opencode",
+      "task": "F05",
+      "category": "factual",
+      "difficulty": "hard",
+      "task_type": "single",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 107.507,
+      "tool_names": [
+        "apollo11_search_documents"
+      ],
+      "strict": 0,
+      "partial": 0.5,
+      "citation": 0,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 3013,
+        "output": 143,
+        "prompt_incl_cache": 2870,
+        "prompt_uncached": 1767,
+        "cached": 1103
+      },
+      "context": null,
+      "compacted": false,
+      "note": "Неверный 11.2.1; нет 4.12.3–4.12.4."
+    },
+    {
+      "agent": "opencode",
+      "task": "F08",
+      "category": "factual",
+      "difficulty": "medium",
+      "task_type": "single",
+      "turn": 1,
+      "status": "timeout",
+      "duration_s": 180.169,
+      "tool_names": [],
+      "strict": 0,
+      "partial": 0,
+      "citation": 0,
+      "history": null,
+      "tool_ok": false,
+      "error": "timeout 180s",
+      "tokens": {
+        "total": null,
+        "output": null,
+        "prompt_incl_cache": null,
+        "prompt_uncached": null,
+        "cached": 0
+      },
+      "context": null,
+      "compacted": false,
+      "note": "timeout 180 с."
+    },
+    {
+      "agent": "opencode",
+      "task": "F11",
+      "category": "factual",
+      "difficulty": "easy",
+      "task_type": "single",
+      "turn": 1,
+      "status": "empty_response",
+      "duration_s": 46.796,
+      "tool_names": [],
+      "strict": 0,
+      "partial": 0,
+      "citation": 0,
+      "history": null,
+      "tool_ok": false,
+      "error": "no text and no tool calls",
+      "tokens": {
+        "total": 1155,
+        "output": 73,
+        "prompt_incl_cache": 1082,
+        "prompt_uncached": 1,
+        "cached": 1081
+      },
+      "context": null,
+      "compacted": false,
+      "note": "empty_response, tool call не выполнен."
+    },
+    {
+      "agent": "opencode",
+      "task": "F13",
+      "category": "factual",
+      "difficulty": "medium",
+      "task_type": "single",
+      "turn": 1,
+      "status": "timeout",
+      "duration_s": 180.157,
+      "tool_names": [],
+      "strict": 0,
+      "partial": 0,
+      "citation": 0,
+      "history": null,
+      "tool_ok": false,
+      "error": "timeout 180s",
+      "tokens": {
+        "total": null,
+        "output": null,
+        "prompt_incl_cache": null,
+        "prompt_uncached": null,
+        "cached": 0
+      },
+      "context": null,
+      "compacted": false,
+      "note": "timeout 180 с."
+    },
+    {
+      "agent": "opencode",
+      "task": "F15",
+      "category": "factual",
+      "difficulty": "hard",
+      "task_type": "single",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 168.723,
+      "tool_names": [
+        "apollo11_search_documents"
+      ],
+      "strict": 0,
+      "partial": 0.5,
+      "citation": 0,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 3573,
+        "output": 322,
+        "prompt_incl_cache": 3251,
+        "prompt_uncached": 2147,
+        "cached": 1104
+      },
+      "context": null,
+      "compacted": false,
+      "note": "Executive overflow назван, но 9.6.5 вместо 16.2.5 и нет страницы."
+    },
+    {
+      "agent": "opencode",
+      "task": "X01",
+      "category": "multi_fact",
+      "difficulty": "medium",
+      "task_type": "single",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 172.027,
+      "tool_names": [
+        "apollo11_search_documents"
+      ],
+      "strict": 0,
+      "partial": 0.5,
+      "citation": 1,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 3857,
+        "output": 201,
+        "prompt_incl_cache": 3656,
+        "prompt_uncached": 2554,
+        "cached": 1102
+      },
+      "context": null,
+      "compacted": false,
+      "note": "4.12.2 назван, но без страницы; вторая часть неточная/16.3.2."
+    },
+    {
+      "agent": "opencode",
+      "task": "X02",
+      "category": "multi_fact",
+      "difficulty": "hard",
+      "task_type": "single",
+      "turn": 1,
+      "status": "timeout",
+      "duration_s": 180.313,
+      "tool_names": [],
+      "strict": 0,
+      "partial": 0,
+      "citation": 0,
+      "history": null,
+      "tool_ok": false,
+      "error": "timeout 180s",
+      "tokens": {
+        "total": null,
+        "output": null,
+        "prompt_incl_cache": null,
+        "prompt_uncached": null,
+        "cached": 0
+      },
+      "context": null,
+      "compacted": false,
+      "note": "timeout 180 с."
+    },
+    {
+      "agent": "opencode",
+      "task": "C01",
+      "category": "retrieval_calculation",
+      "difficulty": "hard",
+      "task_type": "single",
+      "turn": 1,
+      "status": "timeout",
+      "duration_s": 180.219,
+      "tool_names": [],
+      "strict": 0,
+      "partial": 0,
+      "citation": 0,
+      "history": null,
+      "tool_ok": false,
+      "error": "timeout 180s",
+      "tokens": {
+        "total": null,
+        "output": null,
+        "prompt_incl_cache": null,
+        "prompt_uncached": null,
+        "cached": 0
+      },
+      "context": null,
+      "compacted": false,
+      "note": "timeout 180 с."
+    },
+    {
+      "agent": "opencode",
+      "task": "C02",
+      "category": "retrieval_calculation",
+      "difficulty": "medium",
+      "task_type": "single",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 152.643,
+      "tool_names": [
+        "apollo11_search_documents",
+        "apollo11_calculate"
+      ],
+      "strict": 1,
+      "partial": 1,
+      "citation": 1,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 3717,
+        "output": 141,
+        "prompt_incl_cache": 3576,
+        "prompt_uncached": 39,
+        "cached": 3537
+      },
+      "context": null,
+      "compacted": false,
+      "note": "215/p.49 верны; calculate вызван; section не назван."
+    },
+    {
+      "agent": "opencode",
+      "task": "U01",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "task_type": "single",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 110.041,
+      "tool_names": [
+        "apollo11_search_documents"
+      ],
+      "strict": 1,
+      "partial": 1,
+      "citation": null,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 3365,
+        "output": 20,
+        "prompt_incl_cache": 3345,
+        "prompt_uncached": 2241,
+        "cached": 1104
+      },
+      "context": null,
+      "compacted": false,
+      "note": "Корректный отказ."
+    },
+    {
+      "agent": "opencode",
+      "task": "U02",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "task_type": "single",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 137.038,
+      "tool_names": [
+        "apollo11_search_documents"
+      ],
+      "strict": 1,
+      "partial": 1,
+      "citation": null,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 3535,
+        "output": 102,
+        "prompt_incl_cache": 3433,
+        "prompt_uncached": 2341,
+        "cached": 1092
+      },
+      "context": null,
+      "compacted": false,
+      "note": "Корректный отказ."
+    },
+    {
+      "agent": "opencode",
+      "task": "D01",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 141.991,
+      "tool_names": [
+        "apollo11_search_documents"
+      ],
+      "strict": 0,
+      "partial": 0.5,
+      "citation": 0,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 3411,
+        "output": 187,
+        "prompt_incl_cache": 3224,
+        "prompt_uncached": 2144,
+        "cached": 1080
+      },
+      "context": null,
+      "compacted": false,
+      "note": "Общие слова, часть деталей неверна; источник не указан."
+    },
+    {
+      "agent": "opencode",
+      "task": "D01",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "turn": 2,
+      "status": "ok",
+      "duration_s": 145.223,
+      "tool_names": [
+        "apollo11_search_documents"
+      ],
+      "strict": 0,
+      "partial": 0.5,
+      "citation": 0,
+      "history": 1,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 5707,
+        "output": 224,
+        "prompt_incl_cache": 5483,
+        "prompt_uncached": 2033,
+        "cached": 3450
+      },
+      "context": null,
+      "compacted": false,
+      "note": "Использует историю, но ответ общий; источник не указан."
+    },
+    {
+      "agent": "opencode",
+      "task": "D01",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "turn": 3,
+      "status": "ok",
+      "duration_s": 41.224,
+      "tool_names": [],
+      "strict": 1,
+      "partial": 1,
+      "citation": 1,
+      "history": 1,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 5883,
+        "output": 139,
+        "prompt_incl_cache": 5744,
+        "prompt_uncached": 38,
+        "cached": 5706
+      },
+      "context": null,
+      "compacted": false,
+      "note": "4.12.2 верно, но добавлен неверный раздел 17."
+    },
+    {
+      "agent": "opencode",
+      "task": "D01",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "turn": 4,
+      "status": "timeout",
+      "duration_s": 180.134,
+      "tool_names": [],
+      "strict": 0,
+      "partial": 0,
+      "citation": 0,
+      "history": null,
+      "tool_ok": false,
+      "error": "timeout 180s",
+      "tokens": {
+        "total": null,
+        "output": null,
+        "prompt_incl_cache": null,
+        "prompt_uncached": null,
+        "cached": 0
+      },
+      "context": null,
+      "compacted": false,
+      "note": "timeout 180 с."
+    },
+    {
+      "agent": "opencode",
+      "task": "D01",
+      "turn": 5,
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "status": "not_run",
+      "duration_s": null,
+      "tool_names": [],
+      "strict": 0,
+      "partial": 0,
+      "citation": 0,
+      "history": null,
+      "tool_ok": false,
+      "error": "not executed",
+      "tokens": {},
+      "context": null,
+      "note": "Реплика не выполнялась после timeout turn 4."
+    },
+    {
+      "agent": "opencode",
+      "task": "D02",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "turn": 1,
+      "status": "ok",
+      "duration_s": 112.374,
+      "tool_names": [
+        "apollo11_search_documents"
+      ],
+      "strict": 0,
+      "partial": 0,
+      "citation": 0,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 2976,
+        "output": 15,
+        "prompt_incl_cache": 2961,
+        "prompt_uncached": 1882,
+        "cached": 1079
+      },
+      "context": null,
+      "compacted": false,
+      "note": "«Не найдено», хотя 77 минут есть в отчёте."
+    },
+    {
+      "agent": "opencode",
+      "task": "D02",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "turn": 2,
+      "status": "ok",
+      "duration_s": 112.177,
+      "tool_names": [
+        "apollo11_search_documents"
+      ],
+      "strict": 0,
+      "partial": 0,
+      "citation": 0,
+      "history": null,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 5055,
+        "output": 110,
+        "prompt_incl_cache": 4945,
+        "prompt_uncached": 1905,
+        "cached": 3040
+      },
+      "context": null,
+      "compacted": false,
+      "note": "1.4 м северо-запад вместо 14 м юго-юго-запад."
+    },
+    {
+      "agent": "opencode",
+      "task": "D02",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "turn": 3,
+      "status": "ok",
+      "duration_s": 41.853,
+      "tool_names": [],
+      "strict": 0,
+      "partial": 0.5,
+      "citation": 0,
+      "history": 1,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 5273,
+        "output": 195,
+        "prompt_incl_cache": 5078,
+        "prompt_uncached": 24,
+        "cached": 5054
+      },
+      "context": null,
+      "compacted": false,
+      "note": "Цели названы, 15 см/источник отсутствуют."
+    },
+    {
+      "agent": "opencode",
+      "task": "D02",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "turn": 4,
+      "status": "ok",
+      "duration_s": 32.301,
+      "tool_names": [
+        "apollo11_calculate"
+      ],
+      "strict": 0,
+      "partial": 0,
+      "citation": 0,
+      "history": 0,
+      "tool_ok": false,
+      "error": null,
+      "tokens": {
+        "total": 5412,
+        "output": 17,
+        "prompt_incl_cache": 5395,
+        "prompt_uncached": 39,
+        "cached": 5356
+      },
+      "context": null,
+      "compacted": false,
+      "note": "4.6 ч, calculate с (127+149)/60."
+    },
+    {
+      "agent": "opencode",
+      "task": "D02",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "turn": 5,
+      "status": "ok",
+      "duration_s": 161.728,
+      "tool_names": [
+        "apollo11_search_documents"
+      ],
+      "strict": 0,
+      "partial": 0,
+      "citation": 0,
+      "history": 0,
+      "tool_ok": true,
+      "error": null,
+      "tokens": {
+        "total": 8690,
+        "output": 69,
+        "prompt_incl_cache": 8621,
+        "prompt_uncached": 3089,
+        "cached": 5532
+      },
+      "context": null,
+      "compacted": false,
+      "note": "Утверждает, что экспериментов нет; неверно."
+    }
+  ],
+  "token_accounting": {
+    "available": true,
+    "methodology": {
+      "llm_calls_langgraph": "logged GENERATION count + model retry attempts beyond the first (retry attempts without a separate generation are counted as calls, not as extra tokens)",
+      "tokens_langgraph": "sum of input/output/cache across all Langfuse GENERATION observations for the task; includes summarization",
+      "llm_calls_opencode": "sum of upstream attempt counts recorded by the proxy; includes extra/retry requests",
+      "tokens_opencode": "sum across proxy generations; native and step_finish totals are cross-checks and are not added again",
+      "agent_steps": "llm_calls + tool_calls_total",
+      "max_context_langgraph": "max tokens_before across context_diagnostics",
+      "max_context_opencode": "max prompt_incl_cache across proxy generations",
+      "cost": "direct API cost is zero for local Ollama; hardware and electricity costs were not measured"
+    },
+    "previous_metrics": {
+      "langgraph_mean_total_tokens_ok": 4137.6,
+      "opencode_mean_total_tokens_ok": 4474.1,
+      "langgraph_mean_output_tokens_ok": 187.5,
+      "opencode_mean_output_tokens_ok": 136.2
+    },
+    "langgraph_full": {
+      "status_counts": {
+        "ok": 14,
+        "empty_response": 1
+      },
+      "tool_calls_by_name": {
+        "search_documents": 17,
+        "calculate": 1
+      },
+      "tasks": 15,
+      "tasks_with_usage": 15,
+      "sum_total_tokens_full": 127580,
+      "mean_total_tokens_full_per_task": 8505.3,
+      "sum_output_tokens_full": 5870,
+      "mean_output_tokens_full_per_task": 391.3,
+      "sum_prompt_uncached_full": 44245,
+      "sum_cached_full": 77465,
+      "sum_llm_calls": 48,
+      "mean_llm_calls_per_task": 3.2,
+      "sum_tool_calls": 18,
+      "mean_tool_calls_per_task": 1.2,
+      "sum_agent_steps": 66,
+      "sum_retries": 6,
+      "sum_compactions": 1,
+      "max_context_tokens": 8061,
+      "sum_duration_s": 1785.489,
+      "mean_duration_s": 119.033
+    },
+    "opencode_full": {
+      "status_counts": {
+        "timeout": 6,
+        "ok": 8,
+        "empty_response": 1
+      },
+      "tool_calls_by_name": {
+        "search_documents": 12,
+        "calculate": 2
+      },
+      "tasks": 15,
+      "tasks_with_usage": 15,
+      "sum_total_tokens_full": 147808,
+      "mean_total_tokens_full_per_task": 9853.9,
+      "sum_output_tokens_full": 6879,
+      "mean_output_tokens_full_per_task": 458.6,
+      "sum_prompt_uncached_full": 42936,
+      "sum_cached_full": 97993,
+      "sum_llm_calls": 64,
+      "mean_llm_calls_per_task": 4.27,
+      "sum_tool_calls": 14,
+      "mean_tool_calls_per_task": 0.93,
+      "sum_agent_steps": 78,
+      "sum_retries": 34,
+      "sum_compactions": 0,
+      "max_context_tokens": 8621,
+      "sum_duration_s": 2902.989,
+      "mean_duration_s": 193.533
+    }
+  },
+  "task_metrics": [
+    {
+      "agent": "langgraph",
+      "task": "F01",
+      "category": "factual",
+      "difficulty": "medium",
+      "task_type": "single",
+      "status": "ok",
+      "turns_executed": 1,
+      "duration_s": 149.793,
+      "llm_calls": 2,
+      "generation_count": 2,
+      "summary_generations": 0,
+      "retry_count": 0,
+      "tool_calls_total": 1,
+      "tool_calls_by_name": {
+        "search_documents": 1
+      },
+      "agent_steps": 3,
+      "max_context_tokens": 3864,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 2842,
+        "prompt_incl_cache": 4674,
+        "cached": 1832,
+        "output": 541,
+        "total": 5215
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 2793,
+        "prompt_incl_cache": 3740,
+        "cached": 947,
+        "output": 454,
+        "total": 4194
+      }
+    },
+    {
+      "agent": "langgraph",
+      "task": "F03",
+      "category": "factual",
+      "difficulty": "easy",
+      "task_type": "single",
+      "status": "ok",
+      "turns_executed": 1,
+      "duration_s": 100.734,
+      "llm_calls": 3,
+      "generation_count": 2,
+      "summary_generations": 0,
+      "retry_count": 1,
+      "tool_calls_total": 1,
+      "tool_calls_by_name": {
+        "search_documents": 1
+      },
+      "agent_steps": 4,
+      "max_context_tokens": 3691,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 2657,
+        "prompt_incl_cache": 4505,
+        "cached": 1848,
+        "output": 279,
+        "total": 4784
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 2643,
+        "prompt_incl_cache": 3567,
+        "cached": 924,
+        "output": 201,
+        "total": 3768
+      }
+    },
+    {
+      "agent": "langgraph",
+      "task": "F05",
+      "category": "factual",
+      "difficulty": "hard",
+      "task_type": "single",
+      "status": "ok",
+      "turns_executed": 1,
+      "duration_s": 68.756,
+      "llm_calls": 2,
+      "generation_count": 2,
+      "summary_generations": 0,
+      "retry_count": 0,
+      "tool_calls_total": 1,
+      "tool_calls_by_name": {
+        "search_documents": 1
+      },
+      "agent_steps": 3,
+      "max_context_tokens": 2995,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 1973,
+        "prompt_incl_cache": 3806,
+        "cached": 1833,
+        "output": 237,
+        "total": 4043
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 1923,
+        "prompt_incl_cache": 2871,
+        "cached": 948,
+        "output": 139,
+        "total": 3010
+      }
+    },
+    {
+      "agent": "langgraph",
+      "task": "F08",
+      "category": "factual",
+      "difficulty": "medium",
+      "task_type": "single",
+      "status": "ok",
+      "turns_executed": 1,
+      "duration_s": 101.696,
+      "llm_calls": 2,
+      "generation_count": 2,
+      "summary_generations": 0,
+      "retry_count": 0,
+      "tool_calls_total": 1,
+      "tool_calls_by_name": {
+        "search_documents": 1
+      },
+      "agent_steps": 3,
+      "max_context_tokens": 3397,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 2374,
+        "prompt_incl_cache": 4211,
+        "cached": 1837,
+        "output": 365,
+        "total": 4576
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 2322,
+        "prompt_incl_cache": 3273,
+        "cached": 951,
+        "output": 267,
+        "total": 3540
+      }
+    },
+    {
+      "agent": "langgraph",
+      "task": "F11",
+      "category": "factual",
+      "difficulty": "easy",
+      "task_type": "single",
+      "status": "ok",
+      "turns_executed": 1,
+      "duration_s": 88.923,
+      "llm_calls": 3,
+      "generation_count": 2,
+      "summary_generations": 0,
+      "retry_count": 1,
+      "tool_calls_total": 1,
+      "tool_calls_by_name": {
+        "search_documents": 1
+      },
+      "agent_steps": 4,
+      "max_context_tokens": 3532,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 2496,
+        "prompt_incl_cache": 4346,
+        "cached": 1850,
+        "output": 221,
+        "total": 4567
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 2483,
+        "prompt_incl_cache": 3408,
+        "cached": 925,
+        "output": 134,
+        "total": 3542
+      }
+    },
+    {
+      "agent": "langgraph",
+      "task": "F13",
+      "category": "factual",
+      "difficulty": "medium",
+      "task_type": "single",
+      "status": "ok",
+      "turns_executed": 1,
+      "duration_s": 89.681,
+      "llm_calls": 2,
+      "generation_count": 2,
+      "summary_generations": 0,
+      "retry_count": 0,
+      "tool_calls_total": 1,
+      "tool_calls_by_name": {
+        "search_documents": 1
+      },
+      "agent_steps": 3,
+      "max_context_tokens": 3314,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 2291,
+        "prompt_incl_cache": 4127,
+        "cached": 1836,
+        "output": 346,
+        "total": 4473
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 2240,
+        "prompt_incl_cache": 3190,
+        "cached": 950,
+        "output": 273,
+        "total": 3463
+      }
+    },
+    {
+      "agent": "langgraph",
+      "task": "F15",
+      "category": "factual",
+      "difficulty": "hard",
+      "task_type": "single",
+      "status": "empty_response",
+      "turns_executed": 1,
+      "duration_s": 34.291,
+      "llm_calls": 3,
+      "generation_count": 1,
+      "summary_generations": 0,
+      "retry_count": 2,
+      "tool_calls_total": 0,
+      "tool_calls_by_name": {},
+      "agent_steps": 3,
+      "max_context_tokens": 1055,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 11,
+        "prompt_incl_cache": 943,
+        "cached": 932,
+        "output": 107,
+        "total": 1050
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 0,
+        "prompt_incl_cache": 0,
+        "cached": 0,
+        "output": 0,
+        "total": 0
+      }
+    },
+    {
+      "agent": "langgraph",
+      "task": "X01",
+      "category": "multi_fact",
+      "difficulty": "medium",
+      "task_type": "single",
+      "status": "ok",
+      "turns_executed": 1,
+      "duration_s": 110.985,
+      "llm_calls": 2,
+      "generation_count": 2,
+      "summary_generations": 0,
+      "retry_count": 0,
+      "tool_calls_total": 1,
+      "tool_calls_by_name": {
+        "search_documents": 1
+      },
+      "agent_steps": 3,
+      "max_context_tokens": 3835,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 2813,
+        "prompt_incl_cache": 4645,
+        "cached": 1832,
+        "output": 410,
+        "total": 5055
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 2764,
+        "prompt_incl_cache": 3711,
+        "cached": 947,
+        "output": 325,
+        "total": 4036
+      }
+    },
+    {
+      "agent": "langgraph",
+      "task": "X02",
+      "category": "multi_fact",
+      "difficulty": "hard",
+      "task_type": "single",
+      "status": "ok",
+      "turns_executed": 1,
+      "duration_s": 161.602,
+      "llm_calls": 2,
+      "generation_count": 2,
+      "summary_generations": 0,
+      "retry_count": 0,
+      "tool_calls_total": 1,
+      "tool_calls_by_name": {
+        "search_documents": 1
+      },
+      "agent_steps": 3,
+      "max_context_tokens": 3334,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 2312,
+        "prompt_incl_cache": 4137,
+        "cached": 1825,
+        "output": 920,
+        "total": 5057
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 2270,
+        "prompt_incl_cache": 3210,
+        "cached": 940,
+        "output": 847,
+        "total": 4057
+      }
+    },
+    {
+      "agent": "langgraph",
+      "task": "C01",
+      "category": "retrieval_calculation",
+      "difficulty": "hard",
+      "task_type": "single",
+      "status": "ok",
+      "turns_executed": 1,
+      "duration_s": 99.513,
+      "llm_calls": 3,
+      "generation_count": 2,
+      "summary_generations": 0,
+      "retry_count": 1,
+      "tool_calls_total": 1,
+      "tool_calls_by_name": {
+        "search_documents": 1
+      },
+      "agent_steps": 4,
+      "max_context_tokens": 3807,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 2735,
+        "prompt_incl_cache": 4659,
+        "cached": 1924,
+        "output": 219,
+        "total": 4878
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 2721,
+        "prompt_incl_cache": 3683,
+        "cached": 962,
+        "output": 68,
+        "total": 3751
+      }
+    },
+    {
+      "agent": "langgraph",
+      "task": "C02",
+      "category": "retrieval_calculation",
+      "difficulty": "medium",
+      "task_type": "single",
+      "status": "ok",
+      "turns_executed": 1,
+      "duration_s": 84.569,
+      "llm_calls": 2,
+      "generation_count": 2,
+      "summary_generations": 0,
+      "retry_count": 0,
+      "tool_calls_total": 1,
+      "tool_calls_by_name": {
+        "search_documents": 1
+      },
+      "agent_steps": 3,
+      "max_context_tokens": 3646,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 2621,
+        "prompt_incl_cache": 4475,
+        "cached": 1854,
+        "output": 280,
+        "total": 4755
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 2556,
+        "prompt_incl_cache": 3522,
+        "cached": 966,
+        "output": 167,
+        "total": 3689
+      }
+    },
+    {
+      "agent": "langgraph",
+      "task": "U01",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "task_type": "single",
+      "status": "ok",
+      "turns_executed": 1,
+      "duration_s": 67.652,
+      "llm_calls": 2,
+      "generation_count": 2,
+      "summary_generations": 0,
+      "retry_count": 0,
+      "tool_calls_total": 1,
+      "tool_calls_by_name": {
+        "search_documents": 1
+      },
+      "agent_steps": 3,
+      "max_context_tokens": 3507,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 2484,
+        "prompt_incl_cache": 4320,
+        "cached": 1836,
+        "output": 115,
+        "total": 4435
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 2433,
+        "prompt_incl_cache": 3383,
+        "cached": 950,
+        "output": 34,
+        "total": 3417
+      }
+    },
+    {
+      "agent": "langgraph",
+      "task": "U02",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "task_type": "single",
+      "status": "ok",
+      "turns_executed": 1,
+      "duration_s": 66.737,
+      "llm_calls": 2,
+      "generation_count": 2,
+      "summary_generations": 0,
+      "retry_count": 0,
+      "tool_calls_total": 1,
+      "tool_calls_by_name": {
+        "search_documents": 1
+      },
+      "agent_steps": 3,
+      "max_context_tokens": 3435,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 2412,
+        "prompt_incl_cache": 4236,
+        "cached": 1824,
+        "output": 115,
+        "total": 4351
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 2373,
+        "prompt_incl_cache": 3311,
+        "cached": 938,
+        "output": 58,
+        "total": 3369
+      }
+    },
+    {
+      "agent": "langgraph",
+      "task": "D01",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "status": "ok",
+      "turns_executed": 5,
+      "duration_s": 382.426,
+      "llm_calls": 10,
+      "generation_count": 9,
+      "summary_generations": 1,
+      "retry_count": 1,
+      "tool_calls_total": 3,
+      "tool_calls_by_name": {
+        "search_documents": 3
+      },
+      "agent_steps": 13,
+      "max_context_tokens": 8061,
+      "compaction_count": 1,
+      "tokens_full": {
+        "prompt_uncached": 9974,
+        "prompt_incl_cache": 34977,
+        "cached": 25003,
+        "output": 1155,
+        "total": 36132
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 7060,
+        "prompt_incl_cache": 21744,
+        "cached": 14684,
+        "output": 723,
+        "total": 22467
+      }
+    },
+    {
+      "agent": "langgraph",
+      "task": "D02",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "status": "ok",
+      "turns_executed": 5,
+      "duration_s": 178.131,
+      "llm_calls": 8,
+      "generation_count": 8,
+      "summary_generations": 0,
+      "retry_count": 0,
+      "tool_calls_total": 3,
+      "tool_calls_by_name": {
+        "search_documents": 2,
+        "calculate": 1
+      },
+      "agent_steps": 11,
+      "max_context_tokens": 5691,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 4250,
+        "prompt_incl_cache": 33649,
+        "cached": 29399,
+        "output": 560,
+        "total": 34209
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 4148,
+        "prompt_incl_cache": 24291,
+        "cached": 20143,
+        "output": 434,
+        "total": 24725
+      }
+    },
+    {
+      "agent": "opencode",
+      "task": "F01",
+      "category": "factual",
+      "difficulty": "medium",
+      "task_type": "single",
+      "status": "timeout",
+      "turns_executed": 1,
+      "duration_s": 180.456,
+      "llm_calls": 4,
+      "proxy_generations": 2,
+      "native_generations": 0,
+      "step_finish_count": 0,
+      "retry_count": 4,
+      "tool_calls_total": 0,
+      "tool_calls_by_name": {},
+      "agent_steps": 4,
+      "max_context_tokens": 1086,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 568,
+        "prompt_incl_cache": 1659,
+        "cached": 1091,
+        "output": 106,
+        "total": 1765
+      },
+      "tokens_native_success": {
+        "prompt_uncached": 0,
+        "prompt_incl_cache": 0,
+        "cached": 0,
+        "output": 0,
+        "total": 0
+      },
+      "tokens_step_finish_success": {
+        "prompt_uncached": 0,
+        "prompt_incl_cache": 0,
+        "cached": 0,
+        "output": 0,
+        "total": 0
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 0,
+        "prompt_incl_cache": 0,
+        "cached": 0,
+        "output": 0,
+        "total": 0
+      }
+    },
+    {
+      "agent": "opencode",
+      "task": "F03",
+      "category": "factual",
+      "difficulty": "easy",
+      "task_type": "single",
+      "status": "ok",
+      "turns_executed": 1,
+      "duration_s": 137.895,
+      "llm_calls": 4,
+      "proxy_generations": 4,
+      "native_generations": 2,
+      "step_finish_count": 2,
+      "retry_count": 2,
+      "tool_calls_total": 1,
+      "tool_calls_by_name": {
+        "search_documents": 1
+      },
+      "agent_steps": 5,
+      "max_context_tokens": 3669,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 5047,
+        "prompt_incl_cache": 8805,
+        "cached": 3758,
+        "output": 571,
+        "total": 9376
+      },
+      "tokens_native_success": {
+        "prompt_uncached": 2435,
+        "prompt_incl_cache": 4568,
+        "cached": 2133,
+        "output": 246,
+        "total": 4814
+      },
+      "tokens_step_finish_success": {
+        "prompt_uncached": 2435,
+        "prompt_incl_cache": 4568,
+        "cached": 2133,
+        "output": 246,
+        "total": 4814
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 2390,
+        "prompt_incl_cache": 3487,
+        "cached": 1097,
+        "output": 158,
+        "total": 3645
+      }
+    },
+    {
+      "agent": "opencode",
+      "task": "F05",
+      "category": "factual",
+      "difficulty": "hard",
+      "task_type": "single",
+      "status": "ok",
+      "turns_executed": 1,
+      "duration_s": 107.507,
+      "llm_calls": 3,
+      "proxy_generations": 3,
+      "native_generations": 2,
+      "step_finish_count": 2,
+      "retry_count": 1,
+      "tool_calls_total": 1,
+      "tool_calls_by_name": {
+        "search_documents": 1
+      },
+      "agent_steps": 4,
+      "max_context_tokens": 2870,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 1869,
+        "prompt_incl_cache": 4531,
+        "cached": 2662,
+        "output": 247,
+        "total": 4778
+      },
+      "tokens_native_success": {
+        "prompt_uncached": 1818,
+        "prompt_incl_cache": 3957,
+        "cached": 2139,
+        "output": 235,
+        "total": 4192
+      },
+      "tokens_step_finish_success": {
+        "prompt_uncached": 1818,
+        "prompt_incl_cache": 3957,
+        "cached": 2139,
+        "output": 235,
+        "total": 4192
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 1767,
+        "prompt_incl_cache": 2870,
+        "cached": 1103,
+        "output": 143,
+        "total": 3013
+      }
+    },
+    {
+      "agent": "opencode",
+      "task": "F08",
+      "category": "factual",
+      "difficulty": "medium",
+      "task_type": "single",
+      "status": "timeout",
+      "turns_executed": 1,
+      "duration_s": 180.169,
+      "llm_calls": 2,
+      "proxy_generations": 2,
+      "native_generations": 0,
+      "step_finish_count": 0,
+      "retry_count": 2,
+      "tool_calls_total": 0,
+      "tool_calls_by_name": {},
+      "agent_steps": 2,
+      "max_context_tokens": 1090,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 106,
+        "prompt_incl_cache": 1667,
+        "cached": 1561,
+        "output": 97,
+        "total": 1764
+      },
+      "tokens_native_success": {
+        "prompt_uncached": 0,
+        "prompt_incl_cache": 0,
+        "cached": 0,
+        "output": 0,
+        "total": 0
+      },
+      "tokens_step_finish_success": {
+        "prompt_uncached": 0,
+        "prompt_incl_cache": 0,
+        "cached": 0,
+        "output": 0,
+        "total": 0
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 0,
+        "prompt_incl_cache": 0,
+        "cached": 0,
+        "output": 0,
+        "total": 0
+      }
+    },
+    {
+      "agent": "opencode",
+      "task": "F11",
+      "category": "factual",
+      "difficulty": "easy",
+      "task_type": "single",
+      "status": "empty_response",
+      "turns_executed": 1,
+      "duration_s": 46.796,
+      "llm_calls": 5,
+      "proxy_generations": 3,
+      "native_generations": 1,
+      "step_finish_count": 1,
+      "retry_count": 4,
+      "tool_calls_total": 0,
+      "tool_calls_by_name": {},
+      "agent_steps": 5,
+      "max_context_tokens": 3157,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 2097,
+        "prompt_incl_cache": 4808,
+        "cached": 2711,
+        "output": 917,
+        "total": 5725
+      },
+      "tokens_native_success": {
+        "prompt_uncached": 1,
+        "prompt_incl_cache": 1082,
+        "cached": 1081,
+        "output": 73,
+        "total": 1155
+      },
+      "tokens_step_finish_success": {
+        "prompt_uncached": 1,
+        "prompt_incl_cache": 1082,
+        "cached": 1081,
+        "output": 73,
+        "total": 1155
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 1,
+        "prompt_incl_cache": 1082,
+        "cached": 1081,
+        "output": 73,
+        "total": 1155
+      }
+    },
+    {
+      "agent": "opencode",
+      "task": "F13",
+      "category": "factual",
+      "difficulty": "medium",
+      "task_type": "single",
+      "status": "timeout",
+      "turns_executed": 1,
+      "duration_s": 180.157,
+      "llm_calls": 2,
+      "proxy_generations": 2,
+      "native_generations": 0,
+      "step_finish_count": 0,
+      "retry_count": 2,
+      "tool_calls_total": 0,
+      "tool_calls_by_name": {},
+      "agent_steps": 2,
+      "max_context_tokens": 1089,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 104,
+        "prompt_incl_cache": 1665,
+        "cached": 1561,
+        "output": 94,
+        "total": 1759
+      },
+      "tokens_native_success": {
+        "prompt_uncached": 0,
+        "prompt_incl_cache": 0,
+        "cached": 0,
+        "output": 0,
+        "total": 0
+      },
+      "tokens_step_finish_success": {
+        "prompt_uncached": 0,
+        "prompt_incl_cache": 0,
+        "cached": 0,
+        "output": 0,
+        "total": 0
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 0,
+        "prompt_incl_cache": 0,
+        "cached": 0,
+        "output": 0,
+        "total": 0
+      }
+    },
+    {
+      "agent": "opencode",
+      "task": "F15",
+      "category": "factual",
+      "difficulty": "hard",
+      "task_type": "single",
+      "status": "ok",
+      "turns_executed": 1,
+      "duration_s": 168.723,
+      "llm_calls": 4,
+      "proxy_generations": 4,
+      "native_generations": 2,
+      "step_finish_count": 2,
+      "retry_count": 2,
+      "tool_calls_total": 1,
+      "tool_calls_by_name": {
+        "search_documents": 1
+      },
+      "agent_steps": 5,
+      "max_context_tokens": 3251,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 4297,
+        "prompt_incl_cache": 8065,
+        "cached": 3768,
+        "output": 1013,
+        "total": 9078
+      },
+      "tokens_native_success": {
+        "prompt_uncached": 2199,
+        "prompt_incl_cache": 4339,
+        "cached": 2140,
+        "output": 390,
+        "total": 4729
+      },
+      "tokens_step_finish_success": {
+        "prompt_uncached": 2199,
+        "prompt_incl_cache": 4339,
+        "cached": 2140,
+        "output": 390,
+        "total": 4729
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 2147,
+        "prompt_incl_cache": 3251,
+        "cached": 1104,
+        "output": 322,
+        "total": 3573
+      }
+    },
+    {
+      "agent": "opencode",
+      "task": "X01",
+      "category": "multi_fact",
+      "difficulty": "medium",
+      "task_type": "single",
+      "status": "ok",
+      "turns_executed": 1,
+      "duration_s": 172.027,
+      "llm_calls": 3,
+      "proxy_generations": 3,
+      "native_generations": 2,
+      "step_finish_count": 2,
+      "retry_count": 1,
+      "tool_calls_total": 1,
+      "tool_calls_by_name": {
+        "search_documents": 1
+      },
+      "agent_steps": 4,
+      "max_context_tokens": 3656,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 2654,
+        "prompt_incl_cache": 5315,
+        "cached": 2661,
+        "output": 315,
+        "total": 5630
+      },
+      "tokens_native_success": {
+        "prompt_uncached": 2604,
+        "prompt_incl_cache": 4742,
+        "cached": 2138,
+        "output": 293,
+        "total": 5035
+      },
+      "tokens_step_finish_success": {
+        "prompt_uncached": 2604,
+        "prompt_incl_cache": 4742,
+        "cached": 2138,
+        "output": 293,
+        "total": 5035
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 2554,
+        "prompt_incl_cache": 3656,
+        "cached": 1102,
+        "output": 201,
+        "total": 3857
+      }
+    },
+    {
+      "agent": "opencode",
+      "task": "X02",
+      "category": "multi_fact",
+      "difficulty": "hard",
+      "task_type": "single",
+      "status": "timeout",
+      "turns_executed": 1,
+      "duration_s": 180.313,
+      "llm_calls": 2,
+      "proxy_generations": 2,
+      "native_generations": 0,
+      "step_finish_count": 0,
+      "retry_count": 2,
+      "tool_calls_total": 0,
+      "tool_calls_by_name": {},
+      "agent_steps": 2,
+      "max_context_tokens": 1079,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 86,
+        "prompt_incl_cache": 1645,
+        "cached": 1559,
+        "output": 90,
+        "total": 1735
+      },
+      "tokens_native_success": {
+        "prompt_uncached": 0,
+        "prompt_incl_cache": 0,
+        "cached": 0,
+        "output": 0,
+        "total": 0
+      },
+      "tokens_step_finish_success": {
+        "prompt_uncached": 0,
+        "prompt_incl_cache": 0,
+        "cached": 0,
+        "output": 0,
+        "total": 0
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 0,
+        "prompt_incl_cache": 0,
+        "cached": 0,
+        "output": 0,
+        "total": 0
+      }
+    },
+    {
+      "agent": "opencode",
+      "task": "C01",
+      "category": "retrieval_calculation",
+      "difficulty": "hard",
+      "task_type": "single",
+      "status": "timeout",
+      "turns_executed": 1,
+      "duration_s": 180.219,
+      "llm_calls": 3,
+      "proxy_generations": 3,
+      "native_generations": 0,
+      "step_finish_count": 0,
+      "retry_count": 3,
+      "tool_calls_total": 0,
+      "tool_calls_by_name": {},
+      "agent_steps": 3,
+      "max_context_tokens": 3167,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 2238,
+        "prompt_incl_cache": 4892,
+        "cached": 2654,
+        "output": 873,
+        "total": 5765
+      },
+      "tokens_native_success": {
+        "prompt_uncached": 0,
+        "prompt_incl_cache": 0,
+        "cached": 0,
+        "output": 0,
+        "total": 0
+      },
+      "tokens_step_finish_success": {
+        "prompt_uncached": 0,
+        "prompt_incl_cache": 0,
+        "cached": 0,
+        "output": 0,
+        "total": 0
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 0,
+        "prompt_incl_cache": 0,
+        "cached": 0,
+        "output": 0,
+        "total": 0
+      }
+    },
+    {
+      "agent": "opencode",
+      "task": "C02",
+      "category": "retrieval_calculation",
+      "difficulty": "medium",
+      "task_type": "single",
+      "status": "ok",
+      "turns_executed": 1,
+      "duration_s": 152.643,
+      "llm_calls": 5,
+      "proxy_generations": 5,
+      "native_generations": 3,
+      "step_finish_count": 3,
+      "retry_count": 2,
+      "tool_calls_total": 2,
+      "tool_calls_by_name": {
+        "search_documents": 1,
+        "calculate": 1
+      },
+      "agent_steps": 7,
+      "max_context_tokens": 3609,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 4952,
+        "prompt_incl_cache": 12310,
+        "cached": 7358,
+        "output": 610,
+        "total": 12920
+      },
+      "tokens_native_success": {
+        "prompt_uncached": 2412,
+        "prompt_incl_cache": 8109,
+        "cached": 5697,
+        "output": 403,
+        "total": 8512
+      },
+      "tokens_step_finish_success": {
+        "prompt_uncached": 2412,
+        "prompt_incl_cache": 8109,
+        "cached": 5697,
+        "output": 403,
+        "total": 8512
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 39,
+        "prompt_incl_cache": 3576,
+        "cached": 3537,
+        "output": 141,
+        "total": 3717
+      }
+    },
+    {
+      "agent": "opencode",
+      "task": "U01",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "task_type": "single",
+      "status": "ok",
+      "turns_executed": 1,
+      "duration_s": 110.041,
+      "llm_calls": 3,
+      "proxy_generations": 3,
+      "native_generations": 2,
+      "step_finish_count": 2,
+      "retry_count": 1,
+      "tool_calls_total": 1,
+      "tool_calls_by_name": {
+        "search_documents": 1
+      },
+      "agent_steps": 4,
+      "max_context_tokens": 3345,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 2345,
+        "prompt_incl_cache": 5008,
+        "cached": 2663,
+        "output": 114,
+        "total": 5122
+      },
+      "tokens_native_success": {
+        "prompt_uncached": 2293,
+        "prompt_incl_cache": 4433,
+        "cached": 2140,
+        "output": 104,
+        "total": 4537
+      },
+      "tokens_step_finish_success": {
+        "prompt_uncached": 2293,
+        "prompt_incl_cache": 4433,
+        "cached": 2140,
+        "output": 104,
+        "total": 4537
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 2241,
+        "prompt_incl_cache": 3345,
+        "cached": 1104,
+        "output": 20,
+        "total": 3365
+      }
+    },
+    {
+      "agent": "opencode",
+      "task": "U02",
+      "category": "unanswerable",
+      "difficulty": "easy",
+      "task_type": "single",
+      "status": "ok",
+      "turns_executed": 1,
+      "duration_s": 137.038,
+      "llm_calls": 4,
+      "proxy_generations": 3,
+      "native_generations": 2,
+      "step_finish_count": 2,
+      "retry_count": 2,
+      "tool_calls_total": 1,
+      "tool_calls_by_name": {
+        "search_documents": 1
+      },
+      "agent_steps": 5,
+      "max_context_tokens": 3433,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 2381,
+        "prompt_incl_cache": 5072,
+        "cached": 2691,
+        "output": 196,
+        "total": 5268
+      },
+      "tokens_native_success": {
+        "prompt_uncached": 2342,
+        "prompt_incl_cache": 4509,
+        "cached": 2167,
+        "output": 183,
+        "total": 4692
+      },
+      "tokens_step_finish_success": {
+        "prompt_uncached": 2342,
+        "prompt_incl_cache": 4509,
+        "cached": 2167,
+        "output": 183,
+        "total": 4692
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 2341,
+        "prompt_incl_cache": 3433,
+        "cached": 1092,
+        "output": 102,
+        "total": 3535
+      }
+    },
+    {
+      "agent": "opencode",
+      "task": "D01",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "status": "timeout",
+      "turns_executed": 4,
+      "duration_s": 508.572,
+      "llm_calls": 9,
+      "proxy_generations": 7,
+      "native_generations": 6,
+      "step_finish_count": 5,
+      "retry_count": 4,
+      "tool_calls_total": 2,
+      "tool_calls_by_name": {
+        "search_documents": 2
+      },
+      "agent_steps": 11,
+      "max_context_tokens": 5911,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 4297,
+        "prompt_incl_cache": 25411,
+        "cached": 21114,
+        "output": 728,
+        "total": 26139
+      },
+      "tokens_native_success": {
+        "prompt_uncached": 4269,
+        "prompt_incl_cache": 24860,
+        "cached": 20591,
+        "output": 723,
+        "total": 25583
+      },
+      "tokens_step_finish_success": {
+        "prompt_uncached": 4240,
+        "prompt_incl_cache": 18949,
+        "cached": 14709,
+        "output": 665,
+        "total": 19614
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 4215,
+        "prompt_incl_cache": 14451,
+        "cached": 10236,
+        "output": 550,
+        "total": 15001
+      }
+    },
+    {
+      "agent": "opencode",
+      "task": "D02",
+      "category": "long_dialogue",
+      "difficulty": "hard",
+      "task_type": "dialogue",
+      "status": "ok",
+      "turns_executed": 5,
+      "duration_s": 460.433,
+      "llm_calls": 11,
+      "proxy_generations": 11,
+      "native_generations": 9,
+      "step_finish_count": 9,
+      "retry_count": 2,
+      "tool_calls_total": 4,
+      "tool_calls_by_name": {
+        "search_documents": 3,
+        "calculate": 1
+      },
+      "agent_steps": 15,
+      "max_context_tokens": 8621,
+      "compaction_count": 0,
+      "tokens_full": {
+        "prompt_uncached": 9895,
+        "prompt_incl_cache": 50076,
+        "cached": 40181,
+        "output": 908,
+        "total": 50984
+      },
+      "tokens_native_success": {
+        "prompt_uncached": 8157,
+        "prompt_incl_cache": 41847,
+        "cached": 33690,
+        "output": 619,
+        "total": 42466
+      },
+      "tokens_step_finish_success": {
+        "prompt_uncached": 8157,
+        "prompt_incl_cache": 41847,
+        "cached": 33690,
+        "output": 619,
+        "total": 42466
+      },
+      "tokens_last_reported": {
+        "prompt_uncached": 6939,
+        "prompt_incl_cache": 27000,
+        "cached": 20061,
+        "output": 406,
+        "total": 27406
+      }
+    }
+  ]
+}

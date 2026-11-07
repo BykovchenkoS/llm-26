@@ -1,0 +1,43 @@
+{
+  "note": "External difficulty map. comparison_tasks.json is not modified; its SHA-256 is recorded below.",
+  "dataset_sha256": "6cdb62431fff09f9b3c0d2989c29f03d73b14ec076d655638228e347d2f33720",
+  "scale": {
+    "easy": "1-2 required facts / one search",
+    "medium": "2-3 facts or one calculation",
+    "hard": "multi-fact, long dialogue, or known retrieval/arithmetic difficulty"
+  },
+  "difficulty": {
+    "F01": "medium",
+    "F03": "easy",
+    "F05": "hard",
+    "F08": "medium",
+    "F11": "easy",
+    "F13": "medium",
+    "F15": "hard",
+    "X01": "medium",
+    "X02": "hard",
+    "C01": "hard",
+    "C02": "medium",
+    "U01": "easy",
+    "U02": "easy",
+    "D01": "hard",
+    "D02": "hard"
+  },
+  "task_type": {
+    "F01": "single",
+    "F03": "single",
+    "F05": "single",
+    "F08": "single",
+    "F11": "single",
+    "F13": "single",
+    "F15": "single",
+    "X01": "single",
+    "X02": "single",
+    "C01": "single",
+    "C02": "single",
+    "U01": "single",
+    "U02": "single",
+    "D01": "dialogue",
+    "D02": "dialogue"
+  }
+}

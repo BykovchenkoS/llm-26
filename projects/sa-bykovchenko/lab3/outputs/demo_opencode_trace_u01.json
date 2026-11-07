@@ -1,0 +1,99 @@
+{
+  "agent": "opencode",
+  "model": "ollama/apollo-qwen:16k",
+  "algorithm_version": "query-processing-v1",
+  "manifest": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab3\\data\\final_eval_manifest.json",
+  "ids": [
+    "U01"
+  ],
+  "model_config": {
+    "name": "apollo-qwen:16k",
+    "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+    "temperature": 0,
+    "base_url": "http://127.0.0.1:11434/v1"
+  },
+  "runtime_policy": {
+    "warmup": true,
+    "empty_retry_attempts": 2,
+    "retry_mechanism": "model_level",
+    "retry_same_thread": false,
+    "openai_compatible_non_streaming_upstream": true,
+    "openai_proxy": "source/llm_proxy.py",
+    "proxy_upstream_attempts": 3,
+    "proxy_upstream_mode": "non_streaming_with_sse_conversion",
+    "proxy_base_url": "http://127.0.0.1:11435/v1"
+  },
+  "results": [
+    {
+      "id": "U01",
+      "category": "unanswerable",
+      "proxy_session_id": "opencode-U01-20261105-182620",
+      "opencode_session_id": "ses_e53ae8831ffebTYaDj8ESA5PMV",
+      "status": "ok",
+      "failed": false,
+      "turns": [
+        {
+          "turn_id": 1,
+          "prompt": "Какую модель смартфона использовал Нил Армстронг во время EVA согласно Apollo 11 Mission Report? Если отчет этого не сообщает, прямо скажи об отсутствии данных.",
+          "status": "ok",
+          "answer": "Apollo 11 миссии было предназначено выполнить основную миссию программы Аполлон — это — это посадить двух людей на поверхности полюса Луны и вернуть их обратно на Землю. В контексте отчета миссии «Apollo 11» известно, что экипаж состоял из Нила Армстронга (командир), Майкла Коллинса (контролируемого корабляный пилот) и Эдвина Альдрига, ИИ (пилот модуля земного выхода). Согласно отчету, не было упоминания конкретной модели смартфона, использованного Нилом Армстронгом во время EVA. \n\nЯ не нашёл в предоставленном отчёте иной информации о модели смартфона, используемого Нилом Армстронгом во время EVA миссии Apollo 11.",
+          "error": null,
+          "duration_s": 128.573,
+          "session_id": "ses_e53ae8831ffebTYaDj8ESA5PMV",
+          "tool_calls": [
+            {
+              "tool": "apollo11_search_documents",
+              "callID": "call_ce3o0bu1",
+              "state": {
+                "status": "completed",
+                "input": {
+                  "question": "Какую модель смартфона использовал Нил Армстронг во время EVA согласно Apollo 11 Mission Report?",
+                  "query": "С каким устройством работал Нил Армстронг во время EVA в отчете по миссии Apollo 11?"
+                },
+                "output": "{\"question\":\"Какую модель смартфона использовал Нил Армстронг во время EVA согласно Apollo 11 Mission Report?\",\"query\":\"С каким устройством работал Нил Армстронг во время EVA в отчете по миссии Apollo 11?\",\"k\":5,\"algorithm_version\":\"query-processing-v1\",\"variants\":[{\"name\":\"original\",\"text\":\"Какую модель смартфона использовал Нил Армстронг во время EVA согласно Apollo 11 Mission Report?\"},{\"name\":\"glossary_en\",\"text\":\"model smartphone neil armstrong eva apollo 11 mission\"},{\"name\":\"agent_query\",\"text\":\"С каким устройством работал Нил Армстронг во время EVA в отчете по миссии Apollo 11?\"},{\"name\":\"keywords\",\"text\":\"какую модель смартфона использовал нил армстронг время eva apollo 11 mission\"}],\"results\":[{\"rank\":1,\"chunk_id\":\"2f0e4f178386585cf5a63637\",\"section_id\":\"1.0\",\"pdf_page\":12,\"heading_path\":[\"1. SUMMARY\",\"1.0 SUMMARY\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=12\",\"score\":0.047907,\"evidence_coverage\":0.75,\"variant_ranks\":{\"original\":4,\"glossary_en\":1,\"agent_query\":5},\"text\":\"The purpose of the Apollo 11 mission was to land men on the lunar\\nsurface and to return them safely to earth. The crew were Neil A. Armstrong, Commander; Michael Collins, Command Module Pilot; and Edwin E.\\nAldrin, Jr., Lunar Module Pilot.  \\nThe space vehicle was launched from Kennedy Space Center, Florida,\\nat 8:32:00 a.m., e.s.t., July 16, 1969. The activities during earth\\norbit checkout, translunar injection, transposition and docking, spacecraft ejection, and translunar coast were similar to those of Apollo 10.\\nOnly one midcourse correction, performed at about 27 hours elapsed time,\\nwas required during trans lunar coast.  \\nThe spacecraft was inserted into lunar orbit at about 76 hours, and\\nthe circularization maneuver was performed two revolutions later. Initial\\ncheckout of lunar module systems was satisfactory, and after a planned\\nrest period, the Commander and Lunar Module Pilot entered the lunar module\\nto prepare for des cent.\",\"truncated\":false},{\"rank\":2,\"chunk_id\":\"cb3c7baa77edc9825a02dae7\",\"section_id\":\"3.0\",\"pdf_page\":15,\"heading_path\":[\"3. MISSION DESCRIPTION\",\"3.0 MISSION DESCRIPTION\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=15\",\"score\":0.052618,\"evidence_coverage\":0.5,\"variant_ranks\":{\"original\":3,\"glossary_en\":2,\"agent_query\":3,\"keywords\":5},\"text\":\"The Apollo 11 mission accomplished the basic mission of the Apollo\\nProgram; that is, to land two men on the lunar surface and return them  \\nsafely to earth. As a part of this first lunar landing, three basic\\nexperiment packages were deployed, lunar material samples were collected,\\nand surface photographs were taken. Two of the experiments were a part\\nof the early Apollo scientific experiment package which was developed for\\ndeployment on the lunar surface. The sequence of events and the flight\\nplan of the Apollo ll mission are shown in table 3-I and figure 3-l, respectively.  \\nThe Apollo 11 space vehicle was launched on July 16, 1969, at\\n8:32 a.m. e.s.t., as planned. The spacecraft and S-IVB were inserted\\ninto a 100.7-by 99.2-mile earth parking orbit. After a 2-1/2-hour\\ncheckout period, the spacecraft/S-IVB combination was injected into the\",\"truncated\":false},{\"rank\":3,\"chunk_id\":\"00a586e406617afa03389dc1\",\"section_id\":\"FRONT\",\"pdf_page\":3,\"heading_path\":[\"FRONT. FRONT MATTER\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=3\",\"score\":0.052921,\"evidence_coverage\":0.375,\"variant_ranks\":{\"original\":2,\"glossary_en\":3,\"agent_query\":2,\"keywords\":1},\"text\":\"MSC-00171  \\nAPOLLO 11 MISSION REPORT  \\nPREPARED BY  \\nMission Evaluation Team  \\nAPPROVED BY  \\nGeorge M. Low �\\nL.c.r-Manager, Apollo Spacecraft Program  \\nNATIONAL AERONAUTICS AND SPACE ADMINISTRATION  \\nMANNED SPACECRAFT CENTER  \\nHOUSTON, TEXAS  \\nNovember 1969\",\"truncated\":false},{\"rank\":4,\"chunk_id\":\"31cd0bd546e6b4af4bf4c947\",\"section_id\":\"BACK\",\"pdf_page\":359,\"heading_path\":[\"BACK. BACK COVER\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=359\",\"score\":0.052715,\"evidence_coverage\":0.375,\"variant_ranks\":{\"original\":1,\"glossary_en\":4,\"agent_query\":1,\"keywords\":4},\"text\":\"Apollo 8 CSM 103  \\nApollo 9 CSM 104  \\nI.M-3  \\n---  \\nearth-orbital  \\nFirst manned lunar Dec. 21, 1968\\norbital flight; first  \\nmanned Saturn V launch  \\nFirst manned lunar Msr. 3, 1969  \\nmodule flight; earth  \\norbit rendezvous; EVA  \\nFirst lunar orbit Me¥ 18, 1969  \\nApollo 10 CSM 106\\nLM-4  \\nApollo 11 CSM 107\\nLM-5  \\nApollo 12 CSM 108  \\nI.M-6  \\nFirst lunar orbit  \\nrendezvous; low pass  \\nFirst lunar landing Ju:cy 16, 1969  \\nSecond lunar landing Nov. 14, 1969  \\nover lunar surface  \\nLaunch site  \\nKennedy Space\\nCenter, Fla.  \\nCape Kennedy,  \\nFla.  \\nKennedy Space  \\nCenter, Fla.  \\nCape Kennedy,\\nFla.  \\nKennedy Space  \\nKennedy Space  \\nCenter, Fla.  \\nKennedy Space  \\nCenter, Fla.  \\nKennedy Space  \\nCenter, Fla.  \\nKelllledy Space  \\nCenter, Fla.\",\"truncated\":false},{\"rank\":5,\"chunk_id\":\"11927d37f31bc5f747ba2c98\",\"section_id\":\"A\",\"pdf_page\":325,\"heading_path\":[\"A. VEHICLE DESCRIPTIONS\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=325\",\"score\":0.023197,\"evidence_coverage\":0.375,\"variant_ranks\":{\"original\":5,\"agent_query\":4},\"text\":\"A-1  \\nAPPENDIX A -VEHICLE DESCRIPTIONS  \\nVery few changes were made to the Apollo 11 space vehicle from the\\nApollo 10 configuration. The launch escape system and the spacecraft/\\nlaunch vehicle adapter were identical to those for Apollo 10. The few\\nminor changes to the command and service modules, the lunar module, and\\nthe Saturn V lam1ch vehicle are discussed in the following paragraphs.\\nA description of the extravehicular mobility unit, the lunar surface experiment equipment, and a listing of spacecraft mass properties are also\\npresented.  \\nA.l COMMAND AND SERVICE MODULES  \\nThe insulation in the area of the command module forward hatch was\\nmodified to prevent the flaking which occurred during the Apollo 10 lunar\\nmodule pressurization. The feedback circuit in the high gain antenna was\\nslightly changed to reduce servo dither. In Apollo 10, one of the three\\nentry batteries was modified to make use of cellophane separators. The\\nflight results proved this material superior to the Fermion-type previously used and for Apollo 11 all three entry batteries had the cellophane\",\"truncated\":false}],\"evidence\":{\"heuristic_sufficient\":false,\"coverage\":0.75,\"missing_terms\":[\"model\",\"smartphone\"],\"matched_terms\":[\"neil\",\"armstrong\",\"eva\",\"apollo\",\"11\",\"mission\"],\"ocr_noise\":false,\"temporal_required\":[],\"temporal_found\":[],\"temporal_missing\":[],\"negation_required\":[],\"negation_found\":[],\"critical_missing_terms\":[\"smartphone\"],\"numeric_values\":[\"11\",\"8\",\"32\",\"00\",\"16, 1969\",\"10\",\"27\",\"76\",\"3\",\"100.7\",\"99.2\",\"2\",\"1\",\"00171\",\"1969\"],\"unit_values\":[],\"calculation_requested\":false,\"calculation_hint\":null,\"multi_part\":false,\"reason\":\"missing_focus_term\",\"note\":\"Heuristic lexical check; not a semantic entailment judge.\"},\"context_chunks\":[]}",
+                "metadata": {
+                  "truncated": false
+                },
+                "title": "",
+                "time": {
+                  "start": 1793892402327,
+                  "end": 1793892426170
+                }
+              }
+            }
+          ],
+          "usage": {
+            "total": 3623,
+            "input": 2290,
+            "output": 229,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 1104
+            }
+          },
+          "usage_full": {
+            "total": 4799,
+            "input": 2342,
+            "output": 317,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 2140
+            }
+          },
+          "step_finish_count": 2,
+          "llm_calls": 2,
+          "finish_reason": "stop",
+          "event_count": 6,
+          "returncode": 0,
+          "reference": {
+            "answer": "В документе нет сведений о модели смартфона, использованной Армстронгом во время EVA.",
+            "section_ids": [],
+            "pdf_pages": []
+          }
+        }
+      ]
+    }
+  ]
+}

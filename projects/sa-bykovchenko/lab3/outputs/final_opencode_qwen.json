@@ -1,0 +1,1149 @@
+{
+  "agent": "opencode",
+  "model": "ollama/apollo-qwen:16k",
+  "algorithm_version": "query-processing-v1",
+  "manifest": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab3\\data\\final_eval_manifest.json",
+  "ids": [
+    "F01",
+    "F03",
+    "F05",
+    "F08",
+    "F11",
+    "F13",
+    "F15",
+    "X01",
+    "X02",
+    "C01",
+    "C02",
+    "U01",
+    "U02",
+    "D01",
+    "D02"
+  ],
+  "model_config": {
+    "name": "apollo-qwen:16k",
+    "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+    "temperature": 0,
+    "base_url": "http://127.0.0.1:11434/v1"
+  },
+  "runtime_policy": {
+    "warmup": true,
+    "empty_retry_attempts": 2,
+    "retry_mechanism": "model_level",
+    "retry_same_thread": false,
+    "openai_compatible_non_streaming_upstream": true,
+    "openai_proxy": "source/llm_proxy.py",
+    "proxy_upstream_attempts": 3,
+    "proxy_upstream_mode": "non_streaming_with_sse_conversion",
+    "proxy_base_url": "http://127.0.0.1:11435/v1"
+  },
+  "results": [
+    {
+      "id": "F01",
+      "category": "factual",
+      "proxy_session_id": "opencode-F01-20261105-125108",
+      "opencode_session_id": null,
+      "status": "timeout",
+      "failed": true,
+      "turns": [
+        {
+          "turn_id": 1,
+          "prompt": "Какова была основная цель Apollo 11 и как распределялись роли между членами экипажа? В ответе укажи раздел и PDF-страницу отчета",
+          "status": "timeout",
+          "answer": null,
+          "error": "timeout 180s",
+          "duration_s": 180.456,
+          "session_id": null,
+          "tool_calls": [],
+          "usage": null,
+          "finish_reason": null,
+          "event_count": 0,
+          "returncode": null,
+          "reference": {
+            "answer": "Высадить людей на Луну и безопасно вернуть на Землю. Армстронг - командир, Коллинз - пилот командного модуля, Олдрин - пилот лунного модуля.",
+            "section_ids": [
+              "1"
+            ],
+            "pdf_pages": [
+              12,
+              13
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "F03",
+      "category": "factual",
+      "proxy_session_id": "opencode-F03-20261105-125108",
+      "opencode_session_id": "ses_e54de9de2ffeox9oF5V5apJt6V",
+      "status": "ok",
+      "failed": false,
+      "turns": [
+        {
+          "turn_id": 1,
+          "prompt": "Почему выход на поверхность решили провести до первого запланированного отдыха? В ответе укажи раздел и PDF-страницу отчета",
+          "status": "ok",
+          "answer": "Согласно документу отчета по миссии Apollo 11, команде было принято решение начать экипажевую миссию на поверхность Луны до первого запланированного отдыха. Из-за того что экипаж не испытывал ни скрытых трудностей, ни усталости, они решили начать миссию спустя время подготовки и до первого, запланированного сна, чтобы предстартовая подготовка была более эффективной.\n\nОтвет на вопрос в разделе 4.12.2 \"Применение поверхности\".\n\nPDF-страница отчета: 40.",
+          "error": null,
+          "duration_s": 137.895,
+          "session_id": "ses_e54de9de2ffeox9oF5V5apJt6V",
+          "tool_calls": [
+            {
+              "tool": "apollo11_search_documents",
+              "callID": "call_6m3f5nmz",
+              "state": {
+                "status": "completed",
+                "input": {
+                  "question": "Почему выход на поверхность решили провести до первого запланированного отдыха? В ответе укажи раздел и PDF-страницу отчета",
+                  "query": "why did they decide to go to the surface before the first planned break? apollo 11 mission report"
+                },
+                "output": "{\"question\":\"Почему выход на поверхность решили провести до первого запланированного отдыха? В ответе укажи раздел и PDF-страницу отчета\",\"query\":\"why did they decide to go to the surface before the first planned break? apollo 11 mission report\",\"k\":5,\"algorithm_version\":\"query-processing-v1\",\"variants\":[{\"name\":\"original\",\"text\":\"Почему выход на поверхность решили провести до первого запланированного отдыха? В ответе укажи раздел и PDF-страницу отчета\"},{\"name\":\"normalized\",\"text\":\"Почему выход на поверхность решили провести до первого запланированного отдыха?\"},{\"name\":\"glossary_en\",\"text\":\"extravehicular activity surface decided conduct before first planned rest\"},{\"name\":\"expanded_en\",\"text\":\"extravehicular activity surface decided conduct before first planned rest sleep\"},{\"name\":\"agent_query\",\"text\":\"why did they decide to go to the surface before the first planned break? apollo 11 mission report\"},{\"name\":\"keywords\",\"text\":\"выход поверхность решили провести первого запланированного отдыха\"}],\"results\":[{\"rank\":1,\"chunk_id\":\"464e03e594896c1c88bc101b\",\"section_id\":\"4.12.2\",\"pdf_page\":40,\"heading_path\":[\"4. PILOTS' REPORT\",\"4.12 LUNAR SURFACE OPERATIONS\",\"4.12.2 Egress Preparation\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40\",\"score\":0.110443,\"evidence_coverage\":0.889,\"variant_ranks\":{\"original\":1,\"normalized\":2,\"glossary_en\":1,\"expanded_en\":1,\"agent_query\":4,\"keywords\":1},\"text\":\"The crew had given considerable thought to the advantage of beginning the extravehicular activity as soon as possible after landing instead\\nof following the flight plan schedule of having the surface operations between two rest periods. The initial rest period was planned to allow\\nflexibility in the event of unexpected difficulty with postlanding activities. These difficulties did not materialize, the crew were not overly\\ntired, and no problem was experienced in adjusting to the 1/6-g environment. Based on these facts, the decision was made at 104:40:00 to proceed with the extravehicular activity prior to the first rest period.  \\nPreparation for extravehicular activity began at 106:11:00. The estimate of the preparation time proved to be optimistic. In simulations,\\n2 hours had been found to be a reasonable allocation; however, everything\\nhad also been laid out in an orderly manner in the cockpit, and only those\\nitems involved in the extravehicular activity were present. In fact,\",\"truncated\":false},{\"rank\":2,\"chunk_id\":\"2644ab5d32510cb6c5a42690\",\"section_id\":\"12.2.3\",\"pdf_page\":255,\"heading_path\":[\"12. BIOMEDICAL EVALUATION\",\"12.2 MEDICAL OBSERVATIONS\",\"12.2.3 Sleep\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=255\",\"score\":0.032258,\"evidence_coverage\":0.889,\"variant_ranks\":{\"expanded_en\":2},\"text\":\"It is interesting to note that the crewmen's subjective estimates\\nof amount of sleep were less than those based upon telemetered biomedical data, as shown in table 12-I. By either count, the crewmen slept\\nwell in the command module. The simultaneous sleep periods during the\\ntranslunar coast were carefully monitored, and the crew arrived on the  \\nlunar surface well rested. Therefore, it was not necessary to wait until\\nafter the first planned 4-hour sleep period before conducting the extravehicular activity. The crewmen slept very little in the lunar module\",\"truncated\":false},{\"rank\":3,\"chunk_id\":\"3cd27453294ca48a8285fdef\",\"section_id\":\"3.0\",\"pdf_page\":16,\"heading_path\":[\"3. MISSION DESCRIPTION\",\"3.0 MISSION DESCRIPTION\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=16\",\"score\":0.05506,\"evidence_coverage\":0.778,\"variant_ranks\":{\"glossary_en\":3,\"expanded_en\":4},\"text\":\"were 0 degree 41 minutes 15 seconds north latitude and 23 degrees 26 minutes east longitude, compared with the planned landing point of 0 degree\\n43 minutes 53 seconds north latitude and 23 degrees 38 minutes 51 seconds\\neast longitude. These coordinates are referenced to Lunar Map ORB-II-6\\n(100), first edition, dated December 1967.  \\nA 2-hour postlanding checkout was completed, followed by a partial\\npower-down of the spacecraft. A crew rest period was planned to precede\\nthe extravehicular activity to explore the lunar surface. However, the\\ncrew elected to perform the extravehicular portion of the mission prior\\nto the sleep period because they were not overly tired and were adjusting\\neasily to the l/6 gravity. After the crew donned their portable life support systems and completed the required checkouts, the Commander egressed\\nat about 109 hours. Prior to descending the ladder, the Commander deployed\\nthe equipment module in the descent stage. The television camera located\",\"truncated\":false},{\"rank\":4,\"chunk_id\":\"5388fda45dc9faf224e5f844\",\"section_id\":\"4.12.2\",\"pdf_page\":40,\"heading_path\":[\"4. PILOTS' REPORT\",\"4.12 LUNAR SURFACE OPERATIONS\",\"4.12.2 Egress Preparation\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40\",\"score\":0.054963,\"evidence_coverage\":0.667,\"variant_ranks\":{\"glossary_en\":2,\"expanded_en\":5},\"text\":\"items involved in the extravehicular activity were present. In fact,\\nthere were checklists, food packets, monoculars, and other miscellaneous  \\nitems that interfered with an orderly preparation. All these items re�uired some thought as to their possible interference or use in the extravehicular activity. This interference resulted in exceeding the timeline\\nestimate by a considerable amount. Preparation for egress was conducted\\nslowly, carefully, and deliberately, and future missions should be planned and conducted with the same philosophy. The extravehicular activity\\npreparation checklist was ade�uate and was closely followed. However,\\nminor items that re�uired a decision in real time or had not been considered before flight re�uired more time than anticipated.  \\nAn electrical connector on the cable that connects the remote control unit to the portable life support system gave some trouble in mating  \\n(see section 16.3.2). This problem had been occasionally encountered\",\"truncated\":false},{\"rank\":5,\"chunk_id\":\"6473b31b5c0892ba2bc9fdfd\",\"section_id\":\"4.12.4\",\"pdf_page\":42,\"heading_path\":[\"4. PILOTS' REPORT\",\"4.12 LUNAR SURFACE OPERATIONS\",\"4.12.4 Surface Exploration\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=42\",\"score\":0.037361,\"evidence_coverage\":0.556,\"variant_ranks\":{\"original\":2,\"normalized\":1,\"keywords\":2},\"text\":\"Work in the 1/6-g environment was a pleasant experience. Adaptation\\nto movement was not difficult and seemed to be quite natural. Certain\\nspecific peculiarities, such as the effect of the mass versus the lack of\\ntraction, can be anticipated but complete familiarization need not be\\npursued.  \\nThe most effective means of walking seemed to be the lope that\\nevolved naturally. The fact that both feet were occasionally off the\\nground at the same time, plus the fact that the feet did not return to\\nthe surface as rapidly as on earth, required some anticipation before attempting to stop. Although movement was not difficult, there was noticeable resistance provided by the suit.  \\nOn future flights, crewmembers may want to consider kneeling in order\\nto work with their hands. Getting to and from the kneeling position would\\nbe no problem, and being able to do more work with the hands would increase\\nthe productive capability.  \\nPhotography with the Hasselblad cameras on the remote control unit\\nmounts produced no problems. The first panorama was taken while the\",\"truncated\":false}],\"evidence\":{\"heuristic_sufficient\":false,\"coverage\":0.7,\"missing_terms\":[\"decide\",\"break\",\"apollo\"],\"matched_terms\":[\"they\",\"surface\",\"before\",\"first\",\"planned\",\"11\",\"mission\"],\"ocr_noise\":false,\"temporal_required\":[\"before\",\"first\"],\"temporal_found\":[\"before\",\"first\"],\"temporal_missing\":[],\"negation_required\":[],\"negation_found\":[],\"critical_missing_terms\":[\"decide\",\"apollo\"],\"numeric_values\":[\"1\",\"6\",\"104\",\"40\",\"00\",\"106\",\"11\",\"2\",\"12\",\"4\",\"0\",\"41\",\"15\",\"23\",\"26\",\"43\",\"53\",\"38\",\"51\",\"100\"],\"unit_values\":[{\"value\":\"0\",\"unit\":\"degree\"},{\"value\":\"41\",\"unit\":\"minutes\"},{\"value\":\"15\",\"unit\":\"seconds\"},{\"value\":\"23\",\"unit\":\"degrees\"},{\"value\":\"26\",\"unit\":\"minutes\"},{\"value\":\"43\",\"unit\":\"minutes\"},{\"value\":\"53\",\"unit\":\"seconds\"},{\"value\":\"38\",\"unit\":\"minutes\"},{\"value\":\"51\",\"unit\":\"seconds\"}],\"calculation_requested\":false,\"calculation_hint\":null,\"multi_part\":false,\"reason\":\"low_term_coverage,missing_focus_term\",\"note\":\"Heuristic lexical check; not a semantic entailment judge.\"},\"context_chunks\":[]}",
+                "metadata": {
+                  "truncated": false
+                },
+                "title": "",
+                "time": {
+                  "start": 1793872484423,
+                  "end": 1793872509226
+                }
+              }
+            }
+          ],
+          "usage": {
+            "total": 3645,
+            "input": 2390,
+            "output": 158,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 1097
+            }
+          },
+          "finish_reason": "stop",
+          "event_count": 6,
+          "returncode": 0,
+          "reference": {
+            "answer": "После посадки не возникло ожидаемых возможных трудностей, экипаж не был чрезмерно утомлён и хорошо приспособился к пониженной гравитации.",
+            "section_ids": [
+              "4.12.2"
+            ],
+            "pdf_pages": [
+              40,
+              41
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "F05",
+      "category": "factual",
+      "proxy_session_id": "opencode-F05-20261105-125108",
+      "opencode_session_id": "ses_e54dc8ee8ffe9njxTGcZuuO4wh",
+      "status": "ok",
+      "failed": false,
+      "turns": [
+        {
+          "turn_id": 1,
+          "prompt": "Как лунная пыль мешала переносу оборудования и использованию телевизионного кабеля? В ответе укажи раздел и PDF-страницу отчета",
+          "status": "ok",
+          "answer": "В отчете в разделе 11.2.1 указано, что на поверхности Луны наблюдалось перемещение упругой пыльцы подобного кружевного вида, что было причиной понижения видимости. Эта пыльца мешала телевизионному кабелю при использовании и его манипуляции, так как после вывода на поверхность Луны кабель сохранял свою упругую форму. Отчет не предоставляет дополнительные сведения о мешающей этой пыльце по переносу оборудования.",
+          "error": null,
+          "duration_s": 107.507,
+          "session_id": "ses_e54dc8ee8ffe9njxTGcZuuO4wh",
+          "tool_calls": [
+            {
+              "tool": "apollo11_search_documents",
+              "callID": "call_rqskk0u0",
+              "state": {
+                "status": "completed",
+                "input": {
+                  "question": "Как лунная пыль мешала переносу оборудования и использованию телевизионного кабеля? В ответе укажи раздел и PDF-страницу отчета",
+                  "query": "перенос оборудования лунной пыль телевизионный кабель"
+                },
+                "output": "{\"question\":\"Как лунная пыль мешала переносу оборудования и использованию телевизионного кабеля? В ответе укажи раздел и PDF-страницу отчета\",\"query\":\"перенос оборудования лунной пыль телевизионный кабель\",\"k\":5,\"algorithm_version\":\"query-processing-v1\",\"variants\":[{\"name\":\"original\",\"text\":\"Как лунная пыль мешала переносу оборудования и использованию телевизионного кабеля? В ответе укажи раздел и PDF-страницу отчета\"},{\"name\":\"normalized\",\"text\":\"Как лунная пыль мешала переносу оборудования и использованию телевизионного кабеля?\"},{\"name\":\"glossary_en\",\"text\":\"lunar dust\"},{\"name\":\"agent_query\",\"text\":\"перенос оборудования лунной пыль телевизионный кабель\"},{\"name\":\"keywords\",\"text\":\"лунная пыль мешала переносу оборудования использованию телевизионного кабеля\"}],\"results\":[{\"rank\":1,\"chunk_id\":\"f1f0a278398feec3addd2fed\",\"section_id\":\"16.3.1\",\"pdf_page\":300,\"heading_path\":[\"16. ANOMALY SUMMARY\",\"16.3 GOVERNMENT-FURNISHED EQUIPMENT\",\"16.3.1 Television Cable Retained Coiled Shape\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=300\",\"score\":0.045637,\"evidence_coverage\":1.0,\"variant_ranks\":{\"original\":2,\"normalized\":1,\"agent_query\":1,\"keywords\":1},\"text\":\"The cable for the lunar surface television camera retained its coiled\\nshape after being deployed on the lunar surface. Loops resulting from  \\nAll the changes that have been investigated relative to changes in  \\nThis anomaly is closed.\",\"truncated\":false},{\"rank\":2,\"chunk_id\":\"48a4aa7fc88a36c5980675de\",\"section_id\":\"11.2.1\",\"pdf_page\":209,\"heading_path\":[\"11. THE LUNAR SURFACE\",\"11.2 LUNAR SOIL MECHANICS EXPERIMENT\",\"11.2.1 Observed Characteristics\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=209\",\"score\":0.02459,\"evidence_coverage\":1.0,\"variant_ranks\":{\"glossary_en\":1},\"text\":\"The physical characteristics of lunar surface materials were first\\nindicated during the lunar module descent when the crew noticed a transparent sheet of dust resembling a thin layer of ground fog that moved  \\nradially outward and caused a gradual decrease in visibility.\",\"truncated\":false},{\"rank\":3,\"chunk_id\":\"7732a81773fa7a25b6aedb28\",\"section_id\":\"11.5\",\"pdf_page\":219,\"heading_path\":[\"11. THE LUNAR SURFACE\",\"11.5 LASER RANGING RETRO-REFLECTOR EXPERIMENT\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=219\",\"score\":0.024194,\"evidence_coverage\":1.0,\"variant_ranks\":{\"glossary_en\":2},\"text\":\"survived the lunar night satisfactorily. They also indicate no serious\\ndegradation of optical performance from flaked insulation, debris, dust,\\nor rocket exhaust products which scattered during lunar module lift-off.\",\"truncated\":false},{\"rank\":4,\"chunk_id\":\"b44509785d6c574eafdd68af\",\"section_id\":\"11.1.4\",\"pdf_page\":206,\"heading_path\":[\"11. THE LUNAR SURFACE\",\"11.1 LUNAR GEOLOGY EXPERIMENT\",\"11.1.4 Geologic Photography and Mapping Procedures\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=206\",\"score\":0.02381,\"evidence_coverage\":1.0,\"variant_ranks\":{\"glossary_en\":3},\"text\":\"of faces that show features of the rock unobscured by dust and a detailed\\ndescription of the morphologic (relating to former structure), structural,\\nand textural features of the rock, together with an interpretation of the\\nassociated geologic features. The photographs and geologic sketches constitute a permanent record of the appearance of the specimens before subsequent destructive laboratory work.  \\nA small rock, 2 by 4 by 6 centimeters, which was collected in the\\ncontingency sample has been tentatively located on the lunar-surface photographs. Photographs of the rock show a fresh-appearing vesicular (small\\ncavity resulting from vaporization in a molten mass) lava, similar in ve.sicularity, texture, and crystallinity to many terrestrial basalts (see  \\nfig. 11-2).  \\nThe third largest rock in the contingency sample was collected within 2 meters of the lunar module. The rock has an ovoid shape, tapered at\",\"truncated\":false},{\"rank\":5,\"chunk_id\":\"89e7bd73ddb019166b7b4ac1\",\"section_id\":\"12.5.1\",\"pdf_page\":260,\"heading_path\":[\"12. BIOMEDICAL EVALUATION\",\"12.5 LUNAR CONTAMINATION AND QUARANTINE\",\"12.5.1 Lunar Exposure\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=260\",\"score\":0.023438,\"evidence_coverage\":1.0,\"variant_ranks\":{\"glossary_en\":4},\"text\":\"Although each crewman attempted to clean himself and the equipment\\nbefore ingress, a fairly large amount of dust and grains of lunar surface  \\nmaterial was brought into the cabin. When the crewmen removed their helmets, they noticed a distinct, pungent odor emanating from the lunar material. The texture of the dust was like powdered graphite, and both crewmen were very dirty after they removed their helmets, overshoes, and  \\ngloves. The crewmen cleaned their hands and faces with tissues and with\\ntowels that had been soaked in hot water. The Commander removed his\\nliquid-cooling garment in order to clean his body. One grain of material\\ngot into the Commander's eye, but was easily removed and caused no problem. The dust-like material could not be removed completely from beneath\\ntheir fingernails.  \\nThe cabin cleaning procedure involved the use of a vacuum-brush device and positive air pressure from the suit supply hoses to blow remote\",\"truncated\":false}],\"evidence\":{\"heuristic_sufficient\":true,\"coverage\":1.0,\"missing_terms\":[],\"matched_terms\":[\"lunar\",\"dust\"],\"ocr_noise\":false,\"temporal_required\":[],\"temporal_found\":[],\"temporal_missing\":[],\"negation_required\":[],\"negation_found\":[],\"critical_missing_terms\":[],\"numeric_values\":[],\"unit_values\":[],\"calculation_requested\":false,\"calculation_hint\":null,\"multi_part\":false,\"reason\":\"ok\",\"note\":\"Heuristic lexical check; not a semantic entailment judge.\"},\"context_chunks\":[]}",
+                "metadata": {
+                  "truncated": false
+                },
+                "title": "",
+                "time": {
+                  "start": 1793872614053,
+                  "end": 1793872636885
+                }
+              }
+            }
+          ],
+          "usage": {
+            "total": 3013,
+            "input": 1767,
+            "output": 143,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 1103
+            }
+          },
+          "finish_reason": "stop",
+          "event_count": 6,
+          "returncode": 0,
+          "reference": {
+            "answer": "С загрязнённых ремней пыль падала на астронавта и в кабину, транспортёр требовал усилий. Покрытый пылью телевизионный кабель стал хуже виден и путался под ногами.",
+            "section_ids": [
+              "4.12.3",
+              "4.12.4"
+            ],
+            "pdf_pages": [
+              41,
+              42,
+              43,
+              44
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "F08",
+      "category": "factual",
+      "proxy_session_id": "opencode-F08-20261105-125108",
+      "opencode_session_id": null,
+      "status": "timeout",
+      "failed": true,
+      "turns": [
+        {
+          "turn_id": 1,
+          "prompt": "Как работал пассивный сейсмический эксперимент в первые две недели, несмотря на температуру? В ответе укажи раздел и PDF-страницу отчета",
+          "status": "timeout",
+          "answer": null,
+          "error": "timeout 180s",
+          "duration_s": 180.169,
+          "session_id": null,
+          "tool_calls": [],
+          "usage": null,
+          "finish_reason": null,
+          "event_count": 0,
+          "returncode": null,
+          "reference": {
+            "answer": "Эксперимент выполнил требования, существенных недостатков приборов не обнаружили. Максимальная температура превысила расчётную до 50 градусов Фаренгейта. Все четыре сейсмометра работали правильно.",
+            "section_ids": [
+              "11.4",
+              "11.4.1"
+            ],
+            "pdf_pages": [
+              214,
+              215
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "F11",
+      "category": "factual",
+      "proxy_session_id": "opencode-F11-20261105-125108",
+      "opencode_session_id": "ses_e54d82107ffewrVyT29oNlRudE",
+      "status": "empty_response",
+      "failed": true,
+      "turns": [
+        {
+          "turn_id": 1,
+          "prompt": "Как собирали частицы солнечного ветра и сколько времени экспонировали фольгу? В ответе укажи раздел и PDF-страницу отчета",
+          "status": "empty_response",
+          "answer": null,
+          "error": "no text and no tool calls",
+          "duration_s": 46.796,
+          "session_id": "ses_e54d82107ffewrVyT29oNlRudE",
+          "tool_calls": [],
+          "usage": {
+            "total": 1155,
+            "input": 1,
+            "output": 73,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 1081
+            }
+          },
+          "finish_reason": "stop",
+          "event_count": 2,
+          "returncode": 0,
+          "reference": {
+            "answer": "Частицы захватывались специально подготовленной алюминиевой фольгой. Экспозиция составила 77 минут, после чего фольгу вернули для анализа.",
+            "section_ids": [
+              "11.6"
+            ],
+            "pdf_pages": [
+              220
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "F13",
+      "category": "factual",
+      "proxy_session_id": "opencode-F13-20261105-125108",
+      "opencode_session_id": null,
+      "status": "timeout",
+      "failed": true,
+      "turns": [
+        {
+          "turn_id": 1,
+          "prompt": "Какие две задачи решала программа обращения с лунными образцами и зачем предусматривался карантин? В ответе укажи раздел и PDF-страницу отчета",
+          "status": "timeout",
+          "answer": null,
+          "error": "timeout 180s",
+          "duration_s": 180.157,
+          "session_id": null,
+          "tool_calls": [],
+          "usage": null,
+          "finish_reason": null,
+          "event_count": 0,
+          "returncode": null,
+          "reference": {
+            "answer": "Сохранить образцы близкими к исходному состоянию и защитить земную биосферу от возможных вредных лунных веществ. Планировался 21-дневный карантин экипажа для контроля потенциальных инфекционных рисков.",
+            "section_ids": [
+              "12.5"
+            ],
+            "pdf_pages": [
+              259
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "F15",
+      "category": "factual",
+      "proxy_session_id": "opencode-F15-20261105-125108",
+      "opencode_session_id": "ses_e54d4a8b7ffeFRg5rVnAz9tp24",
+      "status": "ok",
+      "failed": false,
+      "turns": [
+        {
+          "turn_id": 1,
+          "prompt": "Чем были вызваны сигналы перегрузки компьютера во время снижения и нарушили ли они наведение? В ответе укажи раздел и PDF-страницу отчета",
+          "status": "ok",
+          "answer": "Факт, предоставленный отчетом, указывает, что на сигналы перегрузки компьютера во время снижения повлияло неправильное использование временной очереди для обработки данных. Два из шести программных сигналов, которые были выявлены во время снижения, относялись к типу перегрузки программы (Executive overflow alarms). Эти сигналы указывали, что более 10 процентов доступного времени компьютера было отдано на обработку данных, сгенерированных с помощью кр-чевого устройства, что могло вызвать нарушение времени обработки различных функций.\n\nОтчет также упоминает, что при снижении, на борту космического аппарата были случаи нестандартных уведомлений (ориентировочно 5), хотя они не повлияли на основные функции навигации и управления (см. раздел 9.6.5 \"Основная навигация и управление при спуске на Moon\").\n\nОднако уточнить в каком именно разделе отчета касаются сигналы перегрузки и их влияние на наведение, невозможно без конкретных упоминаний в тексте.\n\nЧтобы получить более точную информацию, рекомендую продолжить поиск или перечитать соответствующие разделы отчета.",
+          "error": null,
+          "duration_s": 168.723,
+          "session_id": "ses_e54d4a8b7ffeFRg5rVnAz9tp24",
+          "tool_calls": [
+            {
+              "tool": "apollo11_search_documents",
+              "callID": "call_vquypt54",
+              "state": {
+                "status": "completed",
+                "input": {
+                  "question": "Чем были вызваны сигналы перегрузки компьютера во время снижения и нарушили ли они наведение",
+                  "query": "signal overload computer descent navigation disruption",
+                  "k": 5
+                },
+                "output": "{\"question\":\"Чем были вызваны сигналы перегрузки компьютера во время снижения и нарушили ли они наведение\",\"query\":\"signal overload computer descent navigation disruption\",\"k\":5,\"algorithm_version\":\"query-processing-v1\",\"variants\":[{\"name\":\"original\",\"text\":\"Чем были вызваны сигналы перегрузки компьютера во время снижения и нарушили ли они наведение\"},{\"name\":\"glossary_en\",\"text\":\"alarms computer guidance\"},{\"name\":\"agent_query\",\"text\":\"signal overload computer descent navigation disruption\"},{\"name\":\"keywords\",\"text\":\"чем вызваны сигналы перегрузки компьютера время снижения нарушили они наведение\"}],\"results\":[{\"rank\":1,\"chunk_id\":\"5c385ca721667577773a654f\",\"section_id\":\"16.2.5\",\"pdf_page\":291,\"heading_path\":[\"16. ANOMALY SUMMARY\",\"16.2 LUNAR MODULE\",\"16.2.5 Computer Alarms During Descent\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=291\",\"score\":0.045426,\"evidence_coverage\":1.0,\"variant_ranks\":{\"original\":1,\"glossary_en\":2,\"keywords\":2},\"text\":\"Five computer program alarms occurred during descent prior to the\\nlow-gate phase of the trajectory. The performance of guidance and con-trol functions was not affected.  \\nThe alarms were of the Executive overflow type, which signify that\\nthe guidance computer cannot accomplish all of the data processing requested in a computation cycle. The alarms indicated that more than\\n10 percent of the computational capacity of the computer was preempted\\nby unexpected counter interrupts of the type generated by the coupling\\ndata units that interface with the rendezvous radar shaft and trunnion\\nresolvers (see fig. 16-14).  \\nThe computer is organized such that input/output interfaces are\\nserviced by a central processor on a time-shared basis with other processing functions. High-frequency data, such as accelerometer and coupling data unit inputs, are processed as counter interrupts, which are\\nassigned the highest priority in the time-sharing sequence. Whenever\",\"truncated\":false},{\"rank\":2,\"chunk_id\":\"9b0d14360fbb023284f936aa\",\"section_id\":\"9.6.5\",\"pdf_page\":164,\"heading_path\":[\"9. LUNAR MODULE PERFORMANCE\",\"9.6 GUIDANCE AND CONTROL\",\"9.6.5 Primary Guidance, Navigation, and Control System Performance\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=164\",\"score\":0.040463,\"evidence_coverage\":1.0,\"variant_ranks\":{\"original\":3,\"glossary_en\":1},\"text\":\"right rear detent was usable. This detent proved sufficient for prelift-off alignments (see section 5.6).  \\n9-7  \\nThe lunar module guidance computer performed as designed, except for\\na number of unexpected alarms. The first of these occurred during the\\npower-up sequence when the display keyboard circuit breaker was closed  \\nand a 520 alarm (RADAR RliPT), which was not expected at this time, was\\ngenerated. This alarm has been reproduced on the ground and was caused\\nby a random setting of logic gates during the turn-.on se�uence. Although\\nthis alarm has a low probability of occurrence, it is neither abnormal\\n·nor indicative of a malfunction.  \\nThe Executive overflow alarms that occurred during descent (see section 5.3) are now known to be normal for the existing situation and were  \\nindicative of proper performance of the guidance computer. These alarms\\nare discussed in detail in section 16.2.6.\",\"truncated\":false},{\"rank\":3,\"chunk_id\":\"1ca6046e25db8bbaf1b40760\",\"section_id\":\"5.3\",\"pdf_page\":53,\"heading_path\":[\"5. LUNAR DESCENT AND ASCENT\",\"5.3 POWERED DESCENT\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=53\",\"score\":0.023077,\"evidence_coverage\":1.0,\"variant_ranks\":{\"glossary_en\":5},\"text\":\"The first of five computer alarms occurred approximately 5 minutes\\nafter initiation of the descent. Occurrences of these alarms are indicated in table 5�I and are discussed in detail in section 16.2.5. Although the alarms did not degrade the performance of any primary guidance  \\nor control function, they did interfere with an early assessment by the\\ncrew of the landing approach.  \\nArrival at high gate (end of braking phase) and the automatic switch\\nto final approach phase program P64 occurred at 7129 feet at a descent rate\\no� 125 ft/sec. These values are slightly lower than predicted but within\\nacceptable boundaries. At about 5000 feet, the Commander switched his\\ncontrol mode from automatic to attitude-hold to check manual control in\\nanticipation of the final descent.  \\nAfter the pitchover at high gate, the landing point designator indicated that the approach path was leading into a large crater. An unplanned redesignation was introduced at this time. To avoid the crater, the\",\"truncated\":false},{\"rank\":4,\"chunk_id\":\"71ddbd2c981896873b75e96f\",\"section_id\":\"16.2.5\",\"pdf_page\":292,\"heading_path\":[\"16. ANOMALY SUMMARY\",\"16.2 LUNAR MODULE\",\"16.2.5 Computer Alarms During Descent\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=292\",\"score\":0.044229,\"evidence_coverage\":0.667,\"variant_ranks\":{\"glossary_en\":4,\"agent_query\":3,\"keywords\":1},\"text\":\"data units), 15 percent of the available computer time will be spent in\\nprocessing the radar interrupts. (The computer normally operates at\\napproximately 90 percent of capacity during peak activity of powered\\ndescent.) When the capacity of the computer is exceeded, some repetitively scheduled routines will not be completed prior to the start of\\nthe next computation cycle. The computer then generates a software restart and displ�s an Executive overflow alarm.\",\"truncated\":false},{\"rank\":5,\"chunk_id\":\"075602ad5da21e5650bb4f4b\",\"section_id\":\"16.2.5\",\"pdf_page\":292,\"heading_path\":[\"16. ANOMALY SUMMARY\",\"16.2 LUNAR MODULE\",\"16.2.5 Computer Alarms During Descent\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=292\",\"score\":0.032018,\"evidence_coverage\":0.667,\"variant_ranks\":{\"original\":4,\"agent_query\":1},\"text\":\"-  \\n16-13  \\nreserve another memory storage area for its use. When the Executive\\nprogram is requeBted to schedule a job and all locations are assigned,\\na program alarm is displayed and a software restart is initiated. A\\nreview of the jobs that can run during descent leads to the conclusion\\nthat multiple scheduling of the same job produced the program alarms.\\nThe cause for the multiple scheduling of jobs has been identified by  \\nanalyses and simulations to be primarily counter interrupts from the\\nrendezvous radar coupling data unit.  \\nThe interrupts during the powered descent resulted from the configuration of the rendezvous radar face. A schematic of the interface is shown in figure I coupling data unit I computer inter16-14. When the\\nrendezvous radar mode switch is in the AUTO or SLEW position, the excitation for the radar shaft and trunnion resolvers is supplied by a 28-volt,\\n800-hertz signal from the attitude and translation control assembly.\",\"truncated\":false}],\"evidence\":{\"heuristic_sufficient\":false,\"coverage\":0.5,\"missing_terms\":[\"overload\",\"navigation\",\"disruption\"],\"matched_terms\":[\"signal\",\"computer\",\"descent\"],\"ocr_noise\":false,\"temporal_required\":[],\"temporal_found\":[],\"temporal_missing\":[],\"negation_required\":[],\"negation_found\":[],\"critical_missing_terms\":[\"overload\",\"navigation\",\"disruption\"],\"numeric_values\":[\"10\",\"16\",\"14\",\"5.6\",\"9\",\"7\",\"520\",\"5.3\",\"16.2.6\",\"5\",\"16.2.5\",\"64\",\"7129\",\"125\",\"5000\"],\"unit_values\":[{\"value\":\"10\",\"unit\":\"percent\"},{\"value\":\"5\",\"unit\":\"minutes\"},{\"value\":\"7129\",\"unit\":\"feet\"},{\"value\":\"125\",\"unit\":\"ft\"},{\"value\":\"5000\",\"unit\":\"feet\"}],\"calculation_requested\":false,\"calculation_hint\":null,\"multi_part\":false,\"reason\":\"low_term_coverage,missing_focus_term\",\"note\":\"Heuristic lexical check; not a semantic entailment judge.\"},\"context_chunks\":[]}",
+                "metadata": {
+                  "truncated": false
+                },
+                "title": "",
+                "time": {
+                  "start": 1793873135474,
+                  "end": 1793873164064
+                }
+              }
+            }
+          ],
+          "usage": {
+            "total": 3573,
+            "input": 2147,
+            "output": 322,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 1104
+            }
+          },
+          "finish_reason": "stop",
+          "event_count": 6,
+          "returncode": 0,
+          "reference": {
+            "answer": "Во время снижения на Луну бортовой компьютер получал множество лишних прерываний от интерфейса радара сближения. Из-за этого процессор перегружался и не успевал выполнять все задачи за отведённое время. Возникали ошибки Executive overflow — переполнение ресурсов диспетчера задач, приводившее к программному перезапуску компьютера. Несмотря на предупреждения, основные функции наведения и управления не пострадали.",
+            "section_ids": [
+              "16.2.5"
+            ],
+            "pdf_pages": [
+              291,
+              292,
+              293
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "X01",
+      "category": "multi_fact",
+      "proxy_session_id": "opencode-X01-20261105-125108",
+      "opencode_session_id": "ses_e54d21fb6ffebHw6EoucA26ccG",
+      "status": "ok",
+      "failed": false,
+      "turns": [
+        {
+          "turn_id": 1,
+          "prompt": "Почему экипаж начал EVA до первого отдыха и почему подготовка к нему заняла больше времени, чем ожидалось? Укажи источники для обеих частей",
+          "status": "ok",
+          "answer": "Источники для обеих частей вашего вопроса найдены в разделах 4.12.2 и 16.3.2 отчета по миссии Аполлон 11. В этом разделе отчета говорится, что экипаж начал EVA (исходя из перевода: экипаж пошел на свидание, или EVA - экстренный вояж на поверхность Луны) до первого отдыха и что подготовка к нему заняла больше времени, чем ожидалось. Детали проблемы в разделе 16.3.2, это связано с проблемой соединения электропроводки, который вызвал задержку в процессе. На данный момент предоставляются лишь общие детали. Для получения дополнительных информаций по этой теме рекомендуется обратиться к отчету.",
+          "error": null,
+          "duration_s": 172.027,
+          "session_id": "ses_e54d21fb6ffebHw6EoucA26ccG",
+          "tool_calls": [
+            {
+              "tool": "apollo11_search_documents",
+              "callID": "call_j1h2ih3l",
+              "state": {
+                "status": "completed",
+                "input": {
+                  "question": "Почему экипаж начал EVA до первого отдыха и почему подготовка к нему заняла больше времени, чем ожидалось?",
+                  "query": "Почему экипаж начал EVA до первого отдыха и почему подготовка к нему заняла больше времени, чем ожидалось?"
+                },
+                "output": "{\"question\":\"Почему экипаж начал EVA до первого отдыха и почему подготовка к нему заняла больше времени, чем ожидалось?\",\"query\":\"Почему экипаж начал EVA до первого отдыха и почему подготовка к нему заняла больше времени, чем ожидалось?\",\"k\":5,\"algorithm_version\":\"query-processing-v1\",\"variants\":[{\"name\":\"original\",\"text\":\"Почему экипаж начал EVA до первого отдыха и почему подготовка к нему заняла больше времени, чем ожидалось?\"},{\"name\":\"glossary_en\",\"text\":\"crew began eva before first rest preparation took more time expected\"},{\"name\":\"expanded_en\",\"text\":\"crew began eva before first rest preparation took more time expected commander pilot sleep\"},{\"name\":\"keywords\",\"text\":\"экипаж начал eva первого отдыха подготовка нему заняла больше времени чем ожидалось\"}],\"results\":[{\"rank\":1,\"chunk_id\":\"464e03e594896c1c88bc101b\",\"section_id\":\"4.12.2\",\"pdf_page\":40,\"heading_path\":[\"4. PILOTS' REPORT\",\"4.12 LUNAR SURFACE OPERATIONS\",\"4.12.2 Egress Preparation\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40\",\"score\":0.07816,\"evidence_coverage\":0.727,\"variant_ranks\":{\"original\":1,\"glossary_en\":1,\"expanded_en\":2,\"keywords\":1},\"text\":\"The crew had given considerable thought to the advantage of beginning the extravehicular activity as soon as possible after landing instead\\nof following the flight plan schedule of having the surface operations between two rest periods. The initial rest period was planned to allow\\nflexibility in the event of unexpected difficulty with postlanding activities. These difficulties did not materialize, the crew were not overly\\ntired, and no problem was experienced in adjusting to the 1/6-g environment. Based on these facts, the decision was made at 104:40:00 to proceed with the extravehicular activity prior to the first rest period.  \\nPreparation for extravehicular activity began at 106:11:00. The estimate of the preparation time proved to be optimistic. In simulations,\\n2 hours had been found to be a reasonable allocation; however, everything\\nhad also been laid out in an orderly manner in the cockpit, and only those\\nitems involved in the extravehicular activity were present. In fact,\",\"truncated\":false},{\"rank\":2,\"chunk_id\":\"5388fda45dc9faf224e5f844\",\"section_id\":\"4.12.2\",\"pdf_page\":40,\"heading_path\":[\"4. PILOTS' REPORT\",\"4.12 LUNAR SURFACE OPERATIONS\",\"4.12.2 Egress Preparation\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40\",\"score\":0.043584,\"evidence_coverage\":0.636,\"variant_ranks\":{\"original\":5,\"glossary_en\":4,\"keywords\":3},\"text\":\"items involved in the extravehicular activity were present. In fact,\\nthere were checklists, food packets, monoculars, and other miscellaneous  \\nitems that interfered with an orderly preparation. All these items re�uired some thought as to their possible interference or use in the extravehicular activity. This interference resulted in exceeding the timeline\\nestimate by a considerable amount. Preparation for egress was conducted\\nslowly, carefully, and deliberately, and future missions should be planned and conducted with the same philosophy. The extravehicular activity\\npreparation checklist was ade�uate and was closely followed. However,\\nminor items that re�uired a decision in real time or had not been considered before flight re�uired more time than anticipated.  \\nAn electrical connector on the cable that connects the remote control unit to the portable life support system gave some trouble in mating  \\n(see section 16.3.2). This problem had been occasionally encountered\",\"truncated\":false},{\"rank\":3,\"chunk_id\":\"21c7cc3950c3cf52a38146ca\",\"section_id\":\"5.6\",\"pdf_page\":57,\"heading_path\":[\"5. LUNAR DESCENT AND ASCENT\",\"5.6 ASCENT\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=57\",\"score\":0.02381,\"evidence_coverage\":0.636,\"variant_ranks\":{\"glossary_en\":3},\"text\":\"Preparations for ascent began after the end of the crew rest period\\nat 121 hours. The command module state vector was updated from the ground,\\nwith coordinates provided for crater 130, a planned landmark. This crater was tracked using the command module sextant on the revolution prior\\nto lift-off to establish the target orbit plane. During this same revolution, the rendezvous radar was used to track the command module, as\\npreviously mentioned, and the lunar surface navigation program (P22) was  \\nexercised to establish the location of the lunar module relative to the\\norbit plane. Crew activities during the preparation for launch were conducted as planned, and lift-off occurred on time.  \\nThe ascent phase was initiated by a 10-second period of vertical\\nrise, which allowed the ascent stage to clear safely the descent stage\\nand surrounding terrain obstacles, as well as provide for rotation of\\nthe spacecraft to the correct launch azimuth. The pitchover maneuver\\nto a 50-degree attitude with respect to the local vertical began when\",\"truncated\":false},{\"rank\":4,\"chunk_id\":\"b87709e53c82f81fe8bba7bd\",\"section_id\":\"3.0\",\"pdf_page\":16,\"heading_path\":[\"3. MISSION DESCRIPTION\",\"3.0 MISSION DESCRIPTION\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=16\",\"score\":0.024194,\"evidence_coverage\":0.545,\"variant_ranks\":{\"glossary_en\":2},\"text\":\"the equipment module in the descent stage. The television camera located\\nin the module operated satisfactorily and provided live television coverage of the Commander's descent to the lunar surface. The Commander collected the contingency lunar material samples, and approximately 20 minutes later, the Lunar Module Pilot egressed and dual exploration of the\\nlunar surface began.  \\nDuring this exploration period, the television camera was deployed\\nand the American flag was raised on the lunar surface. The solar wind\\nexperiment was also deployed for later retrieval. Both crewmen evaluated their mobility on the lunar surface, deployed the passive seismic\\nand laser retro-reflector experiments, collected about 47 pounds of lunar\\nmaterial, and obtained photographic documentation of their activities\\nand the conditions around them. The crewmen reentered the lunar module\\nafter about 2 hours 14 minutes of exploration.  \\nAfter an 8-hour rest period, the crew began preparations for ascent.\\nLift-off from the lunar surface occurred on time at 124:22:00.8. The\",\"truncated\":false},{\"rank\":5,\"chunk_id\":\"4305ebec4a6fd6143f12e2a1\",\"section_id\":\"1.0\",\"pdf_page\":12,\"heading_path\":[\"1. SUMMARY\",\"1.0 SUMMARY\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=12\",\"score\":0.023077,\"evidence_coverage\":0.455,\"variant_ranks\":{\"glossary_en\":5},\"text\":\"rest period, the Commander and Lunar Module Pilot entered the lunar module\\nto prepare for des cent.  \\nThe two spacecraft were undocked at about 100 hours, followed by\\nseparation of the command and service modules from the lunar module.\\nDescent orbit insertion was performed at approximately 101-l/2 hours, and\\npowered descent to the lunar surface began about 1 hour later. Operation\\n·of the guidance and descent propulsion systems was nominal. The lunar\\nmodule was maneuvered manually approximately 1100 feet downrange from the\\nnominal landing point during the final 2-1/2 minutes of descent. The\\nspacecraft landed in the Sea of Tranquillity at 102:45:40. The landing\\ncoordinates were 0 degrees 41 minutes 15 seconds north latitude and 23 degrees 26 minutes east longitude referenced to lunar map ORB-II-6(100),\\nfirst edition, December 1967. During the first 2 hours on the surface,\\nthe two crewmen performed a postlanding checkout of all lunar module systems. Afterwards, they ate their first meal on the moon and elected to\",\"truncated\":false}],\"evidence\":{\"heuristic_sufficient\":true,\"coverage\":1.0,\"missing_terms\":[],\"matched_terms\":[\"crew\",\"began\",\"eva\",\"before\",\"first\",\"rest\",\"preparation\",\"took\",\"more\",\"time\",\"expected\"],\"ocr_noise\":false,\"temporal_required\":[\"before\",\"first\"],\"temporal_found\":[\"before\",\"first\"],\"temporal_missing\":[],\"negation_required\":[],\"negation_found\":[],\"critical_missing_terms\":[],\"numeric_values\":[\"1\",\"6\",\"104\",\"40\",\"00\",\"106\",\"11\",\"2\",\"16.3.2\",\"121\",\"130\",\"22\",\"10\",\"50\"],\"unit_values\":[],\"calculation_requested\":true,\"calculation_hint\":null,\"multi_part\":true,\"reason\":\"ok\",\"note\":\"Heuristic lexical check; not a semantic entailment judge.\"},\"context_chunks\":[{\"chunk_id\":\"5388fda45dc9faf224e5f844\",\"section_id\":\"4.12.2\",\"pdf_page\":40,\"text\":\"items involved in the extravehicular activity were present. In fact,\\nthere were checklists, food packets, monoculars, and other miscellaneous  \\nitems that interfered with an orderly preparation. All these items re�uired some thought as to their possible interference or use in the extravehicular activity. This interference resulted in exceeding the timeline\\nestimate by a considerable amount. Preparation for egress was conducted\\nslowly, carefully, and deliberately, and future missions should be planned and conducted with the same philosophy. The extravehicular activity\\npreparation checklist was ade�uate and was closely followed. However,\\nminor items that re�uired a decision in real time or had not been considered before flight re�uired more time than anticipated.  \\nAn electrical connector on the cable that connects the remote control unit to the portable life support system gave some trouble in mating  \\n(see section 16.3.2). This problem had been occasionally encountered\",\"truncated\":false}]}",
+                "metadata": {
+                  "truncated": false
+                },
+                "title": "",
+                "time": {
+                  "start": 1793873315357,
+                  "end": 1793873344286
+                }
+              }
+            }
+          ],
+          "usage": {
+            "total": 3857,
+            "input": 2554,
+            "output": 201,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 1102
+            }
+          },
+          "finish_reason": "stop",
+          "event_count": 6,
+          "returncode": 0,
+          "reference": {
+            "answer": "После посадки не возникло ожидаемых возможных трудностей, экипаж не был чрезмерно утомлён и хорошо приспособился к пониженной гравитации. В реальной кабине мешали дополнительные предметы; требовались осторожная подготовка и решения по неучтённым мелочам. Соединение электрического разъёма также вызвало задержку.",
+            "section_ids": [
+              "4.12.2"
+            ],
+            "pdf_pages": [
+              40,
+              41
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "X02",
+      "category": "multi_fact",
+      "proxy_session_id": "opencode-X02-20261105-125108",
+      "opencode_session_id": null,
+      "status": "timeout",
+      "failed": true,
+      "turns": [
+        {
+          "turn_id": 1,
+          "prompt": "Где установили лазерный отражатель, для чего он предназначался и какая точность измерений требовалась? Укажи источники",
+          "status": "timeout",
+          "answer": null,
+          "error": "timeout 180s",
+          "duration_s": 180.313,
+          "session_id": null,
+          "tool_calls": [],
+          "usage": null,
+          "finish_reason": null,
+          "event_count": 0,
+          "returncode": null,
+          "reference": {
+            "answer": "Примерно в 14 метрах к юго-юго-западу, на относительно ровном участке. Изучение гравитации, относительности, физики Земли и Луны; требовались многолетние измерения изменений расстояния с неопределённостью около 15 см.",
+            "section_ids": [
+              "11.5"
+            ],
+            "pdf_pages": [
+              219,
+              220
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "C01",
+      "category": "retrieval_calculation",
+      "proxy_session_id": "opencode-C01-20261105-125108",
+      "opencode_session_id": null,
+      "status": "timeout",
+      "failed": true,
+      "turns": [
+        {
+          "turn_id": 1,
+          "prompt": "Найди предполетную и оцененную после полета среднюю интенсивность энергозатрат командира и пилота лунного модуля при EVA. Для каждого вычисли, насколько оцененная величина ниже предполетной (Btu/ч). Укажи PDF-страницу",
+          "status": "timeout",
+          "answer": null,
+          "error": "timeout 180s",
+          "duration_s": 180.219,
+          "session_id": null,
+          "tool_calls": [],
+          "usage": null,
+          "finish_reason": null,
+          "event_count": 0,
+          "returncode": null,
+          "reference": {
+            "answer": "Командир: 1350 − 900 = 450 Btu/ч. Пилот LM: 1275 − 1200 = 75 Btu/ч.",
+            "section_ids": [
+              "12.3"
+            ],
+            "pdf_pages": [
+              258
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "category": "retrieval_calculation",
+      "proxy_session_id": "opencode-C02-20261105-125108",
+      "opencode_session_id": "ses_e54c9f799ffehPwre95eCaJQ46",
+      "status": "ok",
+      "failed": false,
+      "turns": [
+        {
+          "turn_id": 1,
+          "prompt": "Найди в отчете, с какого расстояния от границы входа в атмосферу на какое перенесли точку приводнения, и вычисли разницу в милях. Приведи PDF-страницу",
+          "status": "ok",
+          "answer": "В отчете указано, что точка приводнения была перенесена на 1500 миль от границы входа в атмосферу. Расстояние от границы входа в атмосферу до точка приводнения составляет 400 000 футов. Разница в милях между этими значениемми составляет 1285 миль.\n\nВычисление разницы в милях:\nРазница в милях между значением расстояния от границы входа в атмосферу до точка приводнения составляет 215 миль. \n\nДля получения этой информации, я использовал формулу: 1500 (милей) - 1285 (милей) = 215 (мили). \n\nПриведенная PDF-страница находится на странице 49 документа, который можно найти по ссылке: \n\nhttps://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=49",
+          "error": null,
+          "duration_s": 152.643,
+          "session_id": "ses_e54c9f799ffehPwre95eCaJQ46",
+          "tool_calls": [
+            {
+              "tool": "apollo11_search_documents",
+              "callID": "call_nss21y72",
+              "state": {
+                "status": "completed",
+                "input": {
+                  "query": "расстояние от границы входа в атмосферу точка приводнения диалог PDF-страница",
+                  "question": "Найди в отчете, с какого расстояния от границы входа в атмосферу на какое перенесли точку приводнения, и вычисли разницу в милях. Приведи PDF-страницу"
+                },
+                "output": "{\"question\":\"Найди в отчете, с какого расстояния от границы входа в атмосферу на какое перенесли точку приводнения, и вычисли разницу в милях. Приведи PDF-страницу\",\"query\":\"расстояние от границы входа в атмосферу точка приводнения диалог PDF-страница\",\"k\":5,\"algorithm_version\":\"query-processing-v1\",\"variants\":[{\"name\":\"original\",\"text\":\"Найди в отчете, с какого расстояния от границы входа в атмосферу на какое перенесли точку приводнения, и вычисли разницу в милях. Приведи PDF-страницу\"},{\"name\":\"normalized\",\"text\":\"с какого расстояния от границы входа в атмосферу на какое перенесли точку приводнения, и вычисли разницу в милях\"},{\"name\":\"glossary_en\",\"text\":\"distance boundary entry interface moved splashdown point calculate difference miles\"},{\"name\":\"expanded_en\",\"text\":\"distance boundary entry interface moved splashdown point calculate difference miles range landing recovery\"},{\"name\":\"agent_query\",\"text\":\"расстояние от границы входа в атмосферу точка приводнения диалог PDF-страница\"},{\"name\":\"keywords\",\"text\":\"какого расстояния границы входа атмосферу какое перенесли точку приводнения вычисли разницу милях\"}],\"results\":[{\"rank\":1,\"chunk_id\":\"bd5fed4b9ffdbaa3d9fcee72\",\"section_id\":\"4.19\",\"pdf_page\":49,\"heading_path\":[\"4. PILOTS' REPORT\",\"4.19 ENTRY\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=49\",\"score\":0.057377,\"evidence_coverage\":0.8,\"variant_ranks\":{\"glossary_en\":1,\"expanded_en\":1},\"text\":\"Because of the presence of thunderstorms in the primary recovery\\narea (1285 miles downrange from the entry interface of 400 000 feet),\\nthe targeted landing point was moved to a range of 1500 miles from entry  \\ninterface. This change required the use of computer program P65 (skipup control routine) in the computer, in addition to those programs used\\nfor the planned shorter range entry. This change caused the crew some\\napprehension, since such entries had rarely been practiced in preflight\\nsimulations. However, during the entry, these parameters remained within\\nacceptable limits. The entry was guided automatically and was nominal in\\nall respects. The first acceleration pulse reached approximately 6.5g\\nand the second 6.0g.\",\"truncated\":false},{\"rank\":2,\"chunk_id\":\"be2f02abb7c687e29be3da5b\",\"section_id\":\"8.6.7\",\"pdf_page\":137,\"heading_path\":[\"8. COMMAND AND SERVICE MODULE PERFORMANCE\",\"8.6 GUIDANCE, NAVIGATION, AND CONTROL\",\"8.6.7 Entry\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=137\",\"score\":0.056452,\"evidence_coverage\":0.7,\"variant_ranks\":{\"glossary_en\":2,\"expanded_en\":2},\"text\":\"dications are that the system performed as intended.  \\nThe onboard calculations for inertial velocity and flight-path angle\\nat the entry interface were 36 195ft/sec and minus 6.488 degrees, respectively, and compare favorably with the 36 194 ft/sec and minus 6.483 degrees determined from tracking. Figure 13-1 shows a summary of landing\\npoint data. The onboard computer indicated a landing at 169 degrees\\n9 minutes west longitude and 13 degrees 18 minutes north latitude, or\\n1.69 miles from the desired target point. Since no telemetry nor radar\",\"truncated\":false},{\"rank\":3,\"chunk_id\":\"4503de843c0eb62b0b23dbba\",\"section_id\":\"8.6.7\",\"pdf_page\":138,\"heading_path\":[\"8. COMMAND AND SERVICE MODULE PERFORMANCE\",\"8.6 GUIDANCE, NAVIGATION, AND CONTROL\",\"8.6.7 Entry\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=138\",\"score\":0.030769,\"evidence_coverage\":0.7,\"variant_ranks\":{\"expanded_en\":5},\"text\":\"8-9  \\nwas available during entry, a final evaluation of navigation accuracy  \\ncannot be obtained. However, a simulated best estimate trajectory shows\\na landing point l. 03 miles from the target and confirms the onboard solution. Indications are that the entry monitor system performed as intended.\",\"truncated\":false},{\"rank\":4,\"chunk_id\":\"5b6d45b4e9d01c750e90419f\",\"section_id\":\"7.5\",\"pdf_page\":113,\"heading_path\":[\"7. TRAJECTORY\",\"7.5 COMMAND MODULE ENTRY\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=113\",\"score\":0.055556,\"evidence_coverage\":0.5,\"variant_ranks\":{\"glossary_en\":3,\"expanded_en\":3},\"text\":\"7-5  \\ncomplete telemetry information was not recorded. A range instrumentation aircraft received a small amount of data soon after the entry interface was reached and again approximately 4 minutes into the entry. These\\ndata, combined with the best estimated trajectory, produced the postflight\\ndata presented herein. Table 7-VII presents the actual conditions at\\nentry interface.  \\nThe flight-path angle at entry was 0.03-degree shallower than predicted at the last midcourse correction, causing a peak load factor of\\n6.56g, which was slightly higher than planned.  \\nThe spacecraft landed in the Pacific Ocean at 169.15 degrees west\\nand 13.30 degrees north.\",\"truncated\":false},{\"rank\":5,\"chunk_id\":\"8f26f3c751b8a8945e2d998d\",\"section_id\":\"7.8\",\"pdf_page\":115,\"heading_path\":[\"7. TRAJECTORY\",\"7.8 LUNAR ORBIT NAVIGATION\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=115\",\"score\":0.054327,\"evidence_coverage\":0.4,\"variant_ranks\":{\"glossary_en\":5,\"expanded_en\":4},\"text\":\"cabin venting. The net effect of these perturbations was a sizeable downrange miss.  \\nA comparison between the lunar landing point coordinates generated\\nfrom various data sources is presented in table 5-IV. The difference, or\\nmiss distance, was 0.0444 degree south and 0.2199 degree east, or approximately 4440 and 21 990 feet, respectively. The miss in latitude was\\ncaused by neglecting the two-revolution orbit plane propagation error,\\nand the miss in longitude resulted from the trajectory perturbations\\nduring revolutions 11 through 13.  \\nThe coordinates used for ascent targeting were the best preflight\\nestimate of landing site radius and the onboard-guidance estimate of latitude and longitude at touchdown (corrected for initia]_ state vector errors\\nfrom ground tracking). The estimated errors in targeting coordinates were\\na radius 1500 feet less than desired and a longitude 4400 feet to the west.\",\"truncated\":false}],\"evidence\":{\"heuristic_sufficient\":true,\"coverage\":0.9,\"missing_terms\":[\"calculate\"],\"matched_terms\":[\"distance\",\"boundary\",\"entry\",\"interface\",\"moved\",\"splashdown\",\"point\",\"difference\",\"miles\"],\"ocr_noise\":false,\"temporal_required\":[],\"temporal_found\":[],\"temporal_missing\":[],\"negation_required\":[],\"negation_found\":[],\"critical_missing_terms\":[],\"numeric_values\":[\"1285\",\"400 000\",\"1500\",\"65\",\"6.5\",\"6.0\",\"36 195\",\"6.488\",\"36 194\",\"6.483\",\"13\",\"1\",\"169\",\"9\",\"18\",\"1.69\",\"8\",\"03\"],\"unit_values\":[{\"value\":\"1285\",\"unit\":\"miles\"},{\"value\":\"400 000\",\"unit\":\"feet\"},{\"value\":\"1500\",\"unit\":\"miles\"},{\"value\":\"36 195\",\"unit\":\"ft\"},{\"value\":\"6.488\",\"unit\":\"degrees\"},{\"value\":\"36 194\",\"unit\":\"ft\"},{\"value\":\"6.483\",\"unit\":\"degrees\"},{\"value\":\"169\",\"unit\":\"degrees\"},{\"value\":\"9\",\"unit\":\"minutes\"},{\"value\":\"13\",\"unit\":\"degrees\"},{\"value\":\"18\",\"unit\":\"minutes\"},{\"value\":\"1.69\",\"unit\":\"miles\"},{\"value\":\"03\",\"unit\":\"miles\"}],\"calculation_requested\":true,\"calculation_hint\":\"Use calculate with the two miles values (1285 and 1500): larger - smaller. Do not compute a percentage unless the question asks for one.\",\"multi_part\":true,\"reason\":\"ok\",\"note\":\"Heuristic lexical check; not a semantic entailment judge.\"},\"context_chunks\":[]}",
+                "metadata": {
+                  "truncated": false
+                },
+                "title": "",
+                "time": {
+                  "start": 1793873837189,
+                  "end": 1793873859988
+                }
+              }
+            },
+            {
+              "tool": "apollo11_calculate",
+              "callID": "call_d8weqba5",
+              "state": {
+                "status": "completed",
+                "input": {
+                  "expression": "(1500 - 1285)"
+                },
+                "output": "{\"expression\":\"(1500 - 1285)\",\"result\":215}",
+                "metadata": {
+                  "truncated": false
+                },
+                "title": "",
+                "time": {
+                  "start": 1793873932052,
+                  "end": 1793873932077
+                }
+              }
+            }
+          ],
+          "usage": {
+            "total": 3717,
+            "input": 39,
+            "output": 141,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 3537
+            }
+          },
+          "finish_reason": "stop",
+          "event_count": 10,
+          "returncode": 0,
+          "reference": {
+            "answer": "С 1285 до 1500 миль. Разница 215 миль.",
+            "section_ids": [
+              "4.19"
+            ],
+            "pdf_pages": [
+              49
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "U01",
+      "category": "unanswerable",
+      "proxy_session_id": "opencode-U01-20261105-125108",
+      "opencode_session_id": "ses_e54c7abbfffeuR37HLeh4au3xH",
+      "status": "ok",
+      "failed": false,
+      "turns": [
+        {
+          "turn_id": 1,
+          "prompt": "Какую модель смартфона использовал Нил Армстронг во время EVA согласно Apollo 11 Mission Report? Если отчет этого не сообщает, прямо скажи об отсутствии данных.",
+          "status": "ok",
+          "answer": "Apollo 11 Missioneu не говорила об использованной смартфоне.",
+          "error": null,
+          "duration_s": 110.041,
+          "session_id": "ses_e54c7abbfffeuR37HLeh4au3xH",
+          "tool_calls": [
+            {
+              "tool": "apollo11_search_documents",
+              "callID": "call_x2kmasa8",
+              "state": {
+                "status": "completed",
+                "input": {
+                  "question": "Какую модель смартфона использовал Нил Армстронг во время EVA согласно Apollo 11 Mission Report?",
+                  "query": "Какую модель смартфона использовал Нил Армстронг во время EVA согласно Apollo 11 Mission Report?"
+                },
+                "output": "{\"question\":\"Какую модель смартфона использовал Нил Армстронг во время EVA согласно Apollo 11 Mission Report?\",\"query\":\"Какую модель смартфона использовал Нил Армстронг во время EVA согласно Apollo 11 Mission Report?\",\"k\":5,\"algorithm_version\":\"query-processing-v1\",\"variants\":[{\"name\":\"original\",\"text\":\"Какую модель смартфона использовал Нил Армстронг во время EVA согласно Apollo 11 Mission Report?\"},{\"name\":\"glossary_en\",\"text\":\"model smartphone neil armstrong eva apollo 11 mission\"},{\"name\":\"keywords\",\"text\":\"какую модель смартфона использовал нил армстронг время eva apollo 11 mission\"}],\"results\":[{\"rank\":1,\"chunk_id\":\"2f0e4f178386585cf5a63637\",\"section_id\":\"1.0\",\"pdf_page\":12,\"heading_path\":[\"1. SUMMARY\",\"1.0 SUMMARY\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=12\",\"score\":0.040215,\"evidence_coverage\":0.75,\"variant_ranks\":{\"original\":4,\"glossary_en\":1},\"text\":\"The purpose of the Apollo 11 mission was to land men on the lunar\\nsurface and to return them safely to earth. The crew were Neil A. Armstrong, Commander; Michael Collins, Command Module Pilot; and Edwin E.\\nAldrin, Jr., Lunar Module Pilot.  \\nThe space vehicle was launched from Kennedy Space Center, Florida,\\nat 8:32:00 a.m., e.s.t., July 16, 1969. The activities during earth\\norbit checkout, translunar injection, transposition and docking, spacecraft ejection, and translunar coast were similar to those of Apollo 10.\\nOnly one midcourse correction, performed at about 27 hours elapsed time,\\nwas required during trans lunar coast.  \\nThe spacecraft was inserted into lunar orbit at about 76 hours, and\\nthe circularization maneuver was performed two revolutions later. Initial\\ncheckout of lunar module systems was satisfactory, and after a planned\\nrest period, the Commander and Lunar Module Pilot entered the lunar module\\nto prepare for des cent.\",\"truncated\":false},{\"rank\":2,\"chunk_id\":\"cb3c7baa77edc9825a02dae7\",\"section_id\":\"3.0\",\"pdf_page\":15,\"heading_path\":[\"3. MISSION DESCRIPTION\",\"3.0 MISSION DESCRIPTION\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=15\",\"score\":0.044682,\"evidence_coverage\":0.5,\"variant_ranks\":{\"original\":3,\"glossary_en\":2,\"keywords\":5},\"text\":\"The Apollo 11 mission accomplished the basic mission of the Apollo\\nProgram; that is, to land two men on the lunar surface and return them  \\nsafely to earth. As a part of this first lunar landing, three basic\\nexperiment packages were deployed, lunar material samples were collected,\\nand surface photographs were taken. Two of the experiments were a part\\nof the early Apollo scientific experiment package which was developed for\\ndeployment on the lunar surface. The sequence of events and the flight\\nplan of the Apollo ll mission are shown in table 3-I and figure 3-l, respectively.  \\nThe Apollo 11 space vehicle was launched on July 16, 1969, at\\n8:32 a.m. e.s.t., as planned. The spacecraft and S-IVB were inserted\\ninto a 100.7-by 99.2-mile earth parking orbit. After a 2-1/2-hour\\ncheckout period, the spacecraft/S-IVB combination was injected into the\",\"truncated\":false},{\"rank\":3,\"chunk_id\":\"00a586e406617afa03389dc1\",\"section_id\":\"FRONT\",\"pdf_page\":3,\"heading_path\":[\"FRONT. FRONT MATTER\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=3\",\"score\":0.044857,\"evidence_coverage\":0.375,\"variant_ranks\":{\"original\":2,\"glossary_en\":3,\"keywords\":1},\"text\":\"MSC-00171  \\nAPOLLO 11 MISSION REPORT  \\nPREPARED BY  \\nMission Evaluation Team  \\nAPPROVED BY  \\nGeorge M. Low �\\nL.c.r-Manager, Apollo Spacecraft Program  \\nNATIONAL AERONAUTICS AND SPACE ADMINISTRATION  \\nMANNED SPACECRAFT CENTER  \\nHOUSTON, TEXAS  \\nNovember 1969\",\"truncated\":false},{\"rank\":4,\"chunk_id\":\"31cd0bd546e6b4af4bf4c947\",\"section_id\":\"BACK\",\"pdf_page\":359,\"heading_path\":[\"BACK. BACK COVER\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=359\",\"score\":0.044518,\"evidence_coverage\":0.375,\"variant_ranks\":{\"original\":1,\"glossary_en\":4,\"keywords\":4},\"text\":\"Apollo 8 CSM 103  \\nApollo 9 CSM 104  \\nI.M-3  \\n---  \\nearth-orbital  \\nFirst manned lunar Dec. 21, 1968\\norbital flight; first  \\nmanned Saturn V launch  \\nFirst manned lunar Msr. 3, 1969  \\nmodule flight; earth  \\norbit rendezvous; EVA  \\nFirst lunar orbit Me¥ 18, 1969  \\nApollo 10 CSM 106\\nLM-4  \\nApollo 11 CSM 107\\nLM-5  \\nApollo 12 CSM 108  \\nI.M-6  \\nFirst lunar orbit  \\nrendezvous; low pass  \\nFirst lunar landing Ju:cy 16, 1969  \\nSecond lunar landing Nov. 14, 1969  \\nover lunar surface  \\nLaunch site  \\nKennedy Space\\nCenter, Fla.  \\nCape Kennedy,  \\nFla.  \\nKennedy Space  \\nCenter, Fla.  \\nCape Kennedy,\\nFla.  \\nKennedy Space  \\nKennedy Space  \\nCenter, Fla.  \\nKennedy Space  \\nCenter, Fla.  \\nKennedy Space  \\nCenter, Fla.  \\nKelllledy Space  \\nCenter, Fla.\",\"truncated\":false},{\"rank\":5,\"chunk_id\":\"f9f19012bf3fd44055bc07d6\",\"section_id\":\"14.0\",\"pdf_page\":275,\"heading_path\":[\"14. ASSESSMENT OF MISSION OBJECTIVES\",\"14.0 ASSESSMENT OF MISSION OBJECTIVES\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=275\",\"score\":0.023077,\"evidence_coverage\":0.375,\"variant_ranks\":{\"glossary_en\":5},\"text\":\"The single primary mission objective for the Apollo 11 mission, as\\ndefined in reference 12, was to perform a manned lunar landing and return safely to earth. In addition to the single primary objective,\\n11 secondary objectives were delineated from the following two general\\ncategories :  \\nPerform selenological inspection and sampling '  \\nb. Obtain data to assess the capability and limitations of a man\\nand his equipment in the lunar environment.  \\nThe 11 secondary objectives are listed in table 14-I and are described\\nin detail in reference 13.  \\nThe following experiments were assigned to the Apollo 11 mission:  \\na. Passive seismic experiment (S-031)  \\nb. Lunar field geology (S-059)  \\nc. Laser ranging retro-reflector (S-078)  \\nSolar wind composition (S-080)  \\ne. Cosmic ray detection (S-151)  \\nThe single primary objective was met. All secondary objectives and\\nexperiments were fully satisfied except for the following:  \\na. Objective G: Location of landed lunar module.\",\"truncated\":false}],\"evidence\":{\"heuristic_sufficient\":false,\"coverage\":0.75,\"missing_terms\":[\"model\",\"smartphone\"],\"matched_terms\":[\"neil\",\"armstrong\",\"eva\",\"apollo\",\"11\",\"mission\"],\"ocr_noise\":false,\"temporal_required\":[],\"temporal_found\":[],\"temporal_missing\":[],\"negation_required\":[],\"negation_found\":[],\"critical_missing_terms\":[\"smartphone\"],\"numeric_values\":[\"11\",\"8\",\"32\",\"00\",\"16, 1969\",\"10\",\"27\",\"76\",\"3\",\"100.7\",\"99.2\",\"2\",\"1\",\"00171\",\"1969\"],\"unit_values\":[],\"calculation_requested\":false,\"calculation_hint\":null,\"multi_part\":false,\"reason\":\"missing_focus_term\",\"note\":\"Heuristic lexical check; not a semantic entailment judge.\"},\"context_chunks\":[]}",
+                "metadata": {
+                  "truncated": false
+                },
+                "title": "",
+                "time": {
+                  "start": 1793873979108,
+                  "end": 1793874002271
+                }
+              }
+            }
+          ],
+          "usage": {
+            "total": 3365,
+            "input": 2241,
+            "output": 20,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 1104
+            }
+          },
+          "finish_reason": "stop",
+          "event_count": 6,
+          "returncode": 0,
+          "reference": {
+            "answer": "В документе нет сведений о модели смартфона, использованной Армстронгом во время EVA.",
+            "section_ids": [],
+            "pdf_pages": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "U02",
+      "category": "unanswerable",
+      "proxy_session_id": "opencode-U02-20261105-125108",
+      "opencode_session_id": "ses_e54c5fcd5ffe6wYHdu6k0PCjmz",
+      "status": "ok",
+      "failed": false,
+      "turns": [
+        {
+          "turn_id": 1,
+          "prompt": "Какие результаты лунной посадки Artemis III описаны в Apollo 11 Mission Report? Ответь только на основе этого отчета.",
+          "status": "ok",
+          "answer": "Apollo 11 Missionskiy Raport не содержит информации о результатах лунной посадки Artemis III. Он описывает результаты лунной посадки Apollo 11. Рапорт не включает данные о посадке Artemis III, так как это событие произошло на более позднем этапе астронавтикального программирования. Артемис III уже выходит за рамки данного отчета.",
+          "error": null,
+          "duration_s": 137.038,
+          "session_id": "ses_e54c5fcd5ffe6wYHdu6k0PCjmz",
+          "tool_calls": [
+            {
+              "tool": "apollo11_search_documents",
+              "callID": "call_oazukqqg",
+              "state": {
+                "status": "completed",
+                "input": {
+                  "question": "Какие результаты лунной посадки Artemis III описаны в Apollo 11 Mission Report?",
+                  "query": "результаты лунной посадки артемис iii описаны в отчете аполло 11 миссии"
+                },
+                "output": "{\"question\":\"Какие результаты лунной посадки Artemis III описаны в Apollo 11 Mission Report?\",\"query\":\"результаты лунной посадки артемис iii описаны в отчете аполло 11 миссии\",\"k\":5,\"algorithm_version\":\"query-processing-v1\",\"variants\":[{\"name\":\"original\",\"text\":\"Какие результаты лунной посадки Artemis III описаны в Apollo 11 Mission Report?\"},{\"name\":\"glossary_en\",\"text\":\"landing artemis iii apollo 11 mission\"},{\"name\":\"expanded_en\",\"text\":\"landing artemis iii apollo 11 mission splashdown recovery\"},{\"name\":\"agent_query\",\"text\":\"результаты лунной посадки артемис iii описаны в отчете аполло 11 миссии\"},{\"name\":\"keywords\",\"text\":\"результаты лунной посадки artemis iii описаны apollo 11 mission\"}],\"results\":[{\"rank\":1,\"chunk_id\":\"cb3c7baa77edc9825a02dae7\",\"section_id\":\"3.0\",\"pdf_page\":15,\"heading_path\":[\"3. MISSION DESCRIPTION\",\"3.0 MISSION DESCRIPTION\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=15\",\"score\":0.07816,\"evidence_coverage\":0.667,\"variant_ranks\":{\"original\":1,\"glossary_en\":1,\"expanded_en\":2,\"keywords\":1},\"text\":\"The Apollo 11 mission accomplished the basic mission of the Apollo\\nProgram; that is, to land two men on the lunar surface and return them  \\nsafely to earth. As a part of this first lunar landing, three basic\\nexperiment packages were deployed, lunar material samples were collected,\\nand surface photographs were taken. Two of the experiments were a part\\nof the early Apollo scientific experiment package which was developed for\\ndeployment on the lunar surface. The sequence of events and the flight\\nplan of the Apollo ll mission are shown in table 3-I and figure 3-l, respectively.  \\nThe Apollo 11 space vehicle was launched on July 16, 1969, at\\n8:32 a.m. e.s.t., as planned. The spacecraft and S-IVB were inserted\\ninto a 100.7-by 99.2-mile earth parking orbit. After a 2-1/2-hour\\ncheckout period, the spacecraft/S-IVB combination was injected into the\",\"truncated\":false},{\"rank\":2,\"chunk_id\":\"25acf4b27e6b7b3aba51618a\",\"section_id\":\"2.0\",\"pdf_page\":14,\"heading_path\":[\"2. INTRODUCTION\",\"2.0 INTRODUCTION\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=14\",\"score\":0.044777,\"evidence_coverage\":0.667,\"variant_ranks\":{\"original\":2,\"glossary_en\":3,\"keywords\":2},\"text\":\"The Apollo ll mission was the eleventh in a series of flights using\\nApollo flight hardware and was the first lunar landing mission of the\\nApollo Program. It was also the fifth manned flight of the command and\\nservice modules and the third manned flight of the lunar module. The pur··\\npose of the mission was to perform a manned lunar landing and return safely\\nto earth.  \\nBecause of the excellent performance of the entire spacecraft, only\\nthe systems performance that significantly differed from that of previous\\nmissions is reported. The ascent, descent, and landing portions of the\\nmission are reported in section 5, and the lunar surface activities are  \\nreported in section 11.  \\nA complete analysis of all flight data is not possible within the\\ntime allowed for preparation of this report. Therefore, report supplements will be published for the guidance and control system, propulsion,  \\nthe biomedical evaluation, the lunar surface photography, the lunar sample  \\nanalysis, and the trajectory analysis. Other supplements will be publish-ed as need is identified.  \\nIn this report, all actual times are elapsed time from range .zero,\",\"truncated\":false},{\"rank\":3,\"chunk_id\":\"22165b2ae3872762b624eeed\",\"section_id\":\"11\",\"pdf_page\":198,\"heading_path\":[\"11. THE LUNAR SURFACE\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=198\",\"score\":0.038462,\"evidence_coverage\":0.667,\"variant_ranks\":{\"original\":5,\"glossary_en\":5},\"text\":\"11-1  \\nPreflight planning for the Apollo 11 mission included a lunar surface stay of approximately 22 hours, including 2 hours 40 minutes that\\nwas allotted to extravehicular activities.  \\nAfter landing, the crew performed a lunar module checkout to ascertain launch capability and photographed the landing area from the lunar\\nmodule. Then, following an extensive checkout of the extravehicular mobility unit, the crewmen left the lunar module to accomplish the following activities:  \\na. Inspection of the lunar module exterior  \\nb. Collection of a contingency sample, a bulk sample, and documented samples of lunar surface materials  \\nc. Evaluation of the physical characteristics of the lunar surface\\nand its effects on extravehicular activity  \\nd. Deployment of the solar wind composition experiment and, at the\\nend of the extravehicular activities, retrieval of the experiment for\\nreturn to earth  \\ne. Deployment of the early Apollo scientific experiments package,\\nconsisting of the passive seismic experiment and the laser ranging retroreflector.  \\nThroughout the extravehicular activities, the crewmen made detailed\",\"truncated\":false},{\"rank\":4,\"chunk_id\":\"f9f19012bf3fd44055bc07d6\",\"section_id\":\"14.0\",\"pdf_page\":275,\"heading_path\":[\"14. ASSESSMENT OF MISSION OBJECTIVES\",\"14.0 ASSESSMENT OF MISSION OBJECTIVES\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=275\",\"score\":0.028881,\"evidence_coverage\":0.667,\"variant_ranks\":{\"glossary_en\":2,\"keywords\":4},\"text\":\"The single primary mission objective for the Apollo 11 mission, as\\ndefined in reference 12, was to perform a manned lunar landing and return safely to earth. In addition to the single primary objective,\\n11 secondary objectives were delineated from the following two general\\ncategories :  \\nPerform selenological inspection and sampling '  \\nb. Obtain data to assess the capability and limitations of a man\\nand his equipment in the lunar environment.  \\nThe 11 secondary objectives are listed in table 14-I and are described\\nin detail in reference 13.  \\nThe following experiments were assigned to the Apollo 11 mission:  \\na. Passive seismic experiment (S-031)  \\nb. Lunar field geology (S-059)  \\nc. Laser ranging retro-reflector (S-078)  \\nSolar wind composition (S-080)  \\ne. Cosmic ray detection (S-151)  \\nThe single primary objective was met. All secondary objectives and\\nexperiments were fully satisfied except for the following:  \\na. Objective G: Location of landed lunar module.\",\"truncated\":false},{\"rank\":5,\"chunk_id\":\"e16cbaaf0f8122f41e9e4dca\",\"section_id\":\"1.0\",\"pdf_page\":13,\"heading_path\":[\"1. SUMMARY\",\"1.0 SUMMARY\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=13\",\"score\":0.03125,\"evidence_coverage\":0.5,\"variant_ranks\":{\"expanded_en\":4},\"text\":\"The return flight started with a 150-second firing of the service\\npropulsion engine during the 31st lunar revolution at 135-l/2 hours. As\\nin translunar flight, only one midcourse correction was required, and\\npassive thermal control was exercised for most of transearth coast. Inclement weather necessitated moving the landing point 215 miles downrange.\\nThe entry phase was normal, and the command module landed in the Pacific\\nOcean at 195-l/4 hours. The landing coordinates, as determined from the\\nonboard computer, were 13 degrees 19 minutes north latitude and 169 degrees 09 minutes west longitude.  \\nAfter landing, the crew donned biological isolation garments. They\\nwere then retrieved by helicopter and taken to the primary recovery ship,  \\nUSS Hornet. The crew and lunar material samples were placed in the\\nMobile Quarantine Facility for transport to the Lunar Receiving Laboratory in Houston. The command module was taken aboard the Hornet about\\n3 hours after landing.  \\nWith the completion of Apollo 11, the national objective of landing\",\"truncated\":false}],\"evidence\":{\"heuristic_sufficient\":false,\"coverage\":0.667,\"missing_terms\":[\"artemis\",\"iii\"],\"matched_terms\":[\"landing\",\"apollo\",\"11\",\"mission\"],\"ocr_noise\":false,\"temporal_required\":[],\"temporal_found\":[],\"temporal_missing\":[],\"negation_required\":[],\"negation_found\":[],\"critical_missing_terms\":[\"artemis\"],\"numeric_values\":[\"11\",\"3\",\"16, 1969\",\"8\",\"32\",\"100.7\",\"99.2\",\"2\",\"1\",\"5\",\"22\",\"40\"],\"unit_values\":[{\"value\":\"40\",\"unit\":\"minutes\"}],\"calculation_requested\":false,\"calculation_hint\":null,\"multi_part\":false,\"reason\":\"low_term_coverage,missing_focus_term\",\"note\":\"Heuristic lexical check; not a semantic entailment judge.\"},\"context_chunks\":[]}",
+                "metadata": {
+                  "truncated": false
+                },
+                "title": "",
+                "time": {
+                  "start": 1793874106737,
+                  "end": 1793874131032
+                }
+              }
+            }
+          ],
+          "usage": {
+            "total": 3535,
+            "input": 2341,
+            "output": 102,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 1092
+            }
+          },
+          "finish_reason": "stop",
+          "event_count": 6,
+          "returncode": 0,
+          "reference": {
+            "answer": "Apollo 11 Mission Report не описывает результаты посадки Artemis III. Нужен отказ от выдумывания фактов.",
+            "section_ids": [],
+            "pdf_pages": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "D01",
+      "category": "long_dialogue",
+      "proxy_session_id": "opencode-D01-20261105-125108",
+      "opencode_session_id": "ses_e54c3e5b3ffeZBN7uz1Nx1uLyW",
+      "status": "timeout",
+      "failed": true,
+      "turns": [
+        {
+          "turn_id": 1,
+          "prompt": "Почему выход на Луну провели до первого отдыха? Сошлись на отчет.",
+          "status": "ok",
+          "answer": "Вот несколько цитат из отчета, которые могут помочь ответить на вопрос:\n\n1. Флотчане тщательно планировали начало внепланового вылета еще до приземления, чтобы как можно скорее начать подъем на поверхность Солнечной Луны.\n2. Это было сделано из-за мысли, что трудности, связанные с вылетом из корабля, не должны мешать, и это также было предполагаемо, что они не возникнут между двуми отдыхами.\n\nЭто указывает на то, что выбор, чтобы начать выход на поверхность Луны до первого отдыха, был сделан с учетом нескольких факторов, включая возможность рутинных проблем с посадкой и безопасность экипажа.",
+          "error": null,
+          "duration_s": 141.991,
+          "session_id": "ses_e54c3e5b3ffeZBN7uz1Nx1uLyW",
+          "tool_calls": [
+            {
+              "tool": "apollo11_search_documents",
+              "callID": "call_20n8rnsd",
+              "state": {
+                "status": "completed",
+                "input": {
+                  "question": "Почему выход на Луну провели до первого отдыха? Сошлись на отчет",
+                  "query": "выход на Луну отдыха сошлись в отчет"
+                },
+                "output": "{\"question\":\"Почему выход на Луну провели до первого отдыха? Сошлись на отчет\",\"query\":\"выход на Луну отдыха сошлись в отчет\",\"k\":5,\"algorithm_version\":\"query-processing-v1\",\"variants\":[{\"name\":\"original\",\"text\":\"Почему выход на Луну провели до первого отдыха? Сошлись на отчет\"},{\"name\":\"normalized\",\"text\":\"Почему выход на Луну провели до первого отдыха?\"},{\"name\":\"glossary_en\",\"text\":\"egress conducted before first rest\"},{\"name\":\"expanded_en\",\"text\":\"egress conducted before first rest sleep\"},{\"name\":\"agent_query\",\"text\":\"выход на Луну отдыха сошлись в отчет\"},{\"name\":\"keywords\",\"text\":\"выход луну провели первого отдыха\"}],\"results\":[{\"rank\":1,\"chunk_id\":\"464e03e594896c1c88bc101b\",\"section_id\":\"4.12.2\",\"pdf_page\":40,\"heading_path\":[\"4. PILOTS' REPORT\",\"4.12 LUNAR SURFACE OPERATIONS\",\"4.12.2 Egress Preparation\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40\",\"score\":0.093364,\"evidence_coverage\":0.6,\"variant_ranks\":{\"original\":2,\"normalized\":4,\"glossary_en\":1,\"expanded_en\":2,\"keywords\":3},\"text\":\"The crew had given considerable thought to the advantage of beginning the extravehicular activity as soon as possible after landing instead\\nof following the flight plan schedule of having the surface operations between two rest periods. The initial rest period was planned to allow\\nflexibility in the event of unexpected difficulty with postlanding activities. These difficulties did not materialize, the crew were not overly\\ntired, and no problem was experienced in adjusting to the 1/6-g environment. Based on these facts, the decision was made at 104:40:00 to proceed with the extravehicular activity prior to the first rest period.  \\nPreparation for extravehicular activity began at 106:11:00. The estimate of the preparation time proved to be optimistic. In simulations,\\n2 hours had been found to be a reasonable allocation; however, everything\\nhad also been laid out in an orderly manner in the cockpit, and only those\\nitems involved in the extravehicular activity were present. In fact,\",\"truncated\":false},{\"rank\":2,\"chunk_id\":\"5388fda45dc9faf224e5f844\",\"section_id\":\"4.12.2\",\"pdf_page\":40,\"heading_path\":[\"4. PILOTS' REPORT\",\"4.12 LUNAR SURFACE OPERATIONS\",\"4.12.2 Egress Preparation\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40\",\"score\":0.05698,\"evidence_coverage\":0.6,\"variant_ranks\":{\"glossary_en\":2,\"expanded_en\":1},\"text\":\"items involved in the extravehicular activity were present. In fact,\\nthere were checklists, food packets, monoculars, and other miscellaneous  \\nitems that interfered with an orderly preparation. All these items re�uired some thought as to their possible interference or use in the extravehicular activity. This interference resulted in exceeding the timeline\\nestimate by a considerable amount. Preparation for egress was conducted\\nslowly, carefully, and deliberately, and future missions should be planned and conducted with the same philosophy. The extravehicular activity\\npreparation checklist was ade�uate and was closely followed. However,\\nminor items that re�uired a decision in real time or had not been considered before flight re�uired more time than anticipated.  \\nAn electrical connector on the cable that connects the remote control unit to the portable life support system gave some trouble in mating  \\n(see section 16.3.2). This problem had been occasionally encountered\",\"truncated\":false},{\"rank\":3,\"chunk_id\":\"6473b31b5c0892ba2bc9fdfd\",\"section_id\":\"4.12.4\",\"pdf_page\":42,\"heading_path\":[\"4. PILOTS' REPORT\",\"4.12 LUNAR SURFACE OPERATIONS\",\"4.12.4 Surface Exploration\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=42\",\"score\":0.032266,\"evidence_coverage\":0.6,\"variant_ranks\":{\"original\":3,\"normalized\":1},\"text\":\"Work in the 1/6-g environment was a pleasant experience. Adaptation\\nto movement was not difficult and seemed to be quite natural. Certain\\nspecific peculiarities, such as the effect of the mass versus the lack of\\ntraction, can be anticipated but complete familiarization need not be\\npursued.  \\nThe most effective means of walking seemed to be the lope that\\nevolved naturally. The fact that both feet were occasionally off the\\nground at the same time, plus the fact that the feet did not return to\\nthe surface as rapidly as on earth, required some anticipation before attempting to stop. Although movement was not difficult, there was noticeable resistance provided by the suit.  \\nOn future flights, crewmembers may want to consider kneeling in order\\nto work with their hands. Getting to and from the kneeling position would\\nbe no problem, and being able to do more work with the hands would increase\\nthe productive capability.  \\nPhotography with the Hasselblad cameras on the remote control unit\\nmounts produced no problems. The first panorama was taken while the\",\"truncated\":false},{\"rank\":4,\"chunk_id\":\"cc1e6a668d60297ce84a301b\",\"section_id\":\"12.2.2\",\"pdf_page\":255,\"heading_path\":[\"12. BIOMEDICAL EVALUATION\",\"12.2 MEDICAL OBSERVATIONS\",\"12.2.2 Medications\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=255\",\"score\":0.03125,\"evidence_coverage\":0.4,\"variant_ranks\":{\"expanded_en\":4},\"text\":\"The Commander and the Lunar Module Pilot each took one Lomotil tablet\\nprior to the sleep period to retard bowel movements before the lunar module activity. They each carried extra Lomotil tablets into the lunar module but did not take them. At 4 hours before entry and again after splashdown, the three crewmen each took anti-nauseant tablets containing 0.3 mg\\nHyoscine and 5.0 mg Dexedrine. Aspirin tablets were also taken by the\\ncrewmen, but the number of tablets per individual was not recorded. The\\nLunar Module Pilot recalled that he had taken two aspirin tablets almost  \\nevery night to aid his sleep.\",\"truncated\":false},{\"rank\":5,\"chunk_id\":\"118f360e4a29fa2eb5c98b5f\",\"section_id\":\"4.12.3\",\"pdf_page\":41,\"heading_path\":[\"4. PILOTS' REPORT\",\"4.12 LUNAR SURFACE OPERATIONS\",\"4.12.3 Lunar Module Egress\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=41\",\"score\":0.02381,\"evidence_coverage\":0.4,\"variant_ranks\":{\"glossary_en\":3},\"text\":\"Simulation work in both the water immersion facility and the 1/6-g  \\nenvironm�nt in an airplane was reasonably accurate in preparing the crew\\nfor lunar n[odule egress. Body positioning and arching-the-back techniques\\nthat were requir�d to exit the hatch were performed, and no unexpected\\nproblems were experienced. The forward platform was more than adequate\\nto allow changing the body position from that used in egressing the hatch\\nto that required for getting on the ladder. The first ladder step was\\nsomewhat difficult to see and required caution and forethought. In general, the hatch, porch, and ladder ope1•ation was not particularly difficult and caused little concern. Operations on the platform could be\\nperformed without losing body balance, and there was adequate room for\\nmaneuvering.  \\nThe initial operation of the lunar equipment conveyor in lowering\\nthe camera was satisfactory, but after the straps had become covered with\",\"truncated\":false}],\"evidence\":{\"heuristic_sufficient\":true,\"coverage\":1.0,\"missing_terms\":[],\"matched_terms\":[\"egress\",\"conducted\",\"before\",\"first\",\"rest\"],\"ocr_noise\":false,\"temporal_required\":[\"before\",\"first\"],\"temporal_found\":[\"before\",\"first\"],\"temporal_missing\":[],\"negation_required\":[],\"negation_found\":[],\"critical_missing_terms\":[],\"numeric_values\":[\"1\",\"6\",\"104\",\"40\",\"00\",\"106\",\"11\",\"2\",\"16.3.2\"],\"unit_values\":[],\"calculation_requested\":false,\"calculation_hint\":null,\"multi_part\":false,\"reason\":\"ok\",\"note\":\"Heuristic lexical check; not a semantic entailment judge.\"},\"context_chunks\":[]}",
+                "metadata": {
+                  "truncated": false
+                },
+                "title": "",
+                "time": {
+                  "start": 1793874236727,
+                  "end": 1793874264037
+                }
+              }
+            }
+          ],
+          "usage": {
+            "total": 3411,
+            "input": 2144,
+            "output": 187,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 1080
+            }
+          },
+          "finish_reason": "stop",
+          "event_count": 6,
+          "returncode": 0,
+          "reference": {
+            "answer": "После посадки не возникло ожидаемых возможных трудностей, экипаж не был чрезмерно утомлён и хорошо приспособился к пониженной гравитации.",
+            "section_ids": [
+              "4.12.2"
+            ],
+            "pdf_pages": [
+              40,
+              41
+            ]
+          }
+        },
+        {
+          "turn_id": 2,
+          "prompt": "А почему подготовка к нему заняла больше времени?",
+          "status": "ok",
+          "answer": "По ходу выполнения предварительной подготовки к вылету несколько запутанных или неожиданных ситуаций возникли. \n\nЭто было из-за наличия дополнительного оборудования и предметов, которые требовали дополнительного времени для организации и подготовки. Например, проблема со монтажом электрического кабеля, который соединяет проводимой системы жизнедеятельности и управляемого наземным узлом, также заставила предполагаемые сроки подготовки вылета пересчитывать. Это вызвало необходимость более внимательного и аккуратного выполнения всех инструкций и операций для подготовки к выходу из корабля. \n\nТаким образом, несмотря на все планирования и подготовки, из-за некоторых неожиданных ситуаций и проблем, требующих дополнительного времени для решения, подготовка к нему заняла больше времени.",
+          "error": null,
+          "duration_s": 145.223,
+          "session_id": "ses_e54c3e5b3ffeZBN7uz1Nx1uLyW",
+          "tool_calls": [
+            {
+              "tool": "apollo11_search_documents",
+              "callID": "call_iktnlw3g",
+              "state": {
+                "status": "completed",
+                "input": {
+                  "question": "А почему подготовка к нему заняла больше времени?",
+                  "query": "предварительная подготовка им заняла больше времени"
+                },
+                "output": "{\"question\":\"А почему подготовка к нему заняла больше времени?\",\"query\":\"предварительная подготовка им заняла больше времени\",\"k\":5,\"algorithm_version\":\"query-processing-v1\",\"variants\":[{\"name\":\"original\",\"text\":\"А почему подготовка к нему заняла больше времени?\"},{\"name\":\"glossary_en\",\"text\":\"preparation took more time\"},{\"name\":\"agent_query\",\"text\":\"предварительная подготовка им заняла больше времени\"},{\"name\":\"keywords\",\"text\":\"подготовка нему заняла больше времени\"}],\"results\":[{\"rank\":1,\"chunk_id\":\"5388fda45dc9faf224e5f844\",\"section_id\":\"4.12.2\",\"pdf_page\":40,\"heading_path\":[\"4. PILOTS' REPORT\",\"4.12 LUNAR SURFACE OPERATIONS\",\"4.12.2 Egress Preparation\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40\",\"score\":0.032006,\"evidence_coverage\":1.0,\"variant_ranks\":{\"glossary_en\":2,\"agent_query\":4},\"text\":\"items involved in the extravehicular activity were present. In fact,\\nthere were checklists, food packets, monoculars, and other miscellaneous  \\nitems that interfered with an orderly preparation. All these items re�uired some thought as to their possible interference or use in the extravehicular activity. This interference resulted in exceeding the timeline\\nestimate by a considerable amount. Preparation for egress was conducted\\nslowly, carefully, and deliberately, and future missions should be planned and conducted with the same philosophy. The extravehicular activity\\npreparation checklist was ade�uate and was closely followed. However,\\nminor items that re�uired a decision in real time or had not been considered before flight re�uired more time than anticipated.  \\nAn electrical connector on the cable that connects the remote control unit to the portable life support system gave some trouble in mating  \\n(see section 16.3.2). This problem had been occasionally encountered\",\"truncated\":false},{\"rank\":2,\"chunk_id\":\"1c536c228ea08bedf9114258\",\"section_id\":\"4.12.1\",\"pdf_page\":40,\"heading_path\":[\"4. PILOTS' REPORT\",\"4.12 LUNAR SURFACE OPERATIONS\",\"4.12.1 Postlanding Checkout\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40\",\"score\":0.04405,\"evidence_coverage\":0.5,\"variant_ranks\":{\"original\":4,\"glossary_en\":3,\"keywords\":5},\"text\":\"4-11  \\nPlatform alignment and preparation for early lift-off were completed\\non schedule without significant problems. The mission timer malfunctioned\\nand displayed an impossible number that could not be correlated with any\\nspecific failure time. After several unsuccessful attempts to recycle\\nthis timer, it was turned off for 11 hours to cool. The timer was turned\\non for ascent and it operated properly and performed satisfactorily for\\nthe remainder of the mission (see section 16.2.1).\",\"truncated\":false},{\"rank\":3,\"chunk_id\":\"464e03e594896c1c88bc101b\",\"section_id\":\"4.12.2\",\"pdf_page\":40,\"heading_path\":[\"4. PILOTS' REPORT\",\"4.12 LUNAR SURFACE OPERATIONS\",\"4.12.2 Egress Preparation\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40\",\"score\":0.032527,\"evidence_coverage\":0.5,\"variant_ranks\":{\"glossary_en\":1,\"agent_query\":3},\"text\":\"The crew had given considerable thought to the advantage of beginning the extravehicular activity as soon as possible after landing instead\\nof following the flight plan schedule of having the surface operations between two rest periods. The initial rest period was planned to allow\\nflexibility in the event of unexpected difficulty with postlanding activities. These difficulties did not materialize, the crew were not overly\\ntired, and no problem was experienced in adjusting to the 1/6-g environment. Based on these facts, the decision was made at 104:40:00 to proceed with the extravehicular activity prior to the first rest period.  \\nPreparation for extravehicular activity began at 106:11:00. The estimate of the preparation time proved to be optimistic. In simulations,\\n2 hours had been found to be a reasonable allocation; however, everything\\nhad also been laid out in an orderly manner in the cockpit, and only those\\nitems involved in the extravehicular activity were present. In fact,\",\"truncated\":false},{\"rank\":4,\"chunk_id\":\"c0611d09d25570c7e750131c\",\"section_id\":\"17\",\"pdf_page\":324,\"heading_path\":[\"17. CONCLUSIONS\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=324\",\"score\":0.028955,\"evidence_coverage\":0.25,\"variant_ranks\":{\"original\":2,\"agent_query\":2,\"keywords\":3},\"text\":\"4. The two--man prelai.mch checkout and countdown for ascent from\\nthe lunar surface were well planned and executed.  \\n5. The timeline activities for all phases of the lunar landing\\nmission were well within the crew's capability to perform the required\\ntasks.  \\n6. The quarantine operation from spacecraft landing until release\\nof the crew, spacecraft, and lunar samples from the Lunar Receiving Laboratory was accompliBhed successfully and without any violation of the quarantine.  \\n7. No microorganisms from extraterrestrial source were recovered\\nfrom either the crew or the spacecraft.  \\n8. The hardware problems experienced on this mission, as on previous manned missions, were of a nature which did not unduly hamper the\\ncrew or result in the compromise of safety or mission objectives.  \\n9. The Misuion Control Center and the Manned Space Flight Network\\nproved to be adequate for controlling and monitoring all phases of the  \\nflight, including the descent, surface activities, and ascent phases of\\nthe mission.\",\"truncated\":false},{\"rank\":5,\"chunk_id\":\"5663872d3f5ba72291bfc132\",\"section_id\":\"17\",\"pdf_page\":324,\"heading_path\":[\"17. CONCLUSIONS\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=324\",\"score\":0.023565,\"evidence_coverage\":0.25,\"variant_ranks\":{\"original\":3,\"agent_query\":5},\"text\":\"17-l  \\nThe Apollo ll mission, including a manned lunar landing and surface\\nexploration, was eonducted with skill, precision, and relative ease. The\\nexcellent performance of the spacecraft in the preceding four flights and\\nthe thorough planning in all aspects of the program permitted the safe and\\nefficient execution of this mission. The following conclusions are drawn\\nfrom the information contained in this report.  \\n1. The effectiveness of preflight training was reflected in the\\nskill and precision with which the crew executed the lunar landing. Manual control while maneuvering to the desired landing point was satisfactorily exercised.  \\n2. The planned techniques involved in the guidance, navigation,\\nand control of the descent trajectory were good. Performance of the landing radar met all expectations in providing the information required for  \\ndescent.  \\n3. The extravehicular mobility units were adequately designed to\\nenable the crew to conduct the planned activities. Adaptation to 1/6-g\\nwas relatively qu:tck, and mobility on the lunar surface was easy.  \\n4. The two--man prelai.mch checkout and countdown for ascent from\",\"truncated\":false}],\"evidence\":{\"heuristic_sufficient\":true,\"coverage\":1.0,\"missing_terms\":[],\"matched_terms\":[\"preparation\",\"took\",\"more\",\"time\"],\"ocr_noise\":false,\"temporal_required\":[],\"temporal_found\":[],\"temporal_missing\":[],\"negation_required\":[],\"negation_found\":[],\"critical_missing_terms\":[],\"numeric_values\":[\"16.3.2\",\"4\",\"11\",\"16.2.1\",\"1\",\"6\",\"104\",\"40\",\"00\",\"106\",\"2\"],\"unit_values\":[],\"calculation_requested\":true,\"calculation_hint\":null,\"multi_part\":false,\"reason\":\"ok\",\"note\":\"Heuristic lexical check; not a semantic entailment judge.\"},\"context_chunks\":[]}",
+                "metadata": {
+                  "truncated": false
+                },
+                "title": "",
+                "time": {
+                  "start": 1793874372723,
+                  "end": 1793874396809
+                }
+              }
+            }
+          ],
+          "usage": {
+            "total": 5707,
+            "input": 2033,
+            "output": 224,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 3450
+            }
+          },
+          "finish_reason": "stop",
+          "event_count": 6,
+          "returncode": 0,
+          "reference": {
+            "answer": "В реальной кабине мешали дополнительные предметы. Требовались осторожная подготовка и решения по неучтённым мелочам. Соединение электрического разъёма также вызвало задержку.",
+            "section_ids": [
+              "4.12.2"
+            ],
+            "pdf_pages": [
+              40,
+              41
+            ]
+          }
+        },
+        {
+          "turn_id": 3,
+          "prompt": "Назови конкретный раздел, к которому относятся оба твоих предыдущих ответа.",
+          "status": "ok",
+          "answer": "Назову конкретные разделы отчета, к которым относятся оба предыдущих ответа:\n\n1. Раздел \"4.12.2 Еgress Preparation\" (готовка к вылету) включает описание плана подготовки к вылету на поверхность Луны.\n2. Раздел \"Отчетные выводы\" в разделе \"17\" (присущие выводы) описывает сходственники по выполнению всех этапов миссии Луна. \n\nОба этих раздела содержат информацию о предварительной подготовке к вылету.",
+          "error": null,
+          "duration_s": 41.224,
+          "session_id": "ses_e54c3e5b3ffeZBN7uz1Nx1uLyW",
+          "tool_calls": [],
+          "usage": {
+            "total": 5883,
+            "input": 38,
+            "output": 139,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 5706
+            }
+          },
+          "finish_reason": "stop",
+          "event_count": 3,
+          "returncode": 0,
+          "reference": {
+            "answer": "4.12.2 Egress Preparation",
+            "section_ids": [
+              "4.12.2"
+            ],
+            "pdf_pages": [
+              40,
+              41
+            ]
+          }
+        },
+        {
+          "turn_id": 4,
+          "prompt": "Как лунная пыль осложняла работу рядом с модулем?",
+          "status": "timeout",
+          "answer": null,
+          "error": "timeout 180s",
+          "duration_s": 180.134,
+          "session_id": "ses_e54c3e5b3ffeZBN7uz1Nx1uLyW",
+          "tool_calls": [],
+          "usage": null,
+          "finish_reason": null,
+          "event_count": 0,
+          "returncode": null,
+          "reference": {
+            "answer": "С загрязнённых ремней пыль падала на астронавта и в кабину, транспортёр требовал усилий. Покрытый пылью телевизионный кабель стал хуже виден и путался под ногами.",
+            "section_ids": [
+              "4.12.3",
+              "4.12.4"
+            ],
+            "pdf_pages": [
+              41,
+              42,
+              43,
+              44
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "D02",
+      "category": "long_dialogue",
+      "proxy_session_id": "opencode-D02-20261105-125108",
+      "opencode_session_id": "ses_e54bc1831ffeANwZJ1DW7QszTZ",
+      "status": "ok",
+      "failed": false,
+      "turns": [
+        {
+          "turn_id": 1,
+          "prompt": "Сколько времени фольга для солнечного ветра находилась на Луне?",
+          "status": "ok",
+          "answer": "Ответ на этот вопрос не найден в предоставленных текстах.",
+          "error": null,
+          "duration_s": 112.374,
+          "session_id": "ses_e54bc1831ffeANwZJ1DW7QszTZ",
+          "tool_calls": [
+            {
+              "tool": "apollo11_search_documents",
+              "callID": "call_urf1be16",
+              "state": {
+                "status": "completed",
+                "input": {
+                  "query": "время, фольга, солнечный ветер, Луна",
+                  "question": "Сколько времени фольга для солнечного ветра находилась на Луне?"
+                },
+                "output": "{\"question\":\"Сколько времени фольга для солнечного ветра находилась на Луне?\",\"query\":\"время, фольга, солнечный ветер, Луна\",\"k\":5,\"algorithm_version\":\"query-processing-v1\",\"variants\":[{\"name\":\"original\",\"text\":\"Сколько времени фольга для солнечного ветра находилась на Луне?\"},{\"name\":\"glossary_en\",\"text\":\"many time foil\"},{\"name\":\"expanded_en\",\"text\":\"many time foil film\"},{\"name\":\"agent_query\",\"text\":\"время, фольга, солнечный ветер, Луна\"},{\"name\":\"keywords\",\"text\":\"сколько времени фольга солнечного ветра находилась луне\"}],\"results\":[{\"rank\":1,\"chunk_id\":\"d9dacef0239f4faa7a3a1363\",\"section_id\":\"3.0\",\"pdf_page\":26,\"heading_path\":[\"3. MISSION DESCRIPTION\",\"3.0 MISSION DESCRIPTION\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=26\",\"score\":0.056596,\"evidence_coverage\":0.333,\"variant_ranks\":{\"glossary_en\":3,\"expanded_en\":1},\"text\":\"3-12  \\nNASA-S-69-3706  \\nLunar revolution count ICSMl\\nGround elapsed time  \\nDay\\nNight  \\nLunar revolution count ICSMl  \\nGround elapsed time  \\nFuel cell purge  \\nCommander transfer to CSM  \\nLunar Module Pilot transfer to CSM  \\nLM jettison  \\nCSM separation maneuver  \\nFuel cell purge  \\nMSFN  \\n29\\n1  \\nFigure 3-l.-Conlin ued.  \\nFuel cell purge  \\nlgl 127 to 149 hours.  \\nFigure 3-l.-Conlin ued.  \\nlgl 127 to 149 hours.\",\"truncated\":false},{\"rank\":2,\"chunk_id\":\"c4a81c38142ee70be7a6b47d\",\"section_id\":\"11.6\",\"pdf_page\":220,\"heading_path\":[\"11. THE LUNAR SURFACE\",\"11.6 SOLAR WIND COMPOSITION EXPERIMENT\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=220\",\"score\":0.053226,\"evidence_coverage\":0.333,\"variant_ranks\":{\"original\":2,\"expanded_en\":2,\"keywords\":2},\"text\":\"The experiment was deployed approximately 6 meters from the lunar\\nmodule. The staff of the experiment penetrated 13.5 centimeters into the\\nsurface.  \\nThe foil was retreived after 77 minutes exposure to the lunar environment. The return unit was placed into a special Teflon bag andreturned to earth in the lunar sample return container. A portion of the\\nfoil was cut out, placed into a metal gasket vacuum container, and heat\\nsterilized at 125° C for 39 hours. The section of foil has been released\\nfor analysis, and results will be reported in science reports.\",\"truncated\":false},{\"rank\":3,\"chunk_id\":\"ddd0c8747bdbfb922913dd0b\",\"section_id\":\"A\",\"pdf_page\":332,\"heading_path\":[\"A. VEHICLE DESCRIPTIONS\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=332\",\"score\":0.03125,\"evidence_coverage\":0.333,\"variant_ranks\":{\"expanded_en\":4},\"text\":\"selected elements present in the solar wind. This was to be accomplished\\nby trappi�g particles of the solar wind on a sheet of aluminum foil exposed on the lunar surface.  \\nPhysically, the experiment consisted of a metallic telescoping pole\\napproximately 1-1/2 inches in diameter and approximately 16 inches in\\nlength when collapsed. When extended, the pole was about 5 feet long�\\nIn the stowed position, the foil was enclosed in one end of the tubing\\nand rolled up on a spring-driven roller. Only the foil portion was recovered at the end of the lunar exposure period, rolled on the springdriven roller, and stowed in the sample return container for return to\\nearth.  \\nA.4.2 Laser Ranging Retro-Reflector  \\nThe laser ranging retro-reflector experiment (fig. A-3) was a retroreflector array of fused silica cubes. A folding support structure was\\nused for aiming and aligning the array toward earth. The purpose of the\\nexperiment was to �eflect laser ranging beams from earth to their point\",\"truncated\":false},{\"rank\":4,\"chunk_id\":\"c3d6442ae371d623508a232b\",\"section_id\":\"8.8\",\"pdf_page\":148,\"heading_path\":[\"8. COMMAND AND SERVICE MODULE PERFORMANCE\",\"8.8 SERVICE PROPULSION\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=148\",\"score\":0.02459,\"evidence_coverage\":0.333,\"variant_ranks\":{\"glossary_en\":1},\"text\":\"Service propulsion system performance was satisfactory during each\\nof the five maneuvers, with a total firing time of 531.9 seconds. The\\nactual ignition times and firing durations are listed in table 8.6-rr.\",\"truncated\":false},{\"rank\":5,\"chunk_id\":\"ffc1819f23fa3761fcaebce4\",\"section_id\":\"5.7\",\"pdf_page\":73,\"heading_path\":[\"5. LUNAR DESCENT AND ASCENT\",\"5.7 RENDEZVOUS\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=73\",\"score\":0.024194,\"evidence_coverage\":0.333,\"variant_ranks\":{\"glossary_en\":2},\"text\":\"||||||||||I |i i I I i I ||\\n|I i I I|I i I I|I i I I|I i I I||||||\\\\ )| I i I J t ||\\n| | | | |||||| '| ! /! I I i||\\n|I '|I '|I '|I '||||||| I I||  \\n46:00  \\n102:43:00 43:20  \\n45:40  \\n43:40  \\n44:00 44:20 44:40 45:00 45:20  \\nTime, hr:min:sec  \\n(bl Pitch gimbal angle.  \\nFigure 5-6.-Expanded pitch and roll attitude time histories near landing.\",\"truncated\":false}],\"evidence\":{\"heuristic_sufficient\":false,\"coverage\":0.667,\"missing_terms\":[\"many\"],\"matched_terms\":[\"time\",\"foil\"],\"ocr_noise\":false,\"temporal_required\":[],\"temporal_found\":[],\"temporal_missing\":[],\"negation_required\":[],\"negation_found\":[],\"critical_missing_terms\":[],\"numeric_values\":[\"3\",\"12\",\"69\",\"3706\",\"29 1\",\"127\",\"149\",\"6\",\"13.5\",\"77\",\"125\",\"39\",\"1\",\"2\",\"16\",\"5\",\"4.2\"],\"unit_values\":[{\"value\":\"6\",\"unit\":\"meters\"},{\"value\":\"13.5\",\"unit\":\"centimeters\"},{\"value\":\"77\",\"unit\":\"minutes\"},{\"value\":\"5\",\"unit\":\"feet\"}],\"calculation_requested\":false,\"calculation_hint\":null,\"multi_part\":false,\"reason\":\"low_term_coverage\",\"note\":\"Heuristic lexical check; not a semantic entailment judge.\"},\"context_chunks\":[]}",
+                "metadata": {
+                  "truncated": false
+                },
+                "title": "",
+                "time": {
+                  "start": 1793874755690,
+                  "end": 1793874776866
+                }
+              }
+            }
+          ],
+          "usage": {
+            "total": 2976,
+            "input": 1882,
+            "output": 15,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 1079
+            }
+          },
+          "finish_reason": "stop",
+          "event_count": 6,
+          "returncode": 0,
+          "reference": {
+            "answer": "Частицы захватывались специально подготовленной алюминиевой фольгой. Экспозиция составила 77 минут, после чего фольгу вернули для анализа.",
+            "section_ids": [
+              "11.6"
+            ],
+            "pdf_pages": [
+              220
+            ]
+          }
+        },
+        {
+          "turn_id": 2,
+          "prompt": "А где установили лазерный отражатель?",
+          "status": "ok",
+          "answer": "Лазерный отражатель был установлен примерно на 1.4 метрах сouth-southwest от лунного модуля в относительно гладкой области. Отражателем управление осуществлялось с помощью металлического колпака, который в сжатом состоянии имел диаметр в промежуточный момент около 1-1/2 дюйма и длину при раскрытии около 5 футов.",
+          "error": null,
+          "duration_s": 112.177,
+          "session_id": "ses_e54bc1831ffeANwZJ1DW7QszTZ",
+          "tool_calls": [
+            {
+              "tool": "apollo11_search_documents",
+              "callID": "call_rf4076ha",
+              "state": {
+                "status": "completed",
+                "input": {
+                  "question": "А где установили лазерный отражатель?",
+                  "query": "лазерный отражатель"
+                },
+                "output": "{\"question\":\"А где установили лазерный отражатель?\",\"query\":\"лазерный отражатель\",\"k\":5,\"algorithm_version\":\"query-processing-v1\",\"variants\":[{\"name\":\"original\",\"text\":\"А где установили лазерный отражатель?\"},{\"name\":\"glossary_en\",\"text\":\"laser reflector\"},{\"name\":\"expanded_en\",\"text\":\"laser reflector retroreflector\"},{\"name\":\"agent_query\",\"text\":\"лазерный отражатель\"},{\"name\":\"keywords\",\"text\":\"установили лазерный отражатель\"}],\"results\":[{\"rank\":1,\"chunk_id\":\"42ad5b48cfbcef4341274d2a\",\"section_id\":\"A\",\"pdf_page\":332,\"heading_path\":[\"A. VEHICLE DESCRIPTIONS\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=332\",\"score\":0.029124,\"evidence_coverage\":1.0,\"variant_ranks\":{\"original\":1,\"agent_query\":4,\"keywords\":1},\"text\":\"experiment was to �eflect laser ranging beams from earth to their point\\nof origin for precise measurement of earth-moon distances, center of\\nmoon's mass motion, lunar radius, earth geophysical information, and development of space communication technology.  \\nEarth stations that can beam lasers to the experiment include the\\nMcDonald Observatory at Fort Davis, Texas; the Lick Observatory in Mount\\nHamilton, California; and the Catalina Station of the University of Arizona. Scientists in other countries also plan to bounce laser beams off\\nthe experiment •\",\"truncated\":false},{\"rank\":2,\"chunk_id\":\"c70be7c97312ba1ad65277c9\",\"section_id\":\"11.5\",\"pdf_page\":220,\"heading_path\":[\"11. THE LUNAR SURFACE\",\"11.5 LASER RANGING RETRO-REFLECTOR EXPERIMENT\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=220\",\"score\":0.084997,\"evidence_coverage\":1.0,\"variant_ranks\":{\"original\":4,\"glossary_en\":1,\"expanded_en\":3,\"agent_query\":1,\"keywords\":2},\"text\":\"11-23  \\nThe scientific objectives of the laser ranging experiment --studies\\nof gravitation, relativity, and·earth and lunar physics --can be achieved\\nonly by successfully moni taring the changes in the distances from stations\\non earth to the laser beam reflector on the moon with an uncertainty of  \\nabout 15 centimeters over a period of many years. The McDonald Observatory\\nis being instrumented to make daily observations with this accuracy, and\\nit is expected that several other stations capable of this ranging precision will be established.\",\"truncated\":false},{\"rank\":3,\"chunk_id\":\"8f02b1cd2388832f8741693a\",\"section_id\":\"11.5\",\"pdf_page\":219,\"heading_path\":[\"11. THE LUNAR SURFACE\",\"11.5 LASER RANGING RETRO-REFLECTOR EXPERIMENT\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=219\",\"score\":0.071836,\"evidence_coverage\":1.0,\"variant_ranks\":{\"original\":5,\"glossary_en\":2,\"expanded_en\":2},\"text\":\"The laser ranging retro-reflector was deployed approximately 1 4 meters\\nsouth-southwest of the lunar module in a relatively smooth area The bubble was not precisely in the center of the leveling device ( see fig.\\nbut was between the center and the innermost division in the southwest 11-2 6 ) .  \\ndirection, indicating an off-level condition of less than 30 minutes of\\narc. The shadow lines and sun compass markings were clearly visible, and\\nthe crew reported that these devices showed that the alignment was precise.  \\nOn August 1, 19 6 9, the Lick Observatory obtained reflected signals\\nfrom the laser reflector. The signal continued to appear for the remainder of the night. Between 5 and 8 joules per pulse were transmitted at\",\"truncated\":false},{\"rank\":4,\"chunk_id\":\"ddd0c8747bdbfb922913dd0b\",\"section_id\":\"A\",\"pdf_page\":332,\"heading_path\":[\"A. VEHICLE DESCRIPTIONS\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=332\",\"score\":0.068562,\"evidence_coverage\":1.0,\"variant_ranks\":{\"glossary_en\":5,\"expanded_en\":1,\"agent_query\":3,\"keywords\":3},\"text\":\"selected elements present in the solar wind. This was to be accomplished\\nby trappi�g particles of the solar wind on a sheet of aluminum foil exposed on the lunar surface.  \\nPhysically, the experiment consisted of a metallic telescoping pole\\napproximately 1-1/2 inches in diameter and approximately 16 inches in\\nlength when collapsed. When extended, the pole was about 5 feet long�\\nIn the stowed position, the foil was enclosed in one end of the tubing\\nand rolled up on a spring-driven roller. Only the foil portion was recovered at the end of the lunar exposure period, rolled on the springdriven roller, and stowed in the sample return container for return to\\nearth.  \\nA.4.2 Laser Ranging Retro-Reflector  \\nThe laser ranging retro-reflector experiment (fig. A-3) was a retroreflector array of fused silica cubes. A folding support structure was\\nused for aiming and aligning the array toward earth. The purpose of the\\nexperiment was to �eflect laser ranging beams from earth to their point\",\"truncated\":false},{\"rank\":5,\"chunk_id\":\"3591f9c2ea78228cd9380a78\",\"section_id\":\"11.5\",\"pdf_page\":219,\"heading_path\":[\"11. THE LUNAR SURFACE\",\"11.5 LASER RANGING RETRO-REFLECTOR EXPERIMENT\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=219\",\"score\":0.054579,\"evidence_coverage\":1.0,\"variant_ranks\":{\"glossary_en\":3,\"expanded_en\":5},\"text\":\"6943 angstroms. Using the 120-inch telescope, each returned signal contained, on the average, more than one photo-electron, a value that indicates that the condition of the reflector on the surface is entirely satisfactory.  \\nthe data.\\ntained in a subsequent science report.  \\nOn August 20, 19 6 9,\\nnals from the reflector.  \\nvariation of 2. 4 959 6 311 ( ±0.00000003 4 .5 meters. )  \\nthe McDonald Observatory obtained reflected sigThe round trip signal time was found to be\\nseconds, an uncertainty equivalent to a distance  \\nThese observations, made a few days before lunar sunset and a few\\ndays after lunar sunrise, show that the thermal design of the reflector\\npermits operation during sun illuminated periods and that the reflector  \\nsurvived the lunar night satisfactorily. They also indicate no serious\\ndegradation of optical performance from flaked insulation, debris, dust,\",\"truncated\":false}],\"evidence\":{\"heuristic_sufficient\":true,\"coverage\":1.0,\"missing_terms\":[],\"matched_terms\":[\"laser\",\"reflector\"],\"ocr_noise\":false,\"temporal_required\":[],\"temporal_found\":[],\"temporal_missing\":[],\"negation_required\":[],\"negation_found\":[],\"critical_missing_terms\":[],\"numeric_values\":[\"11\",\"23\",\"15\",\"1 4\",\"2 6\",\"30\",\"1, 19 6 9\",\"5\",\"8\"],\"unit_values\":[{\"value\":\"15\",\"unit\":\"centimeters\"},{\"value\":\"1 4\",\"unit\":\"meters\"},{\"value\":\"30\",\"unit\":\"minutes\"}],\"calculation_requested\":false,\"calculation_hint\":null,\"multi_part\":false,\"reason\":\"ok\",\"note\":\"Heuristic lexical check; not a semantic entailment judge.\"},\"context_chunks\":[]}",
+                "metadata": {
+                  "truncated": false
+                },
+                "title": "",
+                "time": {
+                  "start": 1793874842135,
+                  "end": 1793874865214
+                }
+              }
+            }
+          ],
+          "usage": {
+            "total": 5055,
+            "input": 1905,
+            "output": 110,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 3040
+            }
+          },
+          "finish_reason": "stop",
+          "event_count": 6,
+          "returncode": 0,
+          "reference": {
+            "answer": "Примерно в 14 метрах к юго-юго-западу, на относительно ровном участке.",
+            "section_ids": [
+              "11.5"
+            ],
+            "pdf_pages": [
+              219,
+              220
+            ]
+          }
+        },
+        {
+          "turn_id": 3,
+          "prompt": "Для каких научных целей он использовался?",
+          "status": "ok",
+          "answer": "Лазерный отражатель использовался для научных целей изучения гравитации, относительного золотого правила и земных и лунных физических явлений. Это было необходимо для точного измерения расстояний от земных станций до лазерного отражателя на Луне на протяжении многих лет. Земные станции, которые могут бросать лазеры к отражателю, включают Макдональскую обсерваторию в Форт-Дейвисе, штат Техас, обсерваторию Лик в Mount Hamilton, штат Калифорния, и станцию Каталиана Альтаясиса университета Аризоны. Также планируются другие станции, способные к такого типа измерений.",
+          "error": null,
+          "duration_s": 41.853,
+          "session_id": "ses_e54bc1831ffeANwZJ1DW7QszTZ",
+          "tool_calls": [],
+          "usage": {
+            "total": 5273,
+            "input": 24,
+            "output": 195,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 5054
+            }
+          },
+          "finish_reason": "stop",
+          "event_count": 3,
+          "returncode": 0,
+          "reference": {
+            "answer": "Изучение гравитации, относительности, физики Земли и Луны. Требовались многолетние измерения изменений расстояния с неопределённостью около 15 см.",
+            "section_ids": [
+              "11.5"
+            ],
+            "pdf_pages": [
+              219,
+              220
+            ]
+          }
+        },
+        {
+          "turn_id": 4,
+          "prompt": "Переведи длительность экспонирования фольги, названную в начале беседы, в часы. Используй арифметический инструмент.",
+          "status": "ok",
+          "answer": "Время экспонирования фольга составляет 4.6 час.",
+          "error": null,
+          "duration_s": 32.301,
+          "session_id": "ses_e54bc1831ffeANwZJ1DW7QszTZ",
+          "tool_calls": [
+            {
+              "tool": "apollo11_calculate",
+              "callID": "call_b8vn4udj",
+              "state": {
+                "status": "completed",
+                "input": {
+                  "expression": "(127+149)/60"
+                },
+                "output": "{\"expression\":\"(127+149)/60\",\"result\":4.6}",
+                "metadata": {
+                  "truncated": false
+                },
+                "title": "",
+                "time": {
+                  "start": 1793875002054,
+                  "end": 1793875002088
+                }
+              }
+            }
+          ],
+          "usage": {
+            "total": 5412,
+            "input": 39,
+            "output": 17,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 5356
+            }
+          },
+          "finish_reason": "stop",
+          "event_count": 6,
+          "returncode": 0,
+          "reference": {
+            "answer": "77 / 60 ≈ 1.2833 часа",
+            "section_ids": [
+              "11.6"
+            ],
+            "pdf_pages": [
+              220
+            ]
+          }
+        },
+        {
+          "turn_id": 5,
+          "prompt": "Кратко перечисли оба научных эксперимента, упомянутых в диалоге, с их разделами и PDF-страницами.",
+          "status": "ok",
+          "answer": "Извините, но в предоставленном отчете нет упоминания двух научных экспериментов, упомянутых в диалоге. Сообщите больше информации или внимательно проверьте предоставляемый отчет, возможно, есть ошибки в формулировке запроса.",
+          "error": null,
+          "duration_s": 161.728,
+          "session_id": "ses_e54bc1831ffeANwZJ1DW7QszTZ",
+          "tool_calls": [
+            {
+              "tool": "apollo11_search_documents",
+              "callID": "call_2p1z69rv",
+              "state": {
+                "status": "completed",
+                "input": {
+                  "query": "двух научных экспериментов",
+                  "question": "Кратко перечисли оба научных эксперимента, упомянутых в диалоге, с их разделами и PDF-страницами."
+                },
+                "output": "{\"question\":\"Кратко перечисли оба научных эксперимента, упомянутых в диалоге, с их разделами и PDF-страницами.\",\"query\":\"двух научных экспериментов\",\"k\":5,\"algorithm_version\":\"query-processing-v1\",\"variants\":[{\"name\":\"original\",\"text\":\"Кратко перечисли оба научных эксперимента, упомянутых в диалоге, с их разделами и PDF-страницами.\"},{\"name\":\"normalized\",\"text\":\"Кратко перечисли оба научных эксперимента, упомянутых в диалоге, с их разделами и PDF-страницами\"},{\"name\":\"agent_query\",\"text\":\"двух научных экспериментов\"},{\"name\":\"keywords\",\"text\":\"научных эксперимента упомянутых диалоге разделами pdf-страницами\"}],\"results\":[{\"rank\":1,\"chunk_id\":\"7d7bb95771040af63c78ab57\",\"section_id\":\"5.7\",\"pdf_page\":70,\"heading_path\":[\"5. LUNAR DESCENT AND ASCENT\",\"5.7 RENDEZVOUS\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=70\",\"score\":0.028739,\"evidence_coverage\":null,\"variant_ranks\":{\"original\":1},\"text\":\"|||||2 |||||||||||||||||\\n||,;Ĵ p -f 5 k- f-.. . _ .. Ƽ _{ ---- ĳ -. .  -- _.-- <--, r-- ˝-˙ ---- -- -- - с r 1 Β 3 - !-- -- 4 \\\" |,;Ĵ p -f 5 k- f-.. . _ .. Ƽ _{ ---- ĳ -. .  -- _.-- <--, r-- ˝-˙ ---- -- -- - с r 1 Β 3 - !-- -- 4 \\\" |- | .· ---| .· ---|·-·|·-·|·-·|·-·|-· --|-· --|-· --|-· --|-· --|-· --||||||\",\"truncated\":false},{\"rank\":2,\"chunk_id\":\"a8a66090aff3cbd34fc72312\",\"section_id\":\"5.7\",\"pdf_page\":79,\"heading_path\":[\"5. LUNAR DESCENT AND ASCENT\",\"5.7 RENDEZVOUS\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=79\",\"score\":0.016393,\"evidence_coverage\":null,\"variant_ranks\":{\"original\":2},\"text\":\"��  \\n��� ����� - �� �� �� �� ��  \\n��� ����  \\n��� �� ��  \\n������ ���� ��  \\n��� �����  \\n��� ����� �� - �� �� �� ��  \\n��  \\n��� - -  \\n��  \\n����� ��  \\n������ - ������������ �� �� �� ����������  \\n�� �� �� ��  \\n�������  \\n�� �� - �� ��� ���� ���� ��� �� �� �� ������  \\n������� �� �� ������  \\n�� �� �� ��  \\n������ - ���  \\n��  \\n������� ����\\n���� �� �� - �� ��� ���� ���� ��� �� �� �� ������ �������\\n�� �� �������� �� �� �� ��  \\n�������  \\n�� �� ������  \\n������� �� �� �������������� �� �� �� ��  \\n- - �������\\n��������  \\n��  \\n��\\n��  \\n��  \\n��  \\n�������� �� ����������������� ��  \\n������������������ ��� ������������� ��  \\n- ����������������� �����������������  \\n�������� ��������������  \\n����������  \\n�������� ��  \\n��  \\n������� ����������  \\n�����������������  \\n��  \\n���������� ��  \\n����������\",\"truncated\":false},{\"rank\":3,\"chunk_id\":\"edba2e705d93231acd49f5d0\",\"section_id\":\"5.7\",\"pdf_page\":86,\"heading_path\":[\"5. LUNAR DESCENT AND ASCENT\",\"5.7 RENDEZVOUS\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=86\",\"score\":0.016129,\"evidence_coverage\":null,\"variant_ranks\":{\"original\":3},\"text\":\"�������������������������� -  \\n����������������������������� ��������������������������� ���\\n�� ��������������� �� �� ��\\n�� �� ��� �� ����  \\n������\\n����  \\n- ������� - ��� - ��������� ������� ���� ���  \\n�� ��  \\n�� �� �� �������� - - ��\\n�����  \\n��\\n��\\n��\\n������\\n����  \\n�� ��  \\n�� ��  \\n�� ��\\n��  \\n- ������������� ����������������������������������������������������������  \\n�� ������ - ������������� ��� �������������������������� ��  \\n���� �������� ���������������� ������  \\n�����������  \\n���������������������������������������  \\n�� �� ������������ ��\\n�� �� ��  \\n�������  \\n����������  \\n��� �� ��  \\n��  \\n�� ��  \\n- ��\\n��  \\n���������� �����\\n��  \\n���������� ���������� ��������� ���������� ��������� ���������  \\n�����������������  \\n������ ����� - ����\\n�����  \\n�������\\n������������ ����\\n�� ������������������� ��  \\n�� �� ������� ���\",\"truncated\":false},{\"rank\":4,\"chunk_id\":\"15d2453357d742db6e84afbe\",\"section_id\":\"12.5\",\"pdf_page\":260,\"heading_path\":[\"12. BIOMEDICAL EVALUATION\",\"12.5 LUNAR CONTAMINATION AND QUARANTINE\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=260\",\"score\":0.015873,\"evidence_coverage\":null,\"variant_ranks\":{\"original\":4},\"text\":\"12-7\",\"truncated\":false},{\"rank\":5,\"chunk_id\":\"4cb908fc7c5da9579db227f3\",\"section_id\":\"5.7\",\"pdf_page\":83,\"heading_path\":[\"5. LUNAR DESCENT AND ASCENT\",\"5.7 RENDEZVOUS\"],\"citation_url\":\"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=83\",\"score\":0.015625,\"evidence_coverage\":null,\"variant_ranks\":{\"original\":5},\"text\":\"- - ����  \\n�� �����  \\n- - - � � �������������  \\n�����������\\n����� ���� �����������  \\n������ ������� � ��� �� ����� ��� �������  \\n�� ��������������������� ����  \\n���� ������ �������������� ������������� ���� � �� � ����������  \\n�� ��������\\n���� �������  \\n���\\n��� ��������\\n��� ��������\\n��� ��������\\n���  \\n��  \\n��  \\n�����  \\n����\\n����\\n��  \\n��  \\n��\\n��  \\n��  \\n�������������� ��� ����������� ������  \\n��\\n��  \\n���  \\n��� ��������\\n��� ����� �\\n��  \\n��\\n����  \\n��\\n��\\n��\\n��\\n�� ��\\n��\\n��\\n��� ���  \\n�� ��\\n�� ��������� ��\\n�� ���������\\n��� ��� �� ���  \\n���\\n��� ��������\\n��� ��������\\n��  \\n���  \\n��� ��������  \\n��� ��������  \\n���������� �������� ��\\n�� ��\\n���\\n�� ��\\n�� ��\\n��� ��  \\n��\\n��\\n�� ��� ����\\n����  \\n��  \\n�� ����  \\n��\\n��\\n�� ��� ����\\n����  \\n�� ��  \\n����\\n��\\n������� ����\\n��������  \\n��\\n�� �� ��  \\n��\\n��  \\n�� ���  \\n����������������������������  \\n��  \\n�� ��  \\n��\\n��  \\n��  \\n�������������������������������  \\n�� ����\\n������  \\n��������  \\n��  \\n��\\n�� ��\\n��  \\n��  \\n��������� ����������  \\n��\\n��\\n��  \\n��\\n���� ��\\n��\\n��\\n��\\n����  \\n��  \\n���  \\n��\\n��  \\n��  \\n���  \\n�������� ��������� ���������  \\n��  \\n��  \\n��� ���  \\n���\\n��\\n����\\n��  \\n��\\n��  \\n��  \\n��\\n����\\n��\\n��\\n��\\n��\\n��\\n��\\n��  \\n��\\n��\\n�� ��\\n��\\n���� �� ����\\n�� ��  \\n��  \\n�� ���� ��  \\n��  \\n�� ��  \\n��  \\n��  \\n�� ��  \\n��\\n��\\n�� �� ��\\n��\\n��  \\n����  \\n����� ����� ��\",\"truncated\":false}],\"evidence\":{\"heuristic_sufficient\":false,\"coverage\":0.0,\"missing_terms\":[\"научных\",\"эксперимента\",\"упомянутых\",\"диалоге\",\"разделами\",\"pdf-страницами\"],\"matched_terms\":[],\"ocr_noise\":true,\"temporal_required\":[],\"temporal_found\":[],\"temporal_missing\":[],\"negation_required\":[],\"negation_found\":[],\"critical_missing_terms\":[\"научных\",\"эксперимента\",\"упомянутых\",\"диалоге\",\"разделами\",\"pdf-страницами\"],\"numeric_values\":[\"2\",\"5\",\"1\",\"3\",\"4\"],\"unit_values\":[],\"calculation_requested\":false,\"calculation_hint\":null,\"multi_part\":true,\"reason\":\"ocr_noise,low_term_coverage,missing_focus_term,limited_english_query\",\"note\":\"No reliable English query was available. The original-question passages are shown; verify that they directly answer the question.\",\"confidence\":\"low\",\"limited_english_query\":true},\"context_chunks\":[{\"chunk_id\":\"4844a2bf3bf1722a380660bf\",\"section_id\":\"5.7\",\"pdf_page\":70,\"text\":\"Initiae roation to windosup 1 Terminate rotio to windos up f4. Landing radr lok (aitude andvelocity! 5. Enale rarupate f6. Enginethrol chang 7. Lndingproram initiation !-8. Abrtguinceupate 9. Automticlndingproram ģ-- - Ġ|||||Network- PriÅry gu: __.-·- ------· -|Network- PriÅry gu: __.-·- ------· -|Network- PriÅry gu: __.-·- ------· -|-l --- -. 1\\\" Ģ- |-- -·|- - -·-|-- -·|-|||L| 1|||\",\"truncated\":false},{\"chunk_id\":\"cb33b4ed9e5ca9d98a88f12e\",\"section_id\":\"5.7\",\"pdf_page\":70,\"text\":\"|:т - -- ·-· ɐ|:т - -- ·-· ɐ|:т - -- ·-· ɐ|:т - -- ·-· ɐ|:т - -- ·-· ɐ|:т - -- ·-· ɐ||||||||||||||||\\n|:т - -- ·-· ɐ|:т - -- ·-· ɐ|:т - -- ·-· ɐ|6 ||||||||||||||||||\",\"truncated\":false}]}",
+                "metadata": {
+                  "truncated": false
+                },
+                "title": "",
+                "time": {
+                  "start": 1793875033794,
+                  "end": 1793875060503
+                }
+              }
+            }
+          ],
+          "usage": {
+            "total": 8690,
+            "input": 3089,
+            "output": 69,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 5532
+            }
+          },
+          "finish_reason": "stop",
+          "event_count": 6,
+          "returncode": 0,
+          "reference": {
+            "answer": "Солнечный ветер: 11.6, стр. 220; лазерный отражатель: 11.5, стр. 219–220.",
+            "section_ids": [
+              "11.5",
+              "11.6"
+            ],
+            "pdf_pages": [
+              219,
+              220
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

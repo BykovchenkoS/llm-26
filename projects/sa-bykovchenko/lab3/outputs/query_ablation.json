@@ -1,0 +1,2587 @@
+{
+  "generated_at": "2026-11-06T10:17:32.266864+00:00",
+  "experiment": "query_processing_ablation",
+  "algorithm_version": "query-processing-v1",
+  "rag": {
+    "store_id": "efa0f2936c31e621",
+    "mode": "hybrid",
+    "backend": "hnsw",
+    "top_k": 5,
+    "candidate_k": 50
+  },
+  "manifest": "data\\final_eval_manifest.json",
+  "dataset": "data\\comparison_tasks.json",
+  "source_run": "outputs\\final_langgraph_qwen.json",
+  "task_ids": [
+    "F01",
+    "F03",
+    "F05",
+    "F08",
+    "F11",
+    "F13",
+    "F15",
+    "X01",
+    "X02",
+    "C01",
+    "C02",
+    "U01",
+    "U02",
+    "D01",
+    "D02"
+  ],
+  "selection": {
+    "n_replications": 15,
+    "n_saved_search_calls": 15,
+    "tasks": [
+      "C01",
+      "C02",
+      "D01",
+      "D02",
+      "F01",
+      "F03",
+      "F05",
+      "F08",
+      "F11",
+      "F13",
+      "X01",
+      "X02"
+    ],
+    "note": "Only LangGraph turns with saved search results and reference sections/pages are included."
+  },
+  "methodology": {
+    "current": "tool_functions.search_documents: current query_processing, multi-query, weighted RRF and lexical rerank",
+    "single_query": "one Lab 2 hybrid RAG call using query, fallback to question",
+    "question_query": "separate Lab 2 RAG calls for question and query; equal-weight RRF only when query differs from question",
+    "aggregation": "Results from multiple saved search calls are concatenated; retrieval_metrics.evaluate deduplicates by chunk_id and uses top-5.",
+    "references": "Reference sections/pages are used only after retrieval, in retrieval_metrics.evaluate; they never select results.",
+    "timing": "Wall-clock seconds around each mode per replication."
+  },
+  "modes": {
+    "current": {
+      "aggregate": {
+        "replications": 15,
+        "mean_section_recall@5": 0.833,
+        "mean_page_recall@5": 0.667,
+        "mean_precision@5_section": 0.413,
+        "mean_precision@5_page": 0.333,
+        "mean_mrr_section": 0.783,
+        "retrieved_replications": 15,
+        "total_search_calls": 74,
+        "mean_search_calls_per_replication": 4.93,
+        "total_duration_s": 19.11,
+        "mean_duration_s": 1.274
+      },
+      "rows": [
+        {
+          "task": "F01",
+          "turn": 1,
+          "category": "factual",
+          "question": "Какова была основная цель Apollo 11 и как распределялись роли между членами экипажа? В ответе укажи раздел и PDF-страницу отчета",
+          "queries": [
+            {
+              "question": "Какова была основная цель Apollo 11 и как распределялись роли между членами экипажа? В ответе укажи раздел и PDF-страницу отчета",
+              "query": "основная цель аполлон 11 распределение ролей экипажа"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 6,
+          "duration_s": 16.9168,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.6,
+          "precision@5_page": 0.6,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "2f0e4f178386585cf5a63637",
+              "section_id": "1.0",
+              "pdf_page": 12
+            },
+            {
+              "rank": 2,
+              "chunk_id": "e16cbaaf0f8122f41e9e4dca",
+              "section_id": "1.0",
+              "pdf_page": 13
+            },
+            {
+              "rank": 3,
+              "chunk_id": "7fd8dafbbd7673a45b41d3cf",
+              "section_id": "9.12.2",
+              "pdf_page": 187
+            },
+            {
+              "rank": 4,
+              "chunk_id": "f9f19012bf3fd44055bc07d6",
+              "section_id": "14.0",
+              "pdf_page": 275
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bae43a023eefad92bc961591",
+              "section_id": "1.0",
+              "pdf_page": 13
+            }
+          ]
+        },
+        {
+          "task": "F03",
+          "turn": 1,
+          "category": "factual",
+          "question": "Почему выход на поверхность решили провести до первого запланированного отдыха? В ответе укажи раздел и PDF-страницу отчета",
+          "queries": [
+            {
+              "question": "почему выход на поверхность решили провести до первого запланированного отдыха? в ответе укажи раздел и PDF-страницу отчета",
+              "query": "причина выхода на поверхность до первого отдыха в отчете"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 6,
+          "duration_s": 0.1849,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.4,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "464e03e594896c1c88bc101b",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 2,
+              "chunk_id": "2644ab5d32510cb6c5a42690",
+              "section_id": "12.2.3",
+              "pdf_page": 255
+            },
+            {
+              "rank": 3,
+              "chunk_id": "3cd27453294ca48a8285fdef",
+              "section_id": "3.0",
+              "pdf_page": 16
+            },
+            {
+              "rank": 4,
+              "chunk_id": "5388fda45dc9faf224e5f844",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 5,
+              "chunk_id": "6473b31b5c0892ba2bc9fdfd",
+              "section_id": "4.12.4",
+              "pdf_page": 42
+            }
+          ]
+        },
+        {
+          "task": "F05",
+          "turn": 1,
+          "category": "factual",
+          "question": "Как лунная пыль мешала переносу оборудования и использованию телевизионного кабеля? В ответе укажи раздел и PDF-страницу отчета",
+          "queries": [
+            {
+              "question": "Как лунная пыль мешала переносу оборудования и использованию телевизионного кабеля? В ответе укажи раздел и PDF-страницу отчета",
+              "query": "Как лунная пыль мешала переносу оборудования и использованию телевизионного кабеля?"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 4,
+          "duration_s": 0.1297,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "f1f0a278398feec3addd2fed",
+              "section_id": "16.3.1",
+              "pdf_page": 300
+            },
+            {
+              "rank": 2,
+              "chunk_id": "48a4aa7fc88a36c5980675de",
+              "section_id": "11.2.1",
+              "pdf_page": 209
+            },
+            {
+              "rank": 3,
+              "chunk_id": "7732a81773fa7a25b6aedb28",
+              "section_id": "11.5",
+              "pdf_page": 219
+            },
+            {
+              "rank": 4,
+              "chunk_id": "b44509785d6c574eafdd68af",
+              "section_id": "11.1.4",
+              "pdf_page": 206
+            },
+            {
+              "rank": 5,
+              "chunk_id": "89e7bd73ddb019166b7b4ac1",
+              "section_id": "12.5.1",
+              "pdf_page": 260
+            }
+          ]
+        },
+        {
+          "task": "F08",
+          "turn": 1,
+          "category": "factual",
+          "question": "Как работал пассивный сейсмический эксперимент в первые две недели, несмотря на температуру? В ответе укажи раздел и PDF-страницу отчета",
+          "queries": [
+            {
+              "question": "Как работал пассивный сейсмический эксперимент в первые две недели, несмотря на температуру? раздел и PDF-страница отчета",
+              "query": "пассивный сейсмический эксперимент температура первые две недели раздел и PDF-страница отчета"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 4,
+          "duration_s": 0.1258,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 0.5,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.8,
+          "precision@5_page": 0.0,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "8e937469c207f083b1a9e8b9",
+              "section_id": "11.4.4",
+              "pdf_page": 217
+            },
+            {
+              "rank": 2,
+              "chunk_id": "349e698eccce826f505d7599",
+              "section_id": "A",
+              "pdf_page": 333
+            },
+            {
+              "rank": 3,
+              "chunk_id": "e81e45398d6d183bd905d1ff",
+              "section_id": "11.4.4",
+              "pdf_page": 218
+            },
+            {
+              "rank": 4,
+              "chunk_id": "e7eb9d7cf8af176e9d8a48f2",
+              "section_id": "11.4.4",
+              "pdf_page": 218
+            },
+            {
+              "rank": 5,
+              "chunk_id": "5470718f33bd8dbda3531472",
+              "section_id": "11.4.5",
+              "pdf_page": 219
+            }
+          ]
+        },
+        {
+          "task": "F11",
+          "turn": 1,
+          "category": "factual",
+          "question": "Как собирали частицы солнечного ветра и сколько времени экспонировали фольгу? В ответе укажи раздел и PDF-страницу отчета",
+          "queries": [
+            {
+              "question": "Как собирали частицы солнечного ветра и сколько времени экспонировали фольгу? В ответе укажи раздел и PDF-страницу отчета",
+              "query": "Как собирали частицы солнечного ветра и сколько времени экспонировали фольгу"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 6,
+          "duration_s": 0.1827,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.4,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "681ba4948097fa262db51b9a",
+              "section_id": "11.6",
+              "pdf_page": 220
+            },
+            {
+              "rank": 2,
+              "chunk_id": "ddd0c8747bdbfb922913dd0b",
+              "section_id": "A",
+              "pdf_page": 332
+            },
+            {
+              "rank": 3,
+              "chunk_id": "c4a81c38142ee70be7a6b47d",
+              "section_id": "11.6",
+              "pdf_page": 220
+            },
+            {
+              "rank": 4,
+              "chunk_id": "7ef524e0a88f1849c5fff398",
+              "section_id": "C",
+              "pdf_page": 348
+            },
+            {
+              "rank": 5,
+              "chunk_id": "9d3e927af06d4c9bcc7ccd53",
+              "section_id": "A",
+              "pdf_page": 331
+            }
+          ]
+        },
+        {
+          "task": "F13",
+          "turn": 1,
+          "category": "factual",
+          "question": "Какие две задачи решала программа обращения с лунными образцами и зачем предусматривался карантин? В ответе укажи раздел и PDF-страницу отчета",
+          "queries": [
+            {
+              "question": "Какие две задачи решала программа обращения с лунными образцами и зачем предусматривался карантин?",
+              "query": "задачи программы обращения с образцами лунной породы карантин"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 5,
+          "duration_s": 0.1503,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 1.0,
+          "precision@5_page": 0.4,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "4e5ced545318ed8495459b16",
+              "section_id": "12.5",
+              "pdf_page": 259
+            },
+            {
+              "rank": 2,
+              "chunk_id": "f4824b17cb3e61304d9f5716",
+              "section_id": "12.5",
+              "pdf_page": 259
+            },
+            {
+              "rank": 3,
+              "chunk_id": "c0bf01cefc27a2488d01c110",
+              "section_id": "12.5.3",
+              "pdf_page": 263
+            },
+            {
+              "rank": 4,
+              "chunk_id": "b771f94e5cf7b55a99428594",
+              "section_id": "12.5.2",
+              "pdf_page": 261
+            },
+            {
+              "rank": 5,
+              "chunk_id": "a945564c9579a6c5e4e6f5bb",
+              "section_id": "12.5.2",
+              "pdf_page": 262
+            }
+          ]
+        },
+        {
+          "task": "X01",
+          "turn": 1,
+          "category": "multi_fact",
+          "question": "Почему экипаж начал EVA до первого отдыха и почему подготовка к нему заняла больше времени, чем ожидалось? Укажи источники для обеих частей",
+          "queries": [
+            {
+              "question": "почему экипаж начал EVA до первого отдыха и почему подготовка к нему заняла больше времени, чем ожидалось",
+              "query": "почему экипаж начал EVA до первого отдыха и почему подготовка к нему заняла больше времени чем ожидалось"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 5,
+          "duration_s": 0.1805,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.4,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "464e03e594896c1c88bc101b",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 2,
+              "chunk_id": "5388fda45dc9faf224e5f844",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 3,
+              "chunk_id": "21c7cc3950c3cf52a38146ca",
+              "section_id": "5.6",
+              "pdf_page": 57
+            },
+            {
+              "rank": 4,
+              "chunk_id": "b87709e53c82f81fe8bba7bd",
+              "section_id": "3.0",
+              "pdf_page": 16
+            },
+            {
+              "rank": 5,
+              "chunk_id": "eb4cb97e300568499d904b92",
+              "section_id": "4.11",
+              "pdf_page": 38
+            }
+          ]
+        },
+        {
+          "task": "X02",
+          "turn": 1,
+          "category": "multi_fact",
+          "question": "Где установили лазерный отражатель, для чего он предназначался и какая точность измерений требовалась? Укажи источники",
+          "queries": [
+            {
+              "question": "Где установили лазерный отражатель, для чего он предназначался и какая точность измерений требовалась?",
+              "query": "лазерный отражатель аполлон 11 точность измерений"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 5,
+          "duration_s": 0.1727,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.6,
+          "precision@5_page": 0.6,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "c70be7c97312ba1ad65277c9",
+              "section_id": "11.5",
+              "pdf_page": 220
+            },
+            {
+              "rank": 2,
+              "chunk_id": "8f02b1cd2388832f8741693a",
+              "section_id": "11.5",
+              "pdf_page": 219
+            },
+            {
+              "rank": 3,
+              "chunk_id": "ddd0c8747bdbfb922913dd0b",
+              "section_id": "A",
+              "pdf_page": 332
+            },
+            {
+              "rank": 4,
+              "chunk_id": "3591f9c2ea78228cd9380a78",
+              "section_id": "11.5",
+              "pdf_page": 219
+            },
+            {
+              "rank": 5,
+              "chunk_id": "42ad5b48cfbcef4341274d2a",
+              "section_id": "A",
+              "pdf_page": 332
+            }
+          ]
+        },
+        {
+          "task": "C01",
+          "turn": 1,
+          "category": "retrieval_calculation",
+          "question": "Найди предполетную и оцененную после полета среднюю интенсивность энергозатрат командира и пилота лунного модуля при EVA. Для каждого вычисли, насколько оцененная величина ниже предполетной (Btu/ч). Укажи PDF-страницу",
+          "queries": [
+            {
+              "question": "Найди предполетную и оцененную после полета среднюю интенсивность энергозатрат командира и пилота лунного модуля при EVA. Для каждого вычисли, насколько оцененная величина ниже предполетной (Btu/ч). Укажи PDF-страницу2652e10d",
+              "query": "средняя интенсивность энергозатрат командира и пилота лунного модуля при EVA PDF-страница2652e10d"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 5,
+          "duration_s": 0.2007,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.2,
+          "precision@5_page": 0.2,
+          "mrr_section": 0.25,
+          "first_relevant_rank": 4,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "a852129d192699971b6659b7",
+              "section_id": "12.5.3",
+              "pdf_page": 265
+            },
+            {
+              "rank": 2,
+              "chunk_id": "c9c8dafc7a2e524d89a60663",
+              "section_id": "7.0",
+              "pdf_page": 109
+            },
+            {
+              "rank": 3,
+              "chunk_id": "1a4c705a16d86e9ed045f6f1",
+              "section_id": "8.2.2",
+              "pdf_page": 133
+            },
+            {
+              "rank": 4,
+              "chunk_id": "9da4139aeb10870d69a5ca3d",
+              "section_id": "12.3",
+              "pdf_page": 258
+            },
+            {
+              "rank": 5,
+              "chunk_id": "a1e4ce29338072fe81418ae2",
+              "section_id": "10.0",
+              "pdf_page": 196
+            }
+          ]
+        },
+        {
+          "task": "C02",
+          "turn": 1,
+          "category": "retrieval_calculation",
+          "question": "Найди в отчете, с какого расстояния от границы входа в атмосферу на какое перенесли точку приводнения, и вычисли разницу в милях. Приведи PDF-страницу",
+          "queries": [
+            {
+              "question": "Найди в отчете, с какого расстояния от границы входа в атмосферу на какое перенесли точку приводнения, и вычисли разницу в милях. Приведи PDF-страницу",
+              "query": "расстояние от границы входа в атмосферу точка приводнения разница мили"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 6,
+          "duration_s": 0.2094,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.2,
+          "precision@5_page": 0.2,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "bd5fed4b9ffdbaa3d9fcee72",
+              "section_id": "4.19",
+              "pdf_page": 49
+            },
+            {
+              "rank": 2,
+              "chunk_id": "be2f02abb7c687e29be3da5b",
+              "section_id": "8.6.7",
+              "pdf_page": 137
+            },
+            {
+              "rank": 3,
+              "chunk_id": "4503de843c0eb62b0b23dbba",
+              "section_id": "8.6.7",
+              "pdf_page": 138
+            },
+            {
+              "rank": 4,
+              "chunk_id": "5b6d45b4e9d01c750e90419f",
+              "section_id": "7.5",
+              "pdf_page": 113
+            },
+            {
+              "rank": 5,
+              "chunk_id": "8f26f3c751b8a8945e2d998d",
+              "section_id": "7.8",
+              "pdf_page": 115
+            }
+          ]
+        },
+        {
+          "task": "D01",
+          "turn": 1,
+          "category": "long_dialogue",
+          "question": "Почему выход на Луну провели до первого отдыха? Сошлись на отчет.",
+          "queries": [
+            {
+              "question": "почему выход на Луну провели до первого отдыха сошлись на отчет",
+              "query": "почему выход на Луну провели до первого отдыха"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 5,
+          "duration_s": 0.1621,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.4,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "464e03e594896c1c88bc101b",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 2,
+              "chunk_id": "5388fda45dc9faf224e5f844",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 3,
+              "chunk_id": "6473b31b5c0892ba2bc9fdfd",
+              "section_id": "4.12.4",
+              "pdf_page": 42
+            },
+            {
+              "rank": 4,
+              "chunk_id": "dfbb01e43b28b76e9c371bc9",
+              "section_id": "4.12.4",
+              "pdf_page": 44
+            },
+            {
+              "rank": 5,
+              "chunk_id": "cc1e6a668d60297ce84a301b",
+              "section_id": "12.2.2",
+              "pdf_page": 255
+            }
+          ]
+        },
+        {
+          "task": "D01",
+          "turn": 2,
+          "category": "long_dialogue",
+          "question": "А почему подготовка к нему заняла больше времени?",
+          "queries": [
+            {
+              "question": "почему подготовка к выходу на Луну заняла больше времени сошлись на отчете",
+              "query": "почему подготовка к выходу на Луну заняла больше времени"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 4,
+          "duration_s": 0.1255,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.6,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "5388fda45dc9faf224e5f844",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 2,
+              "chunk_id": "5b8fb4824e26d545b0a4016f",
+              "section_id": "4.8.2",
+              "pdf_page": 35
+            },
+            {
+              "rank": 3,
+              "chunk_id": "464e03e594896c1c88bc101b",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 4,
+              "chunk_id": "1c536c228ea08bedf9114258",
+              "section_id": "4.12.1",
+              "pdf_page": 40
+            },
+            {
+              "rank": 5,
+              "chunk_id": "27734aed6b36f5aef1b83aaa",
+              "section_id": "4.12.4",
+              "pdf_page": 43
+            }
+          ]
+        },
+        {
+          "task": "D01",
+          "turn": 4,
+          "category": "long_dialogue",
+          "question": "Как лунная пыль осложняла работу рядом с модулем?",
+          "queries": [
+            {
+              "question": "как лунная пыль осложняла работу рядом с модулем сошлись на отчете",
+              "query": "как лунная пыль осложняла работу рядом с модулем"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 4,
+          "duration_s": 0.1177,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "537cce4312f965e497a1ba0d",
+              "section_id": "4.16",
+              "pdf_page": 48
+            },
+            {
+              "rank": 2,
+              "chunk_id": "48a4aa7fc88a36c5980675de",
+              "section_id": "11.2.1",
+              "pdf_page": 209
+            },
+            {
+              "rank": 3,
+              "chunk_id": "7732a81773fa7a25b6aedb28",
+              "section_id": "11.5",
+              "pdf_page": 219
+            },
+            {
+              "rank": 4,
+              "chunk_id": "829e2d2a00e35fa3e211b54f",
+              "section_id": "4.11",
+              "pdf_page": 39
+            },
+            {
+              "rank": 5,
+              "chunk_id": "b44509785d6c574eafdd68af",
+              "section_id": "11.1.4",
+              "pdf_page": 206
+            }
+          ]
+        },
+        {
+          "task": "D02",
+          "turn": 1,
+          "category": "long_dialogue",
+          "question": "Сколько времени фольга для солнечного ветра находилась на Луне?",
+          "queries": [
+            {
+              "question": "сколько времени фольга для солнечного ветра находилась на Луне",
+              "query": "время фольги солнечного ветра на Луне"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 5,
+          "duration_s": 0.1446,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.2,
+          "precision@5_page": 0.2,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "c4a81c38142ee70be7a6b47d",
+              "section_id": "11.6",
+              "pdf_page": 220
+            },
+            {
+              "rank": 2,
+              "chunk_id": "d9dacef0239f4faa7a3a1363",
+              "section_id": "3.0",
+              "pdf_page": 26
+            },
+            {
+              "rank": 3,
+              "chunk_id": "ddd0c8747bdbfb922913dd0b",
+              "section_id": "A",
+              "pdf_page": 332
+            },
+            {
+              "rank": 4,
+              "chunk_id": "429d2f6e4c4c08802fc56003",
+              "section_id": "11.4",
+              "pdf_page": 214
+            },
+            {
+              "rank": 5,
+              "chunk_id": "c3d6442ae371d623508a232b",
+              "section_id": "8.8",
+              "pdf_page": 148
+            }
+          ]
+        },
+        {
+          "task": "D02",
+          "turn": 2,
+          "category": "long_dialogue",
+          "question": "А где установили лазерный отражатель?",
+          "queries": [
+            {
+              "question": "где установили лазерный отражатель",
+              "query": "где установили лазерный отражатель"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 4,
+          "duration_s": 0.1065,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.6,
+          "precision@5_page": 0.6,
+          "mrr_section": 0.5,
+          "first_relevant_rank": 2,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "42ad5b48cfbcef4341274d2a",
+              "section_id": "A",
+              "pdf_page": 332
+            },
+            {
+              "rank": 2,
+              "chunk_id": "c70be7c97312ba1ad65277c9",
+              "section_id": "11.5",
+              "pdf_page": 220
+            },
+            {
+              "rank": 3,
+              "chunk_id": "ddd0c8747bdbfb922913dd0b",
+              "section_id": "A",
+              "pdf_page": 332
+            },
+            {
+              "rank": 4,
+              "chunk_id": "8f02b1cd2388832f8741693a",
+              "section_id": "11.5",
+              "pdf_page": 219
+            },
+            {
+              "rank": 5,
+              "chunk_id": "3591f9c2ea78228cd9380a78",
+              "section_id": "11.5",
+              "pdf_page": 219
+            }
+          ]
+        }
+      ]
+    },
+    "single_query": {
+      "aggregate": {
+        "replications": 15,
+        "mean_section_recall@5": 0.567,
+        "mean_page_recall@5": 0.417,
+        "mean_precision@5_section": 0.24,
+        "mean_precision@5_page": 0.2,
+        "mean_mrr_section": 0.45,
+        "retrieved_replications": 15,
+        "total_search_calls": 15,
+        "mean_search_calls_per_replication": 1,
+        "total_duration_s": 0.44,
+        "mean_duration_s": 0.029
+      },
+      "rows": [
+        {
+          "task": "F01",
+          "turn": 1,
+          "category": "factual",
+          "question": "Какова была основная цель Apollo 11 и как распределялись роли между членами экипажа? В ответе укажи раздел и PDF-страницу отчета",
+          "queries": [
+            {
+              "question": "Какова была основная цель Apollo 11 и как распределялись роли между членами экипажа? В ответе укажи раздел и PDF-страницу отчета",
+              "query": "основная цель аполлон 11 распределение ролей экипажа"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 1,
+          "duration_s": 0.0304,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "ebc2c767dc6a2716a11280f4",
+              "section_id": "8.1",
+              "pdf_page": 132
+            },
+            {
+              "rank": 2,
+              "chunk_id": "08ea213c685d0586327ba30d",
+              "section_id": "11.7",
+              "pdf_page": 221
+            },
+            {
+              "rank": 3,
+              "chunk_id": "f9f19012bf3fd44055bc07d6",
+              "section_id": "14.0",
+              "pdf_page": 275
+            },
+            {
+              "rank": 4,
+              "chunk_id": "437098d2de655f8460102763",
+              "section_id": "11.1.2",
+              "pdf_page": 203
+            },
+            {
+              "rank": 5,
+              "chunk_id": "d9041cb07184de92773d27e9",
+              "section_id": "14.2",
+              "pdf_page": 276
+            }
+          ]
+        },
+        {
+          "task": "F03",
+          "turn": 1,
+          "category": "factual",
+          "question": "Почему выход на поверхность решили провести до первого запланированного отдыха? В ответе укажи раздел и PDF-страницу отчета",
+          "queries": [
+            {
+              "question": "почему выход на поверхность решили провести до первого запланированного отдыха? в ответе укажи раздел и PDF-страницу отчета",
+              "query": "причина выхода на поверхность до первого отдыха в отчете"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 1,
+          "duration_s": 0.0291,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "8075684fc449ec7f366f55d8",
+              "section_id": "5.7",
+              "pdf_page": 73
+            },
+            {
+              "rank": 2,
+              "chunk_id": "fde18fd878bac8aedc101495",
+              "section_id": "8.6.10",
+              "pdf_page": 139
+            },
+            {
+              "rank": 3,
+              "chunk_id": "e4a83f2c23de0a19e364cd21",
+              "section_id": "12.5.3",
+              "pdf_page": 265
+            },
+            {
+              "rank": 4,
+              "chunk_id": "6473b31b5c0892ba2bc9fdfd",
+              "section_id": "4.12.4",
+              "pdf_page": 42
+            },
+            {
+              "rank": 5,
+              "chunk_id": "89212955c69723cbb1306318",
+              "section_id": "13.1",
+              "pdf_page": 269
+            }
+          ]
+        },
+        {
+          "task": "F05",
+          "turn": 1,
+          "category": "factual",
+          "question": "Как лунная пыль мешала переносу оборудования и использованию телевизионного кабеля? В ответе укажи раздел и PDF-страницу отчета",
+          "queries": [
+            {
+              "question": "Как лунная пыль мешала переносу оборудования и использованию телевизионного кабеля? В ответе укажи раздел и PDF-страницу отчета",
+              "query": "Как лунная пыль мешала переносу оборудования и использованию телевизионного кабеля?"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 1,
+          "duration_s": 0.0305,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.4,
+          "mrr_section": 0.25,
+          "first_relevant_rank": 4,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "f1f0a278398feec3addd2fed",
+              "section_id": "16.3.1",
+              "pdf_page": 300
+            },
+            {
+              "rank": 2,
+              "chunk_id": "e102b8350cfb05a03fc253f6",
+              "section_id": "1.0",
+              "pdf_page": 12
+            },
+            {
+              "rank": 3,
+              "chunk_id": "5df14b68fe39f1412f6c8c05",
+              "section_id": "16.2.9",
+              "pdf_page": 295
+            },
+            {
+              "rank": 4,
+              "chunk_id": "a997bd56ffd9c9082ab4b0f6",
+              "section_id": "4.12.3",
+              "pdf_page": 41
+            },
+            {
+              "rank": 5,
+              "chunk_id": "cce4f94a0b6fd5cdd591aebb",
+              "section_id": "4.12.4",
+              "pdf_page": 42
+            }
+          ]
+        },
+        {
+          "task": "F08",
+          "turn": 1,
+          "category": "factual",
+          "question": "Как работал пассивный сейсмический эксперимент в первые две недели, несмотря на температуру? В ответе укажи раздел и PDF-страницу отчета",
+          "queries": [
+            {
+              "question": "Как работал пассивный сейсмический эксперимент в первые две недели, несмотря на температуру? раздел и PDF-страница отчета",
+              "query": "пассивный сейсмический эксперимент температура первые две недели раздел и PDF-страница отчета"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 1,
+          "duration_s": 0.0314,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 0.5,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.6,
+          "precision@5_page": 0.2,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "8e937469c207f083b1a9e8b9",
+              "section_id": "11.4.4",
+              "pdf_page": 217
+            },
+            {
+              "rank": 2,
+              "chunk_id": "7d7bb95771040af63c78ab57",
+              "section_id": "5.7",
+              "pdf_page": 70
+            },
+            {
+              "rank": 3,
+              "chunk_id": "349e698eccce826f505d7599",
+              "section_id": "A",
+              "pdf_page": 333
+            },
+            {
+              "rank": 4,
+              "chunk_id": "e7eb9d7cf8af176e9d8a48f2",
+              "section_id": "11.4.4",
+              "pdf_page": 218
+            },
+            {
+              "rank": 5,
+              "chunk_id": "76112d6a55cb21f3be43dec2",
+              "section_id": "11.4",
+              "pdf_page": 214
+            }
+          ]
+        },
+        {
+          "task": "F11",
+          "turn": 1,
+          "category": "factual",
+          "question": "Как собирали частицы солнечного ветра и сколько времени экспонировали фольгу? В ответе укажи раздел и PDF-страницу отчета",
+          "queries": [
+            {
+              "question": "Как собирали частицы солнечного ветра и сколько времени экспонировали фольгу? В ответе укажи раздел и PDF-страницу отчета",
+              "query": "Как собирали частицы солнечного ветра и сколько времени экспонировали фольгу"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 1,
+          "duration_s": 0.0286,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.4,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "681ba4948097fa262db51b9a",
+              "section_id": "11.6",
+              "pdf_page": 220
+            },
+            {
+              "rank": 2,
+              "chunk_id": "c4a81c38142ee70be7a6b47d",
+              "section_id": "11.6",
+              "pdf_page": 220
+            },
+            {
+              "rank": 3,
+              "chunk_id": "08ea213c685d0586327ba30d",
+              "section_id": "11.7",
+              "pdf_page": 221
+            },
+            {
+              "rank": 4,
+              "chunk_id": "ddd0c8747bdbfb922913dd0b",
+              "section_id": "A",
+              "pdf_page": 332
+            },
+            {
+              "rank": 5,
+              "chunk_id": "7d7bb95771040af63c78ab57",
+              "section_id": "5.7",
+              "pdf_page": 70
+            }
+          ]
+        },
+        {
+          "task": "F13",
+          "turn": 1,
+          "category": "factual",
+          "question": "Какие две задачи решала программа обращения с лунными образцами и зачем предусматривался карантин? В ответе укажи раздел и PDF-страницу отчета",
+          "queries": [
+            {
+              "question": "Какие две задачи решала программа обращения с лунными образцами и зачем предусматривался карантин?",
+              "query": "задачи программы обращения с образцами лунной породы карантин"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 1,
+          "duration_s": 0.0316,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.8,
+          "precision@5_page": 0.4,
+          "mrr_section": 0.5,
+          "first_relevant_rank": 2,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "7d7bb95771040af63c78ab57",
+              "section_id": "5.7",
+              "pdf_page": 70
+            },
+            {
+              "rank": 2,
+              "chunk_id": "f4824b17cb3e61304d9f5716",
+              "section_id": "12.5",
+              "pdf_page": 259
+            },
+            {
+              "rank": 3,
+              "chunk_id": "e4a83f2c23de0a19e364cd21",
+              "section_id": "12.5.3",
+              "pdf_page": 265
+            },
+            {
+              "rank": 4,
+              "chunk_id": "4e5ced545318ed8495459b16",
+              "section_id": "12.5",
+              "pdf_page": 259
+            },
+            {
+              "rank": 5,
+              "chunk_id": "5b7bddefd8a5feed793ba2b2",
+              "section_id": "12.5.3",
+              "pdf_page": 265
+            }
+          ]
+        },
+        {
+          "task": "X01",
+          "turn": 1,
+          "category": "multi_fact",
+          "question": "Почему экипаж начал EVA до первого отдыха и почему подготовка к нему заняла больше времени, чем ожидалось? Укажи источники для обеих частей",
+          "queries": [
+            {
+              "question": "почему экипаж начал EVA до первого отдыха и почему подготовка к нему заняла больше времени, чем ожидалось",
+              "query": "почему экипаж начал EVA до первого отдыха и почему подготовка к нему заняла больше времени чем ожидалось"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 1,
+          "duration_s": 0.0325,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.4,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "464e03e594896c1c88bc101b",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 2,
+              "chunk_id": "31cd0bd546e6b4af4bf4c947",
+              "section_id": "BACK",
+              "pdf_page": 359
+            },
+            {
+              "rank": 3,
+              "chunk_id": "5388fda45dc9faf224e5f844",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 4,
+              "chunk_id": "27734aed6b36f5aef1b83aaa",
+              "section_id": "4.12.4",
+              "pdf_page": 43
+            },
+            {
+              "rank": 5,
+              "chunk_id": "dfbb01e43b28b76e9c371bc9",
+              "section_id": "4.12.4",
+              "pdf_page": 44
+            }
+          ]
+        },
+        {
+          "task": "X02",
+          "turn": 1,
+          "category": "multi_fact",
+          "question": "Где установили лазерный отражатель, для чего он предназначался и какая точность измерений требовалась? Укажи источники",
+          "queries": [
+            {
+              "question": "Где установили лазерный отражатель, для чего он предназначался и какая точность измерений требовалась?",
+              "query": "лазерный отражатель аполлон 11 точность измерений"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 1,
+          "duration_s": 0.0277,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.2,
+          "precision@5_page": 0.2,
+          "mrr_section": 0.5,
+          "first_relevant_rank": 2,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "08ea213c685d0586327ba30d",
+              "section_id": "11.7",
+              "pdf_page": 221
+            },
+            {
+              "rank": 2,
+              "chunk_id": "c70be7c97312ba1ad65277c9",
+              "section_id": "11.5",
+              "pdf_page": 220
+            },
+            {
+              "rank": 3,
+              "chunk_id": "4fb66588aeaf1ecb9791a82c",
+              "section_id": "11",
+              "pdf_page": 200
+            },
+            {
+              "rank": 4,
+              "chunk_id": "fc4a88704f6fa5ee75db2277",
+              "section_id": "11.1",
+              "pdf_page": 200
+            },
+            {
+              "rank": 5,
+              "chunk_id": "437098d2de655f8460102763",
+              "section_id": "11.1.2",
+              "pdf_page": 203
+            }
+          ]
+        },
+        {
+          "task": "C01",
+          "turn": 1,
+          "category": "retrieval_calculation",
+          "question": "Найди предполетную и оцененную после полета среднюю интенсивность энергозатрат командира и пилота лунного модуля при EVA. Для каждого вычисли, насколько оцененная величина ниже предполетной (Btu/ч). Укажи PDF-страницу",
+          "queries": [
+            {
+              "question": "Найди предполетную и оцененную после полета среднюю интенсивность энергозатрат командира и пилота лунного модуля при EVA. Для каждого вычисли, насколько оцененная величина ниже предполетной (Btu/ч). Укажи PDF-страницу2652e10d",
+              "query": "средняя интенсивность энергозатрат командира и пилота лунного модуля при EVA PDF-страница2652e10d"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 1,
+          "duration_s": 0.0322,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "6ed6cdc740d02855a60fc09d",
+              "section_id": "10.0",
+              "pdf_page": 196
+            },
+            {
+              "rank": 2,
+              "chunk_id": "31cd0bd546e6b4af4bf4c947",
+              "section_id": "BACK",
+              "pdf_page": 359
+            },
+            {
+              "rank": 3,
+              "chunk_id": "b9b40e95f349210c983a4e82",
+              "section_id": "A",
+              "pdf_page": 335
+            },
+            {
+              "rank": 4,
+              "chunk_id": "7d7bb95771040af63c78ab57",
+              "section_id": "5.7",
+              "pdf_page": 70
+            },
+            {
+              "rank": 5,
+              "chunk_id": "0f6ec3ba4882d56440594c62",
+              "section_id": "12.1",
+              "pdf_page": 254
+            }
+          ]
+        },
+        {
+          "task": "C02",
+          "turn": 1,
+          "category": "retrieval_calculation",
+          "question": "Найди в отчете, с какого расстояния от границы входа в атмосферу на какое перенесли точку приводнения, и вычисли разницу в милях. Приведи PDF-страницу",
+          "queries": [
+            {
+              "question": "Найди в отчете, с какого расстояния от границы входа в атмосферу на какое перенесли точку приводнения, и вычисли разницу в милях. Приведи PDF-страницу",
+              "query": "расстояние от границы входа в атмосферу точка приводнения разница мили"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 1,
+          "duration_s": 0.0287,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "cb33b4ed9e5ca9d98a88f12e",
+              "section_id": "5.7",
+              "pdf_page": 70
+            },
+            {
+              "rank": 2,
+              "chunk_id": "b63586270646c9cf4a7afdd3",
+              "section_id": "7.8",
+              "pdf_page": 116
+            },
+            {
+              "rank": 3,
+              "chunk_id": "37e54d480a0f6387e2d656e8",
+              "section_id": "5.7",
+              "pdf_page": 92
+            },
+            {
+              "rank": 4,
+              "chunk_id": "a68712d6e1a3cd85cf7173a4",
+              "section_id": "5.7",
+              "pdf_page": 71
+            },
+            {
+              "rank": 5,
+              "chunk_id": "9027a6a0a0dd44ef8995424c",
+              "section_id": "5.7",
+              "pdf_page": 102
+            }
+          ]
+        },
+        {
+          "task": "D01",
+          "turn": 1,
+          "category": "long_dialogue",
+          "question": "Почему выход на Луну провели до первого отдыха? Сошлись на отчет.",
+          "queries": [
+            {
+              "question": "почему выход на Луну провели до первого отдыха сошлись на отчет",
+              "query": "почему выход на Луну провели до первого отдыха"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 1,
+          "duration_s": 0.0269,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.2,
+          "precision@5_page": 0.2,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "464e03e594896c1c88bc101b",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 2,
+              "chunk_id": "6473b31b5c0892ba2bc9fdfd",
+              "section_id": "4.12.4",
+              "pdf_page": 42
+            },
+            {
+              "rank": 3,
+              "chunk_id": "c0611d09d25570c7e750131c",
+              "section_id": "17",
+              "pdf_page": 324
+            },
+            {
+              "rank": 4,
+              "chunk_id": "dfbb01e43b28b76e9c371bc9",
+              "section_id": "4.12.4",
+              "pdf_page": 44
+            },
+            {
+              "rank": 5,
+              "chunk_id": "a4c00842360aced61f1e1dae",
+              "section_id": "4.12.6",
+              "pdf_page": 45
+            }
+          ]
+        },
+        {
+          "task": "D01",
+          "turn": 2,
+          "category": "long_dialogue",
+          "question": "А почему подготовка к нему заняла больше времени?",
+          "queries": [
+            {
+              "question": "почему подготовка к выходу на Луну заняла больше времени сошлись на отчете",
+              "query": "почему подготовка к выходу на Луну заняла больше времени"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 1,
+          "duration_s": 0.0273,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.2,
+          "precision@5_page": 0.2,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "464e03e594896c1c88bc101b",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 2,
+              "chunk_id": "c0611d09d25570c7e750131c",
+              "section_id": "17",
+              "pdf_page": 324
+            },
+            {
+              "rank": 3,
+              "chunk_id": "27734aed6b36f5aef1b83aaa",
+              "section_id": "4.12.4",
+              "pdf_page": 43
+            },
+            {
+              "rank": 4,
+              "chunk_id": "5b8fb4824e26d545b0a4016f",
+              "section_id": "4.8.2",
+              "pdf_page": 35
+            },
+            {
+              "rank": 5,
+              "chunk_id": "dfbb01e43b28b76e9c371bc9",
+              "section_id": "4.12.4",
+              "pdf_page": 44
+            }
+          ]
+        },
+        {
+          "task": "D01",
+          "turn": 4,
+          "category": "long_dialogue",
+          "question": "Как лунная пыль осложняла работу рядом с модулем?",
+          "queries": [
+            {
+              "question": "как лунная пыль осложняла работу рядом с модулем сошлись на отчете",
+              "query": "как лунная пыль осложняла работу рядом с модулем"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 1,
+          "duration_s": 0.029,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.25,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.2,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "829e2d2a00e35fa3e211b54f",
+              "section_id": "4.11",
+              "pdf_page": 39
+            },
+            {
+              "rank": 2,
+              "chunk_id": "7d7bb95771040af63c78ab57",
+              "section_id": "5.7",
+              "pdf_page": 70
+            },
+            {
+              "rank": 3,
+              "chunk_id": "537cce4312f965e497a1ba0d",
+              "section_id": "4.16",
+              "pdf_page": 48
+            },
+            {
+              "rank": 4,
+              "chunk_id": "5b8fb4824e26d545b0a4016f",
+              "section_id": "4.8.2",
+              "pdf_page": 35
+            },
+            {
+              "rank": 5,
+              "chunk_id": "31f084bb1e65f5c26d4df06d",
+              "section_id": "4.12.5",
+              "pdf_page": 44
+            }
+          ]
+        },
+        {
+          "task": "D02",
+          "turn": 1,
+          "category": "long_dialogue",
+          "question": "Сколько времени фольга для солнечного ветра находилась на Луне?",
+          "queries": [
+            {
+              "question": "сколько времени фольга для солнечного ветра находилась на Луне",
+              "query": "время фольги солнечного ветра на Луне"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 1,
+          "duration_s": 0.0272,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "7d7bb95771040af63c78ab57",
+              "section_id": "5.7",
+              "pdf_page": 70
+            },
+            {
+              "rank": 2,
+              "chunk_id": "429d2f6e4c4c08802fc56003",
+              "section_id": "11.4",
+              "pdf_page": 214
+            },
+            {
+              "rank": 3,
+              "chunk_id": "e5ab12a98d192e127dd64e2c",
+              "section_id": "11.7.4",
+              "pdf_page": 224
+            },
+            {
+              "rank": 4,
+              "chunk_id": "4feb12ff87a8d5df86e166f4",
+              "section_id": "5.7",
+              "pdf_page": 92
+            },
+            {
+              "rank": 5,
+              "chunk_id": "4fb66588aeaf1ecb9791a82c",
+              "section_id": "11",
+              "pdf_page": 200
+            }
+          ]
+        },
+        {
+          "task": "D02",
+          "turn": 2,
+          "category": "long_dialogue",
+          "question": "А где установили лазерный отражатель?",
+          "queries": [
+            {
+              "question": "где установили лазерный отражатель",
+              "query": "где установили лазерный отражатель"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 1,
+          "duration_s": 0.0272,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.4,
+          "mrr_section": 0.5,
+          "first_relevant_rank": 2,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "42ad5b48cfbcef4341274d2a",
+              "section_id": "A",
+              "pdf_page": 332
+            },
+            {
+              "rank": 2,
+              "chunk_id": "c70be7c97312ba1ad65277c9",
+              "section_id": "11.5",
+              "pdf_page": 220
+            },
+            {
+              "rank": 3,
+              "chunk_id": "8f02b1cd2388832f8741693a",
+              "section_id": "11.5",
+              "pdf_page": 219
+            },
+            {
+              "rank": 4,
+              "chunk_id": "08ea213c685d0586327ba30d",
+              "section_id": "11.7",
+              "pdf_page": 221
+            },
+            {
+              "rank": 5,
+              "chunk_id": "ddd0c8747bdbfb922913dd0b",
+              "section_id": "A",
+              "pdf_page": 332
+            }
+          ]
+        }
+      ]
+    },
+    "question_query": {
+      "aggregate": {
+        "replications": 15,
+        "mean_section_recall@5": 0.733,
+        "mean_page_recall@5": 0.567,
+        "mean_precision@5_section": 0.267,
+        "mean_precision@5_page": 0.24,
+        "mean_mrr_section": 0.524,
+        "retrieved_replications": 15,
+        "total_search_calls": 29,
+        "mean_search_calls_per_replication": 1.93,
+        "total_duration_s": 0.927,
+        "mean_duration_s": 0.062
+      },
+      "rows": [
+        {
+          "task": "F01",
+          "turn": 1,
+          "category": "factual",
+          "question": "Какова была основная цель Apollo 11 и как распределялись роли между членами экипажа? В ответе укажи раздел и PDF-страницу отчета",
+          "queries": [
+            {
+              "question": "Какова была основная цель Apollo 11 и как распределялись роли между членами экипажа? В ответе укажи раздел и PDF-страницу отчета",
+              "query": "основная цель аполлон 11 распределение ролей экипажа"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 2,
+          "duration_s": 0.0614,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "f9f19012bf3fd44055bc07d6",
+              "section_id": "14.0",
+              "pdf_page": 275
+            },
+            {
+              "rank": 2,
+              "chunk_id": "cb3c7baa77edc9825a02dae7",
+              "section_id": "3.0",
+              "pdf_page": 15
+            },
+            {
+              "rank": 3,
+              "chunk_id": "ebc2c767dc6a2716a11280f4",
+              "section_id": "8.1",
+              "pdf_page": 132
+            },
+            {
+              "rank": 4,
+              "chunk_id": "ea6290e885763848a7abd85f",
+              "section_id": "16.0",
+              "pdf_page": 280
+            },
+            {
+              "rank": 5,
+              "chunk_id": "08ea213c685d0586327ba30d",
+              "section_id": "11.7",
+              "pdf_page": 221
+            }
+          ]
+        },
+        {
+          "task": "F03",
+          "turn": 1,
+          "category": "factual",
+          "question": "Почему выход на поверхность решили провести до первого запланированного отдыха? В ответе укажи раздел и PDF-страницу отчета",
+          "queries": [
+            {
+              "question": "почему выход на поверхность решили провести до первого запланированного отдыха? в ответе укажи раздел и PDF-страницу отчета",
+              "query": "причина выхода на поверхность до первого отдыха в отчете"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 2,
+          "duration_s": 0.0632,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.2,
+          "precision@5_page": 0.2,
+          "mrr_section": 0.5,
+          "first_relevant_rank": 2,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "6473b31b5c0892ba2bc9fdfd",
+              "section_id": "4.12.4",
+              "pdf_page": 42
+            },
+            {
+              "rank": 2,
+              "chunk_id": "464e03e594896c1c88bc101b",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 3,
+              "chunk_id": "8075684fc449ec7f366f55d8",
+              "section_id": "5.7",
+              "pdf_page": 73
+            },
+            {
+              "rank": 4,
+              "chunk_id": "3516a26eaa27cf4a49fb8e44",
+              "section_id": "4.8.1",
+              "pdf_page": 35
+            },
+            {
+              "rank": 5,
+              "chunk_id": "fde18fd878bac8aedc101495",
+              "section_id": "8.6.10",
+              "pdf_page": 139
+            }
+          ]
+        },
+        {
+          "task": "F05",
+          "turn": 1,
+          "category": "factual",
+          "question": "Как лунная пыль мешала переносу оборудования и использованию телевизионного кабеля? В ответе укажи раздел и PDF-страницу отчета",
+          "queries": [
+            {
+              "question": "Как лунная пыль мешала переносу оборудования и использованию телевизионного кабеля? В ответе укажи раздел и PDF-страницу отчета",
+              "query": "Как лунная пыль мешала переносу оборудования и использованию телевизионного кабеля?"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 2,
+          "duration_s": 0.0648,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "f1f0a278398feec3addd2fed",
+              "section_id": "16.3.1",
+              "pdf_page": 300
+            },
+            {
+              "rank": 2,
+              "chunk_id": "7d7bb95771040af63c78ab57",
+              "section_id": "5.7",
+              "pdf_page": 70
+            },
+            {
+              "rank": 3,
+              "chunk_id": "e102b8350cfb05a03fc253f6",
+              "section_id": "1.0",
+              "pdf_page": 12
+            },
+            {
+              "rank": 4,
+              "chunk_id": "edba2e705d93231acd49f5d0",
+              "section_id": "5.7",
+              "pdf_page": 86
+            },
+            {
+              "rank": 5,
+              "chunk_id": "5df14b68fe39f1412f6c8c05",
+              "section_id": "16.2.9",
+              "pdf_page": 295
+            }
+          ]
+        },
+        {
+          "task": "F08",
+          "turn": 1,
+          "category": "factual",
+          "question": "Как работал пассивный сейсмический эксперимент в первые две недели, несмотря на температуру? В ответе укажи раздел и PDF-страницу отчета",
+          "queries": [
+            {
+              "question": "Как работал пассивный сейсмический эксперимент в первые две недели, несмотря на температуру? раздел и PDF-страница отчета",
+              "query": "пассивный сейсмический эксперимент температура первые две недели раздел и PDF-страница отчета"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 2,
+          "duration_s": 0.0636,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 0.5,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.6,
+          "precision@5_page": 0.2,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "8e937469c207f083b1a9e8b9",
+              "section_id": "11.4.4",
+              "pdf_page": 217
+            },
+            {
+              "rank": 2,
+              "chunk_id": "349e698eccce826f505d7599",
+              "section_id": "A",
+              "pdf_page": 333
+            },
+            {
+              "rank": 3,
+              "chunk_id": "76112d6a55cb21f3be43dec2",
+              "section_id": "11.4",
+              "pdf_page": 214
+            },
+            {
+              "rank": 4,
+              "chunk_id": "e7eb9d7cf8af176e9d8a48f2",
+              "section_id": "11.4.4",
+              "pdf_page": 218
+            },
+            {
+              "rank": 5,
+              "chunk_id": "7d7bb95771040af63c78ab57",
+              "section_id": "5.7",
+              "pdf_page": 70
+            }
+          ]
+        },
+        {
+          "task": "F11",
+          "turn": 1,
+          "category": "factual",
+          "question": "Как собирали частицы солнечного ветра и сколько времени экспонировали фольгу? В ответе укажи раздел и PDF-страницу отчета",
+          "queries": [
+            {
+              "question": "Как собирали частицы солнечного ветра и сколько времени экспонировали фольгу? В ответе укажи раздел и PDF-страницу отчета",
+              "query": "Как собирали частицы солнечного ветра и сколько времени экспонировали фольгу"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 2,
+          "duration_s": 0.067,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.4,
+          "mrr_section": 0.333,
+          "first_relevant_rank": 3,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "7d7bb95771040af63c78ab57",
+              "section_id": "5.7",
+              "pdf_page": 70
+            },
+            {
+              "rank": 2,
+              "chunk_id": "08ea213c685d0586327ba30d",
+              "section_id": "11.7",
+              "pdf_page": 221
+            },
+            {
+              "rank": 3,
+              "chunk_id": "681ba4948097fa262db51b9a",
+              "section_id": "11.6",
+              "pdf_page": 220
+            },
+            {
+              "rank": 4,
+              "chunk_id": "cb33b4ed9e5ca9d98a88f12e",
+              "section_id": "5.7",
+              "pdf_page": 70
+            },
+            {
+              "rank": 5,
+              "chunk_id": "c4a81c38142ee70be7a6b47d",
+              "section_id": "11.6",
+              "pdf_page": 220
+            }
+          ]
+        },
+        {
+          "task": "F13",
+          "turn": 1,
+          "category": "factual",
+          "question": "Какие две задачи решала программа обращения с лунными образцами и зачем предусматривался карантин? В ответе укажи раздел и PDF-страницу отчета",
+          "queries": [
+            {
+              "question": "Какие две задачи решала программа обращения с лунными образцами и зачем предусматривался карантин?",
+              "query": "задачи программы обращения с образцами лунной породы карантин"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 2,
+          "duration_s": 0.0593,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.6,
+          "precision@5_page": 0.4,
+          "mrr_section": 0.5,
+          "first_relevant_rank": 2,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "7d7bb95771040af63c78ab57",
+              "section_id": "5.7",
+              "pdf_page": 70
+            },
+            {
+              "rank": 2,
+              "chunk_id": "f4824b17cb3e61304d9f5716",
+              "section_id": "12.5",
+              "pdf_page": 259
+            },
+            {
+              "rank": 3,
+              "chunk_id": "4e5ced545318ed8495459b16",
+              "section_id": "12.5",
+              "pdf_page": 259
+            },
+            {
+              "rank": 4,
+              "chunk_id": "c0611d09d25570c7e750131c",
+              "section_id": "17",
+              "pdf_page": 324
+            },
+            {
+              "rank": 5,
+              "chunk_id": "e4a83f2c23de0a19e364cd21",
+              "section_id": "12.5.3",
+              "pdf_page": 265
+            }
+          ]
+        },
+        {
+          "task": "X01",
+          "turn": 1,
+          "category": "multi_fact",
+          "question": "Почему экипаж начал EVA до первого отдыха и почему подготовка к нему заняла больше времени, чем ожидалось? Укажи источники для обеих частей",
+          "queries": [
+            {
+              "question": "почему экипаж начал EVA до первого отдыха и почему подготовка к нему заняла больше времени, чем ожидалось",
+              "query": "почему экипаж начал EVA до первого отдыха и почему подготовка к нему заняла больше времени чем ожидалось"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 2,
+          "duration_s": 0.0692,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.4,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "464e03e594896c1c88bc101b",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 2,
+              "chunk_id": "31cd0bd546e6b4af4bf4c947",
+              "section_id": "BACK",
+              "pdf_page": 359
+            },
+            {
+              "rank": 3,
+              "chunk_id": "5388fda45dc9faf224e5f844",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 4,
+              "chunk_id": "dfbb01e43b28b76e9c371bc9",
+              "section_id": "4.12.4",
+              "pdf_page": 44
+            },
+            {
+              "rank": 5,
+              "chunk_id": "27734aed6b36f5aef1b83aaa",
+              "section_id": "4.12.4",
+              "pdf_page": 43
+            }
+          ]
+        },
+        {
+          "task": "X02",
+          "turn": 1,
+          "category": "multi_fact",
+          "question": "Где установили лазерный отражатель, для чего он предназначался и какая точность измерений требовалась? Укажи источники",
+          "queries": [
+            {
+              "question": "Где установили лазерный отражатель, для чего он предназначался и какая точность измерений требовалась?",
+              "query": "лазерный отражатель аполлон 11 точность измерений"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 2,
+          "duration_s": 0.0619,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.2,
+          "precision@5_page": 0.2,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "c70be7c97312ba1ad65277c9",
+              "section_id": "11.5",
+              "pdf_page": 220
+            },
+            {
+              "rank": 2,
+              "chunk_id": "42ad5b48cfbcef4341274d2a",
+              "section_id": "A",
+              "pdf_page": 332
+            },
+            {
+              "rank": 3,
+              "chunk_id": "08ea213c685d0586327ba30d",
+              "section_id": "11.7",
+              "pdf_page": 221
+            },
+            {
+              "rank": 4,
+              "chunk_id": "566fdb3317a1d3eaff819ced",
+              "section_id": "4.10",
+              "pdf_page": 36
+            },
+            {
+              "rank": 5,
+              "chunk_id": "4fb66588aeaf1ecb9791a82c",
+              "section_id": "11",
+              "pdf_page": 200
+            }
+          ]
+        },
+        {
+          "task": "C01",
+          "turn": 1,
+          "category": "retrieval_calculation",
+          "question": "Найди предполетную и оцененную после полета среднюю интенсивность энергозатрат командира и пилота лунного модуля при EVA. Для каждого вычисли, насколько оцененная величина ниже предполетной (Btu/ч). Укажи PDF-страницу",
+          "queries": [
+            {
+              "question": "Найди предполетную и оцененную после полета среднюю интенсивность энергозатрат командира и пилота лунного модуля при EVA. Для каждого вычисли, насколько оцененная величина ниже предполетной (Btu/ч). Укажи PDF-страницу2652e10d",
+              "query": "средняя интенсивность энергозатрат командира и пилота лунного модуля при EVA PDF-страница2652e10d"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 2,
+          "duration_s": 0.0798,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.2,
+          "precision@5_page": 0.2,
+          "mrr_section": 0.5,
+          "first_relevant_rank": 2,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "0f6ec3ba4882d56440594c62",
+              "section_id": "12.1",
+              "pdf_page": 254
+            },
+            {
+              "rank": 2,
+              "chunk_id": "9da4139aeb10870d69a5ca3d",
+              "section_id": "12.3",
+              "pdf_page": 258
+            },
+            {
+              "rank": 3,
+              "chunk_id": "6ed6cdc740d02855a60fc09d",
+              "section_id": "10.0",
+              "pdf_page": 196
+            },
+            {
+              "rank": 4,
+              "chunk_id": "31cd0bd546e6b4af4bf4c947",
+              "section_id": "BACK",
+              "pdf_page": 359
+            },
+            {
+              "rank": 5,
+              "chunk_id": "3516a26eaa27cf4a49fb8e44",
+              "section_id": "4.8.1",
+              "pdf_page": 35
+            }
+          ]
+        },
+        {
+          "task": "C02",
+          "turn": 1,
+          "category": "retrieval_calculation",
+          "question": "Найди в отчете, с какого расстояния от границы входа в атмосферу на какое перенесли точку приводнения, и вычисли разницу в милях. Приведи PDF-страницу",
+          "queries": [
+            {
+              "question": "Найди в отчете, с какого расстояния от границы входа в атмосферу на какое перенесли точку приводнения, и вычисли разницу в милях. Приведи PDF-страницу",
+              "query": "расстояние от границы входа в атмосферу точка приводнения разница мили"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 2,
+          "duration_s": 0.0642,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "cb33b4ed9e5ca9d98a88f12e",
+              "section_id": "5.7",
+              "pdf_page": 70
+            },
+            {
+              "rank": 2,
+              "chunk_id": "7d7bb95771040af63c78ab57",
+              "section_id": "5.7",
+              "pdf_page": 70
+            },
+            {
+              "rank": 3,
+              "chunk_id": "7d6730d58b7a83836ddd3f2d",
+              "section_id": "5.6",
+              "pdf_page": 59
+            },
+            {
+              "rank": 4,
+              "chunk_id": "b63586270646c9cf4a7afdd3",
+              "section_id": "7.8",
+              "pdf_page": 116
+            },
+            {
+              "rank": 5,
+              "chunk_id": "a527c72c325dfc60199b5040",
+              "section_id": "5.7",
+              "pdf_page": 88
+            }
+          ]
+        },
+        {
+          "task": "D01",
+          "turn": 1,
+          "category": "long_dialogue",
+          "question": "Почему выход на Луну провели до первого отдыха? Сошлись на отчет.",
+          "queries": [
+            {
+              "question": "почему выход на Луну провели до первого отдыха сошлись на отчет",
+              "query": "почему выход на Луну провели до первого отдыха"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 2,
+          "duration_s": 0.0651,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.2,
+          "precision@5_page": 0.2,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "464e03e594896c1c88bc101b",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 2,
+              "chunk_id": "c0611d09d25570c7e750131c",
+              "section_id": "17",
+              "pdf_page": 324
+            },
+            {
+              "rank": 3,
+              "chunk_id": "6473b31b5c0892ba2bc9fdfd",
+              "section_id": "4.12.4",
+              "pdf_page": 42
+            },
+            {
+              "rank": 4,
+              "chunk_id": "dfbb01e43b28b76e9c371bc9",
+              "section_id": "4.12.4",
+              "pdf_page": 44
+            },
+            {
+              "rank": 5,
+              "chunk_id": "27734aed6b36f5aef1b83aaa",
+              "section_id": "4.12.4",
+              "pdf_page": 43
+            }
+          ]
+        },
+        {
+          "task": "D01",
+          "turn": 2,
+          "category": "long_dialogue",
+          "question": "А почему подготовка к нему заняла больше времени?",
+          "queries": [
+            {
+              "question": "почему подготовка к выходу на Луну заняла больше времени сошлись на отчете",
+              "query": "почему подготовка к выходу на Луну заняла больше времени"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 2,
+          "duration_s": 0.0648,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.2,
+          "precision@5_page": 0.2,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "464e03e594896c1c88bc101b",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 2,
+              "chunk_id": "c0611d09d25570c7e750131c",
+              "section_id": "17",
+              "pdf_page": 324
+            },
+            {
+              "rank": 3,
+              "chunk_id": "27734aed6b36f5aef1b83aaa",
+              "section_id": "4.12.4",
+              "pdf_page": 43
+            },
+            {
+              "rank": 4,
+              "chunk_id": "5b8fb4824e26d545b0a4016f",
+              "section_id": "4.8.2",
+              "pdf_page": 35
+            },
+            {
+              "rank": 5,
+              "chunk_id": "dfbb01e43b28b76e9c371bc9",
+              "section_id": "4.12.4",
+              "pdf_page": 44
+            }
+          ]
+        },
+        {
+          "task": "D01",
+          "turn": 4,
+          "category": "long_dialogue",
+          "question": "Как лунная пыль осложняла работу рядом с модулем?",
+          "queries": [
+            {
+              "question": "как лунная пыль осложняла работу рядом с модулем сошлись на отчете",
+              "query": "как лунная пыль осложняла работу рядом с модулем"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 2,
+          "duration_s": 0.0576,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 0.5,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.2,
+          "precision@5_page": 0.4,
+          "mrr_section": 0.2,
+          "first_relevant_rank": 5,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "537cce4312f965e497a1ba0d",
+              "section_id": "4.16",
+              "pdf_page": 48
+            },
+            {
+              "rank": 2,
+              "chunk_id": "7d7bb95771040af63c78ab57",
+              "section_id": "5.7",
+              "pdf_page": 70
+            },
+            {
+              "rank": 3,
+              "chunk_id": "829e2d2a00e35fa3e211b54f",
+              "section_id": "4.11",
+              "pdf_page": 39
+            },
+            {
+              "rank": 4,
+              "chunk_id": "31f084bb1e65f5c26d4df06d",
+              "section_id": "4.12.5",
+              "pdf_page": 44
+            },
+            {
+              "rank": 5,
+              "chunk_id": "2af1c8812d90c887025c2dd2",
+              "section_id": "4.12.4",
+              "pdf_page": 42
+            }
+          ]
+        },
+        {
+          "task": "D02",
+          "turn": 1,
+          "category": "long_dialogue",
+          "question": "Сколько времени фольга для солнечного ветра находилась на Луне?",
+          "queries": [
+            {
+              "question": "сколько времени фольга для солнечного ветра находилась на Луне",
+              "query": "время фольги солнечного ветра на Луне"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 2,
+          "duration_s": 0.0571,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.4,
+          "mrr_section": 0.333,
+          "first_relevant_rank": 3,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "429d2f6e4c4c08802fc56003",
+              "section_id": "11.4",
+              "pdf_page": 214
+            },
+            {
+              "rank": 2,
+              "chunk_id": "7d7bb95771040af63c78ab57",
+              "section_id": "5.7",
+              "pdf_page": 70
+            },
+            {
+              "rank": 3,
+              "chunk_id": "c4a81c38142ee70be7a6b47d",
+              "section_id": "11.6",
+              "pdf_page": 220
+            },
+            {
+              "rank": 4,
+              "chunk_id": "681ba4948097fa262db51b9a",
+              "section_id": "11.6",
+              "pdf_page": 220
+            },
+            {
+              "rank": 5,
+              "chunk_id": "e5ab12a98d192e127dd64e2c",
+              "section_id": "11.7.4",
+              "pdf_page": 224
+            }
+          ]
+        },
+        {
+          "task": "D02",
+          "turn": 2,
+          "category": "long_dialogue",
+          "question": "А где установили лазерный отражатель?",
+          "queries": [
+            {
+              "question": "где установили лазерный отражатель",
+              "query": "где установили лазерный отражатель"
+            }
+          ],
+          "saved_search_calls": 1,
+          "search_calls": 1,
+          "duration_s": 0.0279,
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.4,
+          "mrr_section": 0.5,
+          "first_relevant_rank": 2,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "42ad5b48cfbcef4341274d2a",
+              "section_id": "A",
+              "pdf_page": 332
+            },
+            {
+              "rank": 2,
+              "chunk_id": "c70be7c97312ba1ad65277c9",
+              "section_id": "11.5",
+              "pdf_page": 220
+            },
+            {
+              "rank": 3,
+              "chunk_id": "8f02b1cd2388832f8741693a",
+              "section_id": "11.5",
+              "pdf_page": 219
+            },
+            {
+              "rank": 4,
+              "chunk_id": "08ea213c685d0586327ba30d",
+              "section_id": "11.7",
+              "pdf_page": 221
+            },
+            {
+              "rank": 5,
+              "chunk_id": "ddd0c8747bdbfb922913dd0b",
+              "section_id": "A",
+              "pdf_page": 332
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

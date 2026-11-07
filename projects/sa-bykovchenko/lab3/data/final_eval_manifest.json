@@ -1,0 +1,102 @@
+{
+  "created_at": "2026-11-05T08:03:44.023924+00:00",
+  "selection_policy": "Pre-registered final set: category/difficulty coverage was fixed before the final quality scoring. No task was removed because it failed. The list must not be changed after seeing final metrics.",
+  "ids": [
+    "F01",
+    "F03",
+    "F05",
+    "F08",
+    "F11",
+    "F13",
+    "F15",
+    "X01",
+    "X02",
+    "C01",
+    "C02",
+    "U01",
+    "U02",
+    "D01",
+    "D02"
+  ],
+  "task_count": 15,
+  "turn_count": 23,
+  "categories": {
+    "F01": "factual",
+    "F03": "factual",
+    "F05": "factual",
+    "F08": "factual",
+    "F11": "factual",
+    "F13": "factual",
+    "F15": "factual",
+    "X01": "multi_fact",
+    "X02": "multi_fact",
+    "C01": "retrieval_calculation",
+    "C02": "retrieval_calculation",
+    "U01": "unanswerable",
+    "U02": "unanswerable",
+    "D01": "long_dialogue",
+    "D02": "long_dialogue"
+  },
+  "model": {
+    "name": "apollo-qwen:16k",
+    "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+    "temperature": 0,
+    "base_url": "http://127.0.0.1:11434/v1"
+  },
+  "agent_parameters": {
+    "max_model_calls": 8,
+    "max_tool_calls": 12,
+    "max_tool_retries": 1,
+    "timeout_seconds": 600
+  },
+  "context": {
+    "max_tokens": 8192,
+    "response_reserve": 512,
+    "strategy": "summarize",
+    "keep_recent_messages": 6
+  },
+  "retrieval": {
+    "store_id": "efa0f2936c31e621",
+    "mode": "hybrid",
+    "backend": "hnsw",
+    "top_k": 5,
+    "candidate_k": 50,
+    "algorithm_version": "query-processing-v1"
+  },
+  "runtime_policy": {
+    "warmup": true,
+    "empty_retry_attempts": 2,
+    "retry_mechanism": "model_level",
+    "retry_same_thread": false,
+    "openai_compatible_non_streaming_upstream": true,
+    "openai_proxy": "source/llm_proxy.py",
+    "proxy_upstream_attempts": 3,
+    "proxy_upstream_mode": "non_streaming_with_sse_conversion",
+    "proxy_base_url": "http://127.0.0.1:11435/v1"
+  },
+  "hashes": {
+    "dataset_sha256": "6cdb62431fff09f9b3c0d2989c29f03d73b14ec076d655638228e347d2f33720",
+    "system_prompt_sha256": "c0deb61c9bf87ca3f159f880b6b0055aca6c419d8d39da5237a080ab35211159",
+    "opencode_prompt_sha256": "c24945a1c206e93caa7459109be31c0015d753ac664d2478e30e2296e7650176",
+    "agent_config_sha256": "8feaeb12c066dc82e8f7af59dff715602a2f166b65e4e1fd1c62d022a778f948",
+    "tools_config_sha256": "d3e75f593d4d33436e5a851420f0c26773dde9f06bc550437d7e0688a3ec8635"
+  },
+  "evaluation_protocol": {
+    "metrics": [
+      "task success (strict and partial)",
+      "fact coverage",
+      "citation accuracy",
+      "tool correctness",
+      "retrieval section_set_hit@5/page_set_hit@5/MRR",
+      "tokens, latency, context size",
+      "compacted before answer",
+      "error type"
+    ],
+    "per_agent": [
+      "langgraph",
+      "opencode"
+    ],
+    "notes": "Task-level and aggregate scores; failures and empty answers are retained, not filtered."
+  },
+  "opencode_model": "ollama/apollo-qwen:16k"
+}

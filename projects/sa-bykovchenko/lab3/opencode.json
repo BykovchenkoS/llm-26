@@ -1,0 +1,72 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "ollama/apollo-llama:16k",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama Local",
+      "options": {
+        "baseURL": "http://127.0.0.1:11435/v1"
+      },
+      "models": {
+        "apollo-qwen:16k": {
+          "name": "Apollo Qwen 3B",
+          "limit": {
+            "context": 16384,
+            "output": 1024
+          }
+        },
+        "apollo-llama:16k": {
+          "name": "Apollo Llama 3.2 3B",
+          "limit": {
+            "context": 16384,
+            "output": 1024
+          }
+        }
+      }
+    }
+  },
+  "mcp": {
+    "apollo11": {
+      "type": "local",
+      "command": [
+        "C:/Users/sonyb/anaconda3/envs/llm-agent/python.exe",
+        "D:/pythonProject/llm-26/projects/sa-bykovchenko/lab3/source/mcp_server.py"
+      ],
+      "enabled": true,
+      "timeout": 120000
+    }
+  },
+  "permission": {
+    "*": "deny",
+    "apollo11_*": "allow"
+  },
+  "experimental": {
+    "openTelemetry": true
+  },
+  "plugin": [
+    [
+      "@langfuse/opencode-observability-plugin@0.7.0",
+      {
+        "tags": [
+          "lab3",
+          "opencode",
+          "opencode-agent"
+        ]
+      }
+    ]
+  ],
+  "agent": {
+    "apollo": {
+      "description": "Apollo 11 document research agent",
+      "mode": "primary",
+      "prompt": "{file:./prompts/opencode_apollo.md}",
+      "temperature": 0,
+      "steps": 8,
+      "permission": {
+        "*": "deny",
+        "apollo11_*": "allow"
+      }
+    }
+  }
+}

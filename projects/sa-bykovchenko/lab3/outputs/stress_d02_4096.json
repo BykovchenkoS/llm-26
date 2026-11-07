@@ -1,0 +1,427 @@
+{
+  "model": "apollo-qwen:16k",
+  "algorithm_version": "query-processing-v1",
+  "dataset": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab3\\data\\comparison_tasks.json",
+  "ids": [
+    "D02"
+  ],
+  "retry_policy": {
+    "empty_retry_attempts": 2,
+    "total_attempts_per_turn": 3,
+    "mechanism": "model_level",
+    "same_thread": false,
+    "nonce": "U+200B"
+  },
+  "warmup": {
+    "enabled": true,
+    "calls": 2,
+    "duration_s": 33.202
+  },
+  "results": [
+    {
+      "id": "D02",
+      "category": "long_dialogue",
+      "model": "apollo-qwen:16k",
+      "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+      "thread_id": "selected-D02-20261105-135901",
+      "status": "context_budget_exceeded",
+      "failed": true,
+      "turns": [
+        {
+          "turn_id": 1,
+          "prompt": "Сколько времени фольга для солнечного ветра находилась на Луне?",
+          "reference": {
+            "answer": "Частицы захватывались специально подготовленной алюминиевой фольгой. Экспозиция составила 77 минут, после чего фольгу вернули для анализа.",
+            "section_ids": [
+              "11.6"
+            ],
+            "pdf_pages": [
+              220
+            ]
+          },
+          "status": "ok",
+          "answer": "В ходе эксперимента с фольгой для солнечного ветра время ее пребывания на Луне составило 77 минут. Эксперимент был проведен на расстоянии примерно 6 метров от лунного модуля, и в течение этого времени фольга была покрыта солнечным ветром. Эксперимент был проведен в качестве попытки захвата частиц солнечного ветра на поверхности Луны с помощью фольги. Фольга была возвращена на Землю после этого времени.",
+          "error": null,
+          "duration_s": 98.898,
+          "before_message_count": 0,
+          "after_message_count": 4,
+          "new_message_count": 4,
+          "context_last": {
+            "thread_id": "selected-D02-20261105-135901",
+            "context_limit": 4096,
+            "response_reserve": 512,
+            "input_budget": 3584,
+            "tokens_before": 3007,
+            "tokens_after": 3007,
+            "messages_before": 3,
+            "messages_after": 3,
+            "compacted": false,
+            "strategy": "summarize",
+            "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+            "current_user_message_preserved": true
+          },
+          "attempts": [
+            {
+              "attempt": 0,
+              "prompt_variant": "original",
+              "status": "ok",
+              "duration_s": 98.898,
+              "empty": false,
+              "error": null
+            }
+          ],
+          "retry_count": 0,
+          "retry_extra_duration_s": 0,
+          "model_retry_events": [],
+          "model_retry_extra_duration_s": 0,
+          "tool_calls": [
+            {
+              "name": "search_documents",
+              "args": {
+                "question": "сколько времени фольга для солнечного ветра находилась на Луне",
+                "query": "время фольги солнечного ветра на Луне"
+              },
+              "id": "call_i0dxg1kj"
+            }
+          ],
+          "tool_messages": [
+            {
+              "tool_call_id": "call_i0dxg1kj",
+              "name": "search_documents",
+              "status": "success",
+              "content": "{\"question\": \"сколько времени фольга для солнечного ветра находилась на Луне\", \"query\": \"время фольги солнечного ветра на Луне\", \"k\": 5, \"algorithm_version\": \"query-processing-v1\", \"variants\": [{\"name\": \"original\", \"text\": \"сколько времени фольга для солнечного ветра находилась на Луне\"}, {\"name\": \"glossary_en\", \"text\": \"many time foil\"}, {\"name\": \"expanded_en\", \"text\": \"many time foil film\"}, {\"name\": \"agent_query\", \"text\": \"время фольги солнечного ветра на Луне\"}, {\"name\": \"keywords\", \"text\": \"сколько времени фольга солнечного ветра находилась луне\"}], \"results\": [{\"rank\": 1, \"chunk_id\": \"c4a81c38142ee70be7a6b47d\", \"section_id\": \"11.6\", \"pdf_page\": 220, \"heading_path\": [\"11. THE LUNAR SURFACE\", \"11.6 SOLAR WIND COMPOSITION EXPERIMENT\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=220\", \"score\": 0.05349, \"evidence_coverage\": 0.333, \"variant_ranks\": {\"original\": 1, \"expanded_en\": 2, \"keywords\": 2}, \"text\": \"The experiment was deployed approximately 6 meters from the lunar\\nmodule. The staff of the experiment penetrated 13.5 centimeters into the\\nsurface.  \\nThe foil was retreived after 77 minutes exposure to the lunar environment. The return unit was placed into a special Teflon bag andreturned to earth in the lunar sample return container. A portion of the\\nfoil was cut out, placed into a metal gasket vacuum container, and heat\\nsterilized at 125° C for 39 hours. The section of foil has been released\\nfor analysis, and results will be reported in science reports.\", \"truncated\": false}, {\"rank\": 2, \"chunk_id\": \"d9dacef0239f4faa7a3a1363\", \"section_id\": \"3.0\", \"pdf_page\": 26, \"heading_path\": [\"3. MISSION DESCRIPTION\", \"3.0 MISSION DESCRIPTION\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=26\", \"score\": 0.056596, \"evidence_coverage\": 0.333, \"variant_ranks\": {\"glossary_en\": 3, \"expanded_en\": 1}, \"text\": \"3-12  \\nNASA-S-69-3706  \\nLunar revolution count ICSMl\\nGround elapsed time  \\nDay\\nNight  \\nLunar revolution count ICSMl  \\nGround elapsed time  \\nFuel cell purge  \\nCommander transfer to CSM  \\nLunar Module Pilot transfer to CSM  \\nLM jettison  \\nCSM separation maneuver  \\nFuel cell purge  \\nMSFN  \\n29\\n1  \\nFigure 3-l.-Conlin ued.  \\nFuel cell purge  \\nlgl 127 to 149 hours.  \\nFigure 3-l.-Conlin ued.  \\nlgl 127 to 149 hours.\", \"truncated\": false}, {\"rank\": 3, \"chunk_id\": \"ddd0c8747bdbfb922913dd0b\", \"section_id\": \"A\", \"pdf_page\": 332, \"heading_path\": [\"A. VEHICLE DESCRIPTIONS\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=332\", \"score\": 0.03125, \"evidence_coverage\": 0.333, \"variant_ranks\": {\"expanded_en\": 4}, \"text\": \"selected elements present in the solar wind. This was to be accomplished\\nby trappi�g particles of the solar wind on a sheet of aluminum foil exposed on the lunar surface.  \\nPhysically, the experiment consisted of a metallic telescoping pole\\napproximately 1-1/2 inches in diameter and approximately 16 inches in\\nlength when collapsed. When extended, the pole was about 5 feet long�\\nIn the stowed position, the foil was enclosed in one end of the tubing\\nand rolled up on a spring-driven roller. Only the foil portion was recovered at the end of the lunar exposure period, rolled on the springdriven roller, and stowed in the sample return container for return to\\nearth.  \\nA.4.2 Laser Ranging Retro-Reflector  \\nThe laser ranging retro-reflector experiment (fig. A-3) was a retroreflector array of fused silica cubes. A folding support structure was\\nused for aiming and aligning the array toward earth. The purpose of the\\nexperiment was to �eflect laser ranging beams from earth to their point\", \"truncated\": false}, {\"rank\": 4, \"chunk_id\": \"429d2f6e4c4c08802fc56003\", \"section_id\": \"11.4\", \"pdf_page\": 214, \"heading_path\": [\"11. THE LUNAR SURFACE\", \"11.4 PASSIVE SEISMIC EXPERIMENT\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=214\", \"score\": 0.029112, \"evidence_coverage\": 0.333, \"variant_ranks\": {\"original\": 2, \"agent_query\": 2, \"keywords\": 1}, \"text\": \"solar panel output power drop occurred at lunar sunset. This occurred\\napproximately 4 hours and 40 minutes before the sunset time predicted for\\na flat surface, indicating an effective slope of 2 degrees 20 minutes upward to the west at the deployment site.\", \"truncated\": false}, {\"rank\": 5, \"chunk_id\": \"c3d6442ae371d623508a232b\", \"section_id\": \"8.8\", \"pdf_page\": 148, \"heading_path\": [\"8. COMMAND AND SERVICE MODULE PERFORMANCE\", \"8.8 SERVICE PROPULSION\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=148\", \"score\": 0.02459, \"evidence_coverage\": 0.333, \"variant_ranks\": {\"glossary_en\": 1}, \"text\": \"Service propulsion system performance was satisfactory during each\\nof the five maneuvers, with a total firing time of 531.9 seconds. The\\nactual ignition times and firing durations are listed in table 8.6-rr.\", \"truncated\": false}], \"evidence\": {\"heuristic_sufficient\": false, \"coverage\": 0.667, \"missing_terms\": [\"many\"], \"matched_terms\": [\"time\", \"foil\"], \"ocr_noise\": false, \"temporal_required\": [], \"temporal_found\": [], \"temporal_missing\": [], \"negation_required\": [], \"negation_found\": [], \"critical_missing_terms\": [], \"numeric_values\": [\"6\", \"13.5\", \"77\", \"125\", \"39\", \"3\", \"12\", \"69\", \"3706\", \"29 1\", \"127\", \"149\", \"1\", \"2\", \"16\", \"5\", \"4.2\"], \"unit_values\": [{\"value\": \"6\", \"unit\": \"meters\"}, {\"value\": \"13.5\", \"unit\": \"centimeters\"}, {\"value\": \"77\", \"unit\": \"minutes\"}, {\"value\": \"5\", \"unit\": \"feet\"}], \"calculation_requested\": false, \"calculation_hint\": null, \"multi_part\": false, \"reason\": \"low_term_coverage\", \"note\": \"Heuristic lexical check; not a semantic entailment judge.\"}, \"context_chunks\": []}",
+              "content_json": {
+                "question": "сколько времени фольга для солнечного ветра находилась на Луне",
+                "query": "время фольги солнечного ветра на Луне",
+                "k": 5,
+                "algorithm_version": "query-processing-v1",
+                "variants": [
+                  {
+                    "name": "original",
+                    "text": "сколько времени фольга для солнечного ветра находилась на Луне"
+                  },
+                  {
+                    "name": "glossary_en",
+                    "text": "many time foil"
+                  },
+                  {
+                    "name": "expanded_en",
+                    "text": "many time foil film"
+                  },
+                  {
+                    "name": "agent_query",
+                    "text": "время фольги солнечного ветра на Луне"
+                  },
+                  {
+                    "name": "keywords",
+                    "text": "сколько времени фольга солнечного ветра находилась луне"
+                  }
+                ],
+                "results": [
+                  {
+                    "rank": 1,
+                    "chunk_id": "c4a81c38142ee70be7a6b47d",
+                    "section_id": "11.6",
+                    "pdf_page": 220,
+                    "heading_path": [
+                      "11. THE LUNAR SURFACE",
+                      "11.6 SOLAR WIND COMPOSITION EXPERIMENT"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=220",
+                    "score": 0.05349,
+                    "evidence_coverage": 0.333,
+                    "variant_ranks": {
+                      "original": 1,
+                      "expanded_en": 2,
+                      "keywords": 2
+                    },
+                    "text": "The experiment was deployed approximately 6 meters from the lunar\nmodule. The staff of the experiment penetrated 13.5 centimeters into the\nsurface.  \nThe foil was retreived after 77 minutes exposure to the lunar environment. The return unit was placed into a special Teflon bag andreturned to earth in the lunar sample return container. A portion of the\nfoil was cut out, placed into a metal gasket vacuum container, and heat\nsterilized at 125° C for 39 hours. The section of foil has been released\nfor analysis, and results will be reported in science reports.",
+                    "truncated": false
+                  },
+                  {
+                    "rank": 2,
+                    "chunk_id": "d9dacef0239f4faa7a3a1363",
+                    "section_id": "3.0",
+                    "pdf_page": 26,
+                    "heading_path": [
+                      "3. MISSION DESCRIPTION",
+                      "3.0 MISSION DESCRIPTION"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=26",
+                    "score": 0.056596,
+                    "evidence_coverage": 0.333,
+                    "variant_ranks": {
+                      "glossary_en": 3,
+                      "expanded_en": 1
+                    },
+                    "text": "3-12  \nNASA-S-69-3706  \nLunar revolution count ICSMl\nGround elapsed time  \nDay\nNight  \nLunar revolution count ICSMl  \nGround elapsed time  \nFuel cell purge  \nCommander transfer to CSM  \nLunar Module Pilot transfer to CSM  \nLM jettison  \nCSM separation maneuver  \nFuel cell purge  \nMSFN  \n29\n1  \nFigure 3-l.-Conlin ued.  \nFuel cell purge  \nlgl 127 to 149 hours.  \nFigure 3-l.-Conlin ued.  \nlgl 127 to 149 hours.",
+                    "truncated": false
+                  },
+                  {
+                    "rank": 3,
+                    "chunk_id": "ddd0c8747bdbfb922913dd0b",
+                    "section_id": "A",
+                    "pdf_page": 332,
+                    "heading_path": [
+                      "A. VEHICLE DESCRIPTIONS"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=332",
+                    "score": 0.03125,
+                    "evidence_coverage": 0.333,
+                    "variant_ranks": {
+                      "expanded_en": 4
+                    },
+                    "text": "selected elements present in the solar wind. This was to be accomplished\nby trappi�g particles of the solar wind on a sheet of aluminum foil exposed on the lunar surface.  \nPhysically, the experiment consisted of a metallic telescoping pole\napproximately 1-1/2 inches in diameter and approximately 16 inches in\nlength when collapsed. When extended, the pole was about 5 feet long�\nIn the stowed position, the foil was enclosed in one end of the tubing\nand rolled up on a spring-driven roller. Only the foil portion was recovered at the end of the lunar exposure period, rolled on the springdriven roller, and stowed in the sample return container for return to\nearth.  \nA.4.2 Laser Ranging Retro-Reflector  \nThe laser ranging retro-reflector experiment (fig. A-3) was a retroreflector array of fused silica cubes. A folding support structure was\nused for aiming and aligning the array toward earth. The purpose of the\nexperiment was to �eflect laser ranging beams from earth to their point",
+                    "truncated": false
+                  },
+                  {
+                    "rank": 4,
+                    "chunk_id": "429d2f6e4c4c08802fc56003",
+                    "section_id": "11.4",
+                    "pdf_page": 214,
+                    "heading_path": [
+                      "11. THE LUNAR SURFACE",
+                      "11.4 PASSIVE SEISMIC EXPERIMENT"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=214",
+                    "score": 0.029112,
+                    "evidence_coverage": 0.333,
+                    "variant_ranks": {
+                      "original": 2,
+                      "agent_query": 2,
+                      "keywords": 1
+                    },
+                    "text": "solar panel output power drop occurred at lunar sunset. This occurred\napproximately 4 hours and 40 minutes before the sunset time predicted for\na flat surface, indicating an effective slope of 2 degrees 20 minutes upward to the west at the deployment site.",
+                    "truncated": false
+                  },
+                  {
+                    "rank": 5,
+                    "chunk_id": "c3d6442ae371d623508a232b",
+                    "section_id": "8.8",
+                    "pdf_page": 148,
+                    "heading_path": [
+                      "8. COMMAND AND SERVICE MODULE PERFORMANCE",
+                      "8.8 SERVICE PROPULSION"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=148",
+                    "score": 0.02459,
+                    "evidence_coverage": 0.333,
+                    "variant_ranks": {
+                      "glossary_en": 1
+                    },
+                    "text": "Service propulsion system performance was satisfactory during each\nof the five maneuvers, with a total firing time of 531.9 seconds. The\nactual ignition times and firing durations are listed in table 8.6-rr.",
+                    "truncated": false
+                  }
+                ],
+                "evidence": {
+                  "heuristic_sufficient": false,
+                  "coverage": 0.667,
+                  "missing_terms": [
+                    "many"
+                  ],
+                  "matched_terms": [
+                    "time",
+                    "foil"
+                  ],
+                  "ocr_noise": false,
+                  "temporal_required": [],
+                  "temporal_found": [],
+                  "temporal_missing": [],
+                  "negation_required": [],
+                  "negation_found": [],
+                  "critical_missing_terms": [],
+                  "numeric_values": [
+                    "6",
+                    "13.5",
+                    "77",
+                    "125",
+                    "39",
+                    "3",
+                    "12",
+                    "69",
+                    "3706",
+                    "29 1",
+                    "127",
+                    "149",
+                    "1",
+                    "2",
+                    "16",
+                    "5",
+                    "4.2"
+                  ],
+                  "unit_values": [
+                    {
+                      "value": "6",
+                      "unit": "meters"
+                    },
+                    {
+                      "value": "13.5",
+                      "unit": "centimeters"
+                    },
+                    {
+                      "value": "77",
+                      "unit": "minutes"
+                    },
+                    {
+                      "value": "5",
+                      "unit": "feet"
+                    }
+                  ],
+                  "calculation_requested": false,
+                  "calculation_hint": null,
+                  "multi_part": false,
+                  "reason": "low_term_coverage",
+                  "note": "Heuristic lexical check; not a semantic entailment judge."
+                },
+                "context_chunks": []
+              },
+              "content_preview": "{\"question\": \"сколько времени фольга для солнечного ветра находилась на Луне\", \"query\": \"время фольги солнечного ветра на Луне\", \"k\": 5, \"algorithm_version\": \"query-processing-v1\", \"variants\": [{\"name\": \"original\", \"text\": \"сколько времени фольга для солнечного ветра находилась на Луне\"}, {\"name\": \"glossary_en\", \"text\": \"many time foil\"}, {\"name\": \"expanded_en\", \"text\": \"many time foil film\"}, {\"name\": \"agent_query\", \"text\": \"время фольги солнечного ветра на Луне\"}, {\"name\": \"keywords\", \"text\": \"сколько времени фольга солнечного ветра находилась луне\"}], \"results\": [{\"rank\": 1, \"chunk_id\": \"c4",
+              "content_length": 5857
+            }
+          ],
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 137,
+              "prompt_tokens": 2883,
+              "total_tokens": 3020,
+              "completion_tokens_details": null,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cache_write_tokens": null,
+                "cached_tokens": 925,
+                "image_tokens": null,
+                "text_tokens": null
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "apollo-qwen:16k",
+            "system_fingerprint": "fp_ollama",
+            "id": "chatcmpl-15",
+            "finish_reason": "stop",
+            "logprobs": null
+          },
+          "usage_metadata": {
+            "input_tokens": 2883,
+            "output_tokens": 137,
+            "total_tokens": 3020,
+            "input_token_details": {
+              "cache_read": 925
+            },
+            "output_token_details": {}
+          }
+        },
+        {
+          "turn_id": 2,
+          "prompt": "А где установили лазерный отражатель?",
+          "reference": {
+            "answer": "Примерно в 14 метрах к юго-юго-западу, на относительно ровном участке.",
+            "section_ids": [
+              "11.5"
+            ],
+            "pdf_pages": [
+              219,
+              220
+            ]
+          },
+          "status": "context_budget_exceeded",
+          "answer": null,
+          "error": "ContextBudgetError: Контекст превышает бюджет даже после сокращения истории. tokens_before=5269, tokens_after=5258, budget=3584. Уменьшите размер текущей реплики или результата инструмента.",
+          "duration_s": 23.114,
+          "before_message_count": 4,
+          "after_message_count": null,
+          "new_message_count": 0,
+          "context_last": {
+            "thread_id": "selected-D02-20261105-135901",
+            "context_limit": 4096,
+            "response_reserve": 512,
+            "input_budget": 3584,
+            "tokens_before": 5269,
+            "tokens_after": 5258,
+            "messages_before": 7,
+            "messages_after": 7,
+            "compacted": true,
+            "strategy": "summarize",
+            "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+            "current_user_message_preserved": true
+          },
+          "attempts": [
+            {
+              "attempt": 0,
+              "prompt_variant": "original",
+              "status": "context_budget_exceeded",
+              "duration_s": 23.114,
+              "empty": false,
+              "error": "ContextBudgetError: Контекст превышает бюджет даже после сокращения истории. tokens_before=5269, tokens_after=5258, budget=3584. Уменьшите размер текущей реплики или результата инструмента."
+            }
+          ],
+          "retry_count": 0,
+          "retry_extra_duration_s": 0,
+          "model_retry_events": [],
+          "model_retry_extra_duration_s": 0,
+          "tool_calls": [],
+          "tool_messages": [],
+          "response_metadata": {},
+          "usage_metadata": {}
+        }
+      ],
+      "context_diagnostics": [
+        {
+          "thread_id": "selected-D02-20261105-135901",
+          "context_limit": 4096,
+          "response_reserve": 512,
+          "input_budget": 3584,
+          "tokens_before": 1031,
+          "tokens_after": 1031,
+          "messages_before": 1,
+          "messages_after": 1,
+          "compacted": false,
+          "strategy": "summarize",
+          "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+          "current_user_message_preserved": true
+        },
+        {
+          "thread_id": "selected-D02-20261105-135901",
+          "context_limit": 4096,
+          "response_reserve": 512,
+          "input_budget": 3584,
+          "tokens_before": 3007,
+          "tokens_after": 3007,
+          "messages_before": 3,
+          "messages_after": 3,
+          "compacted": false,
+          "strategy": "summarize",
+          "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+          "current_user_message_preserved": true
+        },
+        {
+          "thread_id": "selected-D02-20261105-135901",
+          "context_limit": 4096,
+          "response_reserve": 512,
+          "input_budget": 3584,
+          "tokens_before": 3165,
+          "tokens_after": 3165,
+          "messages_before": 5,
+          "messages_after": 5,
+          "compacted": false,
+          "strategy": "summarize",
+          "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+          "current_user_message_preserved": true
+        },
+        {
+          "thread_id": "selected-D02-20261105-135901",
+          "context_limit": 4096,
+          "response_reserve": 512,
+          "input_budget": 3584,
+          "tokens_before": 5269,
+          "tokens_after": 5258,
+          "messages_before": 7,
+          "messages_after": 7,
+          "compacted": true,
+          "strategy": "summarize",
+          "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+          "current_user_message_preserved": true
+        }
+      ]
+    }
+  ]
+}

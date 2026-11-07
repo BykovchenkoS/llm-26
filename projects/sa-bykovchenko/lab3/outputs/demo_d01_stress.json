@@ -1,0 +1,1391 @@
+{
+  "model": "apollo-qwen:16k",
+  "model_config": {
+    "provider": "ollama",
+    "name": "apollo-qwen:16k",
+    "base_url": "http://127.0.0.1:11434/v1",
+    "temperature": 0.0,
+    "timeout_seconds": 600,
+    "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+    "tokenizers": {
+      "apollo-qwen:16k": "Qwen/Qwen2.5-3B-Instruct",
+      "apollo-llama:16k": "unsloth/Llama-3.2-3B-Instruct",
+      "gemma4:e2b": "google/gemma-4-E2B-it"
+    }
+  },
+  "agent_parameters": {
+    "max_model_calls": 8,
+    "max_tool_calls": 12,
+    "max_tool_retries": 1,
+    "timeout_seconds": 600
+  },
+  "context": {
+    "max_tokens": 4096,
+    "response_reserve": 512,
+    "strategy": "summarize",
+    "keep_recent_messages": 6
+  },
+  "retrieval": {
+    "store_id": "efa0f2936c31e621",
+    "mode": "hybrid",
+    "backend": "hnsw",
+    "top_k": 5,
+    "candidate_k": 50
+  },
+  "run_kind": "context_stress",
+  "not_part_of_main_comparison": true,
+  "algorithm_version": "query-processing-v1",
+  "dataset": "D:\\pythonProject\\llm-26\\projects\\sa-bykovchenko\\lab3\\data\\comparison_tasks.json",
+  "ids": [
+    "D01"
+  ],
+  "retry_policy": {
+    "empty_retry_attempts": 0,
+    "total_attempts_per_turn": 1,
+    "mechanism": "model_level",
+    "same_thread": false,
+    "nonce": "U+200B"
+  },
+  "warmup": {
+    "enabled": false,
+    "calls": 0,
+    "duration_s": 0.0
+  },
+  "results": [
+    {
+      "id": "D01",
+      "category": "long_dialogue",
+      "model": "apollo-qwen:16k",
+      "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+      "thread_id": "selected-D01-20261106-200630",
+      "status": "ok",
+      "failed": false,
+      "turns": [
+        {
+          "turn_id": 1,
+          "prompt": "Почему выход на Луну провели до первого отдыха? Сошлись на отчет.",
+          "reference": {
+            "answer": "После посадки не возникло ожидаемых возможных трудностей, экипаж не был чрезмерно утомлён и хорошо приспособился к пониженной гравитации.",
+            "section_ids": [
+              "4.12.2"
+            ],
+            "pdf_pages": [
+              40,
+              41
+            ]
+          },
+          "status": "ok",
+          "answer": "В ходе исследования отчета было установлено, что NASA решил начать высадку на Луну как можно скорее после посадки, чтобы избежать задержек, связанных с посадкой. Это решение было принято в 104:40:00, когда экипаж не был сильно утомлен и не испытывал трудностей при адаптации к гравитации 1/6. В ходе подготовки к высадке были использованы дополнительные чек-листы и инструкции, что привело к задержке времени. Экипаж провел медитацию и принял лекарства для предотвращения запоров и головных болей. Также были проблемы с подключением оборудования, что также затянуло процесс. \n\nСогласно отчету, основной причиной для того, почему высадка была проведена до первого отдыха, было желание начать высадку как можно скорее после посадки, чтобы минимизировать задержки и учесть возможные неожиданные трудности после посадки. \n\nСсылки на отчет: \n- section_id: \"4.12.2\", pdf_page: 40\n- section_id: \"4.12.3\", pdf_page: 41",
+          "error": null,
+          "duration_s": 96.331,
+          "before_message_count": 0,
+          "after_message_count": 4,
+          "new_message_count": 4,
+          "context_last": {
+            "thread_id": "selected-D01-20261106-200630",
+            "context_limit": 4096,
+            "response_reserve": 512,
+            "input_budget": 3584,
+            "tokens_before": 3261,
+            "tokens_after": 3261,
+            "messages_before": 3,
+            "messages_after": 3,
+            "compacted": false,
+            "strategy": "summarize",
+            "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+            "current_user_message_preserved": true,
+            "fallback_used": false,
+            "truncated_tool_messages": 0,
+            "removed_message_ids": [],
+            "removed_message_types": [],
+            "summary_created": false,
+            "summary_retained": false,
+            "compaction_method": "none",
+            "summarized_message_ids": [],
+            "summarized_message_types": [],
+            "truncated_tool_message_ids": []
+          },
+          "attempts": [
+            {
+              "attempt": 0,
+              "prompt_variant": "original",
+              "status": "ok",
+              "duration_s": 96.331,
+              "empty": false,
+              "error": null
+            }
+          ],
+          "retry_count": 0,
+          "retry_extra_duration_s": 0,
+          "model_retry_events": [],
+          "model_retry_extra_duration_s": 0,
+          "tool_calls": [
+            {
+              "name": "search_documents",
+              "args": {
+                "question": "почему выход на луну провели до первого отдыха сошлись на отчет",
+                "query": "Apollo 11 выход на Луну отдых"
+              },
+              "id": "call_8jgyw2kf"
+            }
+          ],
+          "tool_messages": [
+            {
+              "tool_call_id": "call_8jgyw2kf",
+              "name": "search_documents",
+              "status": "success",
+              "content": "{\"question\": \"почему выход на луну провели до первого отдыха сошлись на отчет\", \"query\": \"Apollo 11 выход на Луну отдых\", \"k\": 5, \"algorithm_version\": \"query-processing-v1\", \"variants\": [{\"name\": \"original\", \"text\": \"почему выход на луну провели до первого отдыха сошлись на отчет\"}, {\"name\": \"normalized\", \"text\": \"почему выход на луну провели до первого отдыха\"}, {\"name\": \"glossary_en\", \"text\": \"egress conducted before first rest\"}, {\"name\": \"expanded_en\", \"text\": \"egress conducted before first rest sleep\"}, {\"name\": \"agent_query\", \"text\": \"Apollo 11 выход на Луну отдых\"}, {\"name\": \"keywords\", \"text\": \"выход луну провели первого отдыха\"}], \"results\": [{\"rank\": 1, \"chunk_id\": \"464e03e594896c1c88bc101b\", \"section_id\": \"4.12.2\", \"pdf_page\": 40, \"heading_path\": [\"4. PILOTS' REPORT\", \"4.12 LUNAR SURFACE OPERATIONS\", \"4.12.2 Egress Preparation\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40\", \"score\": 0.094397, \"evidence_coverage\": 0.6, \"variant_ranks\": {\"original\": 1, \"normalized\": 1, \"glossary_en\": 1, \"expanded_en\": 2, \"keywords\": 3}, \"text\": \"The crew had given considerable thought to the advantage of beginning the extravehicular activity as soon as possible after landing instead\\nof following the flight plan schedule of having the surface operations between two rest periods. The initial rest period was planned to allow\\nflexibility in the event of unexpected difficulty with postlanding activities. These difficulties did not materialize, the crew were not overly\\ntired, and no problem was experienced in adjusting to the 1/6-g environment. Based on these facts, the decision was made at 104:40:00 to proceed with the extravehicular activity prior to the first rest period.  \\nPreparation for extravehicular activity began at 106:11:00. The estimate of the preparation time proved to be optimistic. In simulations,\\n2 hours had been found to be a reasonable allocation; however, everything\\nhad also been laid out in an orderly manner in the cockpit, and only those\\nitems involved in the extravehicular activity were present. In fact,\", \"truncated\": false}, {\"rank\": 2, \"chunk_id\": \"5388fda45dc9faf224e5f844\", \"section_id\": \"4.12.2\", \"pdf_page\": 40, \"heading_path\": [\"4. PILOTS' REPORT\", \"4.12 LUNAR SURFACE OPERATIONS\", \"4.12.2 Egress Preparation\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40\", \"score\": 0.05698, \"evidence_coverage\": 0.6, \"variant_ranks\": {\"glossary_en\": 2, \"expanded_en\": 1}, \"text\": \"items involved in the extravehicular activity were present. In fact,\\nthere were checklists, food packets, monoculars, and other miscellaneous  \\nitems that interfered with an orderly preparation. All these items re�uired some thought as to their possible interference or use in the extravehicular activity. This interference resulted in exceeding the timeline\\nestimate by a considerable amount. Preparation for egress was conducted\\nslowly, carefully, and deliberately, and future missions should be planned and conducted with the same philosophy. The extravehicular activity\\npreparation checklist was ade�uate and was closely followed. However,\\nminor items that re�uired a decision in real time or had not been considered before flight re�uired more time than anticipated.  \\nAn electrical connector on the cable that connects the remote control unit to the portable life support system gave some trouble in mating  \\n(see section 16.3.2). This problem had been occasionally encountered\", \"truncated\": false}, {\"rank\": 3, \"chunk_id\": \"cc1e6a668d60297ce84a301b\", \"section_id\": \"12.2.2\", \"pdf_page\": 255, \"heading_path\": [\"12. BIOMEDICAL EVALUATION\", \"12.2 MEDICAL OBSERVATIONS\", \"12.2.2 Medications\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=255\", \"score\": 0.03125, \"evidence_coverage\": 0.4, \"variant_ranks\": {\"expanded_en\": 4}, \"text\": \"The Commander and the Lunar Module Pilot each took one Lomotil tablet\\nprior to the sleep period to retard bowel movements before the lunar module activity. They each carried extra Lomotil tablets into the lunar module but did not take them. At 4 hours before entry and again after splashdown, the three crewmen each took anti-nauseant tablets containing 0.3 mg\\nHyoscine and 5.0 mg Dexedrine. Aspirin tablets were also taken by the\\ncrewmen, but the number of tablets per individual was not recorded. The\\nLunar Module Pilot recalled that he had taken two aspirin tablets almost  \\nevery night to aid his sleep.\", \"truncated\": false}, {\"rank\": 4, \"chunk_id\": \"118f360e4a29fa2eb5c98b5f\", \"section_id\": \"4.12.3\", \"pdf_page\": 41, \"heading_path\": [\"4. PILOTS' REPORT\", \"4.12 LUNAR SURFACE OPERATIONS\", \"4.12.3 Lunar Module Egress\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=41\", \"score\": 0.02381, \"evidence_coverage\": 0.4, \"variant_ranks\": {\"glossary_en\": 3}, \"text\": \"Simulation work in both the water immersion facility and the 1/6-g  \\nenvironm�nt in an airplane was reasonably accurate in preparing the crew\\nfor lunar n[odule egress. Body positioning and arching-the-back techniques\\nthat were requir�d to exit the hatch were performed, and no unexpected\\nproblems were experienced. The forward platform was more than adequate\\nto allow changing the body position from that used in egressing the hatch\\nto that required for getting on the ladder. The first ladder step was\\nsomewhat difficult to see and required caution and forethought. In general, the hatch, porch, and ladder ope1•ation was not particularly difficult and caused little concern. Operations on the platform could be\\nperformed without losing body balance, and there was adequate room for\\nmaneuvering.  \\nThe initial operation of the lunar equipment conveyor in lowering\\nthe camera was satisfactory, but after the straps had become covered with\", \"truncated\": false}, {\"rank\": 5, \"chunk_id\": \"ecbbcd18fa3118d88d3afdfa\", \"section_id\": \"4.12.2\", \"pdf_page\": 40, \"heading_path\": [\"4. PILOTS' REPORT\", \"4.12 LUNAR SURFACE OPERATIONS\", \"4.12.2 Egress Preparation\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40\", \"score\": 0.023438, \"evidence_coverage\": 0.4, \"variant_ranks\": {\"glossary_en\": 4}, \"text\": \"(see section 16.3.2). This problem had been occasionally encountered\\nusing the same e�uipment before flight. At least 10 minutes were re�uired\\nto connect each unit, and at one point it was thought the connection\\nwould not be successfully completed.  \\nConsiderable difficulty was experienced with voice communications\\nwhen the extravehicular transceivers were used inside the lunar module.\\nAt times communications were good but at other times were garbled on the\", \"truncated\": false}], \"evidence\": {\"heuristic_sufficient\": true, \"coverage\": 1.0, \"missing_terms\": [], \"matched_terms\": [\"egress\", \"conducted\", \"before\", \"first\", \"rest\"], \"ocr_noise\": false, \"temporal_required\": [\"before\", \"first\"], \"temporal_found\": [\"before\", \"first\"], \"temporal_missing\": [], \"negation_required\": [], \"negation_found\": [], \"critical_missing_terms\": [], \"numeric_values\": [\"1\", \"6\", \"104\", \"40\", \"00\", \"106\", \"11\", \"2\", \"16.3.2\", \"4\", \"0.3\", \"5.0\"], \"unit_values\": [], \"calculation_requested\": false, \"calculation_hint\": null, \"multi_part\": false, \"reason\": \"ok\", \"note\": \"Heuristic lexical check; not a semantic entailment judge.\"}, \"context_chunks\": []}",
+              "content_json": {
+                "question": "почему выход на луну провели до первого отдыха сошлись на отчет",
+                "query": "Apollo 11 выход на Луну отдых",
+                "k": 5,
+                "algorithm_version": "query-processing-v1",
+                "variants": [
+                  {
+                    "name": "original",
+                    "text": "почему выход на луну провели до первого отдыха сошлись на отчет"
+                  },
+                  {
+                    "name": "normalized",
+                    "text": "почему выход на луну провели до первого отдыха"
+                  },
+                  {
+                    "name": "glossary_en",
+                    "text": "egress conducted before first rest"
+                  },
+                  {
+                    "name": "expanded_en",
+                    "text": "egress conducted before first rest sleep"
+                  },
+                  {
+                    "name": "agent_query",
+                    "text": "Apollo 11 выход на Луну отдых"
+                  },
+                  {
+                    "name": "keywords",
+                    "text": "выход луну провели первого отдыха"
+                  }
+                ],
+                "results": [
+                  {
+                    "rank": 1,
+                    "chunk_id": "464e03e594896c1c88bc101b",
+                    "section_id": "4.12.2",
+                    "pdf_page": 40,
+                    "heading_path": [
+                      "4. PILOTS' REPORT",
+                      "4.12 LUNAR SURFACE OPERATIONS",
+                      "4.12.2 Egress Preparation"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40",
+                    "score": 0.094397,
+                    "evidence_coverage": 0.6,
+                    "variant_ranks": {
+                      "original": 1,
+                      "normalized": 1,
+                      "glossary_en": 1,
+                      "expanded_en": 2,
+                      "keywords": 3
+                    },
+                    "text": "The crew had given considerable thought to the advantage of beginning the extravehicular activity as soon as possible after landing instead\nof following the flight plan schedule of having the surface operations between two rest periods. The initial rest period was planned to allow\nflexibility in the event of unexpected difficulty with postlanding activities. These difficulties did not materialize, the crew were not overly\ntired, and no problem was experienced in adjusting to the 1/6-g environment. Based on these facts, the decision was made at 104:40:00 to proceed with the extravehicular activity prior to the first rest period.  \nPreparation for extravehicular activity began at 106:11:00. The estimate of the preparation time proved to be optimistic. In simulations,\n2 hours had been found to be a reasonable allocation; however, everything\nhad also been laid out in an orderly manner in the cockpit, and only those\nitems involved in the extravehicular activity were present. In fact,",
+                    "truncated": false
+                  },
+                  {
+                    "rank": 2,
+                    "chunk_id": "5388fda45dc9faf224e5f844",
+                    "section_id": "4.12.2",
+                    "pdf_page": 40,
+                    "heading_path": [
+                      "4. PILOTS' REPORT",
+                      "4.12 LUNAR SURFACE OPERATIONS",
+                      "4.12.2 Egress Preparation"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40",
+                    "score": 0.05698,
+                    "evidence_coverage": 0.6,
+                    "variant_ranks": {
+                      "glossary_en": 2,
+                      "expanded_en": 1
+                    },
+                    "text": "items involved in the extravehicular activity were present. In fact,\nthere were checklists, food packets, monoculars, and other miscellaneous  \nitems that interfered with an orderly preparation. All these items re�uired some thought as to their possible interference or use in the extravehicular activity. This interference resulted in exceeding the timeline\nestimate by a considerable amount. Preparation for egress was conducted\nslowly, carefully, and deliberately, and future missions should be planned and conducted with the same philosophy. The extravehicular activity\npreparation checklist was ade�uate and was closely followed. However,\nminor items that re�uired a decision in real time or had not been considered before flight re�uired more time than anticipated.  \nAn electrical connector on the cable that connects the remote control unit to the portable life support system gave some trouble in mating  \n(see section 16.3.2). This problem had been occasionally encountered",
+                    "truncated": false
+                  },
+                  {
+                    "rank": 3,
+                    "chunk_id": "cc1e6a668d60297ce84a301b",
+                    "section_id": "12.2.2",
+                    "pdf_page": 255,
+                    "heading_path": [
+                      "12. BIOMEDICAL EVALUATION",
+                      "12.2 MEDICAL OBSERVATIONS",
+                      "12.2.2 Medications"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=255",
+                    "score": 0.03125,
+                    "evidence_coverage": 0.4,
+                    "variant_ranks": {
+                      "expanded_en": 4
+                    },
+                    "text": "The Commander and the Lunar Module Pilot each took one Lomotil tablet\nprior to the sleep period to retard bowel movements before the lunar module activity. They each carried extra Lomotil tablets into the lunar module but did not take them. At 4 hours before entry and again after splashdown, the three crewmen each took anti-nauseant tablets containing 0.3 mg\nHyoscine and 5.0 mg Dexedrine. Aspirin tablets were also taken by the\ncrewmen, but the number of tablets per individual was not recorded. The\nLunar Module Pilot recalled that he had taken two aspirin tablets almost  \nevery night to aid his sleep.",
+                    "truncated": false
+                  },
+                  {
+                    "rank": 4,
+                    "chunk_id": "118f360e4a29fa2eb5c98b5f",
+                    "section_id": "4.12.3",
+                    "pdf_page": 41,
+                    "heading_path": [
+                      "4. PILOTS' REPORT",
+                      "4.12 LUNAR SURFACE OPERATIONS",
+                      "4.12.3 Lunar Module Egress"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=41",
+                    "score": 0.02381,
+                    "evidence_coverage": 0.4,
+                    "variant_ranks": {
+                      "glossary_en": 3
+                    },
+                    "text": "Simulation work in both the water immersion facility and the 1/6-g  \nenvironm�nt in an airplane was reasonably accurate in preparing the crew\nfor lunar n[odule egress. Body positioning and arching-the-back techniques\nthat were requir�d to exit the hatch were performed, and no unexpected\nproblems were experienced. The forward platform was more than adequate\nto allow changing the body position from that used in egressing the hatch\nto that required for getting on the ladder. The first ladder step was\nsomewhat difficult to see and required caution and forethought. In general, the hatch, porch, and ladder ope1•ation was not particularly difficult and caused little concern. Operations on the platform could be\nperformed without losing body balance, and there was adequate room for\nmaneuvering.  \nThe initial operation of the lunar equipment conveyor in lowering\nthe camera was satisfactory, but after the straps had become covered with",
+                    "truncated": false
+                  },
+                  {
+                    "rank": 5,
+                    "chunk_id": "ecbbcd18fa3118d88d3afdfa",
+                    "section_id": "4.12.2",
+                    "pdf_page": 40,
+                    "heading_path": [
+                      "4. PILOTS' REPORT",
+                      "4.12 LUNAR SURFACE OPERATIONS",
+                      "4.12.2 Egress Preparation"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40",
+                    "score": 0.023438,
+                    "evidence_coverage": 0.4,
+                    "variant_ranks": {
+                      "glossary_en": 4
+                    },
+                    "text": "(see section 16.3.2). This problem had been occasionally encountered\nusing the same e�uipment before flight. At least 10 minutes were re�uired\nto connect each unit, and at one point it was thought the connection\nwould not be successfully completed.  \nConsiderable difficulty was experienced with voice communications\nwhen the extravehicular transceivers were used inside the lunar module.\nAt times communications were good but at other times were garbled on the",
+                    "truncated": false
+                  }
+                ],
+                "evidence": {
+                  "heuristic_sufficient": true,
+                  "coverage": 1.0,
+                  "missing_terms": [],
+                  "matched_terms": [
+                    "egress",
+                    "conducted",
+                    "before",
+                    "first",
+                    "rest"
+                  ],
+                  "ocr_noise": false,
+                  "temporal_required": [
+                    "before",
+                    "first"
+                  ],
+                  "temporal_found": [
+                    "before",
+                    "first"
+                  ],
+                  "temporal_missing": [],
+                  "negation_required": [],
+                  "negation_found": [],
+                  "critical_missing_terms": [],
+                  "numeric_values": [
+                    "1",
+                    "6",
+                    "104",
+                    "40",
+                    "00",
+                    "106",
+                    "11",
+                    "2",
+                    "16.3.2",
+                    "4",
+                    "0.3",
+                    "5.0"
+                  ],
+                  "unit_values": [],
+                  "calculation_requested": false,
+                  "calculation_hint": null,
+                  "multi_part": false,
+                  "reason": "ok",
+                  "note": "Heuristic lexical check; not a semantic entailment judge."
+                },
+                "context_chunks": []
+              },
+              "content_preview": "{\"question\": \"почему выход на луну провели до первого отдыха сошлись на отчет\", \"query\": \"Apollo 11 выход на Луну отдых\", \"k\": 5, \"algorithm_version\": \"query-processing-v1\", \"variants\": [{\"name\": \"original\", \"text\": \"почему выход на луну провели до первого отдыха сошлись на отчет\"}, {\"name\": \"normalized\", \"text\": \"почему выход на луну провели до первого отдыха\"}, {\"name\": \"glossary_en\", \"text\": \"egress conducted before first rest\"}, {\"name\": \"expanded_en\", \"text\": \"egress conducted before first rest sleep\"}, {\"name\": \"agent_query\", \"text\": \"Apollo 11 выход на Луну отдых\"}, {\"name\": \"keywords\",",
+              "content_length": 7508
+            }
+          ],
+          "llm_calls": 2,
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 301,
+              "prompt_tokens": 3137,
+              "total_tokens": 3438,
+              "completion_tokens_details": null,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cache_write_tokens": null,
+                "cached_tokens": 926,
+                "image_tokens": null,
+                "text_tokens": null
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "apollo-qwen:16k",
+            "system_fingerprint": "fp_ollama",
+            "id": "chatcmpl-472",
+            "finish_reason": "stop",
+            "logprobs": null
+          },
+          "usage_metadata": {
+            "input_tokens": 3137,
+            "output_tokens": 301,
+            "total_tokens": 3438,
+            "input_token_details": {
+              "cache_read": 926
+            },
+            "output_token_details": {}
+          },
+          "usage_metadata_all": {
+            "input_tokens": 4050,
+            "output_tokens": 355,
+            "total_tokens": 4405,
+            "input_token_details": {
+              "cache_read": 1817
+            }
+          }
+        },
+        {
+          "turn_id": 2,
+          "prompt": "А почему подготовка к нему заняла больше времени?",
+          "reference": {
+            "answer": "В реальной кабине мешали дополнительные предметы. Требовались осторожная подготовка и решения по неучтённым мелочам. Соединение электрического разъёма также вызвало задержку.",
+            "section_ids": [
+              "4.12.2"
+            ],
+            "pdf_pages": [
+              40,
+              41
+            ]
+          },
+          "status": "ok",
+          "answer": "Подготовка к высадке заняла больше времени из-за наличия различных элементов, связанных с высадкой, в кабине, что затрудняло их организованное размещение. Также были проблемы с подключением оборудования, что также затянуло процесс. Это было связано с тем, что экипаж решил начать высадку как можно скорее после посадки, чтобы избежать задержек, связанных с посадкой. Экипаж провел медитацию и принял лекарства для предотвращения запоров и головных болей. \n\nСсылки на отчет: \n- section_id: \"4.12.2\", pdf_page: 40\n- section_id: \"4.12.1\", pdf_page: 40\n- section_id: \"17\", pdf_page: 324",
+          "error": null,
+          "duration_s": 106.097,
+          "before_message_count": 4,
+          "after_message_count": 5,
+          "new_message_count": 4,
+          "context_last": {
+            "thread_id": "selected-D01-20261106-200630",
+            "context_limit": 4096,
+            "response_reserve": 512,
+            "input_budget": 3584,
+            "tokens_before": 5809,
+            "tokens_after": 3552,
+            "messages_before": 7,
+            "messages_after": 4,
+            "compacted": true,
+            "strategy": "summarize",
+            "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+            "current_user_message_preserved": true,
+            "fallback_used": true,
+            "truncated_tool_messages": 0,
+            "removed_message_ids": [
+              "HumanMessage-c7dd2442d2c31c51",
+              "lc_run--01a1b1d3-896b-723e-855f-1774cbad4d9b-0",
+              "5f6abbfe-2d04-4388-a6f5-bc41c5bf3ecb"
+            ],
+            "removed_message_types": [
+              "HumanMessage",
+              "AIMessage",
+              "ToolMessage"
+            ],
+            "summary_created": true,
+            "summary_retained": false,
+            "compaction_method": "summarize+fallback",
+            "summarized_message_ids": [
+              "673c588e-a37b-4b9e-9ca5-e43017f9d532"
+            ],
+            "summarized_message_types": [
+              "HumanMessage"
+            ],
+            "truncated_tool_message_ids": []
+          },
+          "attempts": [
+            {
+              "attempt": 0,
+              "prompt_variant": "original",
+              "status": "ok",
+              "duration_s": 106.097,
+              "empty": false,
+              "error": null
+            }
+          ],
+          "retry_count": 0,
+          "retry_extra_duration_s": 0,
+          "model_retry_events": [],
+          "model_retry_extra_duration_s": 0,
+          "tool_calls": [
+            {
+              "name": "search_documents",
+              "args": {
+                "query": "Apollo 11 подготовка к нему заняла больше времени",
+                "question": "почему подготовка к нему заняла больше времени"
+              },
+              "id": "call_96s3jhxv"
+            }
+          ],
+          "tool_messages": [
+            {
+              "tool_call_id": "call_96s3jhxv",
+              "name": "search_documents",
+              "status": "success",
+              "content": "{\"question\": \"почему подготовка к нему заняла больше времени\", \"query\": \"Apollo 11 подготовка к нему заняла больше времени\", \"k\": 5, \"algorithm_version\": \"query-processing-v1\", \"variants\": [{\"name\": \"original\", \"text\": \"почему подготовка к нему заняла больше времени\"}, {\"name\": \"glossary_en\", \"text\": \"preparation took more time\"}, {\"name\": \"agent_query\", \"text\": \"Apollo 11 подготовка к нему заняла больше времени\"}, {\"name\": \"keywords\", \"text\": \"подготовка нему заняла больше времени\"}], \"results\": [{\"rank\": 1, \"chunk_id\": \"5388fda45dc9faf224e5f844\", \"section_id\": \"4.12.2\", \"pdf_page\": 40, \"heading_path\": [\"4. PILOTS' REPORT\", \"4.12 LUNAR SURFACE OPERATIONS\", \"4.12.2 Egress Preparation\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40\", \"score\": 0.024194, \"evidence_coverage\": 1.0, \"variant_ranks\": {\"glossary_en\": 2}, \"text\": \"items involved in the extravehicular activity were present. In fact,\\nthere were checklists, food packets, monoculars, and other miscellaneous  \\nitems that interfered with an orderly preparation. All these items re�uired some thought as to their possible interference or use in the extravehicular activity. This interference resulted in exceeding the timeline\\nestimate by a considerable amount. Preparation for egress was conducted\\nslowly, carefully, and deliberately, and future missions should be planned and conducted with the same philosophy. The extravehicular activity\\npreparation checklist was ade�uate and was closely followed. However,\\nminor items that re�uired a decision in real time or had not been considered before flight re�uired more time than anticipated.  \\nAn electrical connector on the cable that connects the remote control unit to the portable life support system gave some trouble in mating  \\n(see section 16.3.2). This problem had been occasionally encountered\", \"truncated\": false}, {\"rank\": 2, \"chunk_id\": \"5b8fb4824e26d545b0a4016f\", \"section_id\": \"4.8.2\", \"pdf_page\": 35, \"heading_path\": [\"4. PILOTS' REPORT\", \"4.8 DESCENT PREPARATION\", \"4.8.2 Command Module\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=35\", \"score\": 0.015385, \"evidence_coverage\": 0.75, \"variant_ranks\": {\"original\": 5}, \"text\": \"Activities after lunar orbit circularization were routine, with the\\ntime being used primarily for photographs of the lunar surface. The\\nactivation of the lunar module in preparation for descent was, from the\\nviewpoint of the Command Module Pilot, a well organized and fairly leisurely period. During the abort guidance system calibration, the command\\nmodule was maintained at a fixed attitude for several minutes without firing thrusters. It was easy to stabilize the spacecraft with minimum impulse control prior to the required period so that no thruster firings\\nwere needed for at least 10 minutes.  \\nThe probe, drogue, and hatch all functioned perfectly, and the\\noperation of closing out the tunnel, preloading the probe, and cocking  \\nthe latches was done routinely. Previous practice with installation and\\nremoval of the probe and drogue during translunar coast was most helpful.  \\nTwo periods of orbital navigation (P22) were scheduled with the lunar module attached. The first, at 83 hours, consisted of five marks on\", \"truncated\": false}, {\"rank\": 3, \"chunk_id\": \"464e03e594896c1c88bc101b\", \"section_id\": \"4.12.2\", \"pdf_page\": 40, \"heading_path\": [\"4. PILOTS' REPORT\", \"4.12 LUNAR SURFACE OPERATIONS\", \"4.12.2 Egress Preparation\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40\", \"score\": 0.040215, \"evidence_coverage\": 0.5, \"variant_ranks\": {\"original\": 4, \"glossary_en\": 1}, \"text\": \"The crew had given considerable thought to the advantage of beginning the extravehicular activity as soon as possible after landing instead\\nof following the flight plan schedule of having the surface operations between two rest periods. The initial rest period was planned to allow\\nflexibility in the event of unexpected difficulty with postlanding activities. These difficulties did not materialize, the crew were not overly\\ntired, and no problem was experienced in adjusting to the 1/6-g environment. Based on these facts, the decision was made at 104:40:00 to proceed with the extravehicular activity prior to the first rest period.  \\nPreparation for extravehicular activity began at 106:11:00. The estimate of the preparation time proved to be optimistic. In simulations,\\n2 hours had been found to be a reasonable allocation; however, everything\\nhad also been laid out in an orderly manner in the cockpit, and only those\\nitems involved in the extravehicular activity were present. In fact,\", \"truncated\": false}, {\"rank\": 4, \"chunk_id\": \"1c536c228ea08bedf9114258\", \"section_id\": \"4.12.1\", \"pdf_page\": 40, \"heading_path\": [\"4. PILOTS' REPORT\", \"4.12 LUNAR SURFACE OPERATIONS\", \"4.12.1 Postlanding Checkout\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40\", \"score\": 0.028425, \"evidence_coverage\": 0.5, \"variant_ranks\": {\"glossary_en\": 3, \"keywords\": 5}, \"text\": \"4-11  \\nPlatform alignment and preparation for early lift-off were completed\\non schedule without significant problems. The mission timer malfunctioned\\nand displayed an impossible number that could not be correlated with any\\nspecific failure time. After several unsuccessful attempts to recycle\\nthis timer, it was turned off for 11 hours to cool. The timer was turned\\non for ascent and it operated properly and performed satisfactorily for\\nthe remainder of the mission (see section 16.2.1).\", \"truncated\": false}, {\"rank\": 5, \"chunk_id\": \"c0611d09d25570c7e750131c\", \"section_id\": \"17\", \"pdf_page\": 324, \"heading_path\": [\"17. CONCLUSIONS\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=324\", \"score\": 0.020891, \"evidence_coverage\": 0.25, \"variant_ranks\": {\"original\": 2, \"keywords\": 3}, \"text\": \"4. The two--man prelai.mch checkout and countdown for ascent from\\nthe lunar surface were well planned and executed.  \\n5. The timeline activities for all phases of the lunar landing\\nmission were well within the crew's capability to perform the required\\ntasks.  \\n6. The quarantine operation from spacecraft landing until release\\nof the crew, spacecraft, and lunar samples from the Lunar Receiving Laboratory was accompliBhed successfully and without any violation of the quarantine.  \\n7. No microorganisms from extraterrestrial source were recovered\\nfrom either the crew or the spacecraft.  \\n8. The hardware problems experienced on this mission, as on previous manned missions, were of a nature which did not unduly hamper the\\ncrew or result in the compromise of safety or mission objectives.  \\n9. The Misuion Control Center and the Manned Space Flight Network\\nproved to be adequate for controlling and monitoring all phases of the  \\nflight, including the descent, surface activities, and ascent phases of\\nthe mission.\", \"truncated\": false}], \"evidence\": {\"heuristic_sufficient\": true, \"coverage\": 1.0, \"missing_terms\": [], \"matched_terms\": [\"preparation\", \"took\", \"more\", \"time\"], \"ocr_noise\": false, \"temporal_required\": [], \"temporal_found\": [], \"temporal_missing\": [], \"negation_required\": [], \"negation_found\": [], \"critical_missing_terms\": [], \"numeric_values\": [\"16.3.2\", \"10\", \"22\", \"83\", \"1\", \"6\", \"104\", \"40\", \"00\", \"106\", \"11\", \"2\"], \"unit_values\": [{\"value\": \"10\", \"unit\": \"minutes\"}], \"calculation_requested\": true, \"calculation_hint\": null, \"multi_part\": false, \"reason\": \"ok\", \"note\": \"Heuristic lexical check; not a semantic entailment judge.\"}, \"context_chunks\": []}",
+              "content_json": {
+                "question": "почему подготовка к нему заняла больше времени",
+                "query": "Apollo 11 подготовка к нему заняла больше времени",
+                "k": 5,
+                "algorithm_version": "query-processing-v1",
+                "variants": [
+                  {
+                    "name": "original",
+                    "text": "почему подготовка к нему заняла больше времени"
+                  },
+                  {
+                    "name": "glossary_en",
+                    "text": "preparation took more time"
+                  },
+                  {
+                    "name": "agent_query",
+                    "text": "Apollo 11 подготовка к нему заняла больше времени"
+                  },
+                  {
+                    "name": "keywords",
+                    "text": "подготовка нему заняла больше времени"
+                  }
+                ],
+                "results": [
+                  {
+                    "rank": 1,
+                    "chunk_id": "5388fda45dc9faf224e5f844",
+                    "section_id": "4.12.2",
+                    "pdf_page": 40,
+                    "heading_path": [
+                      "4. PILOTS' REPORT",
+                      "4.12 LUNAR SURFACE OPERATIONS",
+                      "4.12.2 Egress Preparation"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40",
+                    "score": 0.024194,
+                    "evidence_coverage": 1.0,
+                    "variant_ranks": {
+                      "glossary_en": 2
+                    },
+                    "text": "items involved in the extravehicular activity were present. In fact,\nthere were checklists, food packets, monoculars, and other miscellaneous  \nitems that interfered with an orderly preparation. All these items re�uired some thought as to their possible interference or use in the extravehicular activity. This interference resulted in exceeding the timeline\nestimate by a considerable amount. Preparation for egress was conducted\nslowly, carefully, and deliberately, and future missions should be planned and conducted with the same philosophy. The extravehicular activity\npreparation checklist was ade�uate and was closely followed. However,\nminor items that re�uired a decision in real time or had not been considered before flight re�uired more time than anticipated.  \nAn electrical connector on the cable that connects the remote control unit to the portable life support system gave some trouble in mating  \n(see section 16.3.2). This problem had been occasionally encountered",
+                    "truncated": false
+                  },
+                  {
+                    "rank": 2,
+                    "chunk_id": "5b8fb4824e26d545b0a4016f",
+                    "section_id": "4.8.2",
+                    "pdf_page": 35,
+                    "heading_path": [
+                      "4. PILOTS' REPORT",
+                      "4.8 DESCENT PREPARATION",
+                      "4.8.2 Command Module"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=35",
+                    "score": 0.015385,
+                    "evidence_coverage": 0.75,
+                    "variant_ranks": {
+                      "original": 5
+                    },
+                    "text": "Activities after lunar orbit circularization were routine, with the\ntime being used primarily for photographs of the lunar surface. The\nactivation of the lunar module in preparation for descent was, from the\nviewpoint of the Command Module Pilot, a well organized and fairly leisurely period. During the abort guidance system calibration, the command\nmodule was maintained at a fixed attitude for several minutes without firing thrusters. It was easy to stabilize the spacecraft with minimum impulse control prior to the required period so that no thruster firings\nwere needed for at least 10 minutes.  \nThe probe, drogue, and hatch all functioned perfectly, and the\noperation of closing out the tunnel, preloading the probe, and cocking  \nthe latches was done routinely. Previous practice with installation and\nremoval of the probe and drogue during translunar coast was most helpful.  \nTwo periods of orbital navigation (P22) were scheduled with the lunar module attached. The first, at 83 hours, consisted of five marks on",
+                    "truncated": false
+                  },
+                  {
+                    "rank": 3,
+                    "chunk_id": "464e03e594896c1c88bc101b",
+                    "section_id": "4.12.2",
+                    "pdf_page": 40,
+                    "heading_path": [
+                      "4. PILOTS' REPORT",
+                      "4.12 LUNAR SURFACE OPERATIONS",
+                      "4.12.2 Egress Preparation"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40",
+                    "score": 0.040215,
+                    "evidence_coverage": 0.5,
+                    "variant_ranks": {
+                      "original": 4,
+                      "glossary_en": 1
+                    },
+                    "text": "The crew had given considerable thought to the advantage of beginning the extravehicular activity as soon as possible after landing instead\nof following the flight plan schedule of having the surface operations between two rest periods. The initial rest period was planned to allow\nflexibility in the event of unexpected difficulty with postlanding activities. These difficulties did not materialize, the crew were not overly\ntired, and no problem was experienced in adjusting to the 1/6-g environment. Based on these facts, the decision was made at 104:40:00 to proceed with the extravehicular activity prior to the first rest period.  \nPreparation for extravehicular activity began at 106:11:00. The estimate of the preparation time proved to be optimistic. In simulations,\n2 hours had been found to be a reasonable allocation; however, everything\nhad also been laid out in an orderly manner in the cockpit, and only those\nitems involved in the extravehicular activity were present. In fact,",
+                    "truncated": false
+                  },
+                  {
+                    "rank": 4,
+                    "chunk_id": "1c536c228ea08bedf9114258",
+                    "section_id": "4.12.1",
+                    "pdf_page": 40,
+                    "heading_path": [
+                      "4. PILOTS' REPORT",
+                      "4.12 LUNAR SURFACE OPERATIONS",
+                      "4.12.1 Postlanding Checkout"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=40",
+                    "score": 0.028425,
+                    "evidence_coverage": 0.5,
+                    "variant_ranks": {
+                      "glossary_en": 3,
+                      "keywords": 5
+                    },
+                    "text": "4-11  \nPlatform alignment and preparation for early lift-off were completed\non schedule without significant problems. The mission timer malfunctioned\nand displayed an impossible number that could not be correlated with any\nspecific failure time. After several unsuccessful attempts to recycle\nthis timer, it was turned off for 11 hours to cool. The timer was turned\non for ascent and it operated properly and performed satisfactorily for\nthe remainder of the mission (see section 16.2.1).",
+                    "truncated": false
+                  },
+                  {
+                    "rank": 5,
+                    "chunk_id": "c0611d09d25570c7e750131c",
+                    "section_id": "17",
+                    "pdf_page": 324,
+                    "heading_path": [
+                      "17. CONCLUSIONS"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=324",
+                    "score": 0.020891,
+                    "evidence_coverage": 0.25,
+                    "variant_ranks": {
+                      "original": 2,
+                      "keywords": 3
+                    },
+                    "text": "4. The two--man prelai.mch checkout and countdown for ascent from\nthe lunar surface were well planned and executed.  \n5. The timeline activities for all phases of the lunar landing\nmission were well within the crew's capability to perform the required\ntasks.  \n6. The quarantine operation from spacecraft landing until release\nof the crew, spacecraft, and lunar samples from the Lunar Receiving Laboratory was accompliBhed successfully and without any violation of the quarantine.  \n7. No microorganisms from extraterrestrial source were recovered\nfrom either the crew or the spacecraft.  \n8. The hardware problems experienced on this mission, as on previous manned missions, were of a nature which did not unduly hamper the\ncrew or result in the compromise of safety or mission objectives.  \n9. The Misuion Control Center and the Manned Space Flight Network\nproved to be adequate for controlling and monitoring all phases of the  \nflight, including the descent, surface activities, and ascent phases of\nthe mission.",
+                    "truncated": false
+                  }
+                ],
+                "evidence": {
+                  "heuristic_sufficient": true,
+                  "coverage": 1.0,
+                  "missing_terms": [],
+                  "matched_terms": [
+                    "preparation",
+                    "took",
+                    "more",
+                    "time"
+                  ],
+                  "ocr_noise": false,
+                  "temporal_required": [],
+                  "temporal_found": [],
+                  "temporal_missing": [],
+                  "negation_required": [],
+                  "negation_found": [],
+                  "critical_missing_terms": [],
+                  "numeric_values": [
+                    "16.3.2",
+                    "10",
+                    "22",
+                    "83",
+                    "1",
+                    "6",
+                    "104",
+                    "40",
+                    "00",
+                    "106",
+                    "11",
+                    "2"
+                  ],
+                  "unit_values": [
+                    {
+                      "value": "10",
+                      "unit": "minutes"
+                    }
+                  ],
+                  "calculation_requested": true,
+                  "calculation_hint": null,
+                  "multi_part": false,
+                  "reason": "ok",
+                  "note": "Heuristic lexical check; not a semantic entailment judge."
+                },
+                "context_chunks": []
+              },
+              "content_preview": "{\"question\": \"почему подготовка к нему заняла больше времени\", \"query\": \"Apollo 11 подготовка к нему заняла больше времени\", \"k\": 5, \"algorithm_version\": \"query-processing-v1\", \"variants\": [{\"name\": \"original\", \"text\": \"почему подготовка к нему заняла больше времени\"}, {\"name\": \"glossary_en\", \"text\": \"preparation took more time\"}, {\"name\": \"agent_query\", \"text\": \"Apollo 11 подготовка к нему заняла больше времени\"}, {\"name\": \"keywords\", \"text\": \"подготовка нему заняла больше времени\"}], \"results\": [{\"rank\": 1, \"chunk_id\": \"5388fda45dc9faf224e5f844\", \"section_id\": \"4.12.2\", \"pdf_page\": 40, \"head",
+              "content_length": 7755
+            }
+          ],
+          "llm_calls": 2,
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 201,
+              "prompt_tokens": 3428,
+              "total_tokens": 3629,
+              "completion_tokens_details": null,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cache_write_tokens": null,
+                "cached_tokens": 883,
+                "image_tokens": null,
+                "text_tokens": null
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "apollo-qwen:16k",
+            "system_fingerprint": "fp_ollama",
+            "id": "chatcmpl-179",
+            "finish_reason": "stop",
+            "logprobs": null
+          },
+          "usage_metadata": {
+            "input_tokens": 3428,
+            "output_tokens": 201,
+            "total_tokens": 3629,
+            "input_token_details": {
+              "cache_read": 883
+            },
+            "output_token_details": {}
+          },
+          "usage_metadata_all": {
+            "input_tokens": 6888,
+            "output_tokens": 249,
+            "total_tokens": 7137,
+            "input_token_details": {
+              "cache_read": 4320
+            }
+          }
+        },
+        {
+          "turn_id": 3,
+          "prompt": "Назови конкретный раздел, к которому относятся оба твоих предыдущих ответа.",
+          "reference": {
+            "answer": "4.12.2 Egress Preparation",
+            "section_ids": [
+              "4.12.2"
+            ],
+            "pdf_pages": [
+              40,
+              41
+            ]
+          },
+          "status": "ok",
+          "answer": "Разделы, к которым относятся предыдущие ответы, это \"4.12.2\" и \"4.12.1\", они находятся на страницах 40 в PDF.",
+          "error": null,
+          "duration_s": 61.261,
+          "before_message_count": 5,
+          "after_message_count": 6,
+          "new_message_count": 2,
+          "context_last": {
+            "thread_id": "selected-D01-20261106-200630",
+            "context_limit": 4096,
+            "response_reserve": 512,
+            "input_budget": 3584,
+            "tokens_before": 3789,
+            "tokens_after": 3484,
+            "messages_before": 6,
+            "messages_after": 5,
+            "compacted": true,
+            "strategy": "summarize",
+            "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+            "current_user_message_preserved": true,
+            "fallback_used": true,
+            "truncated_tool_messages": 0,
+            "removed_message_ids": [
+              "lc_run--01a1b1d3-d041-701a-a380-ad81722e6927-0"
+            ],
+            "removed_message_types": [
+              "AIMessage"
+            ],
+            "summary_created": false,
+            "summary_retained": false,
+            "compaction_method": "fallback",
+            "summarized_message_ids": [],
+            "summarized_message_types": [],
+            "truncated_tool_message_ids": []
+          },
+          "attempts": [
+            {
+              "attempt": 0,
+              "prompt_variant": "original",
+              "status": "ok",
+              "duration_s": 61.261,
+              "empty": false,
+              "error": null
+            }
+          ],
+          "retry_count": 0,
+          "retry_extra_duration_s": 0,
+          "model_retry_events": [],
+          "model_retry_extra_duration_s": 0,
+          "tool_calls": [],
+          "tool_messages": [],
+          "llm_calls": 1,
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 49,
+              "prompt_tokens": 3360,
+              "total_tokens": 3409,
+              "completion_tokens_details": null,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cache_write_tokens": null,
+                "cached_tokens": 883,
+                "image_tokens": null,
+                "text_tokens": null
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "apollo-qwen:16k",
+            "system_fingerprint": "fp_ollama",
+            "id": "chatcmpl-242",
+            "finish_reason": "stop",
+            "logprobs": null
+          },
+          "usage_metadata": {
+            "input_tokens": 3360,
+            "output_tokens": 49,
+            "total_tokens": 3409,
+            "input_token_details": {
+              "cache_read": 883
+            },
+            "output_token_details": {}
+          },
+          "usage_metadata_all": {
+            "input_tokens": 3360,
+            "output_tokens": 49,
+            "total_tokens": 3409,
+            "input_token_details": {
+              "cache_read": 883
+            }
+          }
+        },
+        {
+          "turn_id": 4,
+          "prompt": "Как лунная пыль осложняла работу рядом с модулем?",
+          "reference": {
+            "answer": "С загрязнённых ремней пыль падала на астронавта и в кабину, транспортёр требовал усилий. Покрытый пылью телевизионный кабель стал хуже виден и путался под ногами.",
+            "section_ids": [
+              "4.12.3",
+              "4.12.4"
+            ],
+            "pdf_pages": [
+              41,
+              42,
+              43,
+              44
+            ]
+          },
+          "status": "ok",
+          "answer": "В разделе 4.11 \"Командный модуль одиночные активности\" отчета указано, что при работе рядом с модулем возникли проблемы с видимостью из-за лунной пыли. Лунная пыль создавала тонкую пленку, которая двигалась в радиальном направлении и уменьшала видимость. Это затрудняло наблюдение за системами и выполнение необходимых функций, кроме периода приближения к модулю.",
+          "error": null,
+          "duration_s": 144.568,
+          "before_message_count": 6,
+          "after_message_count": 8,
+          "new_message_count": 5,
+          "context_last": {
+            "thread_id": "selected-D01-20261106-200630",
+            "context_limit": 4096,
+            "response_reserve": 512,
+            "input_budget": 3584,
+            "tokens_before": 5573,
+            "tokens_after": 3565,
+            "messages_before": 9,
+            "messages_after": 7,
+            "compacted": true,
+            "strategy": "summarize",
+            "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+            "current_user_message_preserved": true,
+            "fallback_used": false,
+            "truncated_tool_messages": 0,
+            "removed_message_ids": [],
+            "removed_message_types": [],
+            "summary_created": true,
+            "summary_retained": true,
+            "compaction_method": "summarize",
+            "summarized_message_ids": [
+              "c79b0435-51c5-4ac5-a7a8-ac76e3f2e4d1",
+              "lc_run--01a1b1d5-01c6-7345-9ae3-042f9533c6ad-0",
+              "be37800a-3d29-4834-8833-b4f787993e87"
+            ],
+            "summarized_message_types": [
+              "HumanMessage",
+              "AIMessage",
+              "ToolMessage"
+            ],
+            "truncated_tool_message_ids": []
+          },
+          "attempts": [
+            {
+              "attempt": 0,
+              "prompt_variant": "original",
+              "status": "ok",
+              "duration_s": 144.568,
+              "empty": false,
+              "error": null
+            }
+          ],
+          "retry_count": 0,
+          "retry_extra_duration_s": 0,
+          "model_retry_events": [],
+          "model_retry_extra_duration_s": 0,
+          "tool_calls": [
+            {
+              "name": "search_documents",
+              "args": {
+                "query": "Apollo 11 лунная пыль осложняла работу рядом с модулем",
+                "question": "почему лунная пыль осложняла работу рядом с модулем"
+              },
+              "id": "call_zjdrgw79"
+            }
+          ],
+          "tool_messages": [
+            {
+              "tool_call_id": "call_zjdrgw79",
+              "name": "search_documents",
+              "status": "success",
+              "content": "{\"question\": \"почему лунная пыль осложняла работу рядом с модулем\", \"query\": \"Apollo 11 лунная пыль осложняла работу рядом с модулем\", \"k\": 5, \"algorithm_version\": \"query-processing-v1\", \"variants\": [{\"name\": \"original\", \"text\": \"почему лунная пыль осложняла работу рядом с модулем\"}, {\"name\": \"glossary_en\", \"text\": \"lunar dust\"}, {\"name\": \"agent_query\", \"text\": \"Apollo 11 лунная пыль осложняла работу рядом с модулем\"}, {\"name\": \"keywords\", \"text\": \"лунная пыль осложняла работу рядом модулем\"}], \"results\": [{\"rank\": 1, \"chunk_id\": \"829e2d2a00e35fa3e211b54f\", \"section_id\": \"4.11\", \"pdf_page\": 39, \"heading_path\": [\"4. PILOTS' REPORT\", \"4.11 COMMAND MODULE SOLO ACTIVITIES\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=39\", \"score\": 0.021081, \"evidence_coverage\": 1.0, \"variant_ranks\": {\"original\": 1, \"keywords\": 4}, \"text\": \"his attention.  \\nThe visibility through the sextant was good enough to allow the\\nCommand Module Pilot to acquire the lunar module (in flight) at distances\\nof over 100 miles. However, the lunar module was lost in the sextant\\nfield of view just prior to powered descent initiation (120-mile range)\\nand was not regained until after ascent insertion (at an approximate range\\nof 250 miles), when it appeared as a blinking light in the night sky.  \\nIn general, more than enough time was available to monitor systems\\nand perform all necessary functions in a leisurely fashion, except during\\nthe rendezvous phase. During that 3-hour period when hundreds of computer\\nentries, as well as numerous marks and other manual operations, were required, the Command Module Pilot had little time to devote to analyzing\\nany off-nominal rendezvous trends as they developed or to cope with any  \\nsystems malfunctions. Fortunately, no additional attention to these details was required.\", \"truncated\": false}, {\"rank\": 2, \"chunk_id\": \"48a4aa7fc88a36c5980675de\", \"section_id\": \"11.2.1\", \"pdf_page\": 209, \"heading_path\": [\"11. THE LUNAR SURFACE\", \"11.2 LUNAR SOIL MECHANICS EXPERIMENT\", \"11.2.1 Observed Characteristics\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=209\", \"score\": 0.02459, \"evidence_coverage\": 1.0, \"variant_ranks\": {\"glossary_en\": 1}, \"text\": \"The physical characteristics of lunar surface materials were first\\nindicated during the lunar module descent when the crew noticed a transparent sheet of dust resembling a thin layer of ground fog that moved  \\nradially outward and caused a gradual decrease in visibility.\", \"truncated\": false}, {\"rank\": 3, \"chunk_id\": \"7732a81773fa7a25b6aedb28\", \"section_id\": \"11.5\", \"pdf_page\": 219, \"heading_path\": [\"11. THE LUNAR SURFACE\", \"11.5 LASER RANGING RETRO-REFLECTOR EXPERIMENT\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=219\", \"score\": 0.024194, \"evidence_coverage\": 1.0, \"variant_ranks\": {\"glossary_en\": 2}, \"text\": \"survived the lunar night satisfactorily. They also indicate no serious\\ndegradation of optical performance from flaked insulation, debris, dust,\\nor rocket exhaust products which scattered during lunar module lift-off.\", \"truncated\": false}, {\"rank\": 4, \"chunk_id\": \"b44509785d6c574eafdd68af\", \"section_id\": \"11.1.4\", \"pdf_page\": 206, \"heading_path\": [\"11. THE LUNAR SURFACE\", \"11.1 LUNAR GEOLOGY EXPERIMENT\", \"11.1.4 Geologic Photography and Mapping Procedures\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=206\", \"score\": 0.02381, \"evidence_coverage\": 1.0, \"variant_ranks\": {\"glossary_en\": 3}, \"text\": \"of faces that show features of the rock unobscured by dust and a detailed\\ndescription of the morphologic (relating to former structure), structural,\\nand textural features of the rock, together with an interpretation of the\\nassociated geologic features. The photographs and geologic sketches constitute a permanent record of the appearance of the specimens before subsequent destructive laboratory work.  \\nA small rock, 2 by 4 by 6 centimeters, which was collected in the\\ncontingency sample has been tentatively located on the lunar-surface photographs. Photographs of the rock show a fresh-appearing vesicular (small\\ncavity resulting from vaporization in a molten mass) lava, similar in ve.sicularity, texture, and crystallinity to many terrestrial basalts (see  \\nfig. 11-2).  \\nThe third largest rock in the contingency sample was collected within 2 meters of the lunar module. The rock has an ovoid shape, tapered at\", \"truncated\": false}, {\"rank\": 5, \"chunk_id\": \"89e7bd73ddb019166b7b4ac1\", \"section_id\": \"12.5.1\", \"pdf_page\": 260, \"heading_path\": [\"12. BIOMEDICAL EVALUATION\", \"12.5 LUNAR CONTAMINATION AND QUARANTINE\", \"12.5.1 Lunar Exposure\"], \"citation_url\": \"https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=260\", \"score\": 0.023438, \"evidence_coverage\": 1.0, \"variant_ranks\": {\"glossary_en\": 4}, \"text\": \"Although each crewman attempted to clean himself and the equipment\\nbefore ingress, a fairly large amount of dust and grains of lunar surface  \\nmaterial was brought into the cabin. When the crewmen removed their helmets, they noticed a distinct, pungent odor emanating from the lunar material. The texture of the dust was like powdered graphite, and both crewmen were very dirty after they removed their helmets, overshoes, and  \\ngloves. The crewmen cleaned their hands and faces with tissues and with\\ntowels that had been soaked in hot water. The Commander removed his\\nliquid-cooling garment in order to clean his body. One grain of material\\ngot into the Commander's eye, but was easily removed and caused no problem. The dust-like material could not be removed completely from beneath\\ntheir fingernails.  \\nThe cabin cleaning procedure involved the use of a vacuum-brush device and positive air pressure from the suit supply hoses to blow remote\", \"truncated\": false}], \"evidence\": {\"heuristic_sufficient\": true, \"coverage\": 1.0, \"missing_terms\": [], \"matched_terms\": [\"lunar\", \"dust\"], \"ocr_noise\": false, \"temporal_required\": [], \"temporal_found\": [], \"temporal_missing\": [], \"negation_required\": [], \"negation_found\": [], \"critical_missing_terms\": [], \"numeric_values\": [\"100\", \"120\", \"250\", \"3\"], \"unit_values\": [{\"value\": \"100\", \"unit\": \"miles\"}, {\"value\": \"250\", \"unit\": \"miles\"}], \"calculation_requested\": false, \"calculation_hint\": null, \"multi_part\": false, \"reason\": \"ok\", \"note\": \"Heuristic lexical check; not a semantic entailment judge.\"}, \"context_chunks\": []}",
+              "content_json": {
+                "question": "почему лунная пыль осложняла работу рядом с модулем",
+                "query": "Apollo 11 лунная пыль осложняла работу рядом с модулем",
+                "k": 5,
+                "algorithm_version": "query-processing-v1",
+                "variants": [
+                  {
+                    "name": "original",
+                    "text": "почему лунная пыль осложняла работу рядом с модулем"
+                  },
+                  {
+                    "name": "glossary_en",
+                    "text": "lunar dust"
+                  },
+                  {
+                    "name": "agent_query",
+                    "text": "Apollo 11 лунная пыль осложняла работу рядом с модулем"
+                  },
+                  {
+                    "name": "keywords",
+                    "text": "лунная пыль осложняла работу рядом модулем"
+                  }
+                ],
+                "results": [
+                  {
+                    "rank": 1,
+                    "chunk_id": "829e2d2a00e35fa3e211b54f",
+                    "section_id": "4.11",
+                    "pdf_page": 39,
+                    "heading_path": [
+                      "4. PILOTS' REPORT",
+                      "4.11 COMMAND MODULE SOLO ACTIVITIES"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=39",
+                    "score": 0.021081,
+                    "evidence_coverage": 1.0,
+                    "variant_ranks": {
+                      "original": 1,
+                      "keywords": 4
+                    },
+                    "text": "his attention.  \nThe visibility through the sextant was good enough to allow the\nCommand Module Pilot to acquire the lunar module (in flight) at distances\nof over 100 miles. However, the lunar module was lost in the sextant\nfield of view just prior to powered descent initiation (120-mile range)\nand was not regained until after ascent insertion (at an approximate range\nof 250 miles), when it appeared as a blinking light in the night sky.  \nIn general, more than enough time was available to monitor systems\nand perform all necessary functions in a leisurely fashion, except during\nthe rendezvous phase. During that 3-hour period when hundreds of computer\nentries, as well as numerous marks and other manual operations, were required, the Command Module Pilot had little time to devote to analyzing\nany off-nominal rendezvous trends as they developed or to cope with any  \nsystems malfunctions. Fortunately, no additional attention to these details was required.",
+                    "truncated": false
+                  },
+                  {
+                    "rank": 2,
+                    "chunk_id": "48a4aa7fc88a36c5980675de",
+                    "section_id": "11.2.1",
+                    "pdf_page": 209,
+                    "heading_path": [
+                      "11. THE LUNAR SURFACE",
+                      "11.2 LUNAR SOIL MECHANICS EXPERIMENT",
+                      "11.2.1 Observed Characteristics"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=209",
+                    "score": 0.02459,
+                    "evidence_coverage": 1.0,
+                    "variant_ranks": {
+                      "glossary_en": 1
+                    },
+                    "text": "The physical characteristics of lunar surface materials were first\nindicated during the lunar module descent when the crew noticed a transparent sheet of dust resembling a thin layer of ground fog that moved  \nradially outward and caused a gradual decrease in visibility.",
+                    "truncated": false
+                  },
+                  {
+                    "rank": 3,
+                    "chunk_id": "7732a81773fa7a25b6aedb28",
+                    "section_id": "11.5",
+                    "pdf_page": 219,
+                    "heading_path": [
+                      "11. THE LUNAR SURFACE",
+                      "11.5 LASER RANGING RETRO-REFLECTOR EXPERIMENT"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=219",
+                    "score": 0.024194,
+                    "evidence_coverage": 1.0,
+                    "variant_ranks": {
+                      "glossary_en": 2
+                    },
+                    "text": "survived the lunar night satisfactorily. They also indicate no serious\ndegradation of optical performance from flaked insulation, debris, dust,\nor rocket exhaust products which scattered during lunar module lift-off.",
+                    "truncated": false
+                  },
+                  {
+                    "rank": 4,
+                    "chunk_id": "b44509785d6c574eafdd68af",
+                    "section_id": "11.1.4",
+                    "pdf_page": 206,
+                    "heading_path": [
+                      "11. THE LUNAR SURFACE",
+                      "11.1 LUNAR GEOLOGY EXPERIMENT",
+                      "11.1.4 Geologic Photography and Mapping Procedures"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=206",
+                    "score": 0.02381,
+                    "evidence_coverage": 1.0,
+                    "variant_ranks": {
+                      "glossary_en": 3
+                    },
+                    "text": "of faces that show features of the rock unobscured by dust and a detailed\ndescription of the morphologic (relating to former structure), structural,\nand textural features of the rock, together with an interpretation of the\nassociated geologic features. The photographs and geologic sketches constitute a permanent record of the appearance of the specimens before subsequent destructive laboratory work.  \nA small rock, 2 by 4 by 6 centimeters, which was collected in the\ncontingency sample has been tentatively located on the lunar-surface photographs. Photographs of the rock show a fresh-appearing vesicular (small\ncavity resulting from vaporization in a molten mass) lava, similar in ve.sicularity, texture, and crystallinity to many terrestrial basalts (see  \nfig. 11-2).  \nThe third largest rock in the contingency sample was collected within 2 meters of the lunar module. The rock has an ovoid shape, tapered at",
+                    "truncated": false
+                  },
+                  {
+                    "rank": 5,
+                    "chunk_id": "89e7bd73ddb019166b7b4ac1",
+                    "section_id": "12.5.1",
+                    "pdf_page": 260,
+                    "heading_path": [
+                      "12. BIOMEDICAL EVALUATION",
+                      "12.5 LUNAR CONTAMINATION AND QUARANTINE",
+                      "12.5.1 Lunar Exposure"
+                    ],
+                    "citation_url": "https://www.nasa.gov/wp-content/uploads/static/apollo50th/pdf/A11_MissionReport.pdf#page=260",
+                    "score": 0.023438,
+                    "evidence_coverage": 1.0,
+                    "variant_ranks": {
+                      "glossary_en": 4
+                    },
+                    "text": "Although each crewman attempted to clean himself and the equipment\nbefore ingress, a fairly large amount of dust and grains of lunar surface  \nmaterial was brought into the cabin. When the crewmen removed their helmets, they noticed a distinct, pungent odor emanating from the lunar material. The texture of the dust was like powdered graphite, and both crewmen were very dirty after they removed their helmets, overshoes, and  \ngloves. The crewmen cleaned their hands and faces with tissues and with\ntowels that had been soaked in hot water. The Commander removed his\nliquid-cooling garment in order to clean his body. One grain of material\ngot into the Commander's eye, but was easily removed and caused no problem. The dust-like material could not be removed completely from beneath\ntheir fingernails.  \nThe cabin cleaning procedure involved the use of a vacuum-brush device and positive air pressure from the suit supply hoses to blow remote",
+                    "truncated": false
+                  }
+                ],
+                "evidence": {
+                  "heuristic_sufficient": true,
+                  "coverage": 1.0,
+                  "missing_terms": [],
+                  "matched_terms": [
+                    "lunar",
+                    "dust"
+                  ],
+                  "ocr_noise": false,
+                  "temporal_required": [],
+                  "temporal_found": [],
+                  "temporal_missing": [],
+                  "negation_required": [],
+                  "negation_found": [],
+                  "critical_missing_terms": [],
+                  "numeric_values": [
+                    "100",
+                    "120",
+                    "250",
+                    "3"
+                  ],
+                  "unit_values": [
+                    {
+                      "value": "100",
+                      "unit": "miles"
+                    },
+                    {
+                      "value": "250",
+                      "unit": "miles"
+                    }
+                  ],
+                  "calculation_requested": false,
+                  "calculation_hint": null,
+                  "multi_part": false,
+                  "reason": "ok",
+                  "note": "Heuristic lexical check; not a semantic entailment judge."
+                },
+                "context_chunks": []
+              },
+              "content_preview": "{\"question\": \"почему лунная пыль осложняла работу рядом с модулем\", \"query\": \"Apollo 11 лунная пыль осложняла работу рядом с модулем\", \"k\": 5, \"algorithm_version\": \"query-processing-v1\", \"variants\": [{\"name\": \"original\", \"text\": \"почему лунная пыль осложняла работу рядом с модулем\"}, {\"name\": \"glossary_en\", \"text\": \"lunar dust\"}, {\"name\": \"agent_query\", \"text\": \"Apollo 11 лунная пыль осложняла работу рядом с модулем\"}, {\"name\": \"keywords\", \"text\": \"лунная пыль осложняла работу рядом модулем\"}], \"results\": [{\"rank\": 1, \"chunk_id\": \"829e2d2a00e35fa3e211b54f\", \"section_id\": \"4.11\", \"pdf_page\": 39",
+              "content_length": 6599
+            }
+          ],
+          "llm_calls": 2,
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 125,
+              "prompt_tokens": 3441,
+              "total_tokens": 3566,
+              "completion_tokens_details": null,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cache_write_tokens": null,
+                "cached_tokens": 885,
+                "image_tokens": null,
+                "text_tokens": null
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "apollo-qwen:16k",
+            "system_fingerprint": "fp_ollama",
+            "id": "chatcmpl-201",
+            "finish_reason": "stop",
+            "logprobs": null
+          },
+          "usage_metadata": {
+            "input_tokens": 3441,
+            "output_tokens": 125,
+            "total_tokens": 3566,
+            "input_token_details": {
+              "cache_read": 885
+            },
+            "output_token_details": {}
+          },
+          "usage_metadata_all": {
+            "input_tokens": 6877,
+            "output_tokens": 185,
+            "total_tokens": 7062,
+            "input_token_details": {
+              "cache_read": 4293
+            }
+          }
+        },
+        {
+          "turn_id": 5,
+          "prompt": "Составь краткое заключение по всей нашей беседе, разделяя подготовку EVA и работу с лунной пылью. Не добавляй неподтвержденных деталей.",
+          "reference": {
+            "answer": "Экипаж Apollo 11 решил провести выход на поверхность Луны (EVA) до первого запланированного отдыха, поскольку после посадки не возникло серьёзных трудностей, астронавты не чувствовали сильной усталости и хорошо адаптировались к лунной гравитации. Однако подготовка к выходу заняла больше времени, чем ожидалось: в реальных условиях кабина была загружена дополнительным оборудованием, а отдельные операции, включая подключение электрического разъёма, вызвали задержки. Во время работы на поверхности лунная пыль загрязняла оборудование и ремни, попадала в кабину и осложняла обращение с телевизионным кабелем, который становился хуже заметен и путался под ногами. Источники: раздел 4.12.2 — подготовка EVA; разделы 4.12.3–4.12.4 — работа на поверхности и проблемы с пылью.",
+            "section_ids": [
+              "4.12.2",
+              "4.12.3",
+              "4.12.4"
+            ],
+            "pdf_pages": [
+              40,
+              41,
+              42,
+              43,
+              44
+            ]
+          },
+          "status": "ok",
+          "answer": "В ходе нашей беседы было отмечено, что подготовка к ЭВА (экстренной высадке) заняла больше времени из-за различных факторов, включая наличие инструкций, пакетов пищи и моноколов, которые мешали организованной подготовке. Также было упомянуто, что проблема с электрическим соединением на кабеле, который соединяет ручное управление с системой жизнеобеспечения, вызвала трудности при соединении. В то время как работа с лунной пылью затруднялась из-за ее тонкой пленки, которая создавала тень и уменьшала видимость, что затрудняло наблюдение за системами и выполнение необходимых функций.",
+          "error": null,
+          "duration_s": 111.989,
+          "before_message_count": 8,
+          "after_message_count": 8,
+          "new_message_count": 3,
+          "context_last": {
+            "thread_id": "selected-D01-20261106-200630",
+            "context_limit": 4096,
+            "response_reserve": 512,
+            "input_budget": 3584,
+            "tokens_before": 3749,
+            "tokens_after": 3563,
+            "messages_before": 9,
+            "messages_after": 7,
+            "compacted": true,
+            "strategy": "summarize",
+            "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+            "current_user_message_preserved": true,
+            "fallback_used": false,
+            "truncated_tool_messages": 0,
+            "removed_message_ids": [],
+            "removed_message_types": [],
+            "summary_created": true,
+            "summary_retained": true,
+            "compaction_method": "summarize",
+            "summarized_message_ids": [
+              "62787003-0d64-48fa-a5cd-45865b2d05f9",
+              "lc_run--01a1b1d5-5797-77fd-b65b-bc394ecaf7c9-0",
+              "5519f74f-a8a0-421b-810d-1790caa8b519"
+            ],
+            "summarized_message_types": [
+              "HumanMessage",
+              "AIMessage",
+              "HumanMessage"
+            ],
+            "truncated_tool_message_ids": []
+          },
+          "attempts": [
+            {
+              "attempt": 0,
+              "prompt_variant": "original",
+              "status": "ok",
+              "duration_s": 111.989,
+              "empty": false,
+              "error": null
+            }
+          ],
+          "retry_count": 0,
+          "retry_extra_duration_s": 0,
+          "model_retry_events": [],
+          "model_retry_extra_duration_s": 0,
+          "tool_calls": [],
+          "tool_messages": [],
+          "llm_calls": 1,
+          "response_metadata": {
+            "token_usage": {
+              "completion_tokens": 189,
+              "prompt_tokens": 3439,
+              "total_tokens": 3628,
+              "completion_tokens_details": null,
+              "prompt_tokens_details": {
+                "audio_tokens": null,
+                "cache_write_tokens": null,
+                "cached_tokens": 1107,
+                "image_tokens": null,
+                "text_tokens": null
+              }
+            },
+            "model_provider": "openai",
+            "model_name": "apollo-qwen:16k",
+            "system_fingerprint": "fp_ollama",
+            "id": "chatcmpl-796",
+            "finish_reason": "stop",
+            "logprobs": null
+          },
+          "usage_metadata": {
+            "input_tokens": 3439,
+            "output_tokens": 189,
+            "total_tokens": 3628,
+            "input_token_details": {
+              "cache_read": 1107
+            },
+            "output_token_details": {}
+          },
+          "usage_metadata_all": {
+            "input_tokens": 3439,
+            "output_tokens": 189,
+            "total_tokens": 3628,
+            "input_token_details": {
+              "cache_read": 1107
+            }
+          }
+        }
+      ],
+      "context_diagnostics": [
+        {
+          "thread_id": "selected-D01-20261106-200630",
+          "context_limit": 4096,
+          "response_reserve": 512,
+          "input_budget": 3584,
+          "tokens_before": 1032,
+          "tokens_after": 1032,
+          "messages_before": 1,
+          "messages_after": 1,
+          "compacted": false,
+          "strategy": "summarize",
+          "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+          "current_user_message_preserved": true,
+          "fallback_used": false,
+          "truncated_tool_messages": 0,
+          "removed_message_ids": [],
+          "removed_message_types": [],
+          "summary_created": false,
+          "summary_retained": false,
+          "compaction_method": "none",
+          "summarized_message_ids": [],
+          "summarized_message_types": [],
+          "truncated_tool_message_ids": []
+        },
+        {
+          "thread_id": "selected-D01-20261106-200630",
+          "context_limit": 4096,
+          "response_reserve": 512,
+          "input_budget": 3584,
+          "tokens_before": 3261,
+          "tokens_after": 3261,
+          "messages_before": 3,
+          "messages_after": 3,
+          "compacted": false,
+          "strategy": "summarize",
+          "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+          "current_user_message_preserved": true,
+          "fallback_used": false,
+          "truncated_tool_messages": 0,
+          "removed_message_ids": [],
+          "removed_message_types": [],
+          "summary_created": false,
+          "summary_retained": false,
+          "compaction_method": "none",
+          "summarized_message_ids": [],
+          "summarized_message_types": [],
+          "truncated_tool_message_ids": []
+        },
+        {
+          "thread_id": "selected-D01-20261106-200630",
+          "context_limit": 4096,
+          "response_reserve": 512,
+          "input_budget": 3584,
+          "tokens_before": 3584,
+          "tokens_after": 3584,
+          "messages_before": 5,
+          "messages_after": 5,
+          "compacted": false,
+          "strategy": "summarize",
+          "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+          "current_user_message_preserved": true,
+          "fallback_used": false,
+          "truncated_tool_messages": 0,
+          "removed_message_ids": [],
+          "removed_message_types": [],
+          "summary_created": false,
+          "summary_retained": false,
+          "compaction_method": "none",
+          "summarized_message_ids": [],
+          "summarized_message_types": [],
+          "truncated_tool_message_ids": []
+        },
+        {
+          "thread_id": "selected-D01-20261106-200630",
+          "context_limit": 4096,
+          "response_reserve": 512,
+          "input_budget": 3584,
+          "tokens_before": 5809,
+          "tokens_after": 3552,
+          "messages_before": 7,
+          "messages_after": 4,
+          "compacted": true,
+          "strategy": "summarize",
+          "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+          "current_user_message_preserved": true,
+          "fallback_used": true,
+          "truncated_tool_messages": 0,
+          "removed_message_ids": [
+            "HumanMessage-c7dd2442d2c31c51",
+            "lc_run--01a1b1d3-896b-723e-855f-1774cbad4d9b-0",
+            "5f6abbfe-2d04-4388-a6f5-bc41c5bf3ecb"
+          ],
+          "removed_message_types": [
+            "HumanMessage",
+            "AIMessage",
+            "ToolMessage"
+          ],
+          "summary_created": true,
+          "summary_retained": false,
+          "compaction_method": "summarize+fallback",
+          "summarized_message_ids": [
+            "673c588e-a37b-4b9e-9ca5-e43017f9d532"
+          ],
+          "summarized_message_types": [
+            "HumanMessage"
+          ],
+          "truncated_tool_message_ids": []
+        },
+        {
+          "thread_id": "selected-D01-20261106-200630",
+          "context_limit": 4096,
+          "response_reserve": 512,
+          "input_budget": 3584,
+          "tokens_before": 3789,
+          "tokens_after": 3484,
+          "messages_before": 6,
+          "messages_after": 5,
+          "compacted": true,
+          "strategy": "summarize",
+          "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+          "current_user_message_preserved": true,
+          "fallback_used": true,
+          "truncated_tool_messages": 0,
+          "removed_message_ids": [
+            "lc_run--01a1b1d3-d041-701a-a380-ad81722e6927-0"
+          ],
+          "removed_message_types": [
+            "AIMessage"
+          ],
+          "summary_created": false,
+          "summary_retained": false,
+          "compaction_method": "fallback",
+          "summarized_message_ids": [],
+          "summarized_message_types": [],
+          "truncated_tool_message_ids": []
+        },
+        {
+          "thread_id": "selected-D01-20261106-200630",
+          "context_limit": 4096,
+          "response_reserve": 512,
+          "input_budget": 3584,
+          "tokens_before": 3560,
+          "tokens_after": 3560,
+          "messages_before": 7,
+          "messages_after": 7,
+          "compacted": false,
+          "strategy": "summarize",
+          "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+          "current_user_message_preserved": true,
+          "fallback_used": false,
+          "truncated_tool_messages": 0,
+          "removed_message_ids": [],
+          "removed_message_types": [],
+          "summary_created": false,
+          "summary_retained": false,
+          "compaction_method": "none",
+          "summarized_message_ids": [],
+          "summarized_message_types": [],
+          "truncated_tool_message_ids": []
+        },
+        {
+          "thread_id": "selected-D01-20261106-200630",
+          "context_limit": 4096,
+          "response_reserve": 512,
+          "input_budget": 3584,
+          "tokens_before": 5573,
+          "tokens_after": 3565,
+          "messages_before": 9,
+          "messages_after": 7,
+          "compacted": true,
+          "strategy": "summarize",
+          "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+          "current_user_message_preserved": true,
+          "fallback_used": false,
+          "truncated_tool_messages": 0,
+          "removed_message_ids": [],
+          "removed_message_types": [],
+          "summary_created": true,
+          "summary_retained": true,
+          "compaction_method": "summarize",
+          "summarized_message_ids": [
+            "c79b0435-51c5-4ac5-a7a8-ac76e3f2e4d1",
+            "lc_run--01a1b1d5-01c6-7345-9ae3-042f9533c6ad-0",
+            "be37800a-3d29-4834-8833-b4f787993e87"
+          ],
+          "summarized_message_types": [
+            "HumanMessage",
+            "AIMessage",
+            "ToolMessage"
+          ],
+          "truncated_tool_message_ids": []
+        },
+        {
+          "thread_id": "selected-D01-20261106-200630",
+          "context_limit": 4096,
+          "response_reserve": 512,
+          "input_budget": 3584,
+          "tokens_before": 3749,
+          "tokens_after": 3563,
+          "messages_before": 9,
+          "messages_after": 7,
+          "compacted": true,
+          "strategy": "summarize",
+          "tokenizer": "Qwen/Qwen2.5-3B-Instruct",
+          "current_user_message_preserved": true,
+          "fallback_used": false,
+          "truncated_tool_messages": 0,
+          "removed_message_ids": [],
+          "removed_message_types": [],
+          "summary_created": true,
+          "summary_retained": true,
+          "compaction_method": "summarize",
+          "summarized_message_ids": [
+            "62787003-0d64-48fa-a5cd-45865b2d05f9",
+            "lc_run--01a1b1d5-5797-77fd-b65b-bc394ecaf7c9-0",
+            "5519f74f-a8a0-421b-810d-1790caa8b519"
+          ],
+          "summarized_message_types": [
+            "HumanMessage",
+            "AIMessage",
+            "HumanMessage"
+          ],
+          "truncated_tool_message_ids": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1755 @@
+{
+  "relevance_level": "section_id (with parent-prefix matching) and pdf_page; not gold chunk_id",
+  "note": "Recall@5 uses the reference section_ids/pages as qrels. It measures retrieval coverage, not answer correctness.",
+  "agents": {
+    "langgraph": {
+      "turns_with_reference": 21,
+      "turns_with_retrieval": 15,
+      "turns_without_retrieval": 6,
+      "mean_section_recall@5_retrieved": 0.833,
+      "mean_page_recall@5_retrieved": 0.667,
+      "mean_precision@5_section_retrieved": 0.413,
+      "mean_precision@5_page_retrieved": 0.333,
+      "mean_mrr_section_retrieved": 0.783,
+      "mean_section_recall@5_all": 0.595,
+      "mean_page_recall@5_all": 0.476,
+      "mean_precision@5_section_all": 0.295,
+      "mean_precision@5_page_all": 0.238,
+      "mean_mrr_section_all": 0.56,
+      "rows": [
+        {
+          "task": "F01",
+          "turn": 1,
+          "category": "factual",
+          "reference_sections": [
+            "1"
+          ],
+          "reference_pages": [
+            12,
+            13
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.6,
+          "precision@5_page": 0.6,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "2f0e4f178386585cf5a63637",
+              "section_id": "1.0",
+              "pdf_page": 12
+            },
+            {
+              "rank": 2,
+              "chunk_id": "e16cbaaf0f8122f41e9e4dca",
+              "section_id": "1.0",
+              "pdf_page": 13
+            },
+            {
+              "rank": 3,
+              "chunk_id": "7fd8dafbbd7673a45b41d3cf",
+              "section_id": "9.12.2",
+              "pdf_page": 187
+            },
+            {
+              "rank": 4,
+              "chunk_id": "f9f19012bf3fd44055bc07d6",
+              "section_id": "14.0",
+              "pdf_page": 275
+            },
+            {
+              "rank": 5,
+              "chunk_id": "bae43a023eefad92bc961591",
+              "section_id": "1.0",
+              "pdf_page": 13
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "F03",
+          "turn": 1,
+          "category": "factual",
+          "reference_sections": [
+            "4.12.2"
+          ],
+          "reference_pages": [
+            40,
+            41
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.4,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "464e03e594896c1c88bc101b",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 2,
+              "chunk_id": "2644ab5d32510cb6c5a42690",
+              "section_id": "12.2.3",
+              "pdf_page": 255
+            },
+            {
+              "rank": 3,
+              "chunk_id": "3cd27453294ca48a8285fdef",
+              "section_id": "3.0",
+              "pdf_page": 16
+            },
+            {
+              "rank": 4,
+              "chunk_id": "5388fda45dc9faf224e5f844",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 5,
+              "chunk_id": "6473b31b5c0892ba2bc9fdfd",
+              "section_id": "4.12.4",
+              "pdf_page": 42
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "F05",
+          "turn": 1,
+          "category": "factual",
+          "reference_sections": [
+            "4.12.3",
+            "4.12.4"
+          ],
+          "reference_pages": [
+            41,
+            42,
+            43,
+            44
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "f1f0a278398feec3addd2fed",
+              "section_id": "16.3.1",
+              "pdf_page": 300
+            },
+            {
+              "rank": 2,
+              "chunk_id": "48a4aa7fc88a36c5980675de",
+              "section_id": "11.2.1",
+              "pdf_page": 209
+            },
+            {
+              "rank": 3,
+              "chunk_id": "7732a81773fa7a25b6aedb28",
+              "section_id": "11.5",
+              "pdf_page": 219
+            },
+            {
+              "rank": 4,
+              "chunk_id": "b44509785d6c574eafdd68af",
+              "section_id": "11.1.4",
+              "pdf_page": 206
+            },
+            {
+              "rank": 5,
+              "chunk_id": "89e7bd73ddb019166b7b4ac1",
+              "section_id": "12.5.1",
+              "pdf_page": 260
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "F08",
+          "turn": 1,
+          "category": "factual",
+          "reference_sections": [
+            "11.4",
+            "11.4.1"
+          ],
+          "reference_pages": [
+            214,
+            215
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 0.5,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.8,
+          "precision@5_page": 0.0,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "8e937469c207f083b1a9e8b9",
+              "section_id": "11.4.4",
+              "pdf_page": 217
+            },
+            {
+              "rank": 2,
+              "chunk_id": "349e698eccce826f505d7599",
+              "section_id": "A",
+              "pdf_page": 333
+            },
+            {
+              "rank": 3,
+              "chunk_id": "e81e45398d6d183bd905d1ff",
+              "section_id": "11.4.4",
+              "pdf_page": 218
+            },
+            {
+              "rank": 4,
+              "chunk_id": "e7eb9d7cf8af176e9d8a48f2",
+              "section_id": "11.4.4",
+              "pdf_page": 218
+            },
+            {
+              "rank": 5,
+              "chunk_id": "5470718f33bd8dbda3531472",
+              "section_id": "11.4.5",
+              "pdf_page": 219
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "F11",
+          "turn": 1,
+          "category": "factual",
+          "reference_sections": [
+            "11.6"
+          ],
+          "reference_pages": [
+            220
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.4,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "681ba4948097fa262db51b9a",
+              "section_id": "11.6",
+              "pdf_page": 220
+            },
+            {
+              "rank": 2,
+              "chunk_id": "ddd0c8747bdbfb922913dd0b",
+              "section_id": "A",
+              "pdf_page": 332
+            },
+            {
+              "rank": 3,
+              "chunk_id": "c4a81c38142ee70be7a6b47d",
+              "section_id": "11.6",
+              "pdf_page": 220
+            },
+            {
+              "rank": 4,
+              "chunk_id": "7ef524e0a88f1849c5fff398",
+              "section_id": "C",
+              "pdf_page": 348
+            },
+            {
+              "rank": 5,
+              "chunk_id": "9d3e927af06d4c9bcc7ccd53",
+              "section_id": "A",
+              "pdf_page": 331
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "F13",
+          "turn": 1,
+          "category": "factual",
+          "reference_sections": [
+            "12.5"
+          ],
+          "reference_pages": [
+            259
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 1.0,
+          "precision@5_page": 0.4,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "4e5ced545318ed8495459b16",
+              "section_id": "12.5",
+              "pdf_page": 259
+            },
+            {
+              "rank": 2,
+              "chunk_id": "f4824b17cb3e61304d9f5716",
+              "section_id": "12.5",
+              "pdf_page": 259
+            },
+            {
+              "rank": 3,
+              "chunk_id": "c0bf01cefc27a2488d01c110",
+              "section_id": "12.5.3",
+              "pdf_page": 263
+            },
+            {
+              "rank": 4,
+              "chunk_id": "b771f94e5cf7b55a99428594",
+              "section_id": "12.5.2",
+              "pdf_page": 261
+            },
+            {
+              "rank": 5,
+              "chunk_id": "a945564c9579a6c5e4e6f5bb",
+              "section_id": "12.5.2",
+              "pdf_page": 262
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "F15",
+          "turn": 1,
+          "category": "factual",
+          "reference_sections": [
+            "16.2.5"
+          ],
+          "reference_pages": [
+            291,
+            292,
+            293
+          ],
+          "retrieved": false,
+          "n_results": 0,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [],
+          "status": "empty_response"
+        },
+        {
+          "task": "X01",
+          "turn": 1,
+          "category": "multi_fact",
+          "reference_sections": [
+            "4.12.2"
+          ],
+          "reference_pages": [
+            40,
+            41
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.4,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "464e03e594896c1c88bc101b",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 2,
+              "chunk_id": "5388fda45dc9faf224e5f844",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 3,
+              "chunk_id": "21c7cc3950c3cf52a38146ca",
+              "section_id": "5.6",
+              "pdf_page": 57
+            },
+            {
+              "rank": 4,
+              "chunk_id": "b87709e53c82f81fe8bba7bd",
+              "section_id": "3.0",
+              "pdf_page": 16
+            },
+            {
+              "rank": 5,
+              "chunk_id": "eb4cb97e300568499d904b92",
+              "section_id": "4.11",
+              "pdf_page": 38
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "X02",
+          "turn": 1,
+          "category": "multi_fact",
+          "reference_sections": [
+            "11.5"
+          ],
+          "reference_pages": [
+            219,
+            220
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.6,
+          "precision@5_page": 0.6,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "c70be7c97312ba1ad65277c9",
+              "section_id": "11.5",
+              "pdf_page": 220
+            },
+            {
+              "rank": 2,
+              "chunk_id": "8f02b1cd2388832f8741693a",
+              "section_id": "11.5",
+              "pdf_page": 219
+            },
+            {
+              "rank": 3,
+              "chunk_id": "ddd0c8747bdbfb922913dd0b",
+              "section_id": "A",
+              "pdf_page": 332
+            },
+            {
+              "rank": 4,
+              "chunk_id": "3591f9c2ea78228cd9380a78",
+              "section_id": "11.5",
+              "pdf_page": 219
+            },
+            {
+              "rank": 5,
+              "chunk_id": "42ad5b48cfbcef4341274d2a",
+              "section_id": "A",
+              "pdf_page": 332
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "C01",
+          "turn": 1,
+          "category": "retrieval_calculation",
+          "reference_sections": [
+            "12.3"
+          ],
+          "reference_pages": [
+            258
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.2,
+          "precision@5_page": 0.2,
+          "mrr_section": 0.25,
+          "first_relevant_rank": 4,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "a852129d192699971b6659b7",
+              "section_id": "12.5.3",
+              "pdf_page": 265
+            },
+            {
+              "rank": 2,
+              "chunk_id": "c9c8dafc7a2e524d89a60663",
+              "section_id": "7.0",
+              "pdf_page": 109
+            },
+            {
+              "rank": 3,
+              "chunk_id": "1a4c705a16d86e9ed045f6f1",
+              "section_id": "8.2.2",
+              "pdf_page": 133
+            },
+            {
+              "rank": 4,
+              "chunk_id": "9da4139aeb10870d69a5ca3d",
+              "section_id": "12.3",
+              "pdf_page": 258
+            },
+            {
+              "rank": 5,
+              "chunk_id": "a1e4ce29338072fe81418ae2",
+              "section_id": "10.0",
+              "pdf_page": 196
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "C02",
+          "turn": 1,
+          "category": "retrieval_calculation",
+          "reference_sections": [
+            "4.19"
+          ],
+          "reference_pages": [
+            49
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.2,
+          "precision@5_page": 0.2,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "bd5fed4b9ffdbaa3d9fcee72",
+              "section_id": "4.19",
+              "pdf_page": 49
+            },
+            {
+              "rank": 2,
+              "chunk_id": "be2f02abb7c687e29be3da5b",
+              "section_id": "8.6.7",
+              "pdf_page": 137
+            },
+            {
+              "rank": 3,
+              "chunk_id": "4503de843c0eb62b0b23dbba",
+              "section_id": "8.6.7",
+              "pdf_page": 138
+            },
+            {
+              "rank": 4,
+              "chunk_id": "5b6d45b4e9d01c750e90419f",
+              "section_id": "7.5",
+              "pdf_page": 113
+            },
+            {
+              "rank": 5,
+              "chunk_id": "8f26f3c751b8a8945e2d998d",
+              "section_id": "7.8",
+              "pdf_page": 115
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "D01",
+          "turn": 1,
+          "category": "long_dialogue",
+          "reference_sections": [
+            "4.12.2"
+          ],
+          "reference_pages": [
+            40,
+            41
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.4,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "464e03e594896c1c88bc101b",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 2,
+              "chunk_id": "5388fda45dc9faf224e5f844",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 3,
+              "chunk_id": "6473b31b5c0892ba2bc9fdfd",
+              "section_id": "4.12.4",
+              "pdf_page": 42
+            },
+            {
+              "rank": 4,
+              "chunk_id": "dfbb01e43b28b76e9c371bc9",
+              "section_id": "4.12.4",
+              "pdf_page": 44
+            },
+            {
+              "rank": 5,
+              "chunk_id": "cc1e6a668d60297ce84a301b",
+              "section_id": "12.2.2",
+              "pdf_page": 255
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "D01",
+          "turn": 2,
+          "category": "long_dialogue",
+          "reference_sections": [
+            "4.12.2"
+          ],
+          "reference_pages": [
+            40,
+            41
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.6,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "5388fda45dc9faf224e5f844",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 2,
+              "chunk_id": "5b8fb4824e26d545b0a4016f",
+              "section_id": "4.8.2",
+              "pdf_page": 35
+            },
+            {
+              "rank": 3,
+              "chunk_id": "464e03e594896c1c88bc101b",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 4,
+              "chunk_id": "1c536c228ea08bedf9114258",
+              "section_id": "4.12.1",
+              "pdf_page": 40
+            },
+            {
+              "rank": 5,
+              "chunk_id": "27734aed6b36f5aef1b83aaa",
+              "section_id": "4.12.4",
+              "pdf_page": 43
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "D01",
+          "turn": 3,
+          "category": "long_dialogue",
+          "reference_sections": [
+            "4.12.2"
+          ],
+          "reference_pages": [
+            40,
+            41
+          ],
+          "retrieved": false,
+          "n_results": 0,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [],
+          "status": "ok"
+        },
+        {
+          "task": "D01",
+          "turn": 4,
+          "category": "long_dialogue",
+          "reference_sections": [
+            "4.12.3",
+            "4.12.4"
+          ],
+          "reference_pages": [
+            41,
+            42,
+            43,
+            44
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "537cce4312f965e497a1ba0d",
+              "section_id": "4.16",
+              "pdf_page": 48
+            },
+            {
+              "rank": 2,
+              "chunk_id": "48a4aa7fc88a36c5980675de",
+              "section_id": "11.2.1",
+              "pdf_page": 209
+            },
+            {
+              "rank": 3,
+              "chunk_id": "7732a81773fa7a25b6aedb28",
+              "section_id": "11.5",
+              "pdf_page": 219
+            },
+            {
+              "rank": 4,
+              "chunk_id": "829e2d2a00e35fa3e211b54f",
+              "section_id": "4.11",
+              "pdf_page": 39
+            },
+            {
+              "rank": 5,
+              "chunk_id": "b44509785d6c574eafdd68af",
+              "section_id": "11.1.4",
+              "pdf_page": 206
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "D01",
+          "turn": 5,
+          "category": "long_dialogue",
+          "reference_sections": [
+            "4.12.2",
+            "4.12.3",
+            "4.12.4"
+          ],
+          "reference_pages": [
+            40,
+            41,
+            42,
+            43,
+            44
+          ],
+          "retrieved": false,
+          "n_results": 0,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [],
+          "status": "ok"
+        },
+        {
+          "task": "D02",
+          "turn": 1,
+          "category": "long_dialogue",
+          "reference_sections": [
+            "11.6"
+          ],
+          "reference_pages": [
+            220
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.2,
+          "precision@5_page": 0.2,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "c4a81c38142ee70be7a6b47d",
+              "section_id": "11.6",
+              "pdf_page": 220
+            },
+            {
+              "rank": 2,
+              "chunk_id": "d9dacef0239f4faa7a3a1363",
+              "section_id": "3.0",
+              "pdf_page": 26
+            },
+            {
+              "rank": 3,
+              "chunk_id": "ddd0c8747bdbfb922913dd0b",
+              "section_id": "A",
+              "pdf_page": 332
+            },
+            {
+              "rank": 4,
+              "chunk_id": "429d2f6e4c4c08802fc56003",
+              "section_id": "11.4",
+              "pdf_page": 214
+            },
+            {
+              "rank": 5,
+              "chunk_id": "c3d6442ae371d623508a232b",
+              "section_id": "8.8",
+              "pdf_page": 148
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "D02",
+          "turn": 2,
+          "category": "long_dialogue",
+          "reference_sections": [
+            "11.5"
+          ],
+          "reference_pages": [
+            219,
+            220
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.6,
+          "precision@5_page": 0.6,
+          "mrr_section": 0.5,
+          "first_relevant_rank": 2,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "42ad5b48cfbcef4341274d2a",
+              "section_id": "A",
+              "pdf_page": 332
+            },
+            {
+              "rank": 2,
+              "chunk_id": "c70be7c97312ba1ad65277c9",
+              "section_id": "11.5",
+              "pdf_page": 220
+            },
+            {
+              "rank": 3,
+              "chunk_id": "ddd0c8747bdbfb922913dd0b",
+              "section_id": "A",
+              "pdf_page": 332
+            },
+            {
+              "rank": 4,
+              "chunk_id": "8f02b1cd2388832f8741693a",
+              "section_id": "11.5",
+              "pdf_page": 219
+            },
+            {
+              "rank": 5,
+              "chunk_id": "3591f9c2ea78228cd9380a78",
+              "section_id": "11.5",
+              "pdf_page": 219
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "D02",
+          "turn": 3,
+          "category": "long_dialogue",
+          "reference_sections": [
+            "11.5"
+          ],
+          "reference_pages": [
+            219,
+            220
+          ],
+          "retrieved": false,
+          "n_results": 0,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [],
+          "status": "ok"
+        },
+        {
+          "task": "D02",
+          "turn": 4,
+          "category": "long_dialogue",
+          "reference_sections": [
+            "11.6"
+          ],
+          "reference_pages": [
+            220
+          ],
+          "retrieved": false,
+          "n_results": 0,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [],
+          "status": "ok"
+        },
+        {
+          "task": "D02",
+          "turn": 5,
+          "category": "long_dialogue",
+          "reference_sections": [
+            "11.5",
+            "11.6"
+          ],
+          "reference_pages": [
+            219,
+            220
+          ],
+          "retrieved": false,
+          "n_results": 0,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [],
+          "status": "ok"
+        }
+      ]
+    },
+    "opencode": {
+      "turns_with_reference": 21,
+      "turns_with_retrieval": 10,
+      "turns_without_retrieval": 11,
+      "mean_section_recall@5_retrieved": 0.8,
+      "mean_page_recall@5_retrieved": 0.617,
+      "mean_precision@5_section_retrieved": 0.32,
+      "mean_precision@5_page_retrieved": 0.36,
+      "mean_mrr_section_retrieved": 0.7,
+      "mean_section_recall@5_all": 0.381,
+      "mean_page_recall@5_all": 0.294,
+      "mean_precision@5_section_all": 0.152,
+      "mean_precision@5_page_all": 0.171,
+      "mean_mrr_section_all": 0.333,
+      "rows": [
+        {
+          "task": "F01",
+          "turn": 1,
+          "category": "factual",
+          "reference_sections": [
+            "1"
+          ],
+          "reference_pages": [
+            12,
+            13
+          ],
+          "retrieved": false,
+          "n_results": 0,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [],
+          "status": "timeout"
+        },
+        {
+          "task": "F03",
+          "turn": 1,
+          "category": "factual",
+          "reference_sections": [
+            "4.12.2"
+          ],
+          "reference_pages": [
+            40,
+            41
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.4,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "464e03e594896c1c88bc101b",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 2,
+              "chunk_id": "2644ab5d32510cb6c5a42690",
+              "section_id": "12.2.3",
+              "pdf_page": 255
+            },
+            {
+              "rank": 3,
+              "chunk_id": "3cd27453294ca48a8285fdef",
+              "section_id": "3.0",
+              "pdf_page": 16
+            },
+            {
+              "rank": 4,
+              "chunk_id": "5388fda45dc9faf224e5f844",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 5,
+              "chunk_id": "6473b31b5c0892ba2bc9fdfd",
+              "section_id": "4.12.4",
+              "pdf_page": 42
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "F05",
+          "turn": 1,
+          "category": "factual",
+          "reference_sections": [
+            "4.12.3",
+            "4.12.4"
+          ],
+          "reference_pages": [
+            41,
+            42,
+            43,
+            44
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "f1f0a278398feec3addd2fed",
+              "section_id": "16.3.1",
+              "pdf_page": 300
+            },
+            {
+              "rank": 2,
+              "chunk_id": "48a4aa7fc88a36c5980675de",
+              "section_id": "11.2.1",
+              "pdf_page": 209
+            },
+            {
+              "rank": 3,
+              "chunk_id": "7732a81773fa7a25b6aedb28",
+              "section_id": "11.5",
+              "pdf_page": 219
+            },
+            {
+              "rank": 4,
+              "chunk_id": "b44509785d6c574eafdd68af",
+              "section_id": "11.1.4",
+              "pdf_page": 206
+            },
+            {
+              "rank": 5,
+              "chunk_id": "89e7bd73ddb019166b7b4ac1",
+              "section_id": "12.5.1",
+              "pdf_page": 260
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "F08",
+          "turn": 1,
+          "category": "factual",
+          "reference_sections": [
+            "11.4",
+            "11.4.1"
+          ],
+          "reference_pages": [
+            214,
+            215
+          ],
+          "retrieved": false,
+          "n_results": 0,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [],
+          "status": "timeout"
+        },
+        {
+          "task": "F11",
+          "turn": 1,
+          "category": "factual",
+          "reference_sections": [
+            "11.6"
+          ],
+          "reference_pages": [
+            220
+          ],
+          "retrieved": false,
+          "n_results": 0,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [],
+          "status": "empty_response"
+        },
+        {
+          "task": "F13",
+          "turn": 1,
+          "category": "factual",
+          "reference_sections": [
+            "12.5"
+          ],
+          "reference_pages": [
+            259
+          ],
+          "retrieved": false,
+          "n_results": 0,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [],
+          "status": "timeout"
+        },
+        {
+          "task": "F15",
+          "turn": 1,
+          "category": "factual",
+          "reference_sections": [
+            "16.2.5"
+          ],
+          "reference_pages": [
+            291,
+            292,
+            293
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.667,
+          "precision@5_section": 0.6,
+          "precision@5_page": 0.6,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "5c385ca721667577773a654f",
+              "section_id": "16.2.5",
+              "pdf_page": 291
+            },
+            {
+              "rank": 2,
+              "chunk_id": "9b0d14360fbb023284f936aa",
+              "section_id": "9.6.5",
+              "pdf_page": 164
+            },
+            {
+              "rank": 3,
+              "chunk_id": "1ca6046e25db8bbaf1b40760",
+              "section_id": "5.3",
+              "pdf_page": 53
+            },
+            {
+              "rank": 4,
+              "chunk_id": "71ddbd2c981896873b75e96f",
+              "section_id": "16.2.5",
+              "pdf_page": 292
+            },
+            {
+              "rank": 5,
+              "chunk_id": "075602ad5da21e5650bb4f4b",
+              "section_id": "16.2.5",
+              "pdf_page": 292
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "X01",
+          "turn": 1,
+          "category": "multi_fact",
+          "reference_sections": [
+            "4.12.2"
+          ],
+          "reference_pages": [
+            40,
+            41
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.4,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "464e03e594896c1c88bc101b",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 2,
+              "chunk_id": "5388fda45dc9faf224e5f844",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 3,
+              "chunk_id": "21c7cc3950c3cf52a38146ca",
+              "section_id": "5.6",
+              "pdf_page": 57
+            },
+            {
+              "rank": 4,
+              "chunk_id": "b87709e53c82f81fe8bba7bd",
+              "section_id": "3.0",
+              "pdf_page": 16
+            },
+            {
+              "rank": 5,
+              "chunk_id": "4305ebec4a6fd6143f12e2a1",
+              "section_id": "1.0",
+              "pdf_page": 12
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "X02",
+          "turn": 1,
+          "category": "multi_fact",
+          "reference_sections": [
+            "11.5"
+          ],
+          "reference_pages": [
+            219,
+            220
+          ],
+          "retrieved": false,
+          "n_results": 0,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [],
+          "status": "timeout"
+        },
+        {
+          "task": "C01",
+          "turn": 1,
+          "category": "retrieval_calculation",
+          "reference_sections": [
+            "12.3"
+          ],
+          "reference_pages": [
+            258
+          ],
+          "retrieved": false,
+          "n_results": 0,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [],
+          "status": "timeout"
+        },
+        {
+          "task": "C02",
+          "turn": 1,
+          "category": "retrieval_calculation",
+          "reference_sections": [
+            "4.19"
+          ],
+          "reference_pages": [
+            49
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.2,
+          "precision@5_page": 0.2,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "bd5fed4b9ffdbaa3d9fcee72",
+              "section_id": "4.19",
+              "pdf_page": 49
+            },
+            {
+              "rank": 2,
+              "chunk_id": "be2f02abb7c687e29be3da5b",
+              "section_id": "8.6.7",
+              "pdf_page": 137
+            },
+            {
+              "rank": 3,
+              "chunk_id": "4503de843c0eb62b0b23dbba",
+              "section_id": "8.6.7",
+              "pdf_page": 138
+            },
+            {
+              "rank": 4,
+              "chunk_id": "5b6d45b4e9d01c750e90419f",
+              "section_id": "7.5",
+              "pdf_page": 113
+            },
+            {
+              "rank": 5,
+              "chunk_id": "8f26f3c751b8a8945e2d998d",
+              "section_id": "7.8",
+              "pdf_page": 115
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "D01",
+          "turn": 1,
+          "category": "long_dialogue",
+          "reference_sections": [
+            "4.12.2"
+          ],
+          "reference_pages": [
+            40,
+            41
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.6,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "464e03e594896c1c88bc101b",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 2,
+              "chunk_id": "5388fda45dc9faf224e5f844",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 3,
+              "chunk_id": "6473b31b5c0892ba2bc9fdfd",
+              "section_id": "4.12.4",
+              "pdf_page": 42
+            },
+            {
+              "rank": 4,
+              "chunk_id": "cc1e6a668d60297ce84a301b",
+              "section_id": "12.2.2",
+              "pdf_page": 255
+            },
+            {
+              "rank": 5,
+              "chunk_id": "118f360e4a29fa2eb5c98b5f",
+              "section_id": "4.12.3",
+              "pdf_page": 41
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "D01",
+          "turn": 2,
+          "category": "long_dialogue",
+          "reference_sections": [
+            "4.12.2"
+          ],
+          "reference_pages": [
+            40,
+            41
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 0.5,
+          "precision@5_section": 0.4,
+          "precision@5_page": 0.6,
+          "mrr_section": 1.0,
+          "first_relevant_rank": 1,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "5388fda45dc9faf224e5f844",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 2,
+              "chunk_id": "1c536c228ea08bedf9114258",
+              "section_id": "4.12.1",
+              "pdf_page": 40
+            },
+            {
+              "rank": 3,
+              "chunk_id": "464e03e594896c1c88bc101b",
+              "section_id": "4.12.2",
+              "pdf_page": 40
+            },
+            {
+              "rank": 4,
+              "chunk_id": "c0611d09d25570c7e750131c",
+              "section_id": "17",
+              "pdf_page": 324
+            },
+            {
+              "rank": 5,
+              "chunk_id": "5663872d3f5ba72291bfc132",
+              "section_id": "17",
+              "pdf_page": 324
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "D01",
+          "turn": 3,
+          "category": "long_dialogue",
+          "reference_sections": [
+            "4.12.2"
+          ],
+          "reference_pages": [
+            40,
+            41
+          ],
+          "retrieved": false,
+          "n_results": 0,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [],
+          "status": "ok"
+        },
+        {
+          "task": "D01",
+          "turn": 4,
+          "category": "long_dialogue",
+          "reference_sections": [
+            "4.12.3",
+            "4.12.4"
+          ],
+          "reference_pages": [
+            41,
+            42,
+            43,
+            44
+          ],
+          "retrieved": false,
+          "n_results": 0,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [],
+          "status": "timeout"
+        },
+        {
+          "task": "D01",
+          "turn": 5,
+          "category": "long_dialogue",
+          "reference_sections": [
+            "4.12.2",
+            "4.12.3",
+            "4.12.4"
+          ],
+          "reference_pages": [
+            40,
+            41,
+            42,
+            43,
+            44
+          ],
+          "retrieved": false,
+          "n_results": 0,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [],
+          "status": "not_run"
+        },
+        {
+          "task": "D02",
+          "turn": 1,
+          "category": "long_dialogue",
+          "reference_sections": [
+            "11.6"
+          ],
+          "reference_pages": [
+            220
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.2,
+          "precision@5_page": 0.2,
+          "mrr_section": 0.5,
+          "first_relevant_rank": 2,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "d9dacef0239f4faa7a3a1363",
+              "section_id": "3.0",
+              "pdf_page": 26
+            },
+            {
+              "rank": 2,
+              "chunk_id": "c4a81c38142ee70be7a6b47d",
+              "section_id": "11.6",
+              "pdf_page": 220
+            },
+            {
+              "rank": 3,
+              "chunk_id": "ddd0c8747bdbfb922913dd0b",
+              "section_id": "A",
+              "pdf_page": 332
+            },
+            {
+              "rank": 4,
+              "chunk_id": "c3d6442ae371d623508a232b",
+              "section_id": "8.8",
+              "pdf_page": 148
+            },
+            {
+              "rank": 5,
+              "chunk_id": "ffc1819f23fa3761fcaebce4",
+              "section_id": "5.7",
+              "pdf_page": 73
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "D02",
+          "turn": 2,
+          "category": "long_dialogue",
+          "reference_sections": [
+            "11.5"
+          ],
+          "reference_pages": [
+            219,
+            220
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 1.0,
+          "page_recall@5": 1.0,
+          "precision@5_section": 0.6,
+          "precision@5_page": 0.6,
+          "mrr_section": 0.5,
+          "first_relevant_rank": 2,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "42ad5b48cfbcef4341274d2a",
+              "section_id": "A",
+              "pdf_page": 332
+            },
+            {
+              "rank": 2,
+              "chunk_id": "c70be7c97312ba1ad65277c9",
+              "section_id": "11.5",
+              "pdf_page": 220
+            },
+            {
+              "rank": 3,
+              "chunk_id": "8f02b1cd2388832f8741693a",
+              "section_id": "11.5",
+              "pdf_page": 219
+            },
+            {
+              "rank": 4,
+              "chunk_id": "ddd0c8747bdbfb922913dd0b",
+              "section_id": "A",
+              "pdf_page": 332
+            },
+            {
+              "rank": 5,
+              "chunk_id": "3591f9c2ea78228cd9380a78",
+              "section_id": "11.5",
+              "pdf_page": 219
+            }
+          ],
+          "status": "ok"
+        },
+        {
+          "task": "D02",
+          "turn": 3,
+          "category": "long_dialogue",
+          "reference_sections": [
+            "11.5"
+          ],
+          "reference_pages": [
+            219,
+            220
+          ],
+          "retrieved": false,
+          "n_results": 0,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [],
+          "status": "ok"
+        },
+        {
+          "task": "D02",
+          "turn": 4,
+          "category": "long_dialogue",
+          "reference_sections": [
+            "11.6"
+          ],
+          "reference_pages": [
+            220
+          ],
+          "retrieved": false,
+          "n_results": 0,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [],
+          "status": "ok"
+        },
+        {
+          "task": "D02",
+          "turn": 5,
+          "category": "long_dialogue",
+          "reference_sections": [
+            "11.5",
+            "11.6"
+          ],
+          "reference_pages": [
+            219,
+            220
+          ],
+          "retrieved": true,
+          "n_results": 5,
+          "section_recall@5": 0.0,
+          "page_recall@5": 0.0,
+          "precision@5_section": 0.0,
+          "precision@5_page": 0.0,
+          "mrr_section": 0.0,
+          "first_relevant_rank": null,
+          "top_chunks": [
+            {
+              "rank": 1,
+              "chunk_id": "7d7bb95771040af63c78ab57",
+              "section_id": "5.7",
+              "pdf_page": 70
+            },
+            {
+              "rank": 2,
+              "chunk_id": "a8a66090aff3cbd34fc72312",
+              "section_id": "5.7",
+              "pdf_page": 79
+            },
+            {
+              "rank": 3,
+              "chunk_id": "edba2e705d93231acd49f5d0",
+              "section_id": "5.7",
+              "pdf_page": 86
+            },
+            {
+              "rank": 4,
+              "chunk_id": "15d2453357d742db6e84afbe",
+              "section_id": "12.5",
+              "pdf_page": 260
+            },
+            {
+              "rank": 5,
+              "chunk_id": "4cb908fc7c5da9579db227f3",
+              "section_id": "5.7",
+              "pdf_page": 83
+            }
+          ],
+          "status": "ok"
+        }
+      ]
+    }
+  }
+}
